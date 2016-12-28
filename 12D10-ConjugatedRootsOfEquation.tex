@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugatedRootsOfEquation}
+\pmcreated{2013-03-22 17:36:51}
+\pmmodified{2013-03-22 17:36:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{conjugated roots of equation}
+\pmrecord{7}{40032}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmclassification{msc}{30-00}
+\pmclassification{msc}{12D99}
+\pmsynonym{roots of algebraic equation with real coefficients}{ConjugatedRootsOfEquation}
+\pmrelated{PartialFractionsOfExpressions}
+\pmrelated{QuadraticFormula}
+\pmrelated{ExampleOfSolvingACubicEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The rules
+$$\overline{w_1+w_2} = \overline{w_1}+\overline{w_2} \quad\mbox{and}\quad \overline{w_1w_2} = \overline{w_1}\,\overline{w_2},$$
+concerning the complex conjugates of the sum and product of two complex numbers, may be by induction generalised for arbitrary number of complex numbers $w_k$.  Since the complex conjugate of a real number is the same real number, we may write
+$$\overline{a_kz^k} = a_k\overline{z}^k$$
+for real numbers $a_k\,\, (k = 0,\,1,\,2,\,\ldots)$.  Thus, for a polynomial \,$P(x) := a_0x^n+a_1x^{n-1}+\ldots+a_n$\, we obtain
+$$\overline{P(z)} = \overline{a_0z^n+a_1z^{n-1}+\ldots+a_n} = 
+{a_0\overline{z}^n+a_1\overline{z}^{n-1}+\ldots+a_n} = P(\overline{z}).$$
+I.e., the values of a polynomial with real coefficients computed at a complex number and its complex conjugate are 
+complex conjugates of each other.
+
+If especially the value of a polynomial with real coefficients vanishes at some complex number $z$, it vanishes also at $\overline{z}$.\, So the roots of an algebraic equation
+$$P(x) = 0$$
+with real coefficients are pairwise complex conjugate numbers.\\
+
+\textbf{Example.}  The roots of the binomial equation
+$$x^3\!-\!1 = 0$$
+are\, $x = 1$,\, $x = \frac{-1\pm{i}\sqrt{3}}{2}$,\, the third roots of unity.
+%%%%%
+%%%%%
+\end{document}

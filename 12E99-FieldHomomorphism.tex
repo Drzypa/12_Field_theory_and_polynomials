@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FieldHomomorphism}
+\pmcreated{2013-03-22 13:54:54}
+\pmmodified{2013-03-22 13:54:54}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{field homomorphism}
+\pmrecord{9}{34670}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+\pmsynonym{field monomorphism}{FieldHomomorphism}
+%\pmkeywords{field}
+%\pmkeywords{map}
+\pmrelated{RingHomomorphism}
+\pmdefines{field homomorphism}
+\pmdefines{field isomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Let $F$ and $K$ be fields. 
+\begin{defn}
+A {\em field homomorphism} is a function $\psi\colon F \to K$ such that:
+\begin{enumerate}
+\item $\psi(a+b) = \psi(a)+\psi(b)$ for all $a,b \in F$
+\item $\psi(a\cdot b) = \psi(a) \cdot \psi(b)$ for all $a,b \in F$
+\item $\psi(1)=1,\quad \psi(0)=0$
+\end{enumerate}
+If $\psi$ is injective and surjective, then we say that $\psi$ is a \emph{field isomorphism}.
+\end{defn}
+
+\begin{lemma}
+Let $\psi\colon F\to K$ be a field homomorphism. Then $\psi$ is
+injective.
+\end{lemma}
+\begin{proof}
+Indeed, if $\psi$ is a field homomorphism, in particular it is a
+ring homomorphism. Note that the kernel of a ring homomorphism is
+an ideal and a field $F$ only has two ideals, namely $\{0\}, F$.
+Moreover, by the definition of field homomorphism, $\psi(1)=1$,
+hence $1$ is not in the kernel of the map, so the kernel must be
+equal to $\{0\}$.
+\end{proof}
+
+
+{\bf Remark}: For this reason the terms ``field homomorphism'' and
+``field monomorphism'' are synonymous. Also note that if $\psi$ is
+a field monomorphism, then
+$$\psi(F)\cong F, \quad \psi(F)\subseteq K$$
+so there is a ``copy'' of $F$ in $K$. In other words, if
+$$\psi\colon F\to K$$ is a field homomorphism then there exist a
+subfield $H$ of $K$ such that $H\cong F$. Conversely, suppose
+there exists $H\subset K$ with $H$ isomorphic to $F$. Then there
+is an isomorphism $$\chi \colon F \to H$$ and we also have the
+inclusion homomorphism $$\iota\colon H \hookrightarrow K$$ Thus
+the composition
+$$\iota \circ \chi\colon F \to K$$
+is a field homomorphism.
+
+{\bf Remark}: Let $\psi : F \to K$ be a field homomorphism. We claim that the characteristic of $F$ and $K$ must be the same. Indeed, since $\psi(1_F)=1_K$ and $\psi(0_F)=0_K$ then $\psi(n\cdot 1_F)=n\cdot 1_K$ for all natural numbers $n$. If the characteristic of $F$ is $p>0$ then $0=\psi(p\cdot 1)=p\cdot 1$ in $K$, and so the characteristic of $K$ is also $p$. If the characteristic of $F$ is $0$, then the characteristic of $K$ must be $0$ as well. For if $p\cdot 1=0$ in $K$ then $\psi(p\cdot 1)=0$, and since $\psi$ is injective by the lemma, we would have $p\cdot 1=0$ in $F$ as well.
+%%%%%
+%%%%%
+\end{document}

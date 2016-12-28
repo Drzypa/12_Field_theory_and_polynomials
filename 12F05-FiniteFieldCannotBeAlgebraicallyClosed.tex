@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteFieldCannotBeAlgebraicallyClosed}
+\pmcreated{2013-03-22 16:29:09}
+\pmmodified{2013-03-22 16:29:09}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{finite field cannot be algebraically closed}
+\pmrecord{6}{38654}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmrelated{AlgebraicClosureOfAFiniteField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\newtheorem*{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+A finite field cannot be algebraically closed.
+\end{theorem}
+
+\begin{proof}
+The proof proceeds by the method of contradiction.  Assume that a field
+$F$ is both finite and algebraically closed.  Consider the polynomial 
+$p(x) = x^2 - x$ as a function from $F$ to $F$.  There are two elements
+which any field (in particular, $F$) must have --- the additive identity
+$0$ and the multiplicative identity $1$.  The polynomial $p$ maps both of
+these elements to $0$.  Since $F$ is finite and the function $p \colon F
+\to F$ is not one-to-one, the function cannot map onto $F$ either, so
+there must exist an element $a$ of $F$ such that $x^2 - x \not= a$ for
+all $x \in F$.  In other words, the polynomial $x^2 - x - a$ has no root
+in $F$, so $F$ could not be algebraically closed.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

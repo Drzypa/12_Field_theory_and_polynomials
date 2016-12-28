@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RealClosedFieldsAreOmiminal}
+\pmcreated{2013-03-22 13:23:04}
+\pmmodified{2013-03-22 13:23:04}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{real closed fields are o-miminal}
+\pmrecord{8}{33920}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D15}
+\pmclassification{msc}{14P10}
+\pmclassification{msc}{03C64}
+\pmclassification{msc}{12D99}
+\pmrelated{Theory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+It is clear that the axioms for a structure to be an ordered field can be written in $L$, the first order language of ordered rings.  It is also true that the condition 
+\begin{quote}
+for each odd degree polynomial $p \in K[x]$, $p$ has a root
+\end{quote}
+can be written in a schema of first order sentences in this language.
+
+
+Let $A$ be all these sentences together with one that states that all positive elements have a square root. 
+Then one can show that the consequences of $A$ are a complete theory $T$. 
+It is clear that this theory is the theory of the real numbers. We call any $L$ structure a {\em real closed field} (which can be defined purely algebraically also, see \PMlinkname{here}{RealClosed}).
+
+\medskip
+
+The {\em semi algebraic sets} on a real closed field are Boolean combinations of solution sets of polynomial equalities and inequalities.  
+Tarski showed that $T$ has quantifier elimination, which is equivalent to the class of semi algebraic sets being closed under projection. 
+
+\medskip
+
+Let $K$ be a real closed field.  Consider the definable subsets of $K$.  By quantifier elimination, 
+each is definable by a quantifier free formula, i.e. a boolean combination of atomic formulas. 
+An atomic formula in one variable has one of the following forms:
+\begin{itemize} \item $f(x)>g(x)$ for some $f,g \in K[x]$
+\item $f(x)=g(x)$ for some $f,g \in K[x]$.
+\end{itemize}
+The first defines a finite union of intervals, the second defines a finite union of points. Every definable subset of $K$ is a finite union of these kinds of sets, so is a finite union of intervals and points.
+Thus any real closed field is o-minimal.
+%%%%%
+%%%%%
+\end{document}

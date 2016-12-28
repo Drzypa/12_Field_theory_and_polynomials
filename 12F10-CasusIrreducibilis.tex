@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CasusIrreducibilis}
+\pmcreated{2013-03-22 15:21:00}
+\pmmodified{2013-03-22 15:21:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{casus irreducibilis}
+\pmrecord{12}{37171}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+%\pmkeywords{irreducible polynomial}
+%\pmkeywords{roots real}
+\pmrelated{RadicalExtension}
+\pmrelated{CardanosFormulae}
+\pmrelated{TakingSquareRootAlgebraically}
+\pmrelated{EulersDerivationOfTheQuarticFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\PMlinkescapeword{irreducible}
+
+Let the polynomial
+$$P(x) := x^n+a_1x^{n-1}+\ldots+a_n$$
+with complex coefficients $a_j$ be \PMlinkname{irreducible}{IrreduciblePolynomial2}, i.e. irreducible in the field  $\mathbb{Q}(a_1,\,\ldots,\,a_n)$\, of its coefficients.\, If the equation \,$P(x) = 0$\, can be \PMlinkname{solved algebraically}{AlgebraicallySolvable} and if all of its roots are real, then no root may be expressed with the numbers $a_j$ using mere real \PMlinkname{radicals}{NthRoot} unless the \PMlinkname{degree}{AlgebraicEquation} $n$ of the equation is an \PMlinkname{integer power}{GeneralAssociativity} of 2.
+
+\begin{thebibliography}{9}
+\bibitem{K.V.} {\sc K. V\"ais\"al\"a}: {\em Lukuteorian ja korkeamman algebran alkeet}.\, Tiedekirjasto No. 17.\quad  Kustannusosakeyhti\"o Otava, Helsinki (1950).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

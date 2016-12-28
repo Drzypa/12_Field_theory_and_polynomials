@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Multiplicity}
+\pmcreated{2013-03-22 14:24:18}
+\pmmodified{2013-03-22 14:24:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{multiplicity}
+\pmrecord{14}{35905}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmsynonym{order of the zero}{Multiplicity}
+\pmrelated{OrderOfVanishing}
+\pmrelated{DerivativeOfPolynomial}
+\pmdefines{zero of order}
+\pmdefines{multiple zero}
+\pmdefines{simple zero}
+\pmdefines{simple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If a polynomial $f(x)$ in $\mathbb{C}[x]$ is divisible by $(x-a)^m$ but not by $(x-a)^{m+1}$ ($a$ is some complex number, \,$m \in \mathbb{Z}_+$), we say that \, $x = a$ \, is a\, {\em zero of the polynomial with multiplicity $m$} or alternatively a {\em zero of order $m$}.
+
+Generalization of the multiplicity to \PMlinkname{real}{RealFunction} and complex functions (by rspuzio): \,If the function $f$ is continuous on some open set $D$ and \,$f(a) = 0$\, for some \,$a \in D$, then the zero of $f$ at $a$ is said to be of multiplicity $m$ if $\frac{f(z)}{(z\!-\!a)^m}$ is continuous in $D$ but $\frac{f(z)}{(z-a)^{m+1}}$ is not.
+
+If\, $m \geqq 2$, we speak of a {\em multiple zero}; if\, $m = 1$, we speak of a {\em simple zero}.\, If\, $m = 0$, then actually the number $a$ is not a zero of $f(x)$, i.e.\, $f(a) \neq 0$. 
+
+Some properties (from which 2, 3 and 4 concern only polynomials):
+\begin{enumerate}
+
+\item The zero $a$ of a polynomial $f(x)$ with multiplicity $m$ is a zero of the \PMlinkescapetext{derivative} $f'(x)$ with multiplicity $m\!-\!1$.
+\item The zeros of the polynomial $\gcd(f(x), f'(x))$ are same as the multiple zeros of $f(x)$.
+\item The quotient $\displaystyle\frac{f(x)}{\gcd(f(x), f'(x))}$ has the same zeros as $f(x)$ but they all are \PMlinkescapetext{simple}.
+\item The zeros of any irreducible polynomial are \PMlinkescapetext{simple}.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

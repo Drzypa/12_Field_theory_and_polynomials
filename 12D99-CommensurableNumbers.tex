@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommensurableNumbers}
+\pmcreated{2013-03-22 18:11:14}
+\pmmodified{2013-03-22 18:11:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{commensurable numbers}
+\pmrecord{13}{40760}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{03E02}
+\pmrelated{RationalAndIrrational}
+\pmrelated{CommensurableSubgroups}
+\pmdefines{commensurable}
+\pmdefines{incommensurable}
+\pmdefines{commensurability}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Two positive real numbers $a$ and $b$ are {\em commensurable}, iff there exists a positive real number $u$ such that
+\begin{align}
+a \;=\; mu, \quad b \;=\; nu
+\end{align}
+with some positive integers $m$ and $n$.\, If the positive numbers $a$ and $b$ are not commensurable, they are {\em incommensurable}.\\
+
+\textbf{Theorem.}\, The positive numbers $a$ and $b$ are commensurable if and only if their ratio is a rational number 
+$\displaystyle\frac{m}{n}$\, ($m,\,n \in \mathbb{Z}$).\\
+
+{\em Proof.}\, The equations (1) imply the \PMlinkname{proportion}{ProportionEquation}
+\begin{align}
+\frac{a}{b} \;=\; \frac{m}{n}.
+\end{align}
+Conversely, if (2) is valid with\, $m,\,n \in \mathbb{Z}$,\, then we can write
+$$a \;=\; m\!\cdot\!\frac{b}{n}, \quad b \;=\; n\!\cdot\!\frac{b}{n},$$
+which means that $a$ and $b$ are multiples of $\displaystyle\frac{b}{n}$ and thus commensurable.\, Q.E.D.\\
+
+\textbf{Example.}\, The lengths of the side and the diagonal of \PMlinkid{square}{1086} are always incommensurable.
+
+\subsection{Commensurability as relation}
+
+\begin{itemize}
+
+\item The commensurability is an equivalence relation in the set $\mathbb{R}_+$ of the positive reals:\, the reflexivity and the symmetry are trivial;\, if\, $a\!:\!b = r$\, and\, $b\!:\!c = s$,\, then\, $a\!:\!c = (a\!:\!b)(b\!:\!c) = rs$,\, whence one obtains the transitivity.\\
+
+\item The equivalence classes of the commensurability are of the form
+$$[\varrho] \;:=\; \{r\varrho\,\vdots\;\; r \in \mathbb{Q}_+\}.$$
+
+\item One of the equivalence classes is the set\, $[1] = \mathbb{Q}_+$\, of the positive rationals, all others consist of positive irrational numbers.
+
+\item If one sets\; $[\varrho]\!\cdot\![\sigma] := [\varrho\sigma]$,\, the equivalence classes form with respect to this binary operation an Abelian group.
+
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

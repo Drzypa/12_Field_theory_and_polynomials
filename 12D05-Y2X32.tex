@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Y2X32}
+\pmcreated{2013-03-22 14:52:05}
+\pmmodified{2013-03-22 14:52:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{$y^2= x^3-2$}
+\pmrecord{10}{36544}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D05}
+\pmclassification{msc}{11R04}
+\pmsynonym{$y^2+2=x^3$}{Y2X32}
+\pmsynonym{finding integer solutions to $y^2+2=x^3$}{Y2X32}
+\pmrelated{UFD}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+We want to solve the equation $y^2=x^3 - 2$ over the integers.
+
+By writing $y^2+2=x^3$ we can factor on $\Z[\sqrt{-2}]$ as
+\[(y-i\sqrt{2})(y+i\sqrt{2})=x^3.
+\]
+
+Using congruences modulo $8$, one can show that both $x,y$ must be odd, and it can also be shown that $(y-i\sqrt{2})$ and $(y+i\sqrt{2})$ are relatively prime (if it were not the case, any divisor would have even norm, which is not possible).
+
+Therefore, by unique factorization, and using that the only \PMlinkname{units}{UnitsOfQuadraticFields} on $\Z[\sqrt{-2}]$ are $1,-1$, we have that each factor must be a cube.
+
+So let us write
+\[
+(y+i\sqrt{2}) = (a+bi\sqrt{2})^3 = (a^3 - 6ab^2) + i(3a^2b-2b^3)\sqrt{2}
+\]
+
+Then $y=a^3 - 6ab^2$ and $1=3a^2b-2b^3=b(3a^2-2b^2)$. These two equations imply $b=\pm 1$ and thus $a=\pm 1$, from where the only possible solutions are $x=3, y=\pm 5$.
+
+\begin{thebibliography}{9}
+\bibitem{esm}
+  Esmonde, Ram Murty; \emph{Problems in Algebraic Number Theory}. Springer.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

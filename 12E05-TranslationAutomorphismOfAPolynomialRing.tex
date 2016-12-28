@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TranslationAutomorphismOfAPolynomialRing}
+\pmcreated{2013-03-22 14:16:13}
+\pmmodified{2013-03-22 14:16:13}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{translation automorphism of a polynomial ring}
+\pmrecord{4}{35720}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{13P05}
+\pmrelated{IsomorphismSwappingZeroAndUnity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $R$ be a commutative ring, let $R[X]$ be the polynomial ring over $R$, and let $a$ be an element of $R$.  Then we can define a homomorphism $\tau_a$ of $R[X]$ by constructing the evaluation homomorphism from $R[X]$ to $R[X]$ taking $r\in R$ to itself and taking $X$ to $X+a$.  
+
+To see that $\tau_a$ is an automorphism, observe that $\tau_{-a}\circ\tau_a$ is the identity on $R\subset R[X]$ and takes $X$ to $X$, so by the uniqueness of the evaluation homomorphism, $\tau_{-a}\circ\tau_{a}$ is the identity.
+%%%%%
+%%%%%
+\end{document}

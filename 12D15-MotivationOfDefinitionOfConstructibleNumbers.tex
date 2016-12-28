@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MotivationOfDefinitionOfConstructibleNumbers}
+\pmcreated{2013-03-22 17:16:05}
+\pmmodified{2013-03-22 17:16:05}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{motivation of definition of constructible numbers}
+\pmrecord{7}{39607}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D15}
+\pmclassification{msc}{51M15}
+\pmrelated{CompassAndStraightedgeConstruction}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{basic}
+\PMlinkescapeword{constructible}
+\PMlinkescapeword{matching}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{order}
+
+In order to understand the significance of constructible numbers and how they are useful in solving problems in Euclidean geometry, we need to determine how the definitions and properties of these numbers relate to Euclidean geometry.
+
+To start with, let us investigate some properties of $\mathbb{E}$, the field of real constructible numbers:
+
+\begin{enumerate}
+\item $0,1 \in \mathbb{E}$;
+\item If $a,b\in\mathbb{E}$, then also $a\pm b$, $ab$, and $a/b\in\mathbb{E}$, the last of which is meaningful only when $b\not=0$;
+\item If $r\in\mathbb{E}$ and $r>0$, then $\sqrt{r}\in\mathbb{E}$.
+\end{enumerate}
+
+It turns out that the nonnegative elements of $\mathbb{E}$ are in one-to-one correspondence with lengths of \PMlinkname{constructible line segments}{Constructible2}.  Let us determine why this is:
+
+First of all, $0 \in \mathbb{E}$ and $1 \in \mathbb{E}$ are self-evident, as these are basic requirements for $\mathbb{E}$ to be a field.  Moreover, $1 \in \mathbb{E}$ corresponds to the tacit assumption in compass and straightedge construction that a line segment of length $1$ is \PMlinkname{constructible}{Constructible2}.
+
+Secondly, if $a,b\in\mathbb{E}$, which should mean that line segments of lengths $|a|$ and $|b|$ are constructible, then we can easily construct line segments of lengths $|a+b|$ and $|a-b|$ by matching up endpoints of line segments.
+
+Thirdly, if $a,b\in\mathbb{E}$, then we can construct a line segment of length $|ab|$ by the compass and straightedge construction of similar triangles.
+
+Fourthly, if $a,b\in\mathbb{E}$ and $b \neq 0$, we can construct a line segment of length $1/|b|$ by the compass and straightedge construction of inverse point.  By the previous paragraph, multiplication by $a$ poses no problems.
+
+Finally, if $r\in\mathbb{E}$ and $r>0$, then we can construct a line segment of length $\sqrt{r}$ by the compass and straightedge construction of geometric mean, letting $a=1$ and $b=r$.
+
+Now to address the definition of $\mathbb{F}$, the field of constructible numbers:
+
+\begin{enumerate}
+\item $0,1\in\mathbb{F}$;
+\item If $a,b\in\mathbb{F}$, then also $a\pm b$, $ab$, and $a/b\in\mathbb{F}$, the last of which is meaningful only when $b\not=0$;
+\item If $z\in\mathbb{F} \setminus \{0\}$ and $\operatorname{arg}(z)=\theta$ where $0 \le \theta < 2\pi$, then $\sqrt{\vert z\vert}e^{\frac{i\theta}{2}}\in\mathbb{F}$.
+\end{enumerate}
+
+It turns out that the elements of $\mathbb{F}$ are in one-to-one correspondence with the \PMlinkname{constructible points}{Constructible2} of the complex plane.  Let us determine why this is:
+
+Rule 1 is similarly justified as above.
+
+In order to justify rule 2, all we need is the justification of rule 2 for $\mathbb{E}$ along with the notion of copying an angle.  For example, if $a,b\in\mathbb{F}$, then the following picture can be made by copying an angle:
+
+\begin{center}
+\begin{pspicture}(0,-1)(4,5)
+\psline(0,0)(1,3)(4,4)(3,1)
+\psline{->}(0,0)(3.9,1.3)
+\psarc(0,0){0.3}{18.435}{71.565}
+\psarc(3,1){0.3}{18.435}{71.565}
+\psdots(0,0)(1,3)(4,4)(3,1)
+\rput[a](0,-0.3){$0$}
+\rput[r](0.9,3.1){$b$}
+\rput[a](4,4.3){$a+b$}
+\rput[r](3.1,0.7){$a$}
+\end{pspicture}
+\end{center}
+
+Finally to justify rule 3.  If $z\in\mathbb{F}$, then $|z|\in\mathbb{E}$, so we have that $\sqrt{|z|}\in\mathbb{E}$.  Since $|z|e^{i\theta}=z\in\mathbb{F}$, we must have that an angle with \PMlinkname{measure}{AngleMeasure} $\theta$ is constructible.  By the compass and straightedge construction of angle bisector, an angle with measure $\theta/2$ is also constructible.
+%%%%%
+%%%%%
+\end{document}

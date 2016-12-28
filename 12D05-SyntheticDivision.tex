@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SyntheticDivision}
+\pmcreated{2013-03-22 14:07:27}
+\pmmodified{2013-03-22 14:07:27}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{synthetic division}
+\pmrecord{7}{35531}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\emph{Synthetic division} is simply a shorthand for long division, 
+when one of the factors is linear.  
+So when an equation such as $$y = 2x^2 + 10x + 12$$ 
+is given and a factor of $x+3$ is known, we can do the following:
+
+\begin{tabular}{lcrrr}
+$\phantom{-3}$ &\vline& $2$ & $10$ & $12$\\
+   &\vline&   &    &   \\
+   \cline{2-5}
+\end{tabular}
+
+First, we can use $-3$ since $-3$ is a solution if $x+3=0$.
+
+\begin{tabular}{lcrrr}
+$-3$ &\vline& $2$ & $10$ & $12$\\
+   &\vline&   &    &   \\
+   \cline{2-5}
+\end{tabular}
+
+Carry down the first coefficient:
+
+\begin{tabular}{lcrrr}
+$-3$ &\vline& $2$ & $10$ & $12$\\
+   &\vline&   &    &   \\
+   \cline{2-5}
+   && $2$  &    &   \\
+\end{tabular}
+
+Multiply $2$ by $-3$:
+
+\begin{tabular}{lcrrr}
+$-3$ &\vline& $2$ & $10$ & $12$\\
+   &\vline&   & $-6$   &   \\
+   \cline{2-5}
+   && $2$  &    &   \\
+\end{tabular}
+
+Add up $10$ and $-6$:
+
+\begin{tabular}{lcrrr}
+$-3$ &\vline& $2$ & $10$ & $12$\\
+   &\vline&   & $-6$   &   \\
+   \cline{2-5}
+   && $2$  & $4$   &   \\
+\end{tabular}
+
+Multiply $4$ by $-3$:
+
+\begin{tabular}{lcrrr}
+$-3$ &\vline& $2$ & $10$ & $12$\\
+   &\vline&   & $-6$   & $-12$  \\
+   \cline{2-5}
+   && $2$  & $4$   & $0$  \\
+\end{tabular}
+
+This means that, by factoring the equation by $x+3$, we will get another factor as $2x+4$.
+
+Synthetic is simply an variation of the long division --- a version that's manipulated and simplified to shorten the calculations.
+%%%%%
+%%%%%
+\end{document}

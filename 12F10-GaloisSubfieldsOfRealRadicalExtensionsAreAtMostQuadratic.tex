@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaloisSubfieldsOfRealRadicalExtensionsAreAtMostQuadratic}
+\pmcreated{2013-03-22 17:43:05}
+\pmmodified{2013-03-22 17:43:05}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Galois subfields of real radical extensions are at most quadratic}
+\pmrecord{7}{40163}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmclassification{msc}{12F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Reals}{\mathbb{R}}
+\DeclareMathOperator{\Gal}{Gal}
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\begin{thm} Suppose $F\subset L\subset K=F(\sqrt[n]\alpha)\subset\Reals$ are fields with $\alpha\in F$ and $L$ Galois over $F$. Then $[L:F]\leq 2$.
+\end{thm}
+
+\textbf{Proof. }
+Let $\zeta_n$ be a primitive $n^{\mathrm{th}}$ root of unity, and define $F'=F(\zeta_n)$, $L'=L(\zeta_n)$, and $K'=K(\zeta_n)=F'(\sqrt[n]\alpha)$.
+\[\xymatrix @R1pc@C.3pc{
+& K'=K(\zeta_n)=F'(\sqrt[n]\alpha) \ar@{-}[dl]\ar@{-}[dr] & & \\
+K=F(\sqrt[n]\alpha) \ar@{-}[dr] & & L'=L(\zeta_n) \ar@{-}[dl]\ar@{-}[dr] & \\
+& L \ar@{-}[dr] & & F'=F(\zeta_n) \ar@{-}[dl] \\
+& & F &
+}
+\]
+Now, $L'/F'$ is Galois since $L/F$ is. But $K'$ is a Kummer extension of $F'$, so has cyclic Galois group and thus $L'/F'$ has cyclic Galois group as well (being a quotient of $\Gal(K'/F')$). Thus $L'$ is a Kummer extension of $F'$, so that $L'=F'(\sqrt[n]{\beta})$ for some $\beta\in F'$. It follows that $L=F(\sqrt[n]{\beta})$. But since $L$ is Galois over $F$, it follows that $n\leq 2$ (since otherwise in order to be Galois, $L$ would have to contain the non-real $n^{\mathrm{th}}$ roots of unity).
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomomorphismsFromFieldsAreEitherInjectiveOrTrivial}
+\pmcreated{2013-03-22 14:39:07}
+\pmmodified{2013-03-22 14:39:07}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{homomorphisms from fields are either injective or trivial}
+\pmrecord{4}{36243}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Suppose $F$ is a field, $R$ is a ring, and $\phi\colon F\rightarrow R$ is a homomorphism of rings.  Then $\phi$ is either trivial or injective.
+
+\begin{proof}
+We use the fact that kernels of ring homomorphism are ideals.  Since $F$ is a field, by the above result, we have that the kernel of $\phi$ is an ideal of the field $F$ and hence either empty or all of $F$.  If the kernel is empty, then since a ring homomorphism is injective iff the kernel is trivial, we get that $\phi$ is injective.  If the kernel is all of $F$, then $\phi$ is the zero map from $F$ to $R$.
+\end{proof}
+
+Finally, it is clear that both of these possibilities are in fact achieved:
+\begin{itemize}
+\item The map $\phi:\Q\ra \Q$ given by $\phi(n)=0$ is trivial (has all of $\Q$ as a kernel)
+\item The inclusion $\Q\ra \Q[x]$ is injective (i.e. the kernel is trivial).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

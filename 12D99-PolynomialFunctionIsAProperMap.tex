@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolynomialFunctionIsAProperMap}
+\pmcreated{2013-03-22 18:30:49}
+\pmmodified{2013-03-22 18:30:49}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{polynomial function is a proper map}
+\pmrecord{8}{41199}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmrelated{ProperMap}
+\pmrelated{PolynomialFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Assume that $\mathbb{K}$ is either the field of real numbers or the field of complex numbers and let $W:\mathbb{K}\to\mathbb{K}$ be a polynomial function in one variable over $\mathbb{K}$ with positive degree.\\
+
+\textbf{Proposition}. Polynomial function $W:\mathbb{K}\to\mathbb{K}$ is a proper map, i.e. for any compact subset $K\subseteq\mathbb{K}$ the preimage $W^{-1}(K)$ is compact.\\ \\
+\textit{Proof}. Assume that 
+$$W(x)=\sum_{k=0}^{m} a_k\cdot x^k,$$
+where $m=\mathrm{deg}(W)\geq 1$ is the degree of $W$.\\ \\
+Recall that $K\subseteq\mathbb{K}$ is compact if and only if $K$ is closed and bounded. Since polynomial functions are continous, it is sufficient to show that preimage of a bounded set is bounded. So assume that $K$ is bounded and $W^{-1}(K)$ is not bounded. Take a sequence $\{x_{n}\}_{n=1}^{\infty}\subseteq K$ such that 
+$$\lim_{n\to\infty} \Vert x_n \Vert = +\infty,$$
+where $\Vert x \Vert$ denotes the Euclidean norm of $x\in\mathbb{K}$.\\
+\indent Recall that for any $x,y\in\mathbb{K}$ we have $\Vert x+y\Vert\geq \Vert x\Vert - \Vert y\Vert$. Thus we have:
+$$\Vert W(x)\Vert=\Vert\sum_{k=0}^{m} a_k\cdot x^k\Vert\geq\Vert a_m\cdot x^m\Vert - \sum_{k=0}^{m-1} \Vert a_k\cdot x^k\Vert=\Vert a_m\Vert\cdot \Vert x\Vert^m - \sum_{k=0}^{m-1} \Vert a_k\Vert\cdot \Vert x\Vert^k.$$
+Let $$V(x)=\Vert a_m\Vert\cdot x^m - \sum_{k=0}^{m-1} \Vert a_k\Vert\cdot x^k.$$
+Then $V$ is a real polynomial of degree $m$ and the leading coefficient of $V$ is positive, which implies that
+$$\lim_{x\to +\infty} V(x)=+\infty.$$
+Now for each $n\in\mathbb{N}$ we have
+$$\Vert W(x_n)\Vert \geq V(\Vert x_n\Vert),$$
+but $V(\Vert x_n\Vert)$ tends to infinity, therefore $\Vert W(x_n)\Vert$ tends to infinty. Contradiction, since for each $n\in\mathbb{N}$ we have that $W(x_n)\in K$ and $K$ is bounded. $\square$ \\ \\
+\textbf{Corollary 1}. Polynomial functions on $\mathbb{K}$ are closed maps.\\ \\
+\textit{Proof}. Note that $\mathbb{K}$ is compactly generated Hausdorff space and therefore every proper and continous map $f:\mathbb{K}\to\mathbb{K}$ is closed. Thus (due to proposition) polynomial functions are closed. $\square$\\ \\
+\textbf{Corollary 2}. Assume that $W:\mathbb{K}\to\mathbb{K}$ is a polynomial function such that $W(x)\neq 0$ for any $x\in\mathbb{K}$. Let $f:\mathbb{K}\to\mathbb{K}$ be a map defined by the formula
+$$f(x)=\frac{1}{W(x)}.$$
+Then $f$ is bounded.\\ \\
+\textit{Proof}. We wish to show that there exists $M>0$ such that for all $x\in\mathbb{K}$ the inequality $\Vert f(x)\Vert \leq M$ holds. Since polynomial functions are closed maps, then the image $\mathrm{Im}(W)$ of $W$ is a closed subset of $\mathbb{K}$. Therefore $\mathbb{K}\setminus\mathrm{Im}(W)$ is open and it contains $0$, thus there exists $\epsilon >0$ such that the ball around $0$ with radius $\epsilon$ has empty intersection with $\mathrm{Im}(W)$. This means that for all $x\in\mathbb{K}$ we have that $\Vert W(x)\Vert\geq\epsilon>0$. Now for $M=\epsilon^{-1}$ and for any $x\in\mathbb{K}$ we have:
+$$\Vert f(x)\Vert = \bigg\Vert\frac{1}{W(x)}\bigg\Vert=\frac{1}{\Vert W(x)\Vert}\leq \frac{1}{\epsilon}=M$$
+which completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

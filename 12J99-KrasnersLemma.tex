@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KrasnersLemma}
+\pmcreated{2013-03-22 19:03:02}
+\pmmodified{2013-03-22 19:03:02}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Krasner's lemma}
+\pmrecord{6}{41929}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J99}
+\pmclassification{msc}{11S99}
+\pmclassification{msc}{13H99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newcommand{\BQ}{\mathbb{Q}}
+\newcommand{\Abs}[1]{\left\lvert #1\right\rvert}
+\DeclareMathOperator{\Hom}{Hom}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+
+\begin{document}
+Krasner's lemma (along with Hensel's lemma) connects valuations on fields to the algebraic structure of the fields, and in particular to polynomial roots.
+
+\begin{lem} (Krasner's Lemma) Let $K$ be a field of characteristic $0$ complete with respect to a nontrivial nonarchimedean absolute value. Assume $\alpha,\beta\in \bar{K}$ (where $\bar{K}$ is some algebraic closure of $K$) are such that for all nonidentity embeddings $\sigma\in\Hom_K(K(\alpha),\bar{K})$ we have $\Abs{\alpha-\beta} < \Abs{\sigma(\alpha)-\alpha}$. Then $K(\alpha) \subset K(\beta)$.
+\end{lem}
+
+This says that for any $\alpha\in \bar{K}$, there is a neighborhood of $\alpha$ each of whose elements generates at least the same field as $\alpha$ does.
+
+\begin{proof} It suffices to show that for every $\sigma\in\Hom_{K(\beta)}(K(\alpha,\beta),\bar{K})$, we have $\sigma(\alpha)=\alpha$, for then $\alpha$ is in the fixed field of every embedding of $K(\beta)$, so $\alpha\in K(\beta)$. Note that
+\[\Abs{\sigma(\alpha)-\beta} = \Abs{\sigma(\alpha)-\sigma(\beta)} = \Abs{\sigma(\alpha-\beta)} = \Abs{\alpha-\beta}\]
+where the final equality follows since $\Abs{\sigma(\cdot)}$ is another absolute value extending $\Abs{\cdot}_K$ to $K(\alpha,\beta)$ and thus must be equal to $\Abs{\cdot}$. But then
+\[\Abs{\sigma(\alpha)-\alpha} = \Abs{(\sigma(\alpha)-\beta)+(\beta-\alpha)} \leq \max(\Abs{\sigma(\alpha)-\beta},\Abs{\alpha-\beta}) = \Abs{\alpha-\beta}\]
+But this is impossible by the bounds on $\alpha,\beta$ unless $\sigma(\alpha)=\alpha$.
+\end{proof}
+
+The first application of Krasner's lemma is to show that splitting fields are ``locally constant'' in the sense that sufficiently close polynomials in $K[X]$ have the same splitting fields.
+\begin{prop} \label{prop:krasner2} With $K$ as above, let $P(X)\in K[X]$ be a monic irreducible polynomial of degree $n$ with (distinct) roots $\alpha_1, \dotsc, \alpha_n$. Then any monic polynomial $Q(X)\in K[X]$ of degree $n$ that is ``sufficiently close'' to $P(X)$ will be irreducible over $K$ with roots $\beta_1, \dotsc \beta_n$, and (after renumbering) $K(\alpha_i) = K(\beta_i)$.
+\end{prop}
+
+Here ``sufficiently close'' means the following: consider the space of degree $n$ polynomials over $K$ as homeomorphic to $K^n$ as a topological space; close then means close in the obvious metric induced by $\Abs{\cdot}$.
+
+\begin{proof} Since $P(X)$ has distinct roots, we may choose $0 < \gamma < \min(\Abs{\alpha_i - \alpha_j})$ for $i\neq j \leq n$. Since the roots of a polynomial vary continuously with its coefficients, we say that a degree $n$ polynomial $Q(X)\in K[X]$ is sufficiently close to $P(X)$ if $Q(X)$ has roots $\beta_1,\dotsc,\beta_n$ with $\Abs{\alpha_i-\beta_i} < \gamma$. But $\{\alpha_j\}_{j\neq i}$ are all the Galois conjugates of $\alpha_i$, and $\Abs{\alpha_i - \beta_i} < \gamma < \Abs{\alpha_i - \alpha_j}$ by construction, so by Krasner's lemma, $K(\alpha_i) \subset K(\beta_i)$. But
+\[
+  [K(\beta_i):K] \leq \deg Q = \deg P = [K(\alpha_i):K]
+\]
+so that $K(\beta_i) = K(\alpha_i)$. In addition, we see that $\deg Q = [K(\beta_i):K]$ and thus that $Q(X)$ is irreducible.
+\end{proof}
+
+We use this fact to show that every finite extension of $\BQ_p$ arises as a completion of some number field.
+\begin{cor} Let $K$ be a finite extension of $\BQ_p$ of degree $n$. Then there is a number field $E$ and an absolute value $\Abs{\cdot}$ on $E$ such that $\hat{E}\cong K$.
+\end{cor}
+\begin{proof} Let $K=\BQ_p(\alpha)$ and let $P$ be the minimal polynomial for $\alpha$ over $\BQ_p$. Since $\BQ$ is dense in $\BQ_p$, we can choose $Q(X)\in\BQ[X]$ (note: in $\BQ[X]$, not $\BQ_p[X]$), and $\beta$ a root of $Q(X)$, as in the proposition, so that $\BQ_p(\alpha)=\BQ_p(\beta)$. Let $E=\BQ(\beta)$. Clearly $E$ is a number field which, when regarded as embedded in $\BQ_p(\beta)$, has absolute value $\Abs{\cdot}_E$, the restriction of the absolute value on $\BQ_p(\alpha)=\BQ_p(\beta)$. Then $\hat{E}$ is a complete field with respect to that absolute value; $\BQ_p(\beta)$ is as well, and $E$ is dense in both, so we must have $\hat{E}=\BQ_p(\beta)=\BQ_p(\alpha)=K$.
+\end{proof}
+
+Finally, we can prove the following generalization of Krasner's Lemma, which is also given that name in the literature:
+\begin{lem} Let $K$ be a field of characteristic $0$ complete with respect to a nontrivial nonarchimedean absolute value, and $\bar{K}$ an algebraic closure of $K$. Extend the absolute value on $K$ to $\bar{K}$; this extension is unique. Let $\hat{\bar{K}}$ be the completion of $\bar{K}$ with respect to this absolute value. Then $\hat{\bar{K}}$ is algebraically closed.
+\end{lem}
+
+\begin{proof} Let $\alpha$ be algebraic over $\hat{\bar{K}}$ and $P(X)$ its monic irreducible polynomial in $\hat{\bar{K}}[X]$. Since $\bar{K}$ is dense in $\hat{\bar{K}}$, by proposition \ref{prop:krasner2} we may choose $Q(x)\in\bar{K}[X]$ with a root $\beta\in\hat{\bar{K}}$ such that $\hat{\bar{K}}(\alpha) = \hat{\bar{K}}(\beta)$. But $\hat{\bar{K}}(\beta) = \hat{\bar{K}}$ so that $\alpha\in\hat{\bar{K}}$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

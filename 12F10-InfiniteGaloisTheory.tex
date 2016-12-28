@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfiniteGaloisTheory}
+\pmcreated{2013-03-22 12:39:06}
+\pmmodified{2013-03-22 12:39:06}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{infinite Galois theory}
+\pmrecord{7}{32918}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmclassification{msc}{13B05}
+\pmrelated{FundamentalTheoremOfGaloisTheory}
+\pmrelated{GaloisGroup}
+\pmrelated{InverseLimit}
+\pmdefines{Krull topology}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\p}{{\mathfrak{p}}}
+\newcommand{\m}{{\mathfrak{m}}}
+\newcommand{\M}{{\mathfrak{M}}}
+\renewcommand{\P}{{\mathfrak{P}}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\A}{\mathcal{A}}
+\renewcommand{\c}{\mathcal{C}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\lra}{\longrightarrow}
+\renewcommand{\div}{\mid}
+\newcommand{\res}{\operatorname{res}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\diff}{\operatorname{diff}}
+\newcommand{\incl}{\operatorname{incl}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+\newcommand{\bigintersect}{\bigcap}
+\newcommand{\bigunion}{\bigcup}
+\newcommand{\ilim}{\,\underset{\longleftarrow}{\lim}\,}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+Let $L/F$ be a Galois extension, not necessarily finite dimensional.
+
+\section{Topology on the Galois group}
+
+Recall that the \emph{Galois group} $G := \Gal(L/F)$ of $L/F$ is the
+group of all field automorphisms $\sigma: L \lra L$ that restrict to
+the identity map on $F$, under the group operation of composition. In
+the case where the extension $L/F$ is infinite dimensional, the group
+$G$ comes equipped with a natural topology, which plays a key role in
+the statement of the Galois correspondence.
+
+We define a subset $U$ of $G$ to be open if, for each $\sigma \in U$,
+there exists an intermediate field $K \subset L$ such that
+\begin{itemize}
+\item The degree $[K:F]$ is finite,
+\item If $\sigma'$ is another element of $G$, and the restrictions
+  $\sigma|_K$ and $\sigma'|_K$ are equal, then $\sigma' \in U$.
+\end{itemize}
+
+The resulting collection of open sets forms a topology on $G$, called
+the \emph{Krull topology}, and $G$ is a topological group under the
+Krull topology.  Another way to define the topology is to state that
+the subgroups $\Gal(L/K)$ for finite extensions $K/F$ form a neighborhood
+basis for $\Gal(L/F)$ at the identity.
+
+\section{Inverse limit structure}
+
+In this section we exhibit the group $G$ as a projective limit of an
+inverse system of finite groups. This construction shows that the
+Galois group $G$ is actually a profinite group.
+
+Let $\A$ denote the set of finite normal extensions $K$ of $F$ which
+are contained in $L$. The set $\A$ is a partially ordered set under
+the inclusion relation. Form the inverse limit
+$$
+\Gamma := \ilim \Gal(K/F) \subset \prod_{K \in \A} \Gal(K/F)
+$$
+consisting, as usual, of the set of all $(\sigma_K) \in \prod_K
+\Gal(K/F)$ such that $\sigma_{K'}|_K = \sigma_K$ for all $K,K' \in \A$
+with $K \subset K'$. We make $\Gamma$ into a topological space by
+putting the discrete topology on each finite set $\Gal(K/F)$ and
+giving $\Gamma$ the subspace topology induced by the product topology
+on $\prod_K \Gal(K/F)$. The group $\Gamma$ is a closed subset of the
+compact group $\prod_K \Gal(K/F)$, and is therefore compact.
+
+Let
+$$
+\phi: G \lra \prod_{K \in \A} \Gal(K/F)
+$$
+be the group homomorphism which sends an element $\sigma \in G$ to the
+element $(\sigma_K)$ of $\prod_K \Gal(K/F)$ whose $K$--th coordinate
+is the automorphism $\sigma|_K \in \Gal(K/F)$. Then the function
+$\phi$ has image equal to $\Gamma$ and in fact is a homeomorphism
+between $G$ and $\Gamma$. Since $\Gamma$ is profinite, it follows that
+$G$ is profinite as well.
+
+\section{The Galois correspondence}
+
+\begin{theorem}[Galois correspondence for infinite extensions]
+Let $G$, $L$, $F$ be as before. For every closed subgroup $H$ of $G$,
+  let $L^H$ denote the fixed field of $H$. The correspondence
+$$
+K \mapsto \Gal(L/K),
+$$
+defined for all intermediate field extensions $F \subset K \subset L$,
+is an inclusion reversing bijection between the set of all
+intermediate extensions $K$ and the set of all closed subgroups of
+$G$. Its inverse is the correspondence
+$$
+H \mapsto L^H,
+$$
+defined for all closed subgroups $H$ of $G$. The extension $K/F$ is
+normal if and only if $\Gal(L/K)$ is a normal subgroup of $G$, and in
+this case the restriction map
+$$
+G \lra \Gal(K/F)
+$$
+has kernel $\Gal(L/K)$.
+\end{theorem}
+
+\begin{theorem}[Galois correspondence for finite subextensions]
+Let $G$, $L$, $F$ be as before.
+\begin{itemize}
+\item Every open subgroup $H \subset G$ is closed and has finite index
+  in $G$.
+\item If $H \subset G$ is an open subgroup, then the field extension
+  $L^H/F$ is finite.
+\item For every intermediate field $K$ with $[K:F]$ finite, the Galois
+  group $\Gal(L/K)$ is an open subgroup of $G$.
+\end{itemize}
+\end{theorem}
+%%%%%
+%%%%%
+\end{document}

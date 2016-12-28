@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CardanosFormulae}
+\pmcreated{2014-11-27 15:52:49}
+\pmmodified{2014-11-27 15:52:49}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Cardano's formulae}
+\pmrecord{26}{37172}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmsynonym{solution of cubic equation}{CardanosFormulae}
+\pmsynonym{Cardanic formulae}{CardanosFormulae}
+%\pmkeywords{real roots}
+%\pmkeywords{third root of unity}
+\pmrelated{CubicFormula}
+\pmrelated{ATrigonometricCubicFormula}
+\pmrelated{Complex}
+\pmrelated{GaloisGroupOfTheCubic}
+\pmrelated{CasusIrreducibilis}
+\pmrelated{QuadraticResolvent}
+\pmrelated{SimpleAnalyticDiscussionOfTheCubicEquation}
+\pmrelated{GoniometricSolutionOfCubicEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The \PMlinkname{roots}{Equation} of the \PMlinkescapetext{reduced} 
+(for the reducing via a 
+Tschirnhaus transformation, see the \PMlinkname{parent}{CardanosDerivationOfTheCubicFormula} entry) cubic equation
+\begin{align}
+y^3+py+q = 0,
+\end{align}
+with $p$ and $q$ any complex numbers, are
+\begin{align}
+y_1 = u+v, \qquad 
+  y_2 = u\zeta+v\zeta^2, \qquad y_3 = u\zeta^2+v\zeta,
+\end{align}
+where\, $\zeta$ is a \PMlinkname{primitive}{RootOfUnity} third root of unity (e.g. $\frac{-1+i\sqrt{3}}{2}$) and
+\begin{align}
+u \,:=\, \sqrt[3]
+{-\frac{q}{2}+\sqrt{\left(\frac{p}{3}\right)^3+\left(\frac{q}{2}\right)^2}},
+ \qquad 
+v \,:=\, \sqrt[3]{-\frac{q}{2}-\sqrt{\left(\frac{p}{3}\right)^3+\left(\frac{q}{2}\right)^2}}.
+\end{align}
+The values of the cube roots must be chosen such that
+\begin{align}
+uv = -\frac{p}{3}.
+\end{align}
+
+Cardano's formulae, essentially (2) and (3), were first published in 1545 in Geronimo Cardano's book {\em ``Ars magna''}.\, The idea of (2) and (3) is illustrated in the entry example of solving a cubic equation.\\
+
+Let's now assume that the coefficients $p$ and $q$ are real.\, The number of the real \PMlinkname{roots}{Equation} of (1) depends on the sign of the radicand 
+\,$\displaystyle R := \left(\frac{p}{3}\right)^3\!+\!\left(\frac{q}{2}\right)^2$\, 
+of the above square root.\, Instead of $R$ we may use the discriminant \,$D := -108R$\, of the equation.\, As in examining the number of real roots of a \PMlinkname{quadratic equation}{QuadraticFormula}, we get three different cases also for the cubic (1):
+\begin{enumerate}
+\item $D = 0$.\, This is possible only when either\, $p < 0$\, or\, $p = q = 0$.\, Then we get the real roots\, $y_1 = -2\sqrt[3]{q/2}$,\, 
+$y_2 = y_3 = \sqrt[3]{q/2}$.
+\item $D < 0$.\, The square root $\sqrt{R}$ is real, and one can choose for $u$ and $v$ the real values of the cube roots (3); these satisfy (4).\, Thus the root\, $y_1 = u+v$\, is real, and since 
+$$y_{2,\,3} = -\frac{u+v}{2}\pm i\sqrt{3}\cdot\!\frac{u-v}{2},$$
+with\, $u \neq v$, the roots $y_2$ and $y_3$ are non-real complex conjugates of each other.
+\item $D > 0$.\, This requires that $p$ is negative.\, The radicands of the cube roots (3) are non-real complex conjugates.\, Using the argument $\varphi$ of\, $u^3 = -\frac{q}{2}+i\sqrt{-R}$\, as auxiliary angle one is able to \PMlinkname{take the cube roots}{CalculatingTheNthRootsOfAComplexNumber}, obtaining the trigonometric \PMlinkescapetext{presentation}
+$$y_1 \,=\, 2\sqrt{-\frac{p}{3}}\cos\frac{\varphi}{3},\qquad
+y_2 \,=\, 2\sqrt{-\frac{p}{3}}\cos\frac{\varphi+2\pi}{3},\qquad
+y_3 \,=\, 2\sqrt{-\frac{p}{3}}\cos\frac{\varphi+4\pi}{3}.$$
+This shows that the roots of (1) are three distinct real numbers.\, O. L. H\"older has proved in the end of the $19^\mathrm{th}$ century that in this case one can not with algebraic means eliminate the imaginarity from the Cardano's formulae (2), but ``the real roots must be calculated via the non-real numbers''.\, This fact has been known already much earlier and called the {\em casus irreducibilis}.\, It actually coerced the mathematicians to begin to use non-real numbers, i.e. to introduce the complex numbers.
+\end{enumerate}
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Lukuteorian ja korkeamman algebran alkeet}. \,Tiedekirjasto No. 17. \, Kustannusosakeyhti\"o Otava, Helsinki (1950).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

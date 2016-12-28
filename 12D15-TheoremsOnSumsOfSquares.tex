@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremsOnSumsOfSquares}
+\pmcreated{2013-03-22 15:06:04}
+\pmmodified{2013-03-22 15:06:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{theorems on sums of squares}
+\pmrecord{14}{36830}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D15}
+\pmclassification{msc}{16D60}
+\pmclassification{msc}{15A63}
+\pmclassification{msc}{11E25}
+\pmsynonym{Pfister theorem}{TheoremsOnSumsOfSquares}
+\pmrelated{MazursStructureTheorem}
+\pmrelated{SumsOfTwoSquares}
+\pmrelated{StufeOfAField}
+\pmrelated{CayleyDicksonConstruction}
+\pmrelated{CompositionAlgebra}
+\pmrelated{Octonion}
+\pmdefines{Hurwitz theorem}
+\pmdefines{Pfister's theorem}
+\pmdefines{Hilbert's 17th Problem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\begin{document}
+\begin{thm}[\PMlinkescapetext{\textbf{Hurwitz Theorem}}]  Let $F$ be a field with
+characteristic not $2$.  The sum of squares identity of the form
+$$(x_1^2+\cdots+x_n^2)(y_1^2+\cdots+y_n^2)=z_1^2+\cdots+z_n^2$$
+where each $z_k$ is bilinear over $x_i$ and $y_j$ (with coefficients
+in $F$), is possible iff $n=1,2,4,8$.
+\end{thm}
+
+\textbf{Remarks}.
+\begin{enumerate}
+\item When the ground field is $\mathbb{R}$, this theorem is equivalent to the fact that the only normed real division alternative algebra is one of $\mathbb{R}$, $\mathbb{C}$, $\mathbb{H}$, $\mathbb{O}$, as one observes that the sums of squares can be interpreted as the square of the norm defined for each of the above algebras.
+\item An equivalent characterization is that the above four mentioned algebras are the only real composition algebras.
+\end{enumerate}
+
+A generalization of the above is the following:
+
+\begin{thm}[{\textbf{Pfister's Theorem}}]  Let $F$ be a field of
+characteristic not $2$.  The sum of squares identity of the form
+$$(x_1^2+\cdots+x_n^2)(y_1^2+\cdots+y_n^2)=z_1^2+\cdots+z_n^2$$
+where each $z_k$ is a rational function of $x_i$ and $y_j$ (element
+of $F(x_1,\ldots,x_n,y_1,\ldots,y_n)$), is possible iff $n$ is a
+power of $2$.
+\end{thm}
+
+\textbf{Remark}.  The form of Pfister's theorem is stated in a way
+so as to mirror the form of Hurwitz theorem.  In fact, Pfister
+proved the following:  if $F$ is a field and $n$ is a power of 2,
+then there exists a sum of squares identity of the form
+$$(x_1^2+\cdots+x_n^2)(y_1^2+\cdots+y_n^2)=z_1^2+\cdots+z_n^2$$ such
+that each $z_k$ is a rational function of the $x_i$ and a linear
+function of the $y_j$, or that
+$$z_k=\sum_{j=1}^{n}r_{kj}y_j\qquad\mbox{where }r_{kj}\in
+F(x_1,\ldots,x_n).$$  Conversely, if $n$ is not a power of $2$, then
+there exists a field $F$ such that the above sum of square identity
+does not hold for \emph{any} $z_i\in
+F(x_1,\ldots,x_n,y_1,\ldots,y_n)$.  Notice that $z_i$ is no longer
+required to be a linear function of the $y_j$ anymore.
+
+When $F$ is the field of reals $\mathbb{R}$, we have the following
+generalization, also due to Pfister:
+
+\begin{thm}
+If $f\in\mathbb{R}(X_1,\ldots,X_n)$ is positive semidefinite, then
+$f$ can be written as a sum of $2^n$ squares.
+\end{thm}
+
+The above theorem is very closely related to Hilbert's 17th Problem:
+
+{\textbf{Hilbert's 17th Problem.}} \emph{Whether it is possible, to
+write a positive semidefinite rational function in $n$
+indeterminates over the reals, as a sum of squares of rational
+functions in $n$ indeterminates over the reals?}
+
+The answer is yes, and it was proved by Emil Artin in 1927.
+Additionally, Artin showed that the answer is also yes if the reals
+were replaced by the rationals.
+
+
+\begin{thebibliography}{8}
+\bibitem{hurwitz} A. Hurwitz, {\em \"{U}ber die Komposition der quadratishen Formen von beliebig vielen Variabeln}, Nachrichten von der K\"{o}niglichen Gesellschaft der Wissenschaften in G\"{o}ttingen (1898).
+\bibitem{pfister} A. Pfister, {\em Zur Darstellung definiter Funktionen als Summe von Quadraten}, Inventiones Mathematicae (1967).
+\bibitem{rajwade} A. R. Rajwade, {\em Squares}, Cambridge University Press (1993).
+\bibitem{conway} J. Conway, D. A. Smith, {\em On Quaternions and Octonions}, A K Peters, LTD. (2002).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

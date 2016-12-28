@@ -1,0 +1,209 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Interval}
+\pmcreated{2013-03-22 13:44:58}
+\pmmodified{2013-03-22 13:44:58}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{interval}
+\pmrecord{16}{34446}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{26-00}
+\pmclassification{msc}{54C30}
+\pmrelated{OpenSetsInMathbbRnContainsAnOpenRectangle}
+\pmrelated{LineSegment}
+\pmrelated{CircularSegment}
+\pmdefines{open interval}
+\pmdefines{closed interval}
+\pmdefines{half-open interval}
+\pmdefines{right half-open interval}
+\pmdefines{left-half-open interval}
+\pmdefines{segment}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+Loosely speaking, an \emph{interval} is a part of the real numbers
+that start at one number and stops at another number. For instance, 
+all numbers greater that $1$ and smaller than $2$ form in interval.
+Another interval is formed by numbers greater or equal to $1$ and 
+smaller than $2$. Thus, when talking about intervals, it is necessary
+to specify whether the endpoints are part of the interval or not. 
+There are then four types of intervals with three different names: 
+open, closed and half-open. 
+Let us next define these precisely. 
+
+\begin{enumerate}
+\item The open interval contains neither of the endpoints. 
+If $a$ and $b$ are real numbers, then the \emph{open interval} of 
+numbers between $a$ and $b$ is written as $(a,b)$ and
+$$(a,b)=\{ x\in \sR \mid a<x<b\}.$$ 
+\item The closed interval contains both endpoints.
+If $a$ and $b$ are real numbers, then the \emph{closed interval} 
+is written as $[a,b]$ and
+$$[a,b]=\{ x\in \sR \mid a\le x\le b\}.$$ 
+\item A half-open interval contains only one of 
+the endpoints. 
+If $a$ and $b$ are real numbers, the \emph{half-open intervals}
+$(a,b]$ and $[a,b)$ are defined as
+\begin{eqnarray*}
+ (a,b] &=& \{ x\in \sR \mid a<x\le b\},\\
+ \,\![a,b) &=&  \{ x\in \sR \mid a\le x< b\}. 
+\end{eqnarray*}
+\end{enumerate}
+
+Note that this definition includes the empty set as an interval by, for example, taking the interval $(a,a)$ for any $a$.
+
+An interval is a subset $S$ of a totally ordered set $T$ with the property that whenever $x$ and $y$ are in $S$ and $x < z < y$ then $z$ is in $S$. Applied to the real numbers, this encompasses open, closed, half-open, half-infinite, infinite, empty, and one-point intervals. All the various different types of interval in $\mathbb{R}$ have this in common. Intervals in $\mathbb{R}$ are connected under the usual topology.
+
+There is a standard way of graphically representing intervals
+on the real line using filled and empty circles. This is illustrated in
+the below figures:
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.1.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.2.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.3.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.4.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+The logic is here that a empty circle represent a point not belonging 
+to the interval, while a filled circle represents a point belonging
+to the interval. For example, the first interval is an open interval.
+
+\subsubsection*{Infinite intervals}
+If we allow either (or both) of $a$ and $b$ to be infinite, then we
+define
+\begin{eqnarray*}
+(a,\infty) &=& \{ x\in \sR \mid x> a\}, \\
+\,\![a,\infty) &=& \{ x\in \sR \mid x\ge  a\}, \\
+(-\infty, a) &=& \{ x\in \sR \mid x< a\}, \\
+(-\infty, a] &=& \{ x\in \sR \mid x\le  a\}, \\
+(-\infty, \infty) &=& \sR.
+\end{eqnarray*}
+
+The graphical representation of infinite intervals is as follows:
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.5.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.6.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.7.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.8.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+\begin{figure}[!htb]
+\begin{center}
+\includegraphics{intervals.9.eps}
+\end{center}
+%\caption{..}
+\end{figure}
+
+\subsubsection*{Note on naming and notation}
+In \cite{rudin, rudin_real}, an open interval is always called
+a \emph{segment}, and a closed interval is called simply an interval.
+However, the above naming with open, closed, and half-open interval seems
+to be more widely adopted. 
+See e.g. \cite{adams, beta, silverman}. To distinguish between $[a,b)$ and
+$(a,b]$, the former is sometimes called a \emph{right half-open interval } and
+the latter a \emph{left half-open interval} \cite{igari}. 
+The notation $(a,b)$, $[a,b)$, $(a,b]$, $[a,b]$ seems to be standard. However,  
+some authors (especially from the French school) use notation
+$]a,b[$, $[a,b[$, $]a,b]$, $[a,b]$ instead of the above (in the same \PMlinkescapetext{order}). Bourbaki, for example, uses this notation.
+
+{\it This entry contains content adapted from the Wikipedia article \PMlinkexternal{Interval (mathematics)}{http://en.wikipedia.org/wiki/Interval_(mathematics)} as of November 10, 2006.}
+
+\begin{thebibliography}{9}
+ \bibitem{rudin}
+ W. Rudin, \emph{Principles of Mathematical Analysis}, McGraw-Hill Inc., 1976.
+ \bibitem{rudin_real}
+ W. Rudin, \emph{Real and complex analysis}, 3rd ed., McGraw-Hill Inc., 1987.
+\bibitem{adams} R. Adams, \emph{Calculus, a complete course},
+ Addison-Wesley Publishers Ltd., 3rd ed., 1995.
+\bibitem{beta} L. R\r{a}de, B. Westergren,
+ \emph{Mathematics Handbook for Science and Engineering},
+ Studentlitteratur, 1995.
+ \bibitem{silverman}
+R.A. Silverman, \emph{Introductory Complex Analysis}, 
+Dover Publications, 1972.
+\bibitem{igari} S. Igari, \emph{Real analysis - With an introduction to Wavelet Theory}, American Mathematical Society, 1998.
+\end{thebibliography}
+
+The metapost code for the figures can be found
+\PMlinkexternal{here}{http://aux.planetmath.org/files/objects/4446/}.
+%%%%%
+%%%%%
+\end{document}

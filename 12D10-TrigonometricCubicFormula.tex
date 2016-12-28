@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TrigonometricCubicFormula}
+\pmcreated{2013-03-22 15:02:07}
+\pmmodified{2013-03-22 15:02:07}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{trigonometric cubic formula}
+\pmrecord{10}{36746}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmsynonym{Alternate cubic formula}{TrigonometricCubicFormula}
+%\pmkeywords{Polynomial}
+%\pmkeywords{Cubic}
+%\pmkeywords{Roots}
+%\pmkeywords{Zeros}
+\pmrelated{CardanosFormulae}
+
+
+\begin{document}
+Given a cubic polynomial of the form $f(X)=X^3+aX^2+bX+c=0$,  one may reduce $f(x)$ via the substitution $X\rightarrow (x-a/3)$ to obtain $\tilde{f}(x)=f(x-a/3)$ where the reduced polynomial may be represented 
+
+\begin{equation}\tilde{f}(x)=x^3+qx+r\end{equation}  
+
+The roots to (1) are given by Vi\'{e}te in the following cases:\\
+
+\textbf{Case I}  The roots of $\tilde{f}(x)$ are real:\\
+Define $t\equiv\sqrt{-4q/3}$ and $\alpha=\arccos(-4r/t^3)$.
+Then the roots of $\tilde{f}(x)$ are
+$$t\cos(\alpha/3),\quad t\cos(\alpha/3+2\pi/3), \quad t\cos(\alpha/3+4\pi/3)$$
+
+\vspace{15pt}
+
+\textbf{Case II} The roots of $\tilde{f}(x)$ are complex:\\
+Keeping the definition of $t$ from Case I, if $-4q/3\geq 0$, then the real root of $\tilde{f}(x)$ is
+$$t\cosh(\beta/3)\quad \textrm{where}\quad \cosh(\beta)=(-4r/t^3)$$\\   
+
+If $-4q/3< 0$, then the real root of $\tilde{f}(x)$ is
+$$t\sinh(\gamma/3)\quad \textrm{where}\quad \sinh(\gamma)=(-4r/t^3)$$
+One may then inverse transform the roots of $\tilde{f}(x)$ to obtain the roots of the desired cubic $f(x)$ 
+
+We note there are no other cases for the possibilities of the roots of a cubic (i.e. there is no instance where one finds one complex and two real roots).  This result is intuitively obvious after graphing cubic polynomials and taking into account that imaginary roots may only occur in conjugate pairs.
+%%%%%
+%%%%%
+\end{document}

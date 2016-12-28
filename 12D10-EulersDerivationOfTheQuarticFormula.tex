@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EulersDerivationOfTheQuarticFormula}
+\pmcreated{2013-03-22 17:51:58}
+\pmmodified{2013-03-22 17:51:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Euler's derivation of the quartic formula}
+\pmrecord{10}{40344}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmsynonym{quartic formula by Euler}{EulersDerivationOfTheQuarticFormula}
+\pmrelated{TchirnhausTransformations}
+\pmrelated{CasusIrreducibilis}
+\pmrelated{ZeroRuleOfProduct}
+\pmrelated{ErnstLindelof}
+\pmrelated{KalleVaisala}
+\pmrelated{BiquadraticEquation2}
+\pmrelated{SymmetricQuarticEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let us consider the quartic equation
+\begin{align}
+y^4+py^2+qy+r = 0,
+\end{align}
+where $p,\,q,\,r$ are arbitrary known complex numbers.\, We substitute in the equation
+\begin{align}
+y := u+v+w.
+\end{align}
+We get firstly\\
+$y^2 = (u^2+v^2+w^2)+2(vw+wu+uv),$\\
+$y^4 = (u^2+v^2+w^2)^2+4(u^2+v^2+w^2)(vw+wu+uv)+4(v^2w^2+w^2u^2+u^2v^2)+8uvw(u+v+w).$
+
+Thus (1) attains the form 
+$$4(v^2w^2+w^2u^2+u^2v^2)+(u^2+v^2+w^2)^2+p(u^2+v^2+w^2)+r \qquad\;$$
+$$+(vw+wu+uv)[4(u^2+v^2+w^2)+2p]+(u+v+w)[8uvw+q] = 0.$$
+When $u,\,v,\,w$ are determined so that
+\begin{align}
+u^2+v^2+w^2 = -\frac{p}{2},
+\end{align}
+\begin{align}
+uvw = -\frac{q}{8},
+\end{align}
+the expressions in the brackets vanish and our equation shrinks to the form
+\begin{align}
+v^2w^2+w^2u^2+u^2v^2 = \frac{p^2-4r}{16}.
+\end{align}
+Squaring (4) gives
+\begin{align}
+u^2v^2w^2 = \frac{q^2}{64}.
+\end{align}
+The left hand sides of (3), (5) and (6) are the elementary symmetric polynomials of $u^2$, $v^2$, $w^2$, whence these three squares are the roots $z_1$, $z_2$, $z_3$ of the so-called cubic resolvent equation
+\begin{align}
+z^3+\frac{p}{2}z^2+\frac{p^2-4r}{16}z-\frac{q^2}{64} = 0.
+\end{align}
+Therefore we may write
+$$u = \pm\sqrt{z_1}, \quad v = \pm\sqrt{z_2}, \quad w = \pm\sqrt{z_3}.$$
+All 8 sign combinations of those square roots satisfy the equations (3), (5), (6).  In order to satisfy also (4) the signs must be chosen suitably.\, If\, $u_0,\,v_0,\,w_0$ is some suitable combination of the values of the square roots, then all possible combinations are
+$$u_0,\,v_0,\,w_0;\quad u_0,\,-v_0,\,-w_0;\quad -u_0,\,v_0,\,-w_0;\quad -u_0,\,-v_0,\,w_0.$$ 
+
+Accordingly, we have the 
+
+\textbf{Theorem} (Euler 1739).\, The roots of the equation (1) are
+\begin{align}
+\begin{cases}
+y_1 = \;\;u_0+v_0+w_0,\\
+y_2 = \;\;u_0-v_0-w_0,\\
+y_3 = -u_0+v_0-w_0,\\
+y_4 = -u_0-v_0+w_0,
+\end{cases}
+\end{align}
+where $u_0,\,v_0,\,w_0$ are square roots of the roots of the cubic resolvent (7).\, The signs of the square roots must be chosen such that 
+$$u_0v_0w_0 = -\frac{q}{8}.\\$$
+
+
+The equations (8) imply an important formula
+\begin{align*}
+(y_1-y_2)(y_1-y_3)(y_1-y_4)(y_2-y_3)(y_2-y_4)(y_3-y_4) = & -2^6(v_0^2-w_0^2)(w_0^2-u_0^2)(u_0^2-v_0^2)\\ =
+& -64(z_2-z_3)(z_3-z_1)(z_1-z_2),
+\end{align*}
+which yields the
+
+\textbf{Corollary.}\, A quartic equation has a multiple root always and only when its cubic resolvent has such one.
+
+
+\begin{thebibliography}{9}
+\bibitem{J} {\sc Ernst Lindel\"of}: {\em Johdatus korkeampaan analyysiin}. Fourth edition. Werner S\"oderstr\"om Osakeyhti\"o, Porvoo ja Helsinki (1956).
+\bibitem{K.V.} {\sc K. V\"ais\"al\"a}: {\em Lukuteorian ja korkeamman algebran alkeet}.\, Tiedekirjasto No. 17.\quad  Kustannusosakeyhti\"o Otava, Helsinki (1950).
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

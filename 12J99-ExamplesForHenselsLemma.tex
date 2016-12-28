@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesForHenselsLemma}
+\pmcreated{2013-03-22 15:08:36}
+\pmmodified{2013-03-22 15:08:36}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples for Hensel's lemma}
+\pmrecord{6}{36888}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J99}
+\pmclassification{msc}{11S99}
+\pmclassification{msc}{13H99}
+%\pmkeywords{2-adic roots}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{exa}
+Let $p$ be a prime number greater than $2$. Are there solutions to $x^2+7=0$ in the field $\Rats_p$ (the \PMlinkname{$p$-adic numbers}{PAdicIntegers})? If there are, $-7$ must be a quadratic residue modulo $p$. Thus, let $p$ be a prime such that 
+$$\left( \frac{-7}{p} \right)=1$$
+where $( \frac{\cdot}{p} )$ is the Legendre symbol. Hence, there exist $\alpha_0\in \Ints$ such that $\alpha_0^2\equiv -7 \mod p$. We claim that $x^2+7=0$ has a solution in $\Rats_p$ if and only if $-7$ is a quadratic residue modulo $p$. Indeed, if we let $f(x)=x^2+7$ (so $f'(x)=2x$), the element $\alpha_0\in \Ints_p$ satisfies the conditions of the (trivial case of) Hensel's lemma. Therefore there exist a root $\alpha\in \Rats_p$ of $x^2+7=0$. \\
+\end{exa}
+
+\begin{exa}
+Let $p=2$. Are there any solutions to $x^2+7=0$ in $\Rats_2$? Notice that if we let $f(x)=x^2+7$, then $f'(x)=2x$ and for any $\alpha_0\in \Ints_2$, the number $f'(\alpha_0)=2\alpha_0$ is congruent to $0$ modulo $2$. Thus, we cannot use the trivial case of Hensel's lemma.
+
+Let $\alpha_0=1\in \Ints_2$. Notice that $f(1)=8$ and $f'(1)=2$. Thus
+$$|8|_2<|2^2|_2$$
+and the general case of Hensel's lemma applies. Hence, there exist a $2$-adic solution to $x^2+7=0$. The following is the \PMlinkname{$2$-adic canonical form}{PAdicCanonicalForm} for one of the solutions:
+$$\alpha=1+1\cdot 2^3+1\cdot 2^4 +\ldots=\ldots 11001$$
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

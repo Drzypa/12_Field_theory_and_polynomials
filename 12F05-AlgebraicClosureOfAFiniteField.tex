@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicClosureOfAFiniteField}
+\pmcreated{2013-03-22 16:40:51}
+\pmmodified{2013-03-22 16:40:51}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{algebraic closure of a finite field}
+\pmrecord{5}{38889}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmrelated{FiniteField}
+\pmrelated{FiniteFieldCannotBeAlgebraicallyClosed}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Fix a prime $p$ in $\mathbb{Z}$.  Then the Galois fields $GF(p^e)$ denotes the
+finite field of order $p^e$, $e\geq 1$.  This can be concretely constructed as 
+the splitting field of the polynomials $x^{p^e}-x$ over $\mathbb{Z}_p$.  In so doing we
+have $GF(p^{e})\subseteq GF(p^{f})$ whenever $e|f$.  In particular, we have an
+infinite chain:
+\[GF(p^{1!})\subseteq GF(p^{2!})\subseteq GF(p^{3!})\subseteq\cdots \subseteq
+    GF(p^{n!})\subseteq\cdots.\]
+So we define $\displaystyle GF(p^{\infty})=\bigunion_{n=1}^\infty GF(p^{n!})$.
+
+\begin{thm}
+$GF(p^{\infty})$ is an algebraically closed field of characteristic $p$.
+Furthermore, $GF(p^e)$ is a contained in $GF(p^{\infty})$ for all $e\geq 1$.
+Finally, $GF(p^\infty)$ is the algebraic closure of $GF(p^e)$ for any $e\geq 1$.
+\end{thm}
+\begin{proof}
+Given elements $x,y\in GF(p^\infty)$ then there exists some $n$ such that
+$x,y\in GF(p^{n!})$.  So $x+y$ and $xy$ are contained in $GF(p^{n!})$ and also
+in $GF(p^\infty)$.  The properties of a field are thus inherited and we have
+that $GF(p^\infty)$ is a field.  Furthermore, for any $e\geq 1$, $GF(p^e)$ is
+contained in $GF(p^{e!})$ as $e|e!$, and so $GF(p^e)$ is contained in $GF(p^\infty)$.
+
+Now given $p(x)$ a polynomial over $GF(p^\infty)$ then there exists some $n$ 
+such that $p(x)$ is a polynomial over $GF(p^{n!})$.  As the splitting field 
+of $p(x)$ is a finite extension of $GF(p^{n!})$, so it is a finite field 
+$GF(p^{e})$ for some $e$, and hence contained in $GF(p^\infty)$.  Therefore 
+$GF(p^\infty)$ is algebraically closed.
+\end{proof}
+
+We say $GF(p^\infty)$ is \emph{the} algebraic closure indicating that up to field 
+isomorphisms, there is only one algebraic closure of a field.  The actual objects 
+and constructions may vary.
+
+\begin{coro}
+The algebraic closure of a finite field is countable.
+\end{coro}
+\begin{proof}
+By construction the algebraic closure is a countable union of finite sets so
+it is countable.
+\end{proof}
+
+\bibliographystyle{amsplain}
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+\href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{McDonald}
+McDonald, Bernard R.,
+\emph{Finite rings with identity}, Pure and Applied Mathematics, Vol. 28,
+Marcel Dekker Inc., New York, 1974, p. 48.
+
+\end{thebibliography}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

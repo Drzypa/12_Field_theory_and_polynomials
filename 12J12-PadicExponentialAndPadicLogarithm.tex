@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PadicExponentialAndPadicLogarithm}
+\pmcreated{2013-03-22 15:13:50}
+\pmmodified{2013-03-22 15:13:50}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{p-adic exponential and p-adic logarithm}
+\pmrecord{6}{37000}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J12}
+\pmclassification{msc}{11S99}
+\pmclassification{msc}{11S80}
+\pmsynonym{$p$-adic exponential}{PadicExponentialAndPadicLogarithm}
+\pmsynonym{$p$-adic logarithm}{PadicExponentialAndPadicLogarithm}
+\pmrelated{PAdicRegulator}
+\pmrelated{PAdicAnalytic}
+\pmrelated{GeneralPower}
+\pmdefines{general $p$-adic power}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem*{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+Let $p$ be a prime number and let $\Complex_p$ be the field of \PMlinkname{complex $p$-adic numbers}{ComplexPAdicNumbers5}.
+
+\begin{defn}
+The $p$-adic exponential is a function $\exp_p\colon R \to \Complex_p$ defined by
+$$\exp_p(s)=\sum_{n=0}^\infty \frac{s^n}{n!}$$
+where $$R=\{ s\in \Complex_p : |s|_p<\frac{1}{p^{1/(p-1)}}\}.$$ 
+\end{defn}
+
+The domain of $\exp_p$ is restricted because the radius of convergence of the series $\sum_{n=0}^\infty z^n/n!$ over $\Complex_p$ is precisely $r=p^{-1/(p-1)}$. Recall that, for $z\in \Rats_p$, we define 
+$$|z|_p=\frac{1}{p^{\nu_p(z)}}$$
+where $\nu_p(z)$ is the largest exponent $\nu$ such that $p^\nu$ divides $z$. For example, if $p\geq 3$, then $\exp_p$ is defined over $p\Ints_p$. However, $e=\exp_p(1)$ is never defined, but $\exp_p(p)$ is well-defined over $\Complex_p$ (when $p=2$, the number $e^4\in \Complex_2$ because $|4|_2=0.25<0.5=r$).
+
+\begin{defn}
+The $p$-adic logarithm is a function $\log_p\colon S\to \Complex_p$ defined by
+$$\log_p(1+s)=\sum_{n=1}^\infty (-1)^{n+1}\frac{s^n}{n}$$
+where
+$$S=\{ s\in \Complex_p : |s|_p<1\}.$$
+We extend the $p$-adic logarithm to the entire $p$-adic complex field $\Complex_p$ as follows. One can show that:
+$$\Complex_p=\{ p^t\cdot w\cdot u: t\in \Rats,\ w\in W,\ u\in U\}=p^{\Rats}\times W \times U$$
+where $W$ is the group of all roots of unity of order prime to $p$ in $\Complex_p^\times$ and $U$ is the open circle of radius centered at $z=1$:
+$$U=\{ s\in \Complex_p : |s-1|_p < 1\}.$$
+We define $\log_p\colon \Complex_p \to \Complex_p$ by:
+$$\log_p(s)=log_p(u)$$
+where $s=p^r\cdot w \cdot u$, with $w\in W$ and $u\in U$.
+\end{defn}
+
+\begin{prop}[Properties of $\exp_p$ and $\log_p$]
+With $\exp_p$ and $\log_p$ defined as above:
+\begin{enumerate}
+\item If $\exp_p(s)$ and $\exp_p(t)$ are defined then $\exp_p(s+t)=\exp_p(s)\exp_p(t)$.
+\item $\log_p(s)=0$ if and only if $s$ is a rational power of $p$ times a root of unity.
+\item $\log_p(xy)=\log_p(x)+\log_p(y)$, for all $x$ and $y$.
+\item If $|s|_p<p^{-1/(p-1)}$ then 
+$$\exp_p(\log_p(1+s))=1+s,\quad \log_p(\exp_p(s))=s.$$
+\end{enumerate}
+
+\end{prop}
+
+In a similar way one defines the general $p$-adic power by:
+$$s^z=\exp_p(z\log_p(s))$$
+where it makes sense.
+%%%%%
+%%%%%
+\end{document}

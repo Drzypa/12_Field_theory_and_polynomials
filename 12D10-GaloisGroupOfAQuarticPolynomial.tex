@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaloisGroupOfAQuarticPolynomial}
+\pmcreated{2013-03-22 17:41:35}
+\pmmodified{2013-03-22 17:41:35}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Galois group of a quartic polynomial}
+\pmrecord{7}{40134}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Order}[1]{\lvert #1 \rvert}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\subgroup}{\leq}
+\begin{document}
+\PMlinkescapeword{addition}
+\PMlinkescapeword{class}
+Consider a general (monic) quartic polynomial over $\Rats$
+\[f(x)=x^4 + ax^3+bx^2+cx+d\]
+and denote the Galois group of $f(x)$ by $G$.
+
+The Galois group $G$ is isomorphic to a subgroup of $S_4$ (see the article on the Galois group of a cubic polynomial for a discussion of this question). 
+
+If the quartic splits into a linear factor and an irreducible cubic, then its Galois group is simply the Galois group of the cubic portion and thus is isomorphic to a subgroup of $S_3$ (embedded in $S_4$) - again, see the article on the Galois group of a cubic polynomial.
+
+If it factors as two irreducible quadratics, then the splitting field of $f(x)$ is the compositum of $\Rats(\sqrt{D_1})$ and $\Rats(\sqrt{D_2})$, where $D_1$ and $D_2$ are the discriminants of the two quadratics. This is either a biquadratic extension and thus has Galois group isomorphic to $V_4$, or else $D_1D_2$ is a square, and $\Rats(\sqrt{D_1},\sqrt{D_2})=\Rats(\sqrt{D_1})$ and the Galois group  is isomorphic to $\Ints/2\Ints$.
+
+This leaves us with the most interesting case, where $f(x)$ is irreducible. In this case, the Galois group acts transitively on the roots of $f(x)$, so it must be isomorphic to a \PMlinkname{transitive}{GroupAction} subgroup of $S_4$. The transitive subgroups of $S_4$ are
+\begin{align*}
+S_4&\\
+A_4&\\
+D_8&\cong\{e,\ (1234),\ (13)(24),\ (1432),\ (12)(34),\ (14)(23),\ (13),\ (24)\}\text{ and its conjugates}\\
+V_4&\cong\{e,\ (12)(34),\ (13)(24),\ (14)(23)\}\\
+\Ints/4\Ints &\cong \{e,\ (1234),\ (13)(24),\ (1432)\}\text{ and its conjugates}
+\end{align*}
+We will see that each of these transitive subgroups actually appears as the Galois group of some class of irreducible quartics.
+
+The resolvent cubic of $f(x)$ is
+\[C(x) = x^3 - 2b x^2 + (b^2+ac-4d) x + (c^2+a^2d - abc)\]
+and has roots
+\begin{gather*}
+r_1=(\alpha_1+\alpha_2)(\alpha_3+\alpha_4)\\
+r_2=(\alpha_1+\alpha_3)(\alpha_2+\alpha_4)\\
+r_3=(\alpha_1+\alpha_4)(\alpha_2+\alpha_3)
+\end{gather*}
+But then a short computation shows that the discriminant $D$ of $C(x)$ is the same as the discriminant of $f(x)$. Also, since $r_1,r_2,r_3\in\Rats(\alpha_1,\alpha_2,\alpha_3,\alpha_4)$, it follows that the splitting field of $C(x)$ is a subfield of the splitting field of $f(x)$ and thus that the Galois group of $C(x)$ is a quotient of the Galois group of $f(x)$. There are four cases:
+
+\begin{itemize}
+
+\item If $C(x)$ is irreducible, and $D$ is not a rational square, then $G$ does not fix $D$ and thus is not contained in $A_4$. But in this case, where $D$ is not a square, the Galois group of $C(x)$ is $S_3$, which has order $6$. The only subgroup of $S_4$ not contained in $A_4$ with order a multiple of $6$ (and thus capable of having a subgroup of index $6$) is $S_4$ itself, so in this case $G\cong S_4$.
+
+\item If $C(x)$ is irreducible but $D$ is a rational square, then $G$ fixes $D$, so $G\subgroup A_4$. In addition, the Galois group of $C(x)$ is $A_3$, so $3$ divides the order of a transitive subgroup of $A_4$, which means that $G\cong A_4$ itself.
+
+\item If $C(x)$ is reducible, suppose first that it splits completely in $\Rats$. Then each of $r_1,r_2,r_3\in \Rats$ and thus each element of $G$ fixes each $r_i$. Thus $G\cong V_4$.
+
+\item Finally, if $C(x)$ splits into a linear factor and an irreducible quadratic, then one of the $r_i$, say $r_2$, is in $\Rats$. Then $G$ fixes $r_2=(\alpha_1+\alpha_3)(\alpha_2+\alpha_4)$ but not $r_1$ or $r_3$. The only possibilities from among the transitive groups are then that $G\cong D_8$ or $G\cong \Ints/4\Ints$. In this case, the discriminant of the quadratic is not a rational square, but it is a rational square times $D$.
+
+Now, $G\cap A_4$ fixes $\Rats(\sqrt{D})$, since $G$ fixes $\sqrt{D}$ up to sign and $A_4$ restricts our attention to even permutations. But $\Order{G:G\cap A_4}=2$, so the fixed field of $G\cap A_4$ has dimension $2$ over $\Rats$ and thus is exactly $\Rats(\sqrt{D})$. If $G\cong D_8$, then $G\cap A_4\cong V_4$, while if $G\cong \Ints/4\Ints$, then $G\cap A_4\cong \Ints/2\Ints$; in the first case only, $G\cap A_4$ acts transitively on the roots of $f(x)$. Thus $G\cap A_4\cong V_4$ if and only if $f(x)$ is irreducible over $\Rats(\sqrt{D})$.
+\end{itemize}
+
+So, in summary, for $f(x)$ irreducible, we have the following:
+\begin{center}
+\begin{tabular}{lc}
+Condition & Galois group\\
+\hline
+$C(x)$ irreducible, $D$ not a rational square & $S_4$\\
+$C(x)$ irreducible, $D$ a rational square & $A_4$\\
+$C(x)$ splits completely & $V_4$\\
+$C(x)$ factors as linear times irreducible quadratic, $f(x)$ irreducible over $\Rats(\sqrt{D})$ & $D_8$\\
+$C(x)$ factors as linear times irreducible quadratic, $f(x)$ reducible over $\Rats(\sqrt{D})$ & $\Ints/4\Ints$
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{10}
+\bibitem{dummit}
+D.S.~Dummit, R.M.~Foote, \emph{Abstract Algebra}, Wiley and Sons, 2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

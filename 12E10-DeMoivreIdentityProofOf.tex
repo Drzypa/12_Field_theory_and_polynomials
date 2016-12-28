@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DeMoivreIdentityProofOf}
+\pmcreated{2013-03-22 14:34:08}
+\pmmodified{2013-03-22 14:34:08}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{de Moivre identity, proof of}
+\pmrecord{10}{36126}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E10}
+\pmsynonym{proof of de Moivre's formula}{DeMoivreIdentityProofOf}
+\pmsynonym{proof of de Moivre's theorem}{DeMoivreIdentityProofOf}
+\pmrelated{AngleSumIdentity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{side}
+\PMlinkescapeword{sides}
+
+To prove the de Moivre identity, we will first prove by induction on $n$ 
+that the identity holds for all natural numbers.  
+
+For the case $n=0$, observe that
+\[
+\cos (0\theta) + i \sin (0\theta) = 1 + i 0 = \left(\cos (\theta) + i \sin (\theta)\right)^0.
+\]
+
+Assume that the identity holds for a certain value of $n$:
+\[
+\cos (n \theta) + i \sin (n \theta) = \left( \cos (\theta) + i \sin (\theta) \right)^n.
+\]
+Multiply both sides of this identity by $\cos (\theta) + i \sin (\theta)$ 
+and expand the left side to obtain
+\begin{align*}
+\cos (\theta) \cos (n \theta) - \sin (\theta) \sin (n \theta) + i \cos (\theta) \sin (n \theta) + i \sin (\theta) \cos (n \theta)
+&= \left( \cos (\theta) + i \sin (\theta) \right) \left( \cos (n \theta) + i \sin (n \theta) \right) \\
+&= \left( \cos (\theta) + i \sin (\theta) \right)^{n+1}.
+\end{align*}
+By the angle sum identities,
+\begin{align*}
+\cos (\theta) \cos (n \theta) - \sin (\theta) \sin (n \theta) &= \cos (n \theta + \theta) \\
+\cos (\theta) \sin (n \theta) + \sin (\theta) \cos (n \theta) &= \sin (n \theta + \theta)
+\end{align*}
+Therefore,
+\[
+\cos ((n + 1) \theta) + i \sin ((n + 1) \theta) = \left( \cos (\theta) + i \sin (\theta) \right)^{n+1}.
+\]
+
+Hence by induction de Moivre's identity holds for all natural $n$.
+
+Now let $-n$ be any negative integer.  Then using the fact that $\cos$ is an even and $\sin$ an odd function, we obtain that
+\begin{align*}
+\cos (-n \theta) + i \sin (-n \theta) 
+&= \cos (n \theta) - i \sin (n \theta) \\
+&= \frac{\cos (n \theta) - i \sin (n \theta)}{\cos^2 (n \theta) + \sin^2 (n \theta)} \\
+&= \frac{1}{\cos (n \theta) + i \sin (n \theta)} \cdot
+   \frac{\cos (n \theta) - i \sin (n \theta)}{\cos (n \theta) - i \sin (n \theta)} \\
+&= \frac{1}{\cos (n \theta) + i \sin (n \theta)},
+\end{align*}
+the denominator of which is $\left( \cos (n \theta) + i \sin ( n \theta) \right)^n$.  Hence 
+\[
+\cos (-n \theta) + i \sin (-n \theta) = \left( \cos (\theta) + i \sin (\theta) \right)^{-n}.
+\]
+%%%%%
+%%%%%
+\end{document}

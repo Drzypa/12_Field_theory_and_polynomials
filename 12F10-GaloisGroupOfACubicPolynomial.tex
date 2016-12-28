@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaloisGroupOfACubicPolynomial}
+\pmcreated{2013-03-22 17:40:33}
+\pmmodified{2013-03-22 17:40:33}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Galois group of a cubic polynomial}
+\pmrecord{10}{40115}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmclassification{msc}{12D10}
+\pmrelated{CardanosFormulae}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\DeclareMathOperator{\Gal}{Gal}
+
+\begin{document}
+\begin{defn} If $f(x)\in k[x]$, the \emph{Galois group of $f(x)$} is the Galois group $\Gal(K/k)$ of a splitting field $K$ of $f(x)$.
+\end{defn}
+
+\begin{thm} For $f(x)\in k[x]$, the Galois group of $f(x)$ permutes the set of roots of $f(x)$. Therefore, if the roots of $f(x)$ are $\alpha_1,\ldots,\alpha_n\in K$, the Galois group of $f(x)$ is isomorphic to a subgroup of $S_n$.
+\end{thm}
+\textbf{Proof.} $K=k(\alpha_1,\ldots,\alpha_n)$, so any automorphism $\sigma$ of $K$ fixing $k$ is determined by the image of each $\alpha_i$. But $\sigma$ must take each $\alpha_i$ to some $\alpha_j$ (where possibly $i=j$), since $\sigma$ is a homomorphism of $K$ and thus $f(\sigma(\alpha_i))=\sigma(f(\alpha_i))=0$. Thus $\sigma$ permutes the roots of $f(x)$ and is determined by the resulting permutation.
+
+We now restrict our attention to the case $k=\Rats$. If $f(x)\in\Rats[x]$ is a cubic, its Galois group is a subgroup of $S_3$. We can then use the knowledge of the group structure of $S_3$ to anticipate the possible Galois groups of a cubic polynomial. There are six subgroups of $S_3$, and the three subgroups of order $2$ are conjugate. This leaves four essentially different subgroups of $S_3$: the trivial group, the group $\langle(1,2)\rangle$ that consists of a single transposition, the group $A_3=\langle (1,2,3)\rangle$, and the full group $S_3$. All four of these groups can in fact appear as the Galois group of a cubic.
+
+Let $K$ be a splitting field of $f(x)$ over $\Rats$.
+
+If $f(x)$ splits completely in $\Rats$, then $K=\Rats$ and so the Galois group of $f(x)$ is trivial. So any cubic (in fact, a polynomial of any degree) that factors completely into linear factors in $\Rats$ will have trivial Galois group.
+
+If $f(x)$ factors into a linear and an irreducible quadratic term, then $K=\Rats(\sqrt{D})$, where $D$ is the discriminant of the quadratic.  Hence $[K:\Rats]=2$ and the order of $\Gal(K/\Rats)$ is $2$, so $\Gal(K/\Rats)\cong \langle1,2\rangle\cong\Ints/2\Ints$; the nontrivial element of the Galois group takes each root of the quadratic to its complex conjugate (i.e. it maps $\sqrt{D}\mapsto -\sqrt{D}$). Thus any cubic that has exactly one rational root will have Galois group isomorphic to $\langle 1,2\rangle\cong \Ints/2\Ints$.
+
+The Galois groups $A_3$ and $S_3$ arise when considering irreducible cubics. Let $f(x)$ be irreducible with roots $r_1, r_2, r_3$. Since $f$ is irreducible, the roots are distinct. Thus $\Gal(K/\Rats)$ has at least $3$ elements, since the image of $r_1$ may be any of the three roots. Since $\Gal(K/\Rats)\subset S_3$, it follows that $\Gal(K/\Rats)\cong A_3$ or $\Gal(K/\Rats)\cong S_3$ and thus by the fundamental theorem of Galois theory that $[K:\Rats]=3$ or $6$.
+
+Now, the discriminant of $f$ is
+\[D=\prod_{i<j} (r_i-r_j)^2\]
+This is a symmetric polynomial in the $r_i$. The coefficients of $f(x)$ are the elementary symmetric polynomials in the $r_i$: if $f(x)=x^3+ax^2+bx+c$, then
+\begin{gather*}
+c=r_1r_2r_3\\
+b=-(r_1r_2+r_1r_3+r_2r+3)\\
+a=r_1+r_2+r_3
+\end{gather*}
+Thus $D$ can be written as a polynomial in the coefficients of $f$, so $D\in\Rats$. $D\neq 0$ since $f(x)$ is irreducible and therefore has distinct roots; also clearly $\sqrt{D}\in K$ and thus $\Rats(r_1,\sqrt{D})\subset K$. If $f(x)=x^3+ax^2+bx+c$, then its discriminant $D$ is $18abc + a^2 b^2 - 4b^3 - 4a^3 c - 27 c^2$ (see the article on the discriminant for a longer discussion).
+
+If $\sqrt{D}\notin\Rats$, it follows that $\sqrt{D}$ has degree $2$ over $\Rats$, so that $[\Rats(r_1,\sqrt{D}):\Rats]=6$. Hence $K=\Rats(r_1,\sqrt{D})$, so we can derive the splitting field for $f$ by adjoining any root of $f$ and the square root of the discriminant. This can happen for either positive or negative $D$, clearly. 
+Note in particular that if $D<0$, then $\sqrt{D}$ is imaginary and thus $K$ is not a real field, so that $f$ has one real and two imaginary roots. So any cubic with only one real root has Galois group $S_3$.
+
+If $\sqrt{D}\in\Rats$, then any element of $\Gal(K/\Rats)$ must fix $\sqrt{D}$. But a transposition of two roots does not fix $\sqrt{D}$ - for example, the map
+\[r_1\mapsto r_2, \qquad r_2\mapsto r_1, \qquad r_3\mapsto r_3\]
+takes 
+\[\sqrt{D}=(r_1-r_2)(r_1-r_3)(r_2-r_3)\mapsto (r_2-r_1)(r_2-r_3)(r_1-r_3)=-\sqrt{D}\]
+Then $\Gal(K/\Rats)$ does not include transpositions and so it must in this case be isomorphic to $A_3$. Thus $[K:\Rats]=3$, so $K=\Rats(r_1)=\Rats(r_1,\sqrt{D})$ since $\sqrt{D}\in\Rats$. This proves:
+
+\begin{thm} Let $f(x)\in\Rats[x]$ be an irreducible cubic and $K$ its splitting field. Then if $\alpha$ is any root of $f$,
+\[K=\Rats(\alpha,\sqrt{D})\]
+where $D$ is the discriminant of $f$. Thus if $\sqrt{D}$ is rational, $[K:\Rats]=3$ and the Galois group is isomorphic to $A_3$, otherwise $[K:\Rats]=6$ and the Galois group is isomorphic to $S_3$.
+\end{thm}
+
+Thus if $f$ is an irreducible cubic with Galois group $A_3$, it must have three real roots. However, the converse does not hold (see Example 4 below).
+
+\PMlinkescapetext{One way} of looking at the above analysis is that for a ``general'' polynomial of degree $n$, the Galois group is $S_n$. If the Galois group of some polynomial is not $S_n$, there must be algebraic relations among the roots that restrict the available set of permutations. In the case of a cubic whose discriminant is a rational square, this relation is that $\sqrt{D}$, which is a polynomial in the roots, must be preserved.
+
+\begin{enumerate}
+\renewcommand{\labelenumi}{Example \arabic{enumi}}
+
+\item $f(x)=x^3-6x^2+11x-6$. By the rational root test, this polynomial has the three rational roots $1,2,3$, so it factors as $f(x)=(x-1)(x-2)(x-3)$ over $\Rats$. Its Galois group is therefore trivial.
+
+\item $f(x)=x^3-x^2+x-1$. Again by the rational root test, this polynomial factors as $(x-1)(x^2+1)$, so its Galois group has two elements, and a splitting field $K$ for $f$ is derived by adjoining the square root of the discriminant of the quadratic: $K=\Rats(\sqrt{-1})$. The nontrivial element of the Galois group maps $\sqrt{-1}\leftrightarrow -\sqrt{-1}$.
+
+\item $f(x)=x^3-2$. This polynomial has discriminant $-108=-3\cdot 6^2$. This is not a rational square, so\ the Galois group of $f$ over $\Rats$ is $S_3$, and the splitting field for $f$ is $\Rats(\sqrt[3]{2},\sqrt{-108})=\Rats(\sqrt[3]{2},\sqrt{-3})$. This is in agreement with what we already know, namely that the cube roots of $2$ are
+\[\sqrt[3]{2}, \omega\sqrt[3]{2}, \omega^2\sqrt[3]{2}\]
+where $\omega=\frac{-1+\sqrt{-3}}{2}$ is a primitive cube root of unity.
+
+\item $f(x)=x^3-4x+2$. This is irreducible since it is Eisenstein at $2$ (or by the rational root test), and its discriminant is $202$, which is not a rational square. Thus the Galois group for this polynomial is also $S_3$; note, however, that $f$ has three real roots (since $f(0)>0$ but $f(1)<0$).
+
+\item $f(x)=x^3-3x+1$. This is also irreducible by the rational root test. Its discriminant is $81$, which is a rational square, so the Galois group for this polynomial is $A_3$. Explicitly, the roots of $f(x)$ are
+\[r_1=2\cos(2\pi/9), r_2=2\cos(8\pi/9), r_3=2\cos(14\pi/9)\]
+and we see that
+\begin{gather*}
+\cos(14\pi/9)=\cos(4\pi/9)=2\cos^2(2\pi/9)-1\\
+\cos(8\pi/9)=2\cos^2(4\pi/9)-1
+\end{gather*}
+Let's consider an automorphism of $K$ sending $r_1$ to $r_3$, i.e. sending $\cos(2\pi/9)\mapsto\cos(14\pi/9)$. Given the relations above, it is clear that this mapping uniquely determines the image of $r_3$ as well, since
+\[r_3=2\cos^2(2\pi/9)-1\mapsto 2\cos^2(4\pi/9)-1=r_2\]
+and thus we see how the relation imposed by the discriminant actually manifests itself in terms of restrictions on the permutation group.
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

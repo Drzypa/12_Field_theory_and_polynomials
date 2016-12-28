@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicallySolvable}
+\pmcreated{2015-04-15 13:48:08}
+\pmmodified{2015-04-15 13:48:08}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{algebraically solvable}
+\pmrecord{9}{40361}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmsynonym{algebraic solvability}{AlgebraicallySolvable}
+\pmsynonym{solvable algebraically}{AlgebraicallySolvable}
+\pmrelated{RadicalExtension}
+\pmrelated{KalleVaisala}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+An equation
+\begin{align}
+x^n+a_1x^{n-1}+\ldots+a_n = 0,
+\end{align}
+with coefficients $a_j$ in a field $K$, is {\it algebraically 
+solvable}, if some of its \PMlinkname{roots}{Equation} may 
+be expressed with the elements of $K$ by using rational 
+operations (addition, subtraction, multiplication, division) 
+and root extractions.\, I.e., a root of (1) is in a field\, 
+$K(\xi_1,\,\xi_2,\,\ldots,\,\xi_m)$\, which is obtained of 
+$K$ by \PMlinkname{adjoining}{FieldAdjunction} to it in 
+succession certain suitable radicals 
+$\xi_1,\,\xi_2,\,\ldots,\,\xi_m$.\, Each radical may 
+\PMlinkescapetext{contain} under the root sign one or more of 
+the previous radicals,
+\begin{align*}
+\begin{cases}
+\xi_1 = \sqrt[p_1]{r_1},\\
+\xi_2 = \sqrt[p_2]{r_2(\xi_1)},\\
+\xi_3 = \sqrt[p_3]{r_3(\xi_1,\,\xi_2)},\\
+\cdots\qquad\cdots\\
+\xi_m = \sqrt[p_m]{r_m(\xi_1,\,\xi_2,\,\ldots,\,\xi_{m-1})},
+\end{cases}
+\end{align*}
+where generally\, $r_k(\xi_1,\,\xi_2,\,\ldots,\,\xi_{k-1})$\, is an element of the field 
+$K(\xi_1,\,\xi_2,\,\ldots,\,\xi_{k-1})$\, but no $p_k$'th power of an element of this field.\, Because of the formula
+      $$\sqrt[jk]{r} = \sqrt[j]{\sqrt[k]{r}}$$
+one can, without hurting the generality, suppose that the \PMlinkname{indices}{Root} $p_1,\,p_2,\,\ldots,\,p_m$ are prime numbers.\\
+
+\textbf{Example.}\, Cardano's formulae show that all roots of the cubic equation\; $y^3+py+q = 0$\; are in the algebraic number field which is obtained by adjoining to the field\, $\mathbb{Q}(p,\,q)$\, successively the radicals
+$$\xi_1 = \sqrt{\left(\frac{q}{2}\right)^2\!+\!\left(\frac{p}{3}\right)^3}, \qquad 
+\xi_2 = \sqrt[3]{-\frac{q}{2}\!+\!\xi_1}, \qquad \xi_3 = \sqrt{-3}.$$
+In fact, as we consider also the equation (4), the roots may be expressed as
+\begin{align*}
+\begin{cases}
+\displaystyle y_1 = \xi_2-\frac{p}{3\xi_2}\\
+\displaystyle y_2 = \frac{-1\!+\!\xi_3}{2}\cdot\xi_2-\frac{-1\!-\!\xi_3}{2}\cdot\!\frac{p}{3\xi_2}\\
+\displaystyle y_3 = \frac{-1\!-\!\xi_3}{2}\cdot\xi_2-\frac{-1\!+\!\xi_3}{2}\cdot\!\frac{p}{3\xi_2}
+\end{cases}
+\end{align*}
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Lukuteorian ja korkeamman algebran alkeet}. \,Tiedekirjasto No. 17. \, Kustannusosakeyhti\"o Otava, Helsinki (1950).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

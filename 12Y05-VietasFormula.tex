@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VietasFormula}
+\pmcreated{2013-03-22 15:21:55}
+\pmmodified{2013-03-22 15:21:55}
+\pmowner{neapol1s}{9480}
+\pmmodifier{neapol1s}{9480}
+\pmtitle{Vieta's formula}
+\pmrecord{9}{37190}
+\pmprivacy{1}
+\pmauthor{neapol1s}{9480}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12Y05}
+\pmrelated{PropertiesOfQuadraticEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose $P(x)$ is a polynomial of degree $n$ with roots $r_1, r_2, \ldots, r_n$ (not necessarily distinct). For $1\leq k\leq n$, define $S_k$ by
+\[S_k = \sum\limits_{1\leq\alpha_{1} < \alpha_{2} < \ldots\alpha_k\leq n} r_{\alpha_1}r_{\alpha_2}\ldots r_{\alpha_k}\]
+For example, 
+\[S_1 = r_1 + r_2 + r_3 + \ldots + r_n\]
+\[S_2 = r_1r_2 + r_1r_3 + r_1r_4 + r_2r_3 + \ldots + r_{n-1}r_{n}\]
+Then writing $P(x)$ as 
+\[P(x) = a_nx^n + a_{n-1}x^{n-1} + \ldots a_{1}x + a_{0},\]
+we find that 
+\[S_i = (-1)^{i}\frac{a_{n-i}}{a_n}\]
+
+For example, if $P(x)$ is a polynomial of degree 1, then $P(x) = a_1x + a_0$ and clearly $r_1 = -\frac{a_0}{a_1}$.
+
+If $P(x)$ is a polynomial of degree 2, then $P(x) = a_2x^2 + a_1x + a_0$ and  $r_1 + r_2 = -\frac{a_1}{a_2}$ and $r_1r_2 = \frac{a_0}{a_2}$. Notice that both of these formulas can be determined from the quadratic formula. 
+
+More intrestingly, if $P(x) = a_3x^3 + a_2x^2 + a_1x + a_0$, then $r_1 + r_2 + r_3 = -\frac{a_2}{a_3}$, $r_1r_2 + r_2r_3 + r_3r_1 = \frac{a_1}{a_3}$, and $r_1r_2r_3 = -\frac{a_0}{a_3}$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LatticeOfFields}
+\pmcreated{2013-03-22 17:13:26}
+\pmmodified{2013-03-22 17:13:26}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{lattice of fields}
+\pmrecord{5}{39550}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $K$ be a field and $\overline{K}$ be its algebraic closure.  The set $\operatorname{Latt}(K)$ of all intermediate fields $E$ (where $K\subseteq E\subseteq \overline{K}$), ordered by set theoretic inclusion, is a poset.  Furthermore, it is a complete lattice, where $K$ is the bottom and $\overline{K}$ is the top.
+
+This is the direct result of the fact that any topped intersection structure is a complete lattice, and $\operatorname{Latt}(K)$ is such a structure.  However, it can be easily proved directly:  for any collection of intermediate fields $\lbrace E_i\mid i\in I\rbrace$, the intersection is clearly an intermediate field, and is the infimum of the collection.  The compositum of these fields, which is the smallest intermediate field $E$ such that $E_i\subseteq E$, is the supremum of the collection.
+
+It is not hard to see that $\operatorname{Latt}(K)$ is an algebraic lattice, since the union of any directed family of intermediate fields between $K$ and $\overline{K}$ is an intermediate field.  The compact elements in $\operatorname{Latt}(K)$ are the finite algebraic extensions of $K$.  The set of all compact elements in $\operatorname{Latt}(K)$, denoted by $\operatorname{Latt}_F(K)$, is a lattice ideal, for any subfield of a finite algebraic extension of $K$ is finite algebraic over $K$.  However, $\operatorname{Latt}_F(K)$, as a sublattice, is usually not complete (take the compositum of all simple extensions $\mathbb{Q}(\sqrt{p})$, where $p\in \mathbb{Z}$ are rational primes).
+%%%%%
+%%%%%
+\end{document}

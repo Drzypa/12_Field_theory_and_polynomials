@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Monomial}
+\pmcreated{2013-03-22 12:34:32}
+\pmmodified{2013-03-22 12:34:32}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{monomial}
+\pmrecord{5}{32824}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12-00}
+\pmdefines{degree of a monomial}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+A \emph{monomial} is a product of non-negative powers of variables.  It may also include an optional coefficient (which is sometimes ignored when discussing particular properties of monomials).  A polynomial can be thought of as a sum over a set of monomials.
+
+For example, the following are monomials.
+
+$$
+\begin{array}{ccc}
+1 & x & x^2y \\
+\\
+xyz & 3x^4y^2z^3 & -z
+\end{array}
+$$
+
+If there are $n$ variables from which a monomial may be formed, then
+a monomial may be represented without its coefficient as a vector of $n$
+naturals.  Each position in this vector would correspond to a particular
+variable, and the value of the element at each position would correspond
+to the power of that variable in the monomial.  For instance, the monomial
+$x^2yz^3$ formed from the set of variables $\left\{ w, x, y, z \right\}$
+would be represented as $\begin{pmatrix}0&2&1&3\end{pmatrix}^T$.  A constant would be a zero vector.
+
+Given this representation, we may define a few more concepts.  First, the
+\emph{degree of a monomial} is the sum of the elements of its vector representation.  Thus, the degree of $x^2yz^3$ is $0 + 2 + 1 + 3 = 6$,
+and the degree of a constant is 0.  If a polynomial is represented as a sum
+over a set of monomials, then the degree of a polynomial can be defined as the
+degree of the monomial of largest degree belonging to that polynomial.
+%%%%%
+%%%%%
+\end{document}

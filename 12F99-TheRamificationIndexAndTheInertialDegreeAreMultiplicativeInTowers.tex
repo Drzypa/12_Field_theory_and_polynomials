@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheRamificationIndexAndTheInertialDegreeAreMultiplicativeInTowers}
+\pmcreated{2013-03-22 15:06:34}
+\pmmodified{2013-03-22 15:06:34}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{the ramification index and the inertial degree are multiplicative in towers}
+\pmrecord{5}{36842}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+\pmclassification{msc}{13B02}
+\pmclassification{msc}{11S15}
+%\pmkeywords{towers of number fields}
+%\pmkeywords{ramification}
+%\pmkeywords{inertia}
+\pmrelated{Ramify}
+\pmrelated{InertialDegree}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\p}{{\mathfrak{p}}}
+\newcommand{\A}{{\mathfrak{A}}}
+\renewcommand{\P}{{\mathfrak{P}}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\intK}{\mathcal{O}_K}
+\newcommand{\intF}{\mathcal{O}_F}
+\newcommand{\intE}{\mathcal{O}_E}
+\begin{document}
+\begin{thm}
+Let $E,\ F$ and $K$ be number fields in a tower:
+$$K\subseteq F \subseteq E$$
+and let $\intE,\ \intF$ and $\intK$ be their rings of integers respectively. Suppose $\p$ is a prime ideal of $\intK$ and let $\P$ be a prime ideal of $\intF$ lying above $\p$, and $\Pcal$ is a prime ideal of $\intE$ lying above $\P$. 
+
+\begin{center}
+$\xymatrix{
+{E} \ar@{-}[d] & {\intE} \ar@{-}[d] & {\Pcal} \ar@{-}[d] \\
+{F} \ar@{-}[d] & {\intF} \ar@{-}[d] & {\P} \ar@{-}[d]\\
+K & \intK & \p }$
+\end{center}
+
+Then the indices of the extensions, the ramification indices and inertial degrees satisfy:
+\begin{eqnarray}
+[E:K] &=& [E:F]\cdot [F:K],\\
+\nonumber & &\\
+e(\Pcal|\p) &=& e(\Pcal|\P)\cdot e(\P|\p),\\
+\nonumber & &\\
+f(\Pcal|\p) &=& f(\Pcal|\P)\cdot f(\P|\p).
+\end{eqnarray}
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

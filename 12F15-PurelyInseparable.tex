@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PurelyInseparable}
+\pmcreated{2013-03-22 14:49:08}
+\pmmodified{2013-03-22 14:49:08}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{purely inseparable}
+\pmrecord{6}{36480}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{example}{Example}
+\newcommand{\F}{\mathbb{F}}
+\begin{document}
+Let $F$ be a field of characteristic $p > 0$ and let $\alpha$ be an element which is algebraic over $F$.  Then $\alpha$ is said to be \emph{purely inseparable} over $F$ if $\alpha^{p^n} \in F$ for some $n \ge 0$.
+
+An algebraic field extension $K/F$ is \emph{purely inseparable} if each element of $K$ is purely inseparable over $F$.
+
+Purely inseparable extensions have the following property: if $K/F$ is purely inseparable, and $A$ is an algebraic closure of $F$ which contains $K$, then any homomorphism $K \to A$ which fixes $F$ necessarily fixes $K$.
+
+Let $K/F$ be an arbitrary algebraic extension.  Then there is an intermediate field $E$ such that $K/E$ is purely inseparable, and $E/F$ is separable.
+
+
+\begin{example}
+Let $s$ be an indeterminate, and let $K = \F_3(s)$ where $\F_3$ is the finite field with $3$ elements.  Let $F = \F_3(s^6)$.  Then $K/F$ is neither separable, nor purely inseparable.  Let $E = \F_3(s^3)$.  Then $E/F$ is separable, and $K/E$ is purely inseparable.
+\end{example}
+%%%%%
+%%%%%
+\end{document}

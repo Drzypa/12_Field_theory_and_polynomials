@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheFieldExtensionmathbbRmathbbQIsNotFinite}
+\pmcreated{2013-03-22 13:57:32}
+\pmmodified{2013-03-22 13:57:32}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{the field extension $\mathbb{R}/\mathbb{Q}$ is not finite}
+\pmrecord{6}{34726}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmsynonym{the reals is not a finite extension of the rationals}{TheFieldExtensionmathbbRmathbbQIsNotFinite}
+%\pmkeywords{pi}
+%\pmkeywords{transcendental}
+%\pmkeywords{reals}
+%\pmkeywords{rationals}
+\pmrelated{Pi}
+\pmrelated{Algebraic}
+\pmrelated{FiniteExtension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{thm}
+Let $L/K$ be a finite field extension. Then $L/K$ is an algebraic
+extension.
+\end{thm}
+
+\begin{cor}
+The extension of fields $\Reals/\Rats$ is not finite.
+\end{cor}
+
+\begin{proof}[Proof of the Corollary]
+If the extension was finite, it would be an algebraic extension. However, the
+extension $\Reals/\Rats$ is clearly not algebraic. For example,
+$e\in\Reals$ is transcendental over $\Rats$ (see e is transcendental).
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

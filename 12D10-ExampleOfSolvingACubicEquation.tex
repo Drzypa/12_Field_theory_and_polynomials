@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfSolvingACubicEquation}
+\pmcreated{2015-11-18 14:15:18}
+\pmmodified{2015-11-18 14:15:18}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of solving a cubic equation}
+\pmrecord{14}{40335}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmsynonym{example of using Cardano's formulas}{ExampleOfSolvingACubicEquation}
+\pmrelated{PolynomialEquationOfOddDegree}
+\pmrelated{ConjugatedRootsOfEquation2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let us use Cardano's formulae for solving algebraically the cubic equation 
+\begin{align}
+x^3\!+\!3x^2\!-\!1 \;=\; 0.
+\end{align}
+First apply the \PMlinkname{Tschirnhaus transformation}{CardanosDerivationOfTheCubicFormula}\, $x := y\!-\!1$\, for removing the quadratic term; from\, $(y-1)^3+3(y-1)^2-1 = 0$\, we get the simplified equation
+\begin{align}
+y^3\!+\!3y\!-\!2 \;=\; 0.
+\end{align}
+We now suppose that\, $y := u\!+\!v$.\, Substituting this into (2) and rewriting the equation in the form
+$$(u^3\!+\!v^3\!-\!2)+3(uv\!+\!1)(u\!+\!v) \;=\; 0,$$
+one can determine $u$ and $v$ such that\, $u^3\!+\!v^3\!-\!2 = 0$\, and\, $uv\!+\!1 = 0$,\, i.e. 
+\begin{align*}
+\begin{cases}
+u^3\!+\!v^3 \;=\; 2,\\
+u^3v^3 \;=\; -1.
+\end{cases}
+\end{align*}
+Using the properties of quadratic equation, we infer that $u^3$ and $v^3$ are the roots of the resolvent equation
+$$z^2\!-\!2z\!-\!1 \;=\; 0.$$
+Therefore, $u$ and $v$ satisfy the binomial equations
+\begin{align}
+u^3 \;=\; 1\!+\!\sqrt{2}, \qquad v^3 \;=\; 1\!-\!\sqrt{2},
+\end{align}
+respectively.\, If we choose the real radicals \,$u = u_0 = \sqrt[3]{1\!+\!\sqrt{2}}$\, and\, 
+$v = v_0 = \sqrt[3]{1\!-\!\sqrt{2}}$,\, the other solutions $u,\,v$ of (3) are
+\begin{align}
+\zeta u_0,\;\;\zeta^2v_0; \qquad \zeta^2u_0,\;\;\zeta v_0,
+\end{align}
+where\; $\zeta = \frac{-1+i\sqrt{3}}{2}, 
+\quad \zeta^2 = \frac{-1-i\sqrt{3}}{2}$\;
+are the primitive third roots of unity.\,  One must combine the pairs\, $(u,\,v)$\, of (4) so that
+$$uv \;=\; \sqrt[3]{u^3v^3} \;=\; -1.$$
+Accordingly, all three roots of the cubic equation (2) are
+\begin{align*}
+\begin{cases}
+y_1 \;=\; u_0\!+\!v_0 \;=\; \sqrt[3]{1\!+\!\sqrt{2}}\!+\!\sqrt[3]{1\!-\!\sqrt{2}},\\ 
+y_2 \;=\; \zeta u_0\!+\!\zeta^2v_0 \;=\;  
+  \frac{-1+i\sqrt{3}}{2}\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\frac{-1-i\sqrt{3}}{2}\sqrt[3]{1\!-\!\sqrt{2}},\\
+y_3 \;=\; \zeta^2u_0\!+\!\zeta v_0 \;=\;  
+  \frac{-1-i\sqrt{3}}{2}\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\frac{-1+i\sqrt{3}}{2}\sqrt[3]{1\!-\!\sqrt{2}}.\\
+\end{cases}
+\end{align*}
+The roots of the original equation (1) are gotten via the used substitution equation\, $x := y-1$, i.e. adding $-1$ to the values of $y$.\, If we also separate the \PMlinkname{real}{RealPart} and imaginary parts, we have the following solution of (1):
+\begin{align*}
+\begin{cases}
+x_1 \;=\; -1\!+\!\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\sqrt[3]{1\!-\!\sqrt{2}},\\ 
+x_2 \;=\; -1\!-\!\frac{1}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\sqrt[3]{1\!-\!\sqrt{2}}\right)\!
++i\frac{\sqrt{3}}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!-\!\sqrt[3]{1\!-\!\sqrt{2}}\right),\\
+x_3 \;=\; -1\!-\!\frac{1}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\sqrt[3]{1\!-\!\sqrt{2}}\right)\!
+-i\frac{\sqrt{3}}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!-\!\sqrt[3]{1\!-\!\sqrt{2}}\right).
+\end{cases}
+\end{align*}
+One of the roots is a real number, but the other two are \PMlinkescapetext{imaginary} (i.e. non-real) complex conjugates of each other.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfAdditiveFormOfHilbertsTheorem90}
+\pmcreated{2013-03-22 15:21:25}
+\pmmodified{2013-03-22 15:21:25}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{proof of additive form of Hilbert's theorem 90}
+\pmrecord{4}{37179}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmclassification{msc}{11R32}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Set $n=[L:K]$.
+
+First, let there be $x\in L$ such that $y=x-\sigma(x)$. Then 
+$$\operatorname{Tr}(y)=(x-\sigma(x))+(\sigma(x)-\sigma^2(x))+\cdots +(\sigma^{n-1}(x)-\sigma^n(x))=0$$
+because $x=\sigma^n(x)$.
+
+Now, let $\operatorname{Tr}(y)=0$. Choose $z\in L$ with $\operatorname{Tr}(z)\neq 0$. Then there exists $x\in L$ with
+$$x\operatorname{Tr}(z)=y\sigma(z)+(y+\sigma(y))\sigma^2(z)+\cdots +(y+\sigma(y)+\cdots+\sigma^{n-1}(y))\sigma^{n-1}(z).$$
+Since $\operatorname{Tr}(z)\in K$ we have
+$$\sigma(x)\operatorname{Tr}(z)= \sigma(y)\sigma^2(z)+(\sigma(y)+\sigma^2(y))\sigma^3(z)+\cdots +(\sigma(y)+\cdots +\sigma^{n-2})\sigma^{n-1}(z)+(\sigma(y)+\cdots +\sigma^{n-1}(y))\sigma^n(z).$$
+Now remember that $\operatorname{Tr}(y)=0$. We obtain
+\begin{eqnarray*}
+(x-\sigma(x))\operatorname{Tr}(z)&=&y\sigma(z)+ (y+\sigma(y))\sigma^2(z)+\cdots +(y+\sigma(y)+\cdots+\sigma^{n-1}(y))\sigma^{n-1}(z)\\
+&&-\sigma(y)\sigma^2(z)-(\sigma(y)+\sigma^2(y))\sigma^3(z)-\cdots -(\sigma(y)+\cdots +\sigma^{n-2})\sigma^{n-1}(z)+yz\\
+&=&y\operatorname{Tr}(z),
+\end{eqnarray*}
+so $y=x-\sigma(x)$, as we wanted to show.
+%%%%%
+%%%%%
+\end{document}

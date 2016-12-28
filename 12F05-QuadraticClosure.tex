@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticClosure}
+\pmcreated{2013-03-22 15:42:43}
+\pmmodified{2013-03-22 15:42:43}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{quadratic closure}
+\pmrecord{8}{37659}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmdefines{quadratically closed}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A field $K$ is said to be \emph{quadratically closed} if it has no quadratic extensions.  In other words, every element of $K$ is a square.  Two obvious examples are $\mathbb{C}$ and $\mathbb{F}_2$.
+
+A field $K$ is said to be a \emph{quadratic closure} of another field $k$ if
+\begin{enumerate}
+\item $K$ is quadratically closed, and 
+\item among all quadratically closed subfields of the algebraic closure $\overline{k}$ of $k$, $K$ is the smallest one.
+\end{enumerate}
+
+By the second condition, a quadratic closure of a field is unique up to field isomorphism.  So we say \emph{the} quadratic closure of a field $k$, and we denote it by $\widetilde{k}$ Alternatively, the second condition on $K$ can be replaced by the following:
+
+\begin{quote}
+$K$ is the smallest field extension over $k$ such that, if $L$ is any field extension over $k$ obtained by a finite number of quadratic extensions starting with $k$, then $L$ is a subfield of $K$.
+\end{quote}
+
+\textbf{Examples.}  
+\begin{itemize}
+\item $\mathbb{C}=\widetilde{\mathbb{R}}$.  
+\item If $\mathbb{E}$ is the Euclidean field in $\mathbb{R}$, then the quadratic extension $\mathbb{E}(\sqrt{-1})$ is the quadratic closure $\widetilde{\mathbb{Q}}$ of the rational numbers $\mathbb{Q}$.
+\item If $k=\mathbb{F}_5$, consider the chain of fields
+$$k\le k(\sqrt{2})\le k(\sqrt[4]{2})\le \cdots \le k(\sqrt[2^n]{2})\le \cdots $$
+Take the union of all these fields to obtain a field $K$.  Then it can be shown that $K=\widetilde{k}$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RationalIntegersInIdeals}
+\pmcreated{2013-03-22 19:08:47}
+\pmmodified{2013-03-22 19:08:47}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{rational integers in ideals}
+\pmrecord{6}{42049}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmclassification{msc}{06B10}
+\pmclassification{msc}{11R04}
+\pmrelated{CharacteristicPolynomialOfAlgebraicNumber}
+\pmrelated{IdealNorm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Any non-zero ideal of an algebraic number field $K$, i.e. of the maximal order $\mathcal{O}_K$ of $K$, contains positive rational integers.\\
+
+\emph{Proof.}\, Let\, $\mathfrak{a} \neq (0)$\, be any ideal of $\mathcal{O}_K$.\, Take a nonzero element $\alpha$ of 
+$\mathfrak{a}$.\, The \PMlinkname{norm}{NormInNumberField} of $\alpha$ is the product
+$$\mbox{N}(\alpha) \;=\; \alpha^{(1)}\underbrace{\alpha^{(2)}\cdots\alpha^{(n)}}_{\gamma}$$
+where $n$ is the degree of the number field and $\alpha^{(1)},\,\alpha^{(2)},\,\cdots,\,\alpha^{(n)}$ is the \PMlinkescapetext{complete} set of the \PMlinkid{$K$-conjugates}{12046} of\, $\alpha = \alpha^{(1)}$.\, The number
+$$\gamma = \frac{\mbox{N}(\alpha)}{\alpha}$$
+belongs to the field $K$ and it is an algebraic integer, since $\alpha^{(2)},\,\cdots,\,\alpha^{(n)}$ are, as algebraic conjugates of $\alpha$, also algebraic integers.\, Thus\, $\gamma \in \mathcal{O}_K$.\, Consequently, the non-zero integer
+$$\mbox{N}(\alpha) \;=\; \alpha\gamma$$
+belongs to the ideal $\mathfrak{a}$, and similarly its opposite number.\, So, $\mathfrak{a}$ contains positive integers, in fact infinitely many.
+
+%%%%%
+%%%%%
+\end{document}

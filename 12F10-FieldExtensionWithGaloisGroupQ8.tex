@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FieldExtensionWithGaloisGroupQ8}
+\pmcreated{2013-03-22 17:44:28}
+\pmmodified{2013-03-22 17:44:28}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{field extension with Galois group $Q_8$}
+\pmrecord{7}{40191}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\Alg}{\mathcal{O}}
+\newcommand{\ol}{\overline}
+\newcommand{\Leg}[2]{\left(\frac{#1}{#2}\right)}
+\renewcommand{\a}{(2+\sqrt{2})(3+\sqrt{3})}
+\renewcommand{\b}{(2-\sqrt{2})(3+\sqrt{3})}
+\renewcommand{\c}{(2+\sqrt{2})(3-\sqrt{3})}
+\renewcommand{\d}{(2-\sqrt{2})(3-\sqrt{3})}
+\newcommand{\sa}{\sqrt{\a}}
+\renewcommand{\sb}{\sqrt{\b}}
+\renewcommand{\sc}{\sqrt{\c}}
+\newcommand{\sd}{\sqrt{\d}}
+\DeclareMathOperator{\Tr}{Tr}
+\begin{document}
+Let $\alpha=\sa, E=\Rats(\alpha)$. We will show that $E$ is Galois over $\Rats$ and that $G=Gal(E/\Rats)\cong Q_8$ (the group of quaternions).
+
+We begin by showing that $[E:\Rats]=8$. Let $F=\Rats(\sqrt{2},\sqrt{3})=\Rats(\sqrt{2}+\sqrt{3})$. Claim that $F\subsetneq E$. To show that they are not equal, we show that $\alpha\notin F$, i.e. that $\a$ is not a square in $F$. If it were, say $\a=c^2, c\in F$, take $\sigma\in Gal(F/\Rats)$ to be the element
+\[\sigma:\begin{cases}\sqrt{2}\mapsto\sqrt{2}\\\sqrt{3}\mapsto -\sqrt{3}\end{cases}\]
+Then $\a\sigma(\a)=(c\sigma(c))^2$, so \[(2+\sqrt{2})^2(3+\sqrt{3})(3-\sqrt{3})=6(2+\sqrt{2})^2=(c\sigma(c))^2\]
+But $c\sigma(c)=\Tr_{F/\Rats(\sqrt{2})}(c)\in \Rats(\sqrt{2})$, and thus $6=\left(\frac{c\sigma(c)}{2+\sqrt{2}}\right)^2$, so $\sqrt{6}\in \Rats(\sqrt{2})$, a contradiction. Thus $F\neq E$. We show that $F\subset E$ by showing that $\sqrt{2}+\sqrt{3}\in E$.
+\begin{gather*}
+\a=6+3\sqrt{2}+2\sqrt{3}+\sqrt{6}\in E, \text{ so}\\
+3\sqrt{2}+2\sqrt{3}+\sqrt{6}\in E, \text{ so}\\
+(3\sqrt{2}+2\sqrt{3}+\sqrt{6})^2=36+12(\sqrt{2}+\sqrt{3}+\sqrt{6})\in E, \text{ so}\\
+\sqrt{2}+\sqrt{3}+\sqrt{6}\in E, \text{ so}\\
+3\sqrt{2}+2\sqrt{3}+\sqrt{6}-\sqrt{2}-\sqrt{3}-\sqrt{6}=\sqrt{3}+2\sqrt{2}\in E, \text{ so}\\
+(\sqrt{3}+2\sqrt{2})^2=11+4\sqrt{6}\in E, \text{ so}\\
+\sqrt{6}\in E, \text{ so}\\
+\sqrt{2}+\sqrt{3}+\sqrt{6}-\sqrt{6}=\sqrt{2}+\sqrt{3}\in E
+\end{gather*}
+So $F\subsetneq E$ and thus $[E:F]=2$. Then $[E:\Rats]=[E:F][F:\Rats]=8$.
+
+Now, the irreducible polynomial $f(x)$ for $\a$ over $\Rats$ is the product of $x-\tau(\a)$ as $\tau$ ranges over $\Gal(F/\Rats)$:
+\[f(x)=(x-\a)(x-\b)(x-\c)(x-\d)\]
+so that $f(x^2)$ is a degree $8$ polynomial with $\alpha$ as a root. In fact,
+\[f(x^2)=x^8-24x^6+48x^4-288x^2+144\]
+This polynomial must be irreducible since $\alpha$ is of degree $8$, so $f(x^2)$ is the minimal polynomial for $\alpha$ over $\Rats$. The roots of $f(x^2)$ are obviously
+\[\pm\sqrt{(2\pm\sqrt{2})(3\pm\sqrt{3})}\]
+Furthermore, it is easy to see that each of these roots lies in $E$, for
+\begin{align*}
+\alpha\sb&=\sqrt{2}(3+\sqrt{3})\in F\\
+\alpha\sc &= \sqrt{6}(2+\sqrt{2})\in F\\
+\alpha\sd &= \sqrt{2}\sqrt{6}=2\sqrt{3}\in F
+\end{align*}
+so dividing through by $\alpha$ we see that
+\[\sb,\sc,\sd\in E\]
+Thus $E$ is in fact Galois over $\Rats$, is the splitting field for $f(x^2)$, and has Galois group $G=\Gal(E/\Rats)$ of \PMlinkname{order}{OrderGroup} $8$.
+
+$G$ acts transitively on the roots of $f(x^2)$, and $E=\Rats(\alpha)$, so an element of $G$ is determined by the image of $\alpha$. Thus the elements of $G$ are the automorphisms of $E$ that map $\alpha$ to any of the eight roots of $f(x^2)$. Let
+\begin{center}\begin{tabular}{ccc}
+$\alpha=\sa$ & \qquad & $\beta = \sb$\\
+$\gamma=\sc$ & \qquad & $\delta=\sd$
+\end{tabular}\end{center}
+and let $\sigma:\alpha\mapsto\beta, \tau:\alpha\mapsto\gamma$ be elements of $G$.
+
+$\sigma(\alpha^2)=\beta^2$, so $\sigma(2+\sqrt{2})\sigma(3+\sqrt{3})=(2-\sqrt{2})(3+\sqrt{3})$. This is an equation in $F$, so regarding $\sigma$ as an automorphism of $F/\Rats$, it must be the automorphism $\sqrt{2}\mapsto -\sqrt{2}, \sqrt{3}\mapsto \sqrt{3}$. Since $\alpha\beta=\sqrt{2}(3+\sqrt{3})$, we have $\sigma(\alpha\beta)=-\alpha\beta$ and thus that $\sigma(\beta)=-\alpha$. It follows that $\sigma$ is an element of \PMlinkname{order}{OrderGroup} $4$ in $G$.
+
+Similarly, $\tau(\alpha^2)=\gamma^2$, so $\tau(2+\sqrt{2})\tau(3+\sqrt{3})=(2+\sqrt{2})(3-\sqrt{3})$, so that $\tau$, regarded as an automorphism of $F/\Rats$, must be $\sqrt{2}\mapsto\sqrt{2}, \sqrt{3}\mapsto -\sqrt{3}$. Since $\alpha\gamma=\sqrt{6}(2+\sqrt{2})$, we have $\tau(\alpha\gamma)=-\alpha\gamma$, so that $\tau(\gamma)=-\alpha$, and $\tau$ is also an element of \PMlinkname{order}{OrderGroup} $4$ in $G$. Note also that $\sigma^2(\alpha)=-\alpha=\tau^2(\alpha)$, so that $\sigma^2=\tau^2\neq 1$.
+
+Looking at $\sigma\tau$, 
+\[\sigma\tau(\alpha)=\sigma(\gamma)=\sigma\left(\frac{\alpha\gamma}{\alpha}\right)=
+\frac{\sigma(\sqrt{6}(2+\sqrt{2}))}{\sigma(\alpha)}=\frac{-\sqrt{6}(2-\sqrt{2})}{\beta}=
+-\frac{\beta\delta}{\beta}=-\delta\]
+while
+\[\tau\sigma(\alpha)=\tau(\beta)=\tau\left(\frac{\alpha\beta}{\alpha}\right)=
+\frac{\tau(\sqrt{2}(3+\sqrt{3}))}{\tau(\alpha)}=\frac{\sqrt{2}(3-\sqrt{3})}{\gamma}=
+\frac{\gamma\delta}{\gamma}=\delta\]
+and thus $\tau\sigma^3(\alpha)=\tau\sigma\sigma^2(\alpha)=-\tau\sigma(\alpha)=-\delta=\sigma\tau(\alpha)$. So $\sigma\tau=\tau\sigma^3$.
+
+Putting this all together, we see that $G$ is generated by $\sigma, \tau$, and that the generators satisfy the relations
+\[\sigma^4=\tau^4=1,\qquad \sigma^2=\tau^2\neq 1,\qquad \sigma\tau=\tau\sigma^3\]
+Define $\varphi:G\to Q_8$ by $\varphi(\sigma)=i, \varphi(\tau)=j$. This is easily seen to be a homorphism, and $\varphi(\sigma\tau)=ij=k$, so $\varphi$ is surjective and is thus an isomorphism since both groups have \PMlinkname{order}{OrderGroup} $8$. Thus $\Gal(E/\Rats)\cong Q_8$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RealAndComplexEmbeddings}
+\pmcreated{2013-03-22 13:54:43}
+\pmmodified{2013-03-22 13:54:43}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{real and complex embeddings}
+\pmrecord{4}{34666}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmrelated{GaloisGroup}
+\pmrelated{TotallyRealAndImaginaryFields}
+\pmrelated{RamificationOfArchimedeanPlaces}
+\pmdefines{real embedding}
+\pmdefines{complex embedding}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Let $L$ be a subfield of $\Complex$.
+
+\begin{defn}\quad
+\begin{enumerate}
+\item A \emph{real embedding} of $L$ is an injective field
+homomorphism
+$$ \sigma\colon L \hookrightarrow \Reals $$
+
+\item A (non-real) \emph{complex embedding} of $L$ is an injective
+field homomorphism
+$$ \tau\colon L \hookrightarrow \Complex $$
+such that $\tau(L)\nsubseteq \Reals$.
+
+\item We denote $\Sigma_L$ the set of all embeddings, real and
+complex, of $L$ in $\Complex$ (note that all of them must fix
+$\Rats$, since they are field homomorphisms).
+\end{enumerate}
+\end{defn}
+
+Note that if $\sigma$ is a real embedding then
+$\bar{\sigma}=\sigma$, where $\overline{\cdot}$ denotes the
+complex conjugation automorphism: $$ \overline{\cdot}\colon
+\Complex \to \Complex,\quad \overline{(a+bi)}=a-bi$$ On the other
+hand, if $\tau$ is a complex embedding, then $\bar{\tau}$ is
+another complex embedding, so the complex embeddings always come
+in pairs $\{\tau,\bar{\tau}\}$.
+
+Let $K\subseteq L$ be another subfield of $\Complex$. Moreover,
+assume that $[L:K]$ is finite (this is the dimension of $L$ as a
+vector space over $K$). We are interested in the embeddings of $L$
+that fix $K$ pointwise, i.e. embeddings $\psi\colon L
+\hookrightarrow \Complex$ such that
+$$\psi(k)=k,\quad \forall k\in K$$
+
+\begin{thm}
+For any embedding $\psi$ of $K$ in $\Complex$, there are exactly
+$[L:K]$ embeddings of $L$ such that they extend $\psi$. In other
+words, if $\varphi$ is one of them, then
+$$\varphi(k)=\psi(k),\quad \forall k\in K$$
+Thus, by taking $\psi=\operatorname{Id}_K$, there are exactly
+$[L:K]$ embeddings of $L$ which fix $K$ pointwise.
+\end{thm}
+
+Hence, by the theorem, we know that the order of $\Sigma_L$ is
+$[L:\Rats]$. The number $[L:\Rats]$ is usually decomposed as
+$$[L:\Rats]=r_1+2r_2$$
+where $r_1$ is the number of embeddings which are real, and $2r_2$
+is the number of embeddings which are complex (non-real). Notice
+that by the remark above this number is always even, so $r_2$ is
+an integer.
+
+{\bf Remark}: Let $\psi$ be an embedding of $L$ in $\Complex$.
+Since $\psi$ is injective, we have $\psi(L)\cong L$, so we can
+regard $\psi$ as an automorphism of $L$. When $L/\mathbb{Q}$ is a
+Galois extension, we can prove that $\Sigma_L\cong
+\operatorname{Gal}(L/\Rats)$, and hence proving in a different way
+the fact that
+$$\mid \Sigma_L \mid = [L:\Rats]= \mid
+\operatorname{Gal}(L/\Rats)\mid$$
+%%%%%
+%%%%%
+\end{document}

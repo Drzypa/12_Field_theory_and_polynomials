@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RamificationOfArchimedeanPlaces}
+\pmcreated{2013-03-22 15:07:19}
+\pmmodified{2013-03-22 15:07:19}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{ramification of archimedean places}
+\pmrecord{9}{36861}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+\pmclassification{msc}{13B02}
+\pmclassification{msc}{11S15}
+\pmsynonym{finite place}{RamificationOfArchimedeanPlaces}
+\pmsynonym{infinite place}{RamificationOfArchimedeanPlaces}
+\pmrelated{DecompositionGroup}
+\pmrelated{PlaceOfField}
+\pmrelated{RealAndComplexEmbeddings}
+\pmrelated{PlaceAsExtensionOfHomomorphism}
+\pmdefines{decomposition and inertia group for archimedean places}
+\pmdefines{archimedean place}
+\pmdefines{non-archimedean place}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\begin{document}
+Throughout this entry, if $\alpha$ is a complex number, we denote the complex conjugate of $\alpha$ by $\overline{\alpha}$.
+
+\begin{defn}
+Let $K$ be a number field.
+\begin{enumerate}
+\item An {\bf archimedean place} of $K$ is either a real embedding $\phi\colon K \to \Reals$ or a pair of complex-conjugate embeddings $(\psi,\overline{\psi})$, with $\overline{\psi}\neq \psi$ and $\psi\colon K\to \Complex$. The archimedean places are sometimes called the infinite places (cf. place of field).\\
+
+\item The {\bf non-archimedean places} of $K$ are the prime ideals in $\mathcal{O}_K$, the ring of integers of $K$ (see \PMlinkname{non-archimedean valuation}{Valuation}). The non-archimedean places are sometimes called the finite places.
+\end{enumerate}
+\end{defn}
+
+Notice that any archimedean place $\phi\colon K\to \Complex$ can be extended to an embedding $\hat{\phi}\colon \overline{\Rats} \to \Complex$, where $\overline{\Rats}$ is a fixed algebraic closure of $\Rats$ (in order to prove this, one uses the fact that $\Complex$ is algebraically closed and also Zorn's Lemma). See also \PMlinkname{this entry}{PlaceAsExtensionOfHomomorphism}. In particular, if $F$ is a finite extension of $K$ then $\phi$ can be extended to an archimidean place $\hat{\phi}\colon F \to \Complex$ of $F$.
+
+Next, we define the decomposition and inertia group associated to archimedean places. For the case of non-archimedean places (i.e. prime ideals) see the entries decomposition group and ramification.
+
+Let $F/K$ be a finite Galois extension of number fields and let $\phi$ be a (real or a pair of complex) archimedean place of $K$. Let $\phi_1$ and $\phi_2$ be two archimedean places of $F$ which extend $\phi$. Notice that, since $F/K$ is Galois, the image of $\phi_1$ and $\phi_2$ are equal, in other words:
+$$\phi_1(F)=\phi_2(F)\subset \Complex.$$
+Hence, the composition $\phi_1^{-1}\circ \phi_2$ is an automorphism of $F$ (here $\phi_1^{-1}$ denotes the inverse map of $\phi_1$, restricted to $\phi_1(F)$). Thus, $\phi_1^{-1}\circ \phi_2 =\sigma \in \Gal(F/K)$ and
+$$\phi_2 = \phi_1\circ \sigma$$
+so $\phi_1$ and $\phi_2$ differ by an element of the Galois group. Similarly, if $(\psi_1,\overline{\psi_1})$ and $(\psi_2,\overline{\psi_2})$ are complex embeddings which extend $\phi$, then there is $\sigma\in\Gal(F/K)$ such that
+$$(\psi_2,\overline{\psi_2})=(\psi_1,\overline{\psi_1})\circ \sigma$$
+meaning that either $\psi_2 = \psi_1\circ \sigma$ (and thus $\overline{\psi_2} = \overline{\psi_1}\circ \sigma$) or $\overline{\psi_2} = \psi_1\circ \sigma$ (and thus $\psi_2 = \overline{\psi_1}\circ \sigma$). We are ready now to make the definitions.
+
+\begin{defn}
+Let $F/K$ be a Galois extension of number fields and let $w$ be an archimedean place of $F$ lying above a place $v$ of $K$. The decomposition and inertia subgroups  for the pair $w|v$ are equal and are defined by:
+$$D(w|v)=T(w|v)=\{ \sigma \in \Gal(F/K) : w\circ \sigma = w\}.$$
+Let $e=e(w|v)=|T(w|v)|$ be the size of the inertia subgroup. If $e>1$ then we say that the {\bf archimedean place $v$ is ramified} in the extension $F/K$. 
+\end{defn}
+
+The ramification in the archimedean case is much simpler than the non-archimedean analogue. One readily proves the following proposition:
+\begin{prop}
+The inertia subgroup $T(w|v)$ is nontrivial only when $v$ is real, $w=(\psi,\overline{\psi})$ is a complex archimedean place of $F$ and $\sigma$ is the ``complex conjugation'' map which has order $2$. Therefore $e(w|v)=1$ or $2$ and ramification of archimedean places occurs if and only if there is a complex place of $F$ lying above a real place of $K$.
+\end{prop}
+\begin{proof}
+Suppose first that $w=\phi\colon F\to \Reals$ is a real embedding. Then $\phi$ is injective and $\phi\circ \sigma = \phi$ implies that $\sigma$ is the identity automorphism and $T(w|v)$ would be trivial. So let us assume that $w=(\psi,\overline{\psi})$ is a complex archimedean place and let $\sigma\in \Gal(F/K)$ such that 
+$$(\psi,\overline{\psi})=(\psi,\overline{\psi})\circ \sigma.$$
+Therefore, either $\psi=\psi\circ \sigma$ (which implies that $\sigma$ is the identity by the injectivity of $\psi$) or $\psi=\overline{\psi}\circ \sigma$. The latter implies that $\sigma=\overline{\psi^{-1}}\circ \psi$, which is simply complex conjugation:
+$$\overline{\psi^{-1}}\circ \psi(k)=\overline{\psi^{-1}(\psi(k))}=\overline{k}.$$
+Finally, since $w$ is an extension of $v$, the equation $w\circ \sigma = w$ restricts to $\overline{v}=v$, thus $v$ must be real.
+\end{proof}
+\begin{cor}
+Suppose $L/K$ is an extension of number fields and assume that $K$ is a \PMlinkname{totally imaginary}{TotallyRealAndImaginaryFields} number field. Then the extension $L/K$ is unramified at all archimedean places.
+\end{cor}
+\begin{proof}
+Since $K$ is totally imaginary none of the embeddings of $K$ are real. By the proposition, only real places can ramify. 
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

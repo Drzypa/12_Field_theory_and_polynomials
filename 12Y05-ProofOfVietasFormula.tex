@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfVietasFormula}
+\pmcreated{2013-03-22 15:26:59}
+\pmmodified{2013-03-22 15:26:59}
+\pmowner{neapol1s}{9480}
+\pmmodifier{neapol1s}{9480}
+\pmtitle{proof of Vieta's formula}
+\pmrecord{4}{37297}
+\pmprivacy{1}
+\pmauthor{neapol1s}{9480}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12Y05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Proof:}
+We can write $P(x)$ as
+\[P(x) = a_n(x-r_1)(x-r_2)\ldots(x-r_n) = a_n(x^n - S_1x^{n-1} + S_2x^{n-2} - \ldots + (-1)^nS_n).\]
+Since we also have that 
+\[P(x) = a_nx^n + a_{n-1}x^{n-1} + \ldots a_{1}x + a_{0},\]
+setting the coefficients equal yields
+\[a_n(-1)^{i}S_i = a_{n-i}\]
+which is what the theorem stated.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ThinAlgebraicSet}
+\pmcreated{2013-03-22 15:14:13}
+\pmmodified{2013-03-22 15:14:13}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{thin algebraic set}
+\pmrecord{5}{37009}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E25}
+\pmsynonym{thin set}{ThinAlgebraicSet}
+\pmsynonym{mince set}{ThinAlgebraicSet}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{defn}
+Let $V$ be an irreducible algebraic variety (we assume it to be integral and quasi-projective) over a field $K$ with characteristic zero. We regard $V$ as a topological space with the usual Zariski topology.
+\begin{enumerate}
+\item A subset $A\subset V(K)$ is said to be of type $C_1$ if there is a closed subset $W\subset V$, with $W\neq V$, such that $A\subset W(K)$. In other words, $A$ is not dense in $V$ (with respect to the Zariski topology).
+
+\item A subset $A\subset V(K)$ is said to be of type $C_2$ if there is an irreducible variety $V'$ of the same dimension as $V$, and a (generically) surjective algebraic morphism $\phi\colon V'\to V$ of degree $\geq 2$, with $A\subset \phi(V'(K))$
+\end{enumerate}
+\end{defn}
+
+\begin{exa}
+Let $K$ be a field and let $V(K)=\mathbb{A}(K)=\mathbb{A}^1(K)=K$ be the $1$-dimensional affine space. Then, the only Zariski-closed subsets of $V$ are finite subsets of points. Thus, the only subsets of type $C_1$ are subsets formed by a finite number of points. 
+
+Let $V'(K)=\mathbb{A}(K)$ be affine space and define:
+$$\phi\colon V' \to V$$
+by $\phi(k)=k^2$. Then $\deg(\phi)=2$. Thus, the subset:
+$$A=\{k^2: k \in \mathbb{A}(K)\}$$
+, i.e. $A$ is the subset of perfect squares in $K$, is a subset of type $C_2$.
+\end{exa}
+
+\begin{defn}
+A subset $A$ of an irreducible variety $V/K$ is said to be a thin algebraic set (or thin set, or ``mince'' set) if it is a union of a finite number of subsets of type $C_1$ and type $C_2$.
+\end{defn}
+
+\begin{thebibliography}{9}
+\bibitem{serre} J.-P. Serre, {\em Topics in Galois Theory},
+Research Notes in Mathematics, Jones and Barlett Publishers, London.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

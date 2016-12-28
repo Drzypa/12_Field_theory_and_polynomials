@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IrreduciblePolynomialsOverFiniteField}
+\pmcreated{2013-03-22 17:43:14}
+\pmmodified{2013-03-22 17:43:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{irreducible polynomials over finite field}
+\pmrecord{7}{40166}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E20}
+\pmclassification{msc}{11T99}
+\pmrelated{FiniteField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, Over a finite field $F$, there exist irreducible polynomials of any degree.\\
+
+{\em Proof.}\, Let $n$ be a positive integer, $p$ be the characteristic of $F$, $\mathbb{F}_p$ be the prime subfield, and $p^r$ be the \PMlinkname{order}{FiniteField} of the field $F$.\, Since $p^r\!-\!1$ is a divisor of $p^{rn}\!-\!1$, the zeros of the polynomial $X^{p^r}\!-\!X$ form in\, $G := \mathbb{F}_{p^{rn}}$\, a subfield isomorphic to $F$.\, Thus, one can regard $F$ as a subfield of $G$.\, Because
+$$[G\!:\!F] = \frac{[G\!:\!\mathbb{F}_p]}{[F\!:\!\mathbb{F}_p]} = \frac{rn}{r} = n,$$
+the minimal polynomial of a primitive element of the field extension $G/F$ is an irreducible polynomial of degree $n$ in the ring $F[X].$
+%%%%%
+%%%%%
+\end{document}

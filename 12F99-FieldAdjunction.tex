@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FieldAdjunction}
+\pmcreated{2015-02-21 15:39:45}
+\pmmodified{2015-02-21 15:39:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{field adjunction}
+\pmrecord{16}{35875}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+\pmsynonym{simple extension}{FieldAdjunction}
+%\pmkeywords{adjunction}
+\pmrelated{GroundFieldsAndRings}
+\pmrelated{Forcing}
+\pmrelated{PolynomialRingOverFieldIsEuclideanDomain}
+\pmrelated{AConditionOfAlgebraicExtension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $K$ be a field and $E$ an extension field of $K$.\, If $\alpha 
+\in E$, then the smallest subfield of $E$, that contains $K$ and 
+$\alpha$, is denoted by  $K(\alpha)$.\, We say that $K(\alpha)$ is 
+obtained from the field $K$ by {\em adjoining} the element $\alpha$ 
+to $K$ via {\em field adjunction}.\\
+
+\textbf{Theorem.}\, $K(\alpha)$ is identical with the quotient field $Q$ of $K[\alpha]$.
+
+{\it Proof.}  (1)  Because $K[\alpha]$ is an integral domain (as a subring of the field $E$), all possible quotients of the elements of $K[\alpha]$ belong to $E$. So we have
+  $$K\cup\{\alpha\} \subseteq K[\alpha] \subseteq Q \subseteq E,$$
+and because $K(\alpha)$ was the smallest, then \,$K(\alpha) \subseteq Q.$
+
+(2)  $K(\alpha)$ is a subring of $E$ containing $K$ and $\alpha$, therefore also the whole ring $K[\alpha]$, that is, \,$K[\alpha] \subseteq K(\alpha)$. \,And because $K(\alpha)$ is a field, it must contain all possible quotients of the elements of $K[\alpha]$, i.e., \,$Q \subseteq K(\alpha)$.\\
+
+
+In \PMlinkescapetext{addition} to the adjunction of one single element, we can adjoin to $K$ an arbitrary subset $S$ of $E$:\, the resulting field $K(S)$ is the smallest of such subfields of $E$, i.e. the intersection of such subfields of $E$, that contain both $K$ and $S$.\, We say that $K(S)$ is obtained from $K$ by adjoining the set $S$ to it.\, Naturally,
+                    $$K \subseteq K(S) \subseteq E.$$
+The field $K(S)$ contains all elements of $K$ and $S$, and being a field, also all such elements that can be formed via addition, subtraction, multiplication and division from the elements of $K$ and $S$.\, But such elements constitute a field, which therefore must be equal with $K(S)$.\, Accordingly, we have the
+
+\textbf{Theorem.}\, $K(S)$ constitutes of all rational expressions formed of the elements of the field $K$ with the elements of the set $S$.\\
+
+
+\textbf{Notes.}
+
+1. $K(S)$ is the union of all fields $K(T)$ where $T$ is a finite subset of $S$.\\
+2. $K(S_1 \cup S_2) = K(S_1)(S_2)$.\\
+3. If, especially, $S$ also is a subfield of $E$, then one may denote\, $K(S) = KS$.
+
+\begin{thebibliography}{9}
+\bibitem{vdW}{\sc B. L. van der Waerden:} {\em Algebra. Erster Teil}.\, Siebte Auflage der {\em Modernen Algebra}. Springer-Verlag; Berlin, Heidelberg, New York (1966).
+\end{thebibliography}
+
+
+
+%%%%%
+%%%%%
+\end{document}

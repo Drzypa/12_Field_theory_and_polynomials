@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IrreducibilityOfBinomialsWithUnityCoefficients}
+\pmcreated{2013-03-22 15:13:08}
+\pmmodified{2013-03-22 15:13:08}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{irreducibility of binomials with unity coefficients}
+\pmrecord{14}{36982}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D05}
+\pmclassification{msc}{13F15}
+\pmrelated{FactoringASumOrDifferenceOfTwoCubes}
+\pmrelated{PrimeFaxtorsOfXn1}
+\pmrelated{PrimeFactorsOfXn1}
+\pmrelated{ExpressibleInClosedForm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $n$ be a positive integer.\, We consider the possible factorization of the binomial $x^n\!+\!1$.
+
+\begin{itemize}
+ \item If $n$ has no odd prime factors, then the binomial $x^n\!+\!1$ is \PMlinkname{irreducible}{Irreducible Polynomial}.\, Thus, $x\!+\!1$, $x^2\!+\!1$, $x^4\!+\!1$, $x^8\!+\!1$ and so on are irreducible polynomials (i.e. \PMlinkescapetext{irreducible} in the field $\mathbb{Q}$ of their coefficients).\, N.B., only $x\!+\!1$ and $x^2\!+\!1$ are \PMlinkescapetext{irreducible} in the field $\mathbb{R}$; e.g. one has\, $x^4\!+\!1 = (x^2\!-\!x\sqrt{2}\!+\!1)(x^2\!+\!x\sqrt{2}\!+\!1)$.
+ \item If $n$ is an odd number, then $x^n\!+\!1$ is always divisible by $x\!+\!1$:
+  \begin{align}
+         x^n+1 = (x+1)(x^{n-1}-x^{n-2}+x^{n-3}-+\cdots-x+1)
+  \end{align}
+This \PMlinkescapetext{formula} is usable when $n$ is an odd prime number, e.g.
+              $$x^5+1 = (x+1)(x^4-x^3+x^2-x+1).$$
+ \item When $n$ is not a prime number but has an odd prime factor $p$, say\,
+ $n = mp$,\, then we write\, $x^n\!+\!1 = (x^m)^p\!+\!1$\, and apply the idea of (1); for example:
+   $$x^{12}+1 = (x^4)^3+1 = (x^4+1)[(x^4)^2-x^4+1] = (x^4+1)(x^8-x^4+1)$$
+\end{itemize}
+
+There are similar results for the binomial $x^n\!+\!y^n$, and the \PMlinkescapetext{formula} corresponding to (1) is
+  \begin{align}
+         x^n+y^n = (x+y)(x^{n-1}-x^{n-2}y+x^{n-3}y^2-+\cdots-xy^{n-2}+y^n),
+  \end{align}
+which may be verified by performing the multiplication on the right hand \PMlinkescapetext{side}.
+%%%%%
+%%%%%
+\end{document}

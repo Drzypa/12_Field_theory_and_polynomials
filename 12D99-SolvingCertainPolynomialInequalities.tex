@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SolvingCertainPolynomialInequalities}
+\pmcreated{2013-03-22 16:57:23}
+\pmmodified{2013-03-22 16:57:23}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{solving certain polynomial inequalities}
+\pmrecord{20}{39226}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Feature}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmrelated{QuadraticInequality}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\begin{document}
+In this article, we discuss inequality of the form $p(x)\ge 0$ or $p(x)>0$, where $p(x)$ is a polynomial with real coefficients such that $p(x)$ can be expressed as product of linear factors:
+$$p(x)=(x-a_1)(x-a_2)\cdots (x-a_n)$$
+where $a_i$ are real numbers (in the \PMlinkescapetext{language} of field theory, this means that $p(x)$ splits in the field of real numbers).
+
+When we plot the polynomial $y=p(x)$, whenever it crosses the $x$-axis, the crossing point is a root of $p(x)$.  On either side of the crossing point, the values of $p(x)$ may be negative or positive.  The way to solve the inequality $p(x)>0$ or $p(x)\ge 0$ is to look at how $p(x)$ crosses the $x$-axis, and to realize that when $x$ is very large, $p(x)$ will be positive.  This idea can be illustrated in the following figure:
+\begin{center}
+\begin{pspicture}(-7,-2)(7,3)
+\psset{unit=0.8cm}
+\rput[l](-7,0){.}
+\rput[r](7,0){.}
+\rput[a](3,-2){.}
+\rput[b](-3.7,3.1){.}
+\psline{<->}(-7,0)(7,0)
+\pscurve{<->}(-6,-1)(-4,3)(-3,3)(0,0)(1,1)(3,-2)(6,1)
+\rput[b](6.74,-0.4){$x$}
+\rput[b](-1.25,2){$p(x)$}
+\rput[b](6.5,0.25){$+$}
+\rput[b](3.5,0.25){$-$}
+\rput[b](1,0.25){$+$}
+\rput[b](0,0.25){$-$}
+\rput[b](-3.5,0.25){$+$}
+\rput[b](-6.5,0.25){$-$}
+\rput[b](5.75,-0.5){$a_1$}
+\rput[b](2.4,-0.5){$a_2$}
+\rput[b](0,-0.5){$a_3$}
+\rput[b](-5.25,-0.5){$a_4$}
+\end{pspicture}
+\end{center}
+If we start from the far right, the curve (graph of $p(x)$) is above the horizontal axis, and so the values of $p(x)$ are positive there.  As it approaches $a_1$, its values decrease until it crosses $a_1$ and dips below the horizontal axis.  The values of $p(x)$ are now negative.  As it continues to travel along to the left, its values increase until it passes over another crossing point, $a_2$, and the values become positive as soon as it passes $a_2$.  When $p(x)$ reaches $a_3$ however, it merely touches the $x$-axis (at $a_3$) and then rises again.  So on either side of $a_3$ the values of $p(x)$ are positive.  Nevertheless, an analysis of how $p(x)$ crosses the $x$-axis is enough to give us some clue on how to solve inequalities of the form $p(x)\ge 0$ or $p(x)>0$.
+
+With this idea in mind, the steps are devised when solving inequalities of this type:
+\begin{enumerate}
+\item arrange $a_i$ so that they are in the ascending order: $a_1\ge a_2\ge \cdots \ge a_n$
+\item plot $a_i$ on the number line (the real axis), so each $a_i$ is now a point on the line
+\item label above the interval $i_1:=(a_1,\infty)$ to the right of $a_1$ positive
+\item go to point $a_2$
+\item if $a_2\ne a_1$, label above the interval $i_2:=(a_2,a_1)$ adjacent to $i_1$ negative
+\item if $a_2=a_1$, label above $a_2$ negative
+\item go to $a_3$, and iterate the labeling processes 4-6
+\item stop when $(-\infty,a_n)$ is labeled.
+\item if we are trying to solve $p(x)\ge 0$, then all intervals that are labeled positive, including the end points, are solutions to the inequality
+\item if we are solving $p(x)>0$, then all intervals labeled positive, excluding the end points, are solutions to the inequality.
+\end{enumerate}
+
+\textbf{Remark}.  After all the labeling is done, there should a total of $n+1$ labels, one over each interval, including the null intervals (the points).
+
+To see how this works, let us look at some actual examples.
+\begin{itemize}
+\item Solve $(x-2)x(x+3)\ge 0$.
+\begin{enumerate}
+\item Plot $2$, $0$, $-3$ on the number line. 
+\item The intervals separated by these points are $(2,\infty),(0,2),(-3,0),(-\infty,-3)$.
+\item Since no two points are the same, the intervals that are labeled positive are $(2,\infty)$ and $(-3,0)$.
+\item The solutions to the inequality are $[2,\infty) \cup [-3,0]$, the square brackets signify that the end points are included in the solutions.
+\end{enumerate}
+\begin{center}
+\begin{pspicture}(-7,-2)(7,2)
+\psset{unit=0.8cm}
+\psline{<->}(-7,0)(7,0)
+\psline[linewidth=1.5pt]{->}(2,0)(7,0)
+\psline[linewidth=1.5pt](-3,0)(0,0)
+\psdots[dotscale=1.5](2,0)(0,0)(-3,0)
+\rput[b](2,-0.75){$2$}
+\rput[b](0,-0.75){$0$}
+\rput[b](-3,-0.75){$-3$}
+\rput[b](5,0.25){$+$}
+\rput[b](1,0.25){$-$}
+\rput[b](-1.5,0.25){$+$}
+\rput[b](-5,0.25){$-$}
+\end{pspicture}
+\end{center}
+\item Solve $(x-8)^7>0$.
+\begin{enumerate}
+\item Plot $8$ on the number line. 
+\item The intervals separated by these points are $(8,\infty),(-\infty,8)$, since $8$ is repeated $7$ times.
+\item Start with labeling $(8,\infty)$ positive (the first label)
+\item The point $8$ is then labeled alternately $-(2), +(3), -(4), +(5), -(6), +(7)$.
+\item The last label goes to $(-\infty,8)$, which is negative.
+\item Therefore, the solution set is $(8,\infty)$ (excluding $8$).
+\end{enumerate}
+\begin{center}
+\begin{pspicture}(-7,-2)(7,2)
+\psset{unit=0.8cm}
+\psline{<->}(-7,0)(7,0)
+\psline[linewidth=1.5pt]{->}(1,0)(7,0)
+\psdots[dotstyle=o,dotscale=1.5](1,0)
+\rput[b](1,-0.75){$8$}
+\rput[b](3,0.25){$+$}
+\rput[b](1,0.25){$-$}
+\rput[b](1,0.5){$+$}
+\rput[b](1,0.75){$-$}
+\rput[b](1,1){$+$}
+\rput[b](1,1.25){$-$}
+\rput[b](1,1.5){$+$}
+\rput[b](-1,0.25){$-$}
+\end{pspicture}
+\end{center}
+\item Solve $(x-1)(x+1)^4\ge 0$.
+\begin{enumerate}
+\item Plot $1,-1$ on the number line. 
+\item The intervals separated by these points are $(1,\infty),(-1,1)$, and $(-\infty,-1)$, since $-1$ is repeated $4$ times.
+\item Start with labeling $(1,\infty)$ positive (the first label), followed by $(-1,1)$ as negative.
+\item The point $-1$ is then labeled alternately $+(3), -(4), +(5)$.
+\item The last label goes to $(-\infty,-1)$, which is negative.
+\item Therefore, the solution set is $[1,\infty) \cup \lbrace -1\rbrace$.
+\end{enumerate}
+\begin{center}
+\begin{pspicture}(-7,-2)(7,2)
+\psset{unit=0.8cm}
+\psline{<->}(-7,0)(7,0)
+\psline[linewidth=1.5pt]{->}(0,0)(7,0)
+\psdots[dotscale=1.5](-2,0)(0,0)
+\rput[b](-2,-0.75){$-1$}
+\rput[b](0,-0.75){$1$}
+\rput[b](2,0.25){$+$}
+\rput[b](-1,0.25){$-$}
+\rput[b](-2,0.25){$+$}
+\rput[b](-2,0.5){$-$}
+\rput[b](-2,0.75){$+$}
+\rput[b](-4,0.25){$-$}
+\end{pspicture}
+\end{center}
+\end{itemize}
+
+\textbf{Remarks}.  
+\begin{enumerate}
+\item
+In the last two examples, we observe that a simplification can be made when solving the inequality: whenever we have repeating roots ($a_i=a_{i+1}$).  Depending on the parity of the number of repeating roots, we have two situations:
+\begin{itemize}
+\item If the number $n_i$ of repeating root, say $a_i$, is odd, then solving inequality involving $(x-a_i)^{n_i}$ is the same as solving the same inequality with $(x-a_i)^{n_i}$ replaced by $(x-a_i)$.  In other words, their solution sets are the same.  For example, 
+\begin{center} solving $(x-8)^7>0$ is the same as solving $(x-8)>0$. \end{center}
+\item If the number $n_i$ of repeating root $a_i$ is even, then we look at whether the inequality is strict or not.
+\begin{itemize}
+\item If the inequality is strict, then we can completely eliminate $(x-a_i)^{n_i}$ from the inequality without altering the solution set.  For example, \begin{center} solving $(x-1)(x+1)^4>0$ is the same as solving $(x-1)>0$. \end{center}
+\item Otherwise, we need to remember the roots themselves as solutions.  Therefore, the solution set for $(x-1)(x+1)^4\ge 0$ is the same as the solution set of $(x-1)\ge 0$ together with the root $-4$.
+\end{itemize}
+\end{itemize}
+\item
+Using the rules above, we may also solve inequalities $p(x)<0$ or $p(x)\le 0$.  The solution set for $p(x)<0$ is the complement of the solution set for $p(x)\ge 0$, and the solution set for $p(x)\le 0$ is the complement of the solution set for $p(x)>0$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

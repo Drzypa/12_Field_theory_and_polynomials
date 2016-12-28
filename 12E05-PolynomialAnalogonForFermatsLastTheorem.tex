@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolynomialAnalogonForFermatsLastTheorem}
+\pmcreated{2013-03-22 19:13:05}
+\pmmodified{2013-03-22 19:13:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{polynomial analogon for Fermat's last theorem}
+\pmrecord{8}{42138}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{11C08}
+\pmsynonym{Fermat's last theorem for polynomials}{PolynomialAnalogonForFermatsLastTheorem}
+\pmrelated{MasonsTheorem}
+\pmrelated{WeierstrassSubstitutionFormulas}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+For polynomials with complex coefficients, there is an analogon of Fermat's last theorem.\, It can be proven quite elementarily by using Mason's theorem (1983), but the original proof (about in 1900) was based on methods of algebraic geometry.\\
+
+\textbf{Theorem.}\, For an integer $n$ greater than 2, there exist no non-constant coprime polynomials $x(t)$, $y(t)$, 
+$z(t)$ in the ring $\mathbb{C}[t]$ satisfying
+\begin{align}
+[x(t)]^n+[y(t)]^n \;=\; [z(t)]^n.
+\end{align}
+
+
+\textbf{Remark.}\, For\, $n = 2$, the equation (1) is in \PMlinkescapetext{force} e.g. as
+$$(2t)^2\!+\!(1\!-\!t^2)^2 \;=\; (1\!+\!t^2)^2.$$
+
+
+
+\begin{thebibliography}{8}
+\bibitem{SL}{\sc Serge Lang}: ``Die $abc$-Vermutung''.\, -- \emph{Elemente der Mathematik} \textbf{48} (1993).
+\end{thebibliography}
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

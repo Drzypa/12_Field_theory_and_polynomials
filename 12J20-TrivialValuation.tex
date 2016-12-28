@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TrivialValuation}
+\pmcreated{2013-03-22 14:20:23}
+\pmmodified{2013-03-22 14:20:23}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{trivial valuation}
+\pmrecord{16}{35811}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{11R99}
+\pmrelated{IndependenceOfTheValuations}
+\pmrelated{KrullValuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The {\em trivial valuation} of a field $K$ is the Krull valuation\, $|\cdot|$\, of $K$ such that\, $|0| = 0$\, and\, $|x| = 1$\, for other elements $x$ of $K$.
+
+\subsection*{Properties}
+
+\begin{enumerate}
+ \item Every field has the trivial valuation.
+ \item The trivial valuation is non-archimedean.
+ \item The valuation ring of the trivial valuation is the whole field and the corresponding maximal ideal is the zero ideal.
+ \item The field is \PMlinkname{complete}{Complete} with respect to (the metric given by) its trivial valuation.
+ \item A finite field has only the trivial valuation.\, (Let $a$ be the primitive element of the multiplicative group of the field, which is \PMlinkname{cyclic}{CyclicGroup}.\, If \,$|\cdot|$\, is any valuation of the field, then one must have\, $|a| = 1$\, since otherwise\, $|1| \neq 1$.\, Consequently,\, $|x| = |a^m| = |a|^m = 1^m = 1$\, for all non-zero elements $x$.)
+ \item Every algebraic extension of finite fields has only the trivial valuation, but every field of characteristic 0 has non-trivial valuations.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

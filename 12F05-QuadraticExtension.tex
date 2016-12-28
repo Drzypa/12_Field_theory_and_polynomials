@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticExtension}
+\pmcreated{2013-03-22 15:42:34}
+\pmmodified{2013-03-22 15:42:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{quadratic extension}
+\pmrecord{20}{37656}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmclassification{msc}{12F10}
+\pmsynonym{$2$-extension}{QuadraticExtension}
+\pmrelated{PExtension}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $k$ be a field and $K$ be its algebraic closure.  Suppose that $k\neq K$.  A \emph{quadratic extension} $E$ over $k$ is a field $k< E\leq K$ such that $E=k(\alpha)$ for some $\alpha\in K-k$, where $\alpha^2\in k$.
+
+If $a=\alpha^2$, we often write $E=k(\sqrt{a})$.  Every element of $E$ can be written as $r+s\sqrt{a}$, for some $r,s\in k$.  This representation is unique and we see that $\lbrace 1,\sqrt{a}\rbrace$ is a basis for the vector space $E$ over $k$.  In fact, we have the following
+
+\textbf{Proposition.}  If the characteristic of $k$ is not $2$, then $E$ is a quadratic extension over $k$ iff $\operatorname{dim}(E)=2$ (as a vector space) over $k$.
+\begin{proof}  One direction is clear from the above discussion.  So suppose $\operatorname{dim}(E)=2$ over $k$ and $\lbrace 1,\beta \rbrace$ is a basis for $E$ over $k$.  Then $\beta^2=r+s\beta$ for some $r,s\in k$.  Set $\alpha=\beta-\frac{s}{2}$.  Then clearly $\alpha\in E-k$ and $\lbrace 1,\alpha\rbrace$ is also a basis for $E$ over $k$.  Furthermore,  $\alpha^2= r+\frac{s^2}{4}\in k$.  Thus, $k(\alpha)$ is quadratic extension over $k$ and $[k(\alpha):k]=2$.  But $k(\alpha)$ is a subfield of $E$.  Then $2=[E:k]= [E:k(\alpha)][k(\alpha):k]=2[E:k(\alpha)]$ implies that $[E:k(\alpha)]=1$ and $E=k(\alpha)$.
+\end{proof}
+
+In the proposition above, the assumption that $\operatorname{Char}(k)\ne 2$ can not be dropped.  If fact, quadratic extensions of $\mathbb{Z}_2$ do not exist, for if $\alpha^2\in \mathbb{Z}_2$, then $\alpha\in \mathbb{Z}_2$.
+
+For the rest of the discussion, we assume that $\operatorname{Char}(k)\ne 2$.
+
+Pick any element $\beta=r+s\sqrt{a}$ in $E-k$.  Then $s\neq 0$ and $(\beta - r)^2=s^2a\in k$.  So $\beta$ is a root of the irreducible polynomial $m(x)=x^2-2rx+(r^2-s^2a)$ in $k[x]$.  If we define $\overline{\beta}$ to be $r-s\sqrt{a}$, then $\overline{\beta}$ is the other root of $m(x)$, clearly also in $E-k$.  This implies that the minimal polynomial of every element in $E$ has degree at most 2, and splits into linear factors in $E[x]$.  
+
+Since $\operatorname{Char}(k)\ne 2$, $\beta\neq\overline{\beta}$ are two distinct roots of $m(x)$.  This shows that $k(\sqrt{a})$ is separable over $k$.
+
+Now, let $f(x)$ be any irreducible polynomial over $k$ which has a root $\beta$ in $E$.  Then the minimal polynomial $m(x)$ of $\beta$ in $k[x]$ must divide $f$.  But because $f$ is irreducible, $m=f$.  This shows that $k(\sqrt{a})$ is normal over $k$.  Since $k(\sqrt{a})$ is both separable and normal over $k$, it is a Galois extension over $k$.
+
+Let $\phi$ be an automorphism of $E=k(\sqrt{a})$ fixing $k$.  Then $\phi(\sqrt{a})$ is easily seen to be a root of the minimal polynomial of $\sqrt{a}$.  As a result, either $\phi=1$ on $E$ or $\phi$ is the involution that maps each $\beta$ to $\overline{\beta}$.  We have just proved
+
+\textbf{Theorem.}  Suppose $\operatorname{Char}(k)\neq 2$.  Any quadratic extension of $k$ is Galois over $k$, whose Galois group is isomorphic to $\mathbb{Z}/2\mathbb{Z}$.
+
+\textbf{Remark}.  A quadratic extension (of a field) is also known in the literature as a \emph{$2$-extension}, a special case of a p-extension, when $p=2$.
+%%%%%
+%%%%%
+\end{document}

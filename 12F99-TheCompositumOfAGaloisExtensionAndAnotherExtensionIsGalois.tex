@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheCompositumOfAGaloisExtensionAndAnotherExtensionIsGalois}
+\pmcreated{2013-03-22 15:04:13}
+\pmmodified{2013-03-22 15:04:13}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{the compositum of a Galois extension and another extension is Galois}
+\pmrecord{6}{36791}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+\pmclassification{msc}{11R32}
+%\pmkeywords{compositum}
+%\pmkeywords{composite field}
+%\pmkeywords{Galois extension}
+\pmrelated{FundamentalTheoremOfGaloisTheory}
+\pmrelated{GaloisExtension}
+\pmrelated{ExampleOfNormalExtension}
+\pmrelated{ClassNumberDivisibilityInExtensions}
+\pmrelated{GaloisGroupOfTheCompositumOfTwoGaloisExtensions}
+\pmrelated{ExtensionsWithoutUnramifiedSubextensionsAndClassNumberDivisibility}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{rem}{Remark}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\begin{document}
+\begin{thm}
+Let $E/K$ be a Galois extension of fields, let $F/K$ be an arbitrary extension and  assume that $E$ and $F$ are both subfields of some other larger field $T$. The compositum of $E$ and $F$ is here denoted by $EF$. Then:
+\begin{enumerate}
+\item $EF$ is a Galois extension of $F$ and $E$ is Galois over $E\cap F$;\\
+
+\item Let $H=\Gal(EF/F)$. The restriction map:
+\begin{eqnarray*}
+H=\Gal(EF/F) & \longrightarrow & \Gal(E/E\cap F)\\
+\sigma & \longrightarrow & \sigma |_{E}
+\end{eqnarray*}
+is an isomorphism, where $\sigma |_{E}$ denotes the restriction of $\sigma$ to $E$. 
+\end{enumerate}
+\end{thm}
+
+\begin{rem}
+Notice, however, that if $E/F$ and $F/K$ are both Galois extensions, the extension $E/K$ need not be Galois. See example of normal extension for a counterexample.
+\end{rem}
+%%%%%
+%%%%%
+\end{document}

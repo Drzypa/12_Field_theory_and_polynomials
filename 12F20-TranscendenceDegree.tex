@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TranscendenceDegree}
+\pmcreated{2013-03-22 13:58:11}
+\pmmodified{2013-03-22 13:58:11}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{transcendence degree}
+\pmrecord{7}{34740}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F20}
+\pmdefines{transcendence degree of a set}
+\pmdefines{transcendence degree of a field extension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\newtheorem{Exam}{Example}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+The \emph{transcendence degree} of a set $S$ over a field $K$, denoted $T_S$, is the size of the maximal subset $S'$ of $S$ such that all the elements of $S'$ are algebraically independent.
+
+The \emph{transcendence degree} of a field extension $L$ over $K$ is the transcendence degree of the minimal subset of $L$ needed to generate $L$ over $K$.
+
+Heuristically speaking, the transcendence degree of a finite set $S$ is obtained by taking the number of elements in the set, subtracting the number of algebraic elements in that set, and then subtracting the number of algebraic relations between distinct pairs of elements in $S$.
+
+\begin{Exam}[Computing the Transcendence Degree]
+The set $S=\{\sqrt{7}, \pi, \pi^2, e\}$ has transcendence $T_S\leq2$ over $\mathbb{Q}$ since there are
+four elements, $\sqrt{7}$ is algebraic, and the polynomial
+$f(x,y)=x^2-y$ gives an algebraic dependence between $\pi$ and $\pi^2$
+(i.e.  $(\pi,\pi^2)$ is a root of $f$), giving $T_S\leq4-1-1=2$.  If
+we assume the conjecture that $e$ and $\pi$ are algebraically
+independent, then no more dependencies can exist, and we can conclude
+that, in fact, $T_S=2$.
+\end{Exam}
+%%%%%
+%%%%%
+\end{document}

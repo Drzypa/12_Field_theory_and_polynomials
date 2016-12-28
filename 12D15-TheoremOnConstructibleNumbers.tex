@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremOnConstructibleNumbers}
+\pmcreated{2013-03-22 17:16:28}
+\pmmodified{2013-03-22 17:16:28}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{theorem on constructible numbers}
+\pmrecord{10}{39614}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D15}
+\pmrelated{ConstructibleNumbers}
+\pmrelated{ClassicalProblemsOfConstructibility}
+\pmdefines{immediately constructible from}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+\begin{thm*}
+Let $\mathbb{F}$ be the field of constructible numbers and $\alpha\in\mathbb{F}$.  Then there exists a nonnegative integer $k$ such that $[\mathbb{Q}(\alpha)\!:\!\mathbb{Q}]=2^k$.
+\end{thm*}
+
+Before proving this theorem, some preliminaries must be addressed.
+
+First of all, within this entry, the following nonconventional definition will be used:
+
+Let $S$ be a subset of $\mathbb{C}$ that contains a nonzero complex number and $\alpha\in\mathbb{C}$.  Then $\alpha$ is \emph{immediately constructible from} $S$ if any of the following hold:
+
+\begin{itemize}
+\item $\alpha=a+b$ for some $a,b\in S$;
+\item $\alpha=a-b$ for some $a,b\in S$;
+\item $\alpha=ab$ for some $a,b\in S$;
+\item $\alpha=a/b$ for some $a,b\in S$ with $b\neq 0$;
+\item $\alpha=\sqrt{|z|}e^{\frac{i\theta}{2}}$ for some $z\in S$ with $z \neq 0$ and $\theta=\operatorname{arg}(z)$ with $0\le\theta <2\pi$.
+\end{itemize}
+
+The following lemmas are clear from this definition:
+
+\begin{lemma}
+Let $S$ be a subset of $\mathbb{C}$ that contains a nonzero complex number and $\alpha\in\mathbb{C}$.  Then $\alpha$ is constructible from $S$ if and only if there exists a finite sequence $\alpha_1,\dots ,\alpha_n\in\mathbb{C}$ such that $\alpha_1$ is immediately constructible from $S$, $\alpha_2$ is immediately constructible from $S \cup \{\alpha_1\}$, $\dots$ , and $\alpha$ is immediately constructible from $S \cup \{\alpha_1,\dots ,\alpha_n\}$.
+\end{lemma}
+
+\begin{lemma}
+Let $F$ be a subfield of $\mathbb{C}$ and $\alpha\in\mathbb{C}$.  If $\alpha$ is immediately constructible from $F$, then either $[F(\alpha)\!:\!F]=1$ or $[F(\alpha)\!:\!F]=2$.
+\end{lemma}
+
+Now to prove the theorem.
+
+\begin{proof}
+By the first lemma, there exists a finite sequence $\alpha_1,\dots ,\alpha_n\in\mathbb{C}$ such that $\alpha_1$ is immediately constructible from $\mathbb{Q}$, $\alpha_2$ is immediately constructible from $\mathbb{Q} \cup \{\alpha_1\}$, $\dots$ , and $\alpha$ is immediately constructible from $\mathbb{Q} \cup \{\alpha_1,\dots ,\alpha_n\}$.  Thus, $\alpha_2$ is immediately constructible from $\mathbb{Q}(\alpha_1)$, $\dots$ , and $\alpha$ is immediately constructible from $\mathbb{Q}(\alpha_1,\dots ,\alpha_n)$.  By the second lemma, $[\mathbb{Q}(\alpha_1)\!:\!\mathbb{Q}]$ is equal to either $1$ or $2$, $[\mathbb{Q}(\alpha_1,\alpha_2)\!:\!\mathbb{Q}(\alpha_1)]$ is equal to either $1$ or $2$, $\dots$ , and $[\mathbb{Q}(\alpha_1, \dots ,\alpha_n,\alpha)\!:\!\mathbb{Q}(\alpha_1, \dots ,\alpha_n)]$ is equal to either $1$ or $2$.  Therefore, there exists a nonnegative integer $m$ such that $[\mathbb{Q}(\alpha_1, \dots ,\alpha_n,\alpha)\!:\!\mathbb{Q}]=2^m$.  Since $\mathbb{Q} \subseteq \mathbb{Q}(\alpha) \subseteq \mathbb{Q}(\alpha_1, \dots ,\alpha_n,\alpha)$, it follows that there exists a nonnegative integer $k$ such that $[\mathbb{Q}(\alpha)\!:\!\mathbb{Q}]=2^k$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

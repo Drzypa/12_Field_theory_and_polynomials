@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteUltrametricField}
+\pmcreated{2013-03-22 14:55:37}
+\pmmodified{2013-03-22 14:55:37}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{complete ultrametric field}
+\pmrecord{15}{36615}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J10}
+\pmclassification{msc}{54E35}
+%\pmkeywords{convergence}
+\pmrelated{Series}
+\pmrelated{NecessaryConditionOfConvergence}
+\pmrelated{ExtensionOfValuationFromCompleteBaseField}
+\pmrelated{PropertiesOfNonArchimedeanValuations}
+\pmdefines{ultrametric field}
+\pmdefines{non-archimedean field}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A field $K$ equipped with a non-archimedean valuation\, $|\cdot|$\, is called a {\em non-archimedean field} or also an {\em ultrametric field}, since the valuation \PMlinkescapetext{induces} the ultrametric\, $d(x,\,y) := |x\!-\!y|$\, of $K$.\\
+
+\begin{thmplain}
+\,Let $(K,\,d)$ be a \PMlinkname{complete}{Complete} ultrametric field.\, A necessary and sufficient condition for the convergence of the {\em series} 
+\begin{align}
+                 a_1\!+\!a_2\!+\!a_3\!+\ldots
+\end{align}
+in $K$ is that
+\begin{align}
+                \lim_{n\to\infty}a_n \;=\; 0.
+\end{align}
+\end{thmplain}
+
+{\em Proof.}\, Let $\varepsilon$ be any positive number.\, When (1) converges, it satisfies the Cauchy condition and therefore exists a number $m_\varepsilon$ such that surely
+ $$|a_{m+1}| \;=\; \left|\sum_{j=1}^{m+1}a_j-\sum_{j=1}^{m}a_j\right| \;<\; \varepsilon$$
+for all\, $m \geqq m_\varepsilon$;\, thus (2) is necessary.\, On the contrary, suppose the validity of (2).\, Now one may determine such a great number $n_\varepsilon$ that 
+      $$|a_m| \;<\; \varepsilon \qquad \forall m \,\geqq\, n_\varepsilon.$$
+No matter how great is the natural number $n$, the ultrametric then guarantees the inequality
+  $$|a_m\!+\!a_{m+1}\!+\ldots+\!a_{m+n}| \;\leqq\; 
+\max\{|a_m|,\,|a_{m+1}|,\,\ldots,\,|a_{m+n}|\} \;<\; \varepsilon$$
+always when\, $m \geqq n_\varepsilon$.\, Thus the partial sums of (1) form a Cauchy sequence, which converges in the complete field.\, Hence the series (1) converges, and (2) is sufficient.
+
+%%%%%
+%%%%%
+\end{document}

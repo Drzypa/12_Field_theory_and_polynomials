@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TschirnhausTransformations}
+\pmcreated{2013-03-22 13:50:12}
+\pmmodified{2013-03-22 13:50:12}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Tschirnhaus transformations}
+\pmrecord{11}{34572}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmsynonym{Tschirnhausen Transformation}{TschirnhausTransformations}
+%\pmkeywords{reduction}
+%\pmkeywords{polynomial}
+%\pmkeywords{resultant}
+\pmrelated{QuadraticResolvent}
+\pmrelated{EulersDerivationOfTheQuarticFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+\begin{document}
+A polynomial transformation which transforms a polynomial to another with certain zero-coefficients is called a
+\emph{Tschirnhaus Transformation}. It is thus an invertible transformation of the form   $x \mapsto g(x)/h(x)$ where $g,h$ are polynomials over the base field $K$ (or some subfield of the splitting field of the polynomial being transformed). If $\gcd(h(x),f(x)) = 1$ then the Tschirnhaus transformation becomes a polynomial transformation mod f.
+
+Specifically, it concerns a substitution that reduces finding the roots of the polynomial
+$$
+\textmd{p} = T^n + a_1T^{n-1} + ... + a_n = \prod_{i=1}^n
+(T-r_i)\in k[T]
+$$
+to finding the roots of another \textmd{q} - with less parameters
+- and solving an auxiliary polynomial equation \textmd{s}, with
+$\deg(s)<\deg(p \cap q).$
+
+Historically, the transformation was applied to reduce the general quintic equation, to simpler resolvents. Examples due to Hermite and Klein are
+respectively: The principal resolvent
+$$
+K(X):=X^5+a_0X^2+a_1X+a_3
+$$
+and the Bring-Jerrard form
+$$
+K(X):=X^5+a_1X+a_2
+$$
+Tschirnhaus transformations are also used when computing Galois
+groups to remove repeated roots in resolvent polynomials. Almost any transformation will work but it is
+extremely hard to find an efficient algorithm that can be proved
+to work.
+%%%%%
+%%%%%
+\end{document}

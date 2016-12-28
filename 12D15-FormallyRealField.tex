@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FormallyRealField}
+\pmcreated{2013-03-22 14:22:22}
+\pmmodified{2013-03-22 14:22:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{formally real field}
+\pmrecord{20}{35863}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D15}
+\pmrelated{PositiveCone}
+\pmrelated{RealRing}
+\pmdefines{formally real}
+\pmdefines{real closed}
+\pmdefines{real closure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{real}
+
+A field $F$ is called \emph{formally real} if $-1$ can not be expressed as a sum of squares (of elements of $F$).
+
+Given a field $F$, let $S_F$ be the set of all sums of squares in $F$.  The following are equivalent conditions that $F$ is formally real:
+
+\begin{enumerate}
+\item
+$-1\notin S_F$
+\item
+$S_F\not= F$ and $\operatorname{char}(F)\ne 2$
+\item
+$\sum {a_i}^2=0$ implies each $a_i=0$, where $a_i\in F$
+\item
+$F$ can be ordered (There is a total order $<$ which makes $F$ into an ordered field)
+\end{enumerate}
+
+\textbf{Some Examples:}
+\begin{itemize}
+\item
+$\mathbb{R}$ and $\mathbb{Q}$ are both formally real fields.
+\item
+If $F$ is formally real, so is $F(\alpha)$, where $\alpha$ is a root of an irreducible polynomial of odd degree in $F[x]$.  As an example, $\mathbb{Q}(\sqrt[3]{2}\omega)$ is formally real, where $\omega\not= 1$ is a third root of unity.
+\item
+$\mathbb{C}$ is not formally real since $-1=i^2$.
+\item
+Any field of characteristic non-zero is not formally real; it is not \PMlinkescapetext{even} orderable.
+\end{itemize}
+
+A formally real field is said to be \emph{real closed} if any of its algebraic extension which is also formally real is itself.  For any formally real field $k$, a formally real field $K$ is said to be a \emph{real closure} of $k$ if $K$ is an algebraic extension of $k$ and is real closed.
+
+In the example above, $\mathbb{R}$ is real closed, and $\mathbb{Q}$ is not, whose real closure is $\tilde{\mathbb{Q}}$.  Furthermore, it can be shown that the real closure of a countable formally real field is countable, so that $\tilde{\mathbb{Q}} \ne \mathbb{R}$.
+
+%%%%%
+%%%%%
+\end{document}

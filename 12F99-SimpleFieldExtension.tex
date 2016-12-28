@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleFieldExtension}
+\pmcreated{2013-03-22 14:23:06}
+\pmmodified{2013-03-22 14:23:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{simple field extension}
+\pmrecord{25}{35878}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+%\pmkeywords{adjunction}
+\pmrelated{PrimitiveElementTheorem}
+\pmrelated{CanonicalFormOfElementOfNumberField}
+\pmdefines{primitive element}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $K(\alpha)$ be obtained from the field $K$ via the \PMlinkescapetext{simple adjunction} of the element $\alpha$, which is called the \emph{primitive element} of the field extension $K(\alpha)/K$.\, We shall settle the \PMlinkescapetext{structure types} of the field $K(\alpha)$.
+
+We consider the substitution homomorphism \,$\varphi: K[X] \rightarrow K[\alpha]$, where
+            $$\sum a_{\nu}X^\nu \mapsto \sum a_{\nu}\alpha^\nu.$$
+According to the ring homomorphism theorem, the image ring $K[\alpha]$ is isomorphic with the residue class ring $K[X]/\frak{p}$, where $\frak{p}$ is the ideal of polynomials having $\alpha$ as their zero. \,Because $K[\alpha]$ is, as subring of the field $K(\alpha)$, an integral domain, then also $K[X]/\frak{p}$ has no zero divisors, and hence $\frak{p}$ is a prime ideal. \,It must be principal, for $K[X]$ is a principal ideal ring.
+
+There are two possibilities:
+
+\begin{enumerate}
+\item  $\frak{p} = (p(X))$, where $p(X)$ is an irreducible polynomial with \,$p(\alpha) = 0$. \,Because every non-zero prime ideal of $K[X]$ is maximal, the isomorphic image $K[X]/(p(X))$ of $K[\alpha]$ is a field, and it must give the \PMlinkescapetext{structure} of \,$K(\alpha) = K[\alpha]$. \,We say that $\alpha$ is {\em algebraic with respect to} $K$ (or {\em over} $K$). \,In this case, we have a finite field extension \,$K(\alpha)/K$.
+
+\item  $\frak{p} = (0)$. \,This means that the homomorphism $\varphi$ is an isomorphism between $K[X]$ and $K[\alpha]$, i.e. all expressions $\sum a_{\nu}\alpha^\nu$ behave as the polynomials $\sum a_{\nu}X^\nu$. \,Now, $K[\alpha]$ is no field because $K[X]$ is not such, but the isomorphy of the rings implies the isomorphy of the corresponding fields of fractions. \,Thus the simple extension field $K(\alpha)$ is isomorphic with the field $K(X)$ of rational functions in one indeterminate $X$. \,We say that $\alpha$ is {\em \PMlinkname{transcendental}{Algebraic} with respect to} $K$ (or {\em over} $K$).  \,This time we have a simple infinite field extension \,$K(\alpha)/K$. 
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

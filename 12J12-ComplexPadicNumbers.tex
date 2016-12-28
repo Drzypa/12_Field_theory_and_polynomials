@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexPadicNumbers}
+\pmcreated{2013-03-22 15:13:44}
+\pmmodified{2013-03-22 15:13:44}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{complex p-adic numbers}
+\pmrecord{6}{36998}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J12}
+\pmclassification{msc}{11S99}
+\pmsynonym{complex $p$-adic numbers}{ComplexPadicNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem*{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+First, we review a possible construction of the complex numbers. We start from the rational numbers, $\Rats$, which we consider as a metric space, where the distance is given by the usual absolute value $|\cdot|$, e.g. $|-3/2|=3/2$. As we know, the field of rational numbers is not an algebraically closed field (e.g. $i=\sqrt{-1} \notin \Rats$). Let $\overline{\Rats}$ be a fixed algebraic closure of $\Rats$. The absolute value in $\Rats$ extends uniquely to $\overline{\Rats}$. However, $\overline{\Rats}$ is not complete with respect to $|\cdot|$ (e.g. $e=\sum_{n\geq 0} 1/n!\notin \overline{\Rats}$ because e is transcendental). The completion of $\overline{\Rats}$ with respect to $|\cdot |$ is $\Complex$, the field of complex numbers. 
+
+\subsection*{Construction of $\Complex_p$}
+
+We follow the construction of $\Complex$ above to build $\Complex_p$. Let $p$ be a prime number and let $\Rats_p$ be the \PMlinkname{$p$-adic rationals}{PAdicIntegers} or ($p$-adic numbers). The $p$-adics, $\Rats_p$, are the completion of $\Rats$ with respect to the usual \PMlinkname{$p$-adic valuation}{PAdicValuation} $|\cdot|_p$. Thus, we regard $(\Rats_p, |\cdot|_p)$ as a complete metric space. However, the field $\Rats_p$ is not algebraically closed (e.g. $i=\sqrt{-1}\in \Rats_p$ if and only if $p \equiv 1 \mod 4$). Let $\overline{\Rats}_p$ be a fixed algebraic closure of $\Rats_p$. The $p$-adic valuation $|\cdot|_p$ extends uniquely to $\overline{\Rats}_p$. However:
+
+\begin{prop}
+The field $\overline{\Rats}_p$ is not complete with respect to $|\cdot|_p$.
+\end{prop}
+\begin{proof}
+Let $\beta_n$ be defined as:
+$$\beta_n=\begin{cases}
+e^{2\pi i/n}, \text{ if } (n,p)=1;\\
+1 ,\text{ otherwise.}
+\end{cases}$$
+One can prove that if we define:
+$$\alpha=\sum_{n=1}^\infty \beta_n p^n$$
+then $\alpha\notin \overline{\Rats}_p$, although $\sum_{n=m}^\infty \beta_n p^n \to 0$ as $m\to \infty$ (see \cite{wash}, p. 48, for details). Thus, $\overline{\Rats}_p$ is not complete with respect to $|\cdot|_p$. 
+\end{proof}
+
+\begin{defn}
+The field of complex $p$-adic numbers is defined to be the completion of $\overline{\Rats}_p$ with respect to the $p$-adic absolute value $|\cdot|_p$.
+\end{defn}
+
+\begin{prop}[Properties of $\Complex_p$]
+The field $\Complex_p$ enjoys the following properties:
+\begin{enumerate}
+\item $\Complex_p$ is algebraically closed.
+\item The absolute value $|\cdot|_p$ extends uniquely to $\Complex_p$, which becomes an algebraically closed, complete metric space.
+\item $\Complex_p$ is a complete ultrametric field.
+\item $\overline{\Rats}_p$ is dense in $\Complex_p$.
+\item $\Complex_p$ is isomorphic to $\Complex$ as fields, although they are not isomorphic as topological spaces.
+\end{enumerate}
+\end{prop}
+
+\begin{thebibliography}{9}
+\bibitem{wash} L. C. Washington, {\em Introduction to Cyclotomic Fields},
+Springer-Verlag, New York.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

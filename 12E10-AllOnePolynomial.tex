@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AllOnePolynomial}
+\pmcreated{2013-03-22 15:00:26}
+\pmmodified{2013-03-22 15:00:26}
+\pmowner{Derk}{34}
+\pmmodifier{Derk}{34}
+\pmtitle{all one polynomial}
+\pmrecord{7}{36712}
+\pmprivacy{1}
+\pmauthor{Derk}{34}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E10}
+\pmsynonym{all-one polynomial}{AllOnePolynomial}
+\pmsynonym{AOP}{AllOnePolynomial}
+\pmrelated{CyclotomicPolynomial}
+\pmrelated{ProofThatTheCyclotomicPolynomialIsIrreducible}
+\pmrelated{FactoringAllOnePolynomialsUsingTheGroupingMethod}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An \emph{all one polynomial} (\emph{AOP}) is a polynomial used in finite fields, specifically GF($2$).  The AOP is a 1-equally spaced polynomial.
+
+An AOP of degree $m$ can be written as follows:
+
+$$\operatorname{AOP}(x) = \sum_{i=0}^{m} x^i = x^m + x^{m-1} + \ldots + x + 1$$
+
+Over GF($2$) the AOP has many interesting properties, including:
+
+\begin{itemize}
+\item The Hamming weight of the AOP is $m + 1$.
+\item The AOP is irreducible polynomial iff $m+1$ is prime and $2$ is a primitive root modulo $m+1$.
+\item The only AOP that is a primitive polynomial is $x^2 + x + 1$.
+\end{itemize}
+
+Despite the fact that the Hamming weight is large, because of the ease of representation and other improvements there are efficient hardware and software implementations for use in areas such as coding theory and cryptography.
+%%%%%
+%%%%%
+\end{document}

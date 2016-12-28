@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IrreduciblePolynomialsObtainedFromBiquadraticFields}
+\pmcreated{2013-03-22 17:54:22}
+\pmmodified{2013-03-22 17:54:22}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{irreducible polynomials obtained from biquadratic fields}
+\pmrecord{5}{40398}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{11R16}
+\pmrelated{ExamplesOfMinimalPolynomials}
+\pmrelated{BiquadraticEquation2}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{cor*}{Corollary}
+\begin{document}
+\begin{cor*}
+Let $m$ and $n$ be distinct squarefree integers, neither of which is equal to $1$.  Then the polynomial
+\[
+x^4-2(m+n)x^2+(m-n)^2
+\]
+is \PMlinkname{irreducible}{IrreduciblePolynomial2} (over $\mathbb{Q}$).
+\end{cor*}
+
+\begin{proof}
+By the theorem stated in the \PMlinkname{parent entry}{PrimitiveElementOfBiquadraticField}, $\sqrt{m}+\sqrt{n}$ is an algebraic number of \PMlinkname{degree}{DegreeOfAnAlgebraicNumber} $4$.  Thus, a polynomial of degree $4$ that has $\sqrt{m}+\sqrt{n}$ as a root must be \PMlinkescapetext{irreducible} over $\mathbb{Q}$.  We set out to construct such a polynomial.
+
+\begin{center}
+$\begin{array}{rl}
+x & =\sqrt{m}+\sqrt{n} \\
+x-\sqrt{m} & =\sqrt{n} \\
+(x-\sqrt{m})^2 & =n \\
+x^2-2\sqrt{m}\, x+m & =n \\
+x^2+m-n & =2\sqrt{m}\, x \\
+(x^2+m-n)^2 & =4mx^2 \\
+x^4+(2m-2n)x^2+(m-n)^2 & =4mx^2 \\
+x^4+(2m-2n-4m)x^2+(m-n)^2 & =0 \\
+x^4-2(m+n)x^2+(m-n)^2 & =0 \qedhere
+\end{array}$
+\end{center}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

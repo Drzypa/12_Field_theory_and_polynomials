@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConstructibleNumbers}
+\pmcreated{2013-03-22 17:15:01}
+\pmmodified{2013-03-22 17:15:01}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{constructible numbers}
+\pmrecord{17}{39583}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D15}
+\pmrelated{EuclideanField}
+\pmrelated{CompassAndStraightedgeConstruction}
+\pmrelated{TheoremOnConstructibleAngles}
+\pmrelated{TheoremOnConstructibleNumbers}
+\pmdefines{ruler and compass operation}
+\pmdefines{compass and ruler operation}
+\pmdefines{compass and straightedge operation}
+\pmdefines{straightedge and compass operation}
+\pmdefines{constructible number}
+\pmdefines{constructible from}
+\pmdefines{constructible}
+\pmdefines{field of constructible numbers}
+\pmdefines{field of real constructible numbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The smallest subfield $\mathbb{E}$ of $\mathbb{R}$ over $\mathbb{Q}$ such that $\mathbb{E}$ is 
+Euclidean is called the \emph{field of real constructible numbers}.  First, note that $\mathbb{E}$ has the following properties:
+
+\begin{enumerate}
+\item $0,1\in\mathbb{E}$;
+\item If $a,b\in\mathbb{E}$, then also $a\pm b$, $ab$, and $a/b\in\mathbb{E}$, the last of which is meaningful only when $b\not=0$;
+\item If $r\in\mathbb{E}$ and $r>0$, then $\sqrt{r}\in\mathbb{E}$.
+\end{enumerate}
+
+The field $\mathbb{E}$ can be extended in a natural manner to a subfield of $\mathbb{C}$ that is not a subfield of $\mathbb{R}$.  Let $\mathbb{F}$ be a subset of $\mathbb{C}$ that has the following properties:
+
+\begin{enumerate}
+\item $0,1\in\mathbb{F}$;
+\item If $a,b\in\mathbb{F}$, then also $a\pm b$, $ab$, and $a/b\in\mathbb{F}$, the last of which is meaningful only when $b\not=0$;
+\item If $z\in\mathbb{F} \setminus \{0\}$ and $\operatorname{arg}(z)=\theta$ where $0 \le \theta < 2\pi$, then $\sqrt{|z|}e^{\frac{i\theta}{2}}\in\mathbb{F}$.
+\end{enumerate}
+
+Then $\mathbb{F}$ is the \emph{field of constructible numbers}.
+
+Note that $\mathbb{E}\subset\mathbb{F}$.  Moreover, $\mathbb{F}\cap\mathbb{R}=\mathbb{E}$.
+
+An element of $\mathbb{F}$ is called a \emph{constructible number}.  These numbers can be ``constructed'' by a process that will be described shortly.
+
+Conversely, let us start with a subset $S$ of $\mathbb{C}$ such that $S$ contains a non-zero complex number.  Call any of the binary operations in condition 2 as well as the square root unary operation in condition 3 a \emph{ruler and compass operation}.  Call a complex number \emph{constructible from} $S$ if it can be obtained from elements of $S$ by a finite sequence of ruler and compass operations.  Note that $1\in S$.  If $S^{\prime}$ is the set of numbers constructible from $S$ using only the binary ruler and compass operations (those in condition 2), then $S^{\prime}$ is a subfield of $\mathbb{C}$, and is the smallest field containing $S$.  Next, denote $\hat{S}$ the set of all constructible numbers from $S$.  It is not hard to see that $\hat{S}$ is also a subfield of $\mathbb{C}$, but an extension of $S^{\prime}$.  Furthermore, it is not hard to show that $\hat{S}$ is Euclidean.  The general process (algorithm) of \PMlinkescapeword{generating} elements in $\hat{S}$ from elements in $S$ using finite sequences of ruler and compass operations is called a ruler and compass construction.  These are so called because, given two points, one of which is 0, the other of which is a non-zero real number in $S$, one can use a ruler and compass to construct these elements of $\hat{S}$.
+
+If $S=\lbrace 1\rbrace$ (or any rational number), we see that $\hat{S}=\mathbb{F}$ is \emph{the} field of constructible numbers.
+
+Note that the lengths of \PMlinkname{constructible line segments}{Constructible2} on the Euclidean plane are exactly the positive elements of $\mathbb{E}$.  Note also that the set $\mathbb{F}$ is in one-to-one correspondence with the set of \PMlinkname{constructible points}{Constructible2} on the Euclidean plane.  These facts provide a \PMlinkescapetext{connection} between abstract algebra and compass and straightedge constructions.
+%%%%%
+%%%%%
+\end{document}

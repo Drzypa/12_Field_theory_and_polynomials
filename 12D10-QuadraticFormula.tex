@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticFormula}
+\pmcreated{2013-03-22 11:46:15}
+\pmmodified{2013-03-22 11:46:15}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{quadratic formula}
+\pmrecord{13}{30227}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmclassification{msc}{26A99}
+\pmclassification{msc}{26A24}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26A06}
+\pmclassification{msc}{26-01}
+\pmclassification{msc}{11-00}
+%\pmkeywords{Algebra}
+%\pmkeywords{Polynomial}
+\pmrelated{DerivationOfQuadraticFormula}
+\pmrelated{QuadraticInequality}
+\pmrelated{QuadraticEquationInMathbbC}
+\pmrelated{ConjugatedRootsOfEquation2}
+\pmrelated{QuadraticCongruence}
+
+\usepackage{graphicx}
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+The roots of the quadratic equation
+\[
+  ax^2+bx+c=0\qquad{a,b,c\in\R,a\neq 0}
+\]
+are given by the formula
+\[
+  x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.
+\]
+
+The number $\Delta=b^2-4ac$ is called the \emph{discriminant} of the equation.
+If $\Delta>0$, there are two different real roots,
+if $\Delta=0$ there is a single real root,
+and if $\Delta<0$ there are no real roots (but two different complex roots).
+
+Let's work a few examples.
+
+First, consider $2x^2-14x+24=0$.
+Here $a=2$, $b=-14$, and $c=24$.
+Substituting in the formula gives us
+\[
+  x=\frac{14\pm \sqrt{(-14)^2-4\cdot2\cdot24}}{2\cdot 2}
+   =\frac{14\pm\sqrt{4}}{4}
+   =\frac{14\pm2}{4}
+   =\frac{7\pm1}{2}.
+\]
+So we have two solutions (depending on whether we take the sign $+$ or $-$):
+$x=\frac{8}{2}=4$ and $x=\frac{6}{2}=3$.
+
+Now we will solve $x^2-x-1=0$.
+Here $a=1$, $b=-1$, and $c=-1$, so
+\[
+  x=\frac{1\pm\sqrt{(-1)^2-4(1)(-1)}}{2}
+   =\frac{1\pm{\sqrt{5}}}{2},
+\]
+and the solutions are $x=\frac{1+\sqrt{5}}{2}$ and $x=\frac{1-\sqrt{5}}{2}$.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

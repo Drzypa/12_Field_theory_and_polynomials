@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuousFunctionsOnTheExtendedRealNumbers}
+\pmcreated{2013-03-22 16:59:31}
+\pmmodified{2013-03-22 16:59:31}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{continuous functions on the extended real numbers}
+\pmrecord{10}{39272}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{28-00}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+Within this entry, $\overline{\mathbb{R}}$ will be used to refer to the extended real numbers.
+
+\begin{thm*}
+Let $f \colon \mathbb{R} \to \mathbb{R}$ be a function.  Then $\overline{f} \colon \overline{\mathbb{R}} \to \overline{\mathbb{R}}$ defined by
+
+\begin{center}
+$\overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+A & \text{ if } x=\infty \\
+B & \text{ if } x=-\infty \end{cases}$
+\end{center}
+
+is continuous if and only if $f$ is continuous such that $\displaystyle \lim_{x \to \infty} f(x)=A$ and $\displaystyle \lim_{x \to -\infty} f(x)=B$ for some $A,B \in \overline{\mathbb{R}}$.
+\end{thm*}
+
+\begin{proof}
+Note that $\overline{f}$ is continuous if and only if $\displaystyle \lim_{x \to c} \overline{f}(x)=\overline{f}(c)$ for all $c \in \overline{\mathbb{R}}$.  By defintion of $\overline{f}$ and the topology of $\overline{\mathbb{R}}$, $\displaystyle \lim_{x \to c} \overline{f}(x)=\displaystyle \lim_{x \to c} f(x)$ for all $c \in \overline{\mathbb{R}}$.  Thus, $\overline{f}$ is continuous if and only if $\displaystyle \lim_{x \to c} f(x)=\overline{f}(c)$ for all $c \in \overline{\mathbb{R}}$.  The latter condition is \PMlinkname{equivalent}{Equivalent3} to the hypotheses that $f$ is continuous on $\mathbb{R}$, $\displaystyle \lim_{x \to \infty}f(x)=A$, and $\displaystyle \lim_{x \to -\infty}f(x)=B$.
+\end{proof}
+
+Note that, without the universal assumption that $f$ is a function from $\mathbb{R}$ to $\mathbb{R}$, necessity holds, but sufficiency does not.  As a counterexample to sufficiency, consider the function $\overline{f} \colon \mathbb{R} \to \mathbb{R}$ defined by
+
+\begin{center}
+$\overline{f}(x)=\begin{cases}
+\displaystyle \frac{1}{x^2} & \text{ if } x \in \mathbb{R} \setminus \{0\} \\
+\infty & \text{ if } x=0 \\
+0 & \text{ if } x=\pm \infty. \end{cases}$
+\end{center}
+%%%%%
+%%%%%
+\end{document}

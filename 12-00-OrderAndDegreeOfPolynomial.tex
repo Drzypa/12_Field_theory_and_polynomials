@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderAndDegreeOfPolynomial}
+\pmcreated{2013-03-22 13:38:21}
+\pmmodified{2013-03-22 13:38:21}
+\pmowner{jgade}{861}
+\pmmodifier{jgade}{861}
+\pmtitle{order and degree of polynomial}
+\pmrecord{8}{34289}
+\pmprivacy{1}
+\pmauthor{jgade}{861}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12-00}
+%\pmkeywords{polynomial}
+%\pmkeywords{order}
+%\pmkeywords{degree}
+\pmrelated{ZeroPolynomial2}
+\pmdefines{order}
+\pmdefines{degree}
+
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\begin{document}
+Let $f$ be a polynomial in two variables, viz. $f(x,y) = \sum_{i,j} a_{ij}x^i y^j$.\footnote
+{In order to simplify the notation, the definition is given in terms of a polynomial in two variables, however the definition naturally scales to any number of variables.}
+
+ Then the \emph{total degree} of $f$ is given by:
+\[
+\mathrm{deg} f = \sup\{i+j | a_{ij} \neq 0\}
+\]
+Note the degree of the zero-polynomial is $-\infty$, since $\sup\emptyset$ (per definition) is $-\infty$, thus $\mathrm{deg} f \in \mathbb{N}\cup\{0\}\cup\{-\infty\}$.
+
+Similarly the \emph{order} of $f$ is given by:
+\[
+\mathrm{ord} f = \inf\{i+j | a_{ij} \neq 0\}
+\]
+Note the order of the zero-polynomial is $\infty$ (because $\inf\emptyset = \infty$). Thus $\mathrm{ord} f \in \mathbb{N}\cup\{0\}\cup\{\infty\}$.
+
+Please note that the term order is not as common as degree. In fact, it is perhaps more frequently associated with power series (a form of generalized polynomials) than with ordinary polynomials. Also be aware that the term order occasionally is used as a synonym for degree.
+%%%%%
+%%%%%
+\end{document}

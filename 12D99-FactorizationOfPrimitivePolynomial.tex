@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FactorizationOfPrimitivePolynomial}
+\pmcreated{2013-03-22 19:20:30}
+\pmmodified{2013-03-22 19:20:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{factorization of primitive polynomial}
+\pmrecord{4}{42290}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{26C05}
+\pmsynonym{primitive factors of primitive polynomial}{FactorizationOfPrimitivePolynomial}
+\pmrelated{EliminationOfUnknown}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{factor}
+As an application of the \PMlinkname{parent entry}{EliminationOfUnknown} we take the factorization of a primitive polynomial of $\mathbb{Z}[x]$ into \PMlinkname{primitive}{PrimitivePolynomial} prime factors.\, We shall see that the procedure may be done by performing a finite number of tests.\\
+
+Let
+$$a(x) \;=:\; a_nx^n\!+\!a_{n-1}x^{n-1}\!+\ldots+\!a_0$$
+be a primitive polynomial in $\mathbb{Z}[x]$.
+
+By the rational root theorem and the factor theorem, one finds all first-degree prime factors $x\!-\!a$ and thus all primitive prime factors of the polynomial $a(x)$.
+
+If $a(x)$ has a primitive quadratic factor, then it has also a factor
+\begin{align}
+x^2\!+\!px\!+\!q
+\end{align}
+where $p$ and $q$ are  rationals (and conversely).\, For settling the existence of such a factor we treat $p$ and $q$ as unknowns and perform the long division
+$$a(x):(x^2\!+\!px\!+\!q).$$
+It gives finally the remainder \,$b(p,\,q)\,x+c(p,\,q)$ where $b(p,\,q)$ and $c(p,\,q)$ belong to $\mathbb{Z}[p,\,q]$.\, According to the \PMlinkname{parent entry}{EliminationOfUnknown} we bring the system
+\begin{align*}
+\begin{cases}
+b(p,\,q) \;=\; 0\\
+c(p,\,q) \;=\; 0
+\end{cases}
+\end{align*}
+to the form
+\begin{align*}
+\begin{cases}
+\bar{b}(q) \;=\; 0\\
+\bar{c}(p,\,q) \;=\; 0
+\end{cases}
+\end{align*}
+and then can determine the possible rational solutions \,$(p,\,q)$\, of the system via a finite number of tests.\, Hence 
+ we find the possible quadratic factors (1) having rational coefficients.\, Such a factor is converted into a primitive one when it is multiplied by the gcd of the denominators of $p$ and $q$.
+
+Determining a possible cubic factor $x^3\!+\!px^2\!+\!qx\!+\!r$ with rational coefficients requires examination of a remainder of the form
+$$b(p,\,q,\,r)\,x^2+c(p,\,q,\,r)\,x+d(p,\,q,\,r).$$
+In the needed system
+\begin{align*}
+\begin{cases}
+b(p,\,q,\,r) \;=\; 0\\
+c(p,\,q,\,r) \;=\; 0\\
+d(p,\,q,\,r) \;=\; 0
+\end{cases}
+\end{align*}
+we have to perform two eliminations.\, Then we can act as above and find a primitive cubic factor of $a(x)$.\, Similarly also the primitive factors of higher degree.\, All in all, one needs only look for factors of degree $\le \frac{n}{2}$.
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Lukuteorian ja korkeamman algebran alkeet}. \,Tiedekirjasto No. 17. \, Kustannusosakeyhti\"o Otava, Helsinki (1950).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfNonperfectField}
+\pmcreated{2013-03-22 13:08:31}
+\pmmodified{2013-03-22 13:08:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{example of nonperfect field}
+\pmrecord{7}{33580}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In this entry, we exhibit an example of a field that is not a perfect field.
+
+Let $F = \mathbb{F}_p(t)$, where $\mathbb{F}_p$ is the field with $p$ elements and $t$ transcendental over $\mathbb{F}_p$. The splitting field $E$ of the irreducible polynomial $f = x^p - t$ is not separable over $F$. Indeed, if $\alpha$ is an element of $E$ such that $\alpha^p = t$, we have
+\[ x^p - t = x^p - \alpha^p = (x-\alpha)^p, \]
+which shows that $f$ has one root of multiplicity $p$.
+%%%%%
+%%%%%
+\end{document}

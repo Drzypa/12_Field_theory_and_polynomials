@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FieldHomomorphismsFixPrimeSubfields}
+\pmcreated{2013-03-22 16:19:54}
+\pmmodified{2013-03-22 16:19:54}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{field homomorphisms fix prime subfields}
+\pmrecord{10}{38461}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newtheorem*{thm*}{Theorem}
+
+\begin{document}
+\begin{thm*}
+Let $F$ and $K$ be fields having the same prime subfield $L$ and $\varphi \colon F \to K$ be a field homomorphism.  Then $\varphi$ fixes $L$.
+\end{thm*}
+
+\begin{proof}
+Without loss of generality, it will be assumed that $L$ is either $\mathbb{Q}$ or $\mathbb{Z}/c\mathbb{Z}$.
+
+Since $\varphi$ is a field homomorphism, $\varphi(0)=0$, $\varphi(1)=1$, and, for every $x \in F$, $\varphi(-x)=-\varphi(x)$.
+
+Let $n \in \mathbb{Z}$ and $c$ be the characteristic of $F$.  Then
+
+\begin{center}
+\begin{tabular}{rl}
+$\varphi(n)$ & $\equiv \varphi(\operatorname{sign}(n)|n|) \operatorname{mod} c$, where $\operatorname{sign}$ denotes the signum function \\
+& $\displaystyle \equiv \operatorname{sign}(n)\varphi(|n|) \operatorname{mod} c$ \\
+& $\displaystyle \equiv \operatorname{sign}(n)\varphi\left(\sum_{j=1}^{|n|} 1\right) \operatorname{mod} c$ \\
+& $\displaystyle \equiv \operatorname{sign}(n)\sum_{j=1}^{|n|} \varphi(1) \operatorname{mod} c$ \\
+& $\displaystyle \equiv \operatorname{sign}(n)\sum_{j=1}^{|n|} 1 \operatorname{mod} c$ \\
+& $\equiv \operatorname{sign}(n)|n| \operatorname{mod} c$ \\
+& $\equiv n \operatorname{mod} c$. \end{tabular}
+\end{center}
+
+This \PMlinkescapetext{completes} the proof in the case that $c$ is prime.
+
+Now consider $c=0$.  Let $x \in \mathbb{Q}$.  Then there exist $a,b \in \mathbb{Z}$ with $b>0$ such that $\displaystyle x=\frac{a}{b}$.  Thus, $\displaystyle b\varphi(x)=\sum_{j=1}^b\varphi\left(\frac{a}{b}\right)=\varphi\left(\sum_{j=1}^b \frac{a}{b}\right)=\varphi(a)=a$.  Therefore, $\displaystyle \varphi(x)=\frac{a}{b}=x$.  Hence, $\varphi$ fixes $\mathbb{Q}$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremsOnContinuation}
+\pmcreated{2013-03-22 17:59:51}
+\pmmodified{2013-03-22 17:59:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{theorems on continuation}
+\pmrecord{10}{40510}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J20}
+\pmclassification{msc}{13A18}
+\pmclassification{msc}{13F30}
+\pmclassification{msc}{11R99}
+\pmsynonym{theorems on continuations of exponents}{TheoremsOnContinuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{exponent} \PMlinkescapeword{exponents}
+
+\textbf{Theorem 1.}\, When $\nu_0$ is an exponent valuation of the field $k$ and $K/k$ is a finite field extension, $\nu_0$ has a continuation to the extension field $K$.
+
+\textbf{Theorem 2.}\, If the \PMlinkname{degree}{ExtensionField} of the field extension $K/k$ is $n$ and $\nu_0$ is an arbitrary \PMlinkname{exponent}{ExponentValuation2} of $k$, then $\nu_0$ has at most $n$ continuations to the extension field $K$.
+
+\textbf{Theorem 3.}\, Let $\nu_0$ be an exponent valuation of the field $k$ and $\mathfrak{o}$ the ring of the exponent $\nu_0$.\, Let $K/k$ be a finite extension and $\mathfrak{O}$ the integral closure of $\mathfrak{o}$ in $K$.\, If\, $\nu_1,\,\ldots,\,\nu_m$ are all different continuations of $\nu_0$ to the field $K$ and $\mathfrak{O}_1,\,\ldots,\,\mathfrak{O}_m$ \PMlinkname{their rings}{RingOfExponent}, then
+$$\mathfrak{O} = \bigcap_{i=1}^m\mathfrak{O}_i.$$
+
+
+
+The proofs of those theorems are found in [1], which is available also in Russian (original), English and French.\\
+
+\textbf{Corollary.}\, The ring $\mathfrak{O}$ (of theorem 3) is a UFD.\, The exponents of $K$, which are determined by the pairwise coprime prime elements of $\mathfrak{O}$, coincide with the continuations $\nu_1,\,\ldots,\,\nu_m$ of $\nu_0$.\, If $\pi_1,\,\ldots,\,\pi_m$ are the pairwise coprime prime elements of $\mathfrak{O}$ such that\; $\nu_i(\pi_1) = 1$\, for all\, $i$'s and if the prime element $p$ of the ring $\mathfrak{o}$ has the \PMlinkescapetext{representation}
+$$p = \varepsilon\pi_1^{e_1}\cdots\pi_m^{e_m}$$
+with $\varepsilon$ a unit of $\mathfrak{O}$, then $e_i$ is the ramification index of the exponent $\nu_i$ with respect to $\nu_0$ ($i = 1,\,\ldots,\,m$).
+
+
+
+\begin{thebibliography}{9}
+\bibitem{BS}{\sc S. Borewicz \& I. Safarevic}: {\em Zahlentheorie}.\, Birkh\"auser Verlag. Basel und Stuttgart (1966).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

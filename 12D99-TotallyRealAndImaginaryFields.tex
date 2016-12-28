@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TotallyRealAndImaginaryFields}
+\pmcreated{2013-03-22 13:55:02}
+\pmmodified{2013-03-22 13:55:02}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{totally real and imaginary fields}
+\pmrecord{8}{34673}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmsynonym{complex multiplication field}{TotallyRealAndImaginaryFields}
+%\pmkeywords{totally}
+%\pmkeywords{real}
+%\pmkeywords{imaginary}
+%\pmkeywords{complex multiplication}
+\pmrelated{RealAndComplexEmbeddings}
+\pmrelated{TotallyImaginaryExamplesOfTotallyReal}
+\pmrelated{ExamplesOfRamificationOfArchimedeanPlaces}
+\pmdefines{totally real field}
+\pmdefines{totally imaginary field}
+\pmdefines{CM-field}
+\pmdefines{maximal real subfield}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+For this entry, we follow the notation of the entry real and
+complex embeddings.
+
+Let $K$ be a subfield of the complex numbers, $\Complex$, and let
+$\Sigma_K$ be the set of all embeddings of $K$ in $\Complex$.
+
+\begin{defn}
+With $K$ as above:
+\begin{enumerate}
+\item $K$ is a \emph{totally real field} if all embeddings
+$\psi\in \Sigma_K$ are real embeddings.
+
+\item $K$ is a \emph{totally imaginary field} if all embeddings
+$\psi\in\Sigma_K$ are (non-real) complex embeddings.
+
+\item $K$ is a \emph{CM-field} or \emph{complex multiplication
+field} if $K$ is a totally imaginary quadratic extension of a totally real
+field. 
+\end{enumerate}
+\end{defn}
+
+Note that, for example, one can obtain a CM-field $K$ from a totally real number field $F$ by adjoining the square root of a number all of whose
+conjugates are negative.
+
+Note: A complex number $\omega$ is real if and only if
+$\bar{\omega}$, the complex conjugate of $\omega$, equals
+$\omega$:
+$$\omega\in \Reals \Leftrightarrow \omega=\bar{\omega}$$
+Thus, a field $K$ which is fixed \emph{pointwise} by complex
+conjugation is real (i.e. strictly contained in $\Reals$). However, $K$ might not be {\it totally real}. For example, let $\alpha$ be the unique real third root of $2$. Then $\Rats(\alpha)$ is real but not totally real. \\
+
+Given a field $L$, the subfield of
+$L$ fixed pointwise by complex conjugation is called the
+\emph{maximal real subfield of} $L$.
+
+For examples (of $(1),(2)$ and $(3)$), see examples of totally real fields.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HilbertsIrreducibilityTheorem}
+\pmcreated{2013-03-22 15:14:16}
+\pmmodified{2013-03-22 15:14:16}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Hilbert's irreducibility theorem}
+\pmrecord{5}{37010}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E25}
+\pmsynonym{Hilbertian}{HilbertsIrreducibilityTheorem}
+\pmdefines{Hilbert property}
+\pmdefines{Hilbertian field}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+In this entry, $K$ is a field of characteristic zero and $V$ is an irreducible algebraic variety over $K$.
+
+\begin{defn}
+A variety $V$ satisfies the Hilbert property over $K$ if $V(K)$ is not a thin algebraic set.
+\end{defn}
+
+\begin{defn}
+A field $K$ is said to be Hilbertian if there exists an irreducible variety $V/K$ of $\dim V \geq 1$ which has the Hilbert property.
+\end{defn}
+
+\begin{thm}[Hilbert's irreducibility theorem]
+A number field $K$ is Hilbertian. In particular, for every $n$, the affine space $\mathbb{A}^n(K)$ has the Hilbert property over $K$.
+\end{thm}
+
+However, the field of real numbers $\Reals$ and the field of $p$-adic rationals $\Rats_p$ are not Hilbertian.
+
+\begin{thebibliography}{9}
+\bibitem{serre} J.-P. Serre, {\em Topics in Galois Theory},
+Research Notes in Mathematics, Jones and Barlett Publishers, London.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

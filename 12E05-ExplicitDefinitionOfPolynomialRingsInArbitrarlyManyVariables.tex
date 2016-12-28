@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExplicitDefinitionOfPolynomialRingsInArbitrarlyManyVariables}
+\pmcreated{2013-03-22 19:18:10}
+\pmmodified{2013-03-22 19:18:10}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{explicit definition of polynomial rings in arbitrarly many variables}
+\pmrecord{8}{42238}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{13P05}
+\pmclassification{msc}{11C08}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\F}{\mathcal{F}}
+
+\begin{document}
+Let $R$ be a ring and let $\X$ be any set (possibly empty). We wish to give an explicit and formal definition of the polynomial ring $R[\X]$.
+
+We start with the set 
+$$\F(\X)=\{f:\X\to\mathbb{N}\ |\ f(x)=0\mbox{ for almost all }x\}.$$
+If $\X=\{X_1,\ldots,X_n\}$ then the elements of $\F(\X)$ can be interpreted as monomials
+$$X_1^{\alpha_1}\cdots X_n^{\alpha_n}.$$
+Now define
+$$R[\X]=\{F:\F(\X)\to R\ |\ F(f)=0\mbox{ for almost all }f\}.$$
+The addition in $R[\X]$ is defined as pointwise addition.
+
+Now we will define multiplication. First note that we have a multiplication on $\F(\X)$. For any $f,g:\X\to\mathbb{N}$ put
+$$(fg)(x)=f(x)+g(x).$$
+This is the same as multiplying $x^a\cdot x^b=x^{a+b}$.
+
+Now for any $f\in\F(\X)$ define
+$$M(h)=\{(f,g)\in\F(\X)^{2}\ |\ h=fg\},$$
+Now if $F,G\in R[\X]$ then we define the multiplication
+$$FG:\F(\X)\to R$$
+by putting
+$$(FG)(h)=\sum_{(f,g))\in M(h)}F(f)G(g).$$
+Note that all of this well-defined, since both $F$ and $G$ vanish almost everywhere.
+
+It can be shown that $R[\X]$ with these operations is a ring, even an $R$-algebra. This algebra is commutative if and only if $R$ is. Furthermore we have an algebra homomorphism
+$$E:R\to R[\X]$$
+which is defined as follows: for any $r\in R$ let $F_r:\F(\X)\to R$ be the function such that if $f:\X\to\mathbb{N}$ is such that $f(x)=0$ for any $x\in\X$, then put $F_r(f)=r$ and for any other function $f\in\F(\X)$ put $F_r(f)=0$. Then
+$$E(r)=F_r$$
+is our function, which is a monomorphism. Furthermore if $R$ is unital with the identity $1$, then
+$$E(1)$$
+is the identity in $R[\X]$. Anyway we can always interpret $R$ as a subset of $R[\X]$ if put $r=F_r$ for $r\in R$.
+
+Note, that if $\X=\emptyset$, then $R[\emptyset]$ is still defined and $E:R\to R[\X]$ is an isomorphism of rings (it is ,,onto''). Actually these two conditions are equivalent.
+
+Also note, that $\X$ itself can be interpreted as a subset of $R[\X]$. Indeed, for any $x\in\X$ define
+$$f_x:\X\to\mathbb{N}$$
+by $f_x(x)=1$ and $f_x(y)=0$ for any $y\neq x$. Then define
+$$F_x:\F(\X)\to R$$
+by putting $F_x(f_x)=1$ and $F_x(f)=0$ for any $f\neq f_x$. It can be easily seen that $F_x=F_y$ if and only if $x=y$. Thus we will use convention $x=F_x$. 
+
+With these notations (i.e. $R,\X\subseteq R[\X]$) we have that elements of $R[\X]$ are exactly polynomials in the set of variables $\X$ with coefficients in $R$.
+%%%%%
+%%%%%
+\end{document}

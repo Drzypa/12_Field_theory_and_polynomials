@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfAlgebraResult}
+\pmcreated{2013-03-22 14:22:01}
+\pmmodified{2013-03-22 14:22:01}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{fundamental theorem of algebra result}
+\pmrecord{7}{35851}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{30A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Lindent}{0.4in}
+\newenvironment{Lalgorithm}[4]{
+\textbf{Algorithm} \textsc{#1}\texttt{(#2)}\newline
+\textit{Input}: #3\newline
+\textit{Output}: #4
+
+}{}
+\newenvironment{Lfloatalgorithm}[6][h]{
+\begin{figure}[#1]
+\caption{#2}
+\begin{Lalgorithm}{#3}{#4}{#5}{#6}
+}{
+\end{Lalgorithm}
+\end{figure}
+}
+\newcommand{\Lgets}{\ensuremath{\gets}}
+\newcommand{\Lgroup}[1]{\textbf{begin}\\\hspace*{\Lindent}\parbox{\textwidth}{#1}\\\textbf{end}}
+
+\newcommand{\Lif}[2]{\textbf{if} #1 \textbf{then}\\\hspace*{\Lindent}\parbox{\textwidth}{#2}}
+
+\newcommand{\Lwhile}[2]{\textbf{while} #1 \\\hspace*{\Lindent}\parbox{\textwidth}{#2}}
+
+\newcommand{\Lelse}[1]{\textbf{else}\\\hspace*{\Lindent}\parbox{\textwidth}{#1}}
+\newcommand{\Lelseif}[2]{\textbf{else if} #1 \textbf{then}\\\hspace*{\Lindent}\parbox{\textwidth}{#2}}
+\begin{document}
+This leads to the following theorem:
+
+Given a polynomial $p(x)=a_nx^n+a_{n-1}x^{n-1}+\ldots+a_1x+a_0 $ of degree $n\geq 1$ where $a_i\in \mathbb{C}$, there are exactly $n$ roots in $\mathbb{C}$ to the equation $p(x)=0$ if we count multiple roots.
+
+\emph{Proof}
+The non-constant polynomial $a_1x-a_0$ has one root, $x=a_0/a_1$.
+Next, assume that a polynomial of degree $n-1$ has $n-1$ roots.
+
+The polynomial of degree $n$ has then by the fundamental theorem of algebra a root $z_n$. With polynomial division we find the unique polynomial $q(x)$ such that $p(x)=(x-z_n)q(x)$. The original equation has then $1 + (n-1)=n $ roots.
+By induction, every non-constant polynomial of degree $n$ has exactly $n$ roots.
+
+For example, $x^4=0$ has four roots, $x_1=x_2=x_3=x_4=0$.
+%%%%%
+%%%%%
+\end{document}

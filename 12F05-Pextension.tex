@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pextension}
+\pmcreated{2013-03-22 15:02:56}
+\pmmodified{2013-03-22 15:02:56}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{$p$-extension}
+\pmrecord{5}{36764}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmsynonym{p-extension}{Pextension}
+%\pmkeywords{field extension}
+\pmrelated{PGroup4}
+\pmrelated{UnramifiedExtensionsAndClassNumberDivisibility}
+\pmrelated{PushDownTheoremOnClassNumbers}
+\pmrelated{ClassNumberDivisibilityInPExtensions}
+\pmrelated{QuadraticExtension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{defn}
+Let $p$ be a prime number. A Galois extension of fields $E/F$, with $G=\operatorname{Gal}(E/F)$, is said to be a $p$-extension if $G$ is a $p$-group.  
+\end{defn}
+
+\begin{exa}
+Let $d$ be a square-free integer. Then the field extension $\Rats(\sqrt{d})/\Rats$ is a $2$-extension.
+\end{exa}
+
+\begin{exa}
+Let $p>2$ be a prime and, for any $n$, let $\zeta_{p^n}$ be a primitive $p^n$th root of unity. The cyclotomic extension:
+$$\Rats(\zeta_{p^n})/\Rats(\zeta_p)$$
+is a $p$-extension. Indeed:
+$$G_n=\operatorname{Gal}(\Rats(\zeta_{p^n})/\Rats)\cong (\Ints/p^n\Ints)^\times$$
+Thus, $|G_n|=\varphi(p^n)=p^{(n-1)}(p-1)$ and $|G_1|=\varphi(p)=p-1$, where $\varphi$ is the Euler phi function. Therefore the extension above is of degree $p^{(n-1)}$.
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

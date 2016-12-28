@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FerrariCardanoDerivationOfTheQuarticFormula}
+\pmcreated{2013-03-22 12:37:21}
+\pmmodified{2013-03-22 12:37:21}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{Ferrari-Cardano derivation of the quartic formula}
+\pmrecord{8}{32883}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmrelated{CardanosDerivationOfTheCubicFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a quartic equation $x^4 + ax^3 + bx^2 + cx + d = 0$, apply the Tchirnhaus transformation $x \mapsto y - \frac{a}{4}$ to obtain
+\begin{equation}\label{reduced}
+y^4 + py^2 + qy + r = 0
+\end{equation}
+where
+\begin{eqnarray*}
+p & = & b - \frac{3a^2}{8}\\
+q & = & c - \frac{ab}{2} + \frac{a^3}{8}\\
+r & = & d - \frac{ac}{4} + \frac{a^2 b}{16} - \frac{3a^4}{256}
+\end{eqnarray*}
+Clearly a solution to Equation~\eqref{reduced} solves the original, so we replace the original equation with Equation~\eqref{reduced}. Move $qy+r$ to the other side and complete the square on the left to get:
+$$
+(y^2+p)^2 = py^2 - qy + (p^2 - r).
+$$
+We now wish to add the quantity $(y^2+p+z)^2 - (y^2+p)^2$ to both sides, for some unspecified value of $z$ whose purpose will be made clear in what follows. Note that $(y^2+p+z)^2 - (y^2+p)^2$ is a quadratic in $y$. Carrying out this addition, we get
+\begin{equation}\label{middle}
+(y^2 + p + z)^2 = (p+2z) y^2 - qy + (z^2 + 2pz + p^2 - r)
+\end{equation}
+The goal is now to choose a value for $z$ which makes the right hand side of Equation~\eqref{middle} a perfect square. The right hand side is a quadratic polynomial in $y$ whose discriminant is
+$$
+-8 z^3 - 20pz^2 + (8r-16p^2)z + q^2+4pr-4p^3.
+$$
+Our goal will be achieved if we can find a value for $z$ which makes this discriminant zero. But the above polynomial is a cubic polynomial in $z$, so its roots can be found using the cubic formula. Choosing then such a value for $z$, we may rewrite Equation~\eqref{middle} as
+$$
+(y^2 + p + z)^2 = (sy + t)^2
+$$
+for some (complicated!) values $s$ and $t$, and then taking the square root of both sides and solving the resulting quadratic equation in $y$ provides a root of Equation~\eqref{reduced}.
+%%%%%
+%%%%%
+\end{document}

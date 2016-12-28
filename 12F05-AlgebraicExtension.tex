@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlgebraicExtension}
+\pmcreated{2013-03-22 13:57:27}
+\pmmodified{2013-03-22 13:57:27}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{algebraic extension}
+\pmrecord{7}{34724}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmsynonym{algebraic field extension}{AlgebraicExtension}
+%\pmkeywords{algebraic}
+%\pmkeywords{root of polynomial}
+\pmrelated{Algebraic}
+\pmrelated{FiniteExtension}
+\pmrelated{AFiniteExtensionOfFieldsIsAnAlgebraicExtension}
+\pmrelated{ProofOfTranscendentalRootTheorem}
+\pmrelated{EquivalentConditionsForNormalityOfAFieldExtension}
+\pmdefines{examples of field extension}
+\pmdefines{transcendental extension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{defn}
+Let $L/K$ be an extension of fields. $L/K$ is said to be an
+\emph{algebraic extension} of fields if every element of $L$ is
+algebraic over $K$. If $L/K$ is not algebraic then we say that it is a transcendental extension of fields.
+\end{defn}
+
+{\bf Examples: }
+\begin{enumerate}
+\item Let $L=\Rats(\sqrt{2})$. The extension $L/\Rats$ is an
+algebraic extension. Indeed, any element $\alpha\in L$ is of the
+form
+$$\alpha=q+t\sqrt{2}\in L$$
+for some $q,t\in\Rats$. Then $\alpha\in L$ is a root of
+$$X^2-2qX+q^2-2t^2=0$$
+
+\item The field extension $\Reals/ \Rats$ is not an algebraic
+extension. For example, $\pi\in \Reals$ is a transcendental number
+over $\Rats$ (see pi). So $\Reals/\Rats$ is a transcendental extension of fields.
+
+\item Let $K$ be a field and denote by $\overline{K}$ the
+algebraic closure of $K$. Then the extension $\overline{K}/K$ is
+algebraic.
+
+\item In general, a finite extension of fields is an algebraic
+extension. However, the converse is not true. The extension
+$\overline{\Rats}/\Rats$ is \emph{far} from finite.
+
+\item The extension $\Rats(\pi)/\Rats$ is transcendental because $\pi$ is a transcendental number, i.e. $\pi$ is not the root of any polynomial $p(x)\in \Rats[x]$.
+\end{enumerate}
+
+
+%%%%%
+%%%%%
+\end{document}

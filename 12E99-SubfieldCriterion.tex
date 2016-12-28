@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubfieldCriterion}
+\pmcreated{2013-03-22 16:26:34}
+\pmmodified{2013-03-22 16:26:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{subfield criterion}
+\pmrecord{7}{38598}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+\pmclassification{msc}{12E15}
+\pmrelated{FieldOfAlgebraicNumbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $K$ be a skew field and $S$ its subset.\, For $S$ to be a subfield of $K$, it's necessary and sufficient that the following three conditions are fulfilled:
+\begin{enumerate}
+\item $S$ \PMlinkescapetext{contains} a non-zero element of $K$.
+\item $a\!-\!b \in S$ always when\, $a,\,b \in S$.
+\item $ab^{-1} \in S$ always when\, $a,\,b \in S$\, and\, $b \neq 0$.
+\end{enumerate}
+
+{\em Proof.}\, Because the conditions are fulfilled in every skew field, they are necessary.\, For proving the sufficience, suppose now that the subset $S$ \PMlinkescapetext{satisfies} these conditions.\, The condition 1 guarantees that $S$ is not empty and the condition 2 that\, $(S,\, +)$\, is an subgroup of\, $(K,\, +)$;\, thus all the required properties of addition for a skew field hold in $S$.\, If $b$ is a non-zero element of $S$, then, according to the condition 3, we have\, $0 \neq 1 = bb^{-1} \in S$.\, Moreover,\, $a\!\cdot\!1 = 1\!\cdot a = a \in S$\, for all\, $a \in S \subseteq K$.\, The laws of multiplication (associativity and left and \PMlinkescapetext{right} distributivity over addition) hold in $S$ since they hold in whole $K$.\, So $S$ fulfils all the postulates for a skew field.
+%%%%%
+%%%%%
+\end{document}

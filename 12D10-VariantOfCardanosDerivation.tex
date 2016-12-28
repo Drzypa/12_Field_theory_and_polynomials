@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VariantOfCardanosDerivation}
+\pmcreated{2013-03-22 13:38:43}
+\pmmodified{2013-03-22 13:38:43}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{variant of Cardano's derivation}
+\pmrecord{9}{34296}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+\PMlinkescapeword{identities}
+By a linear change of variable, a cubic polynomial over ${\mathbb C}$ can
+be given the form $x^3+3bx+c$. To find the zeros of this cubic in the
+form of surds in $b$ and $c$, make the substitution $x=y^{1/3}+z^{1/3},$ thus replacing one unknown with two, and then write down identities which are suggested by the resulting equation in two unknowns. Specifically, we get
+\begin{align}
+y+3(y^{1/3}+z^{1/3})y^{1/3}z^{1/3}+z+3b(y^{1/3}+z^{1/3})+c=0.
+\end{align}
+This will be true if
+\begin{align}
+y+z+c=0 \\
+3y^{1/3}z^{1/3}+3b=0,
+\end{align}
+which in turn requires
+\begin{align}
+yz=-b^3.
+\end{align}
+The pair of equations (2) and (4) is a quadratic system in $y$ and $z$,
+readily solved. But notice that (3) puts a restriction on a certain
+choice of cube roots.
+%%%%%
+%%%%%
+\end{document}

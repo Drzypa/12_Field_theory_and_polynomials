@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IrreduciblePolynomial}
+\pmcreated{2013-03-22 14:24:22}
+\pmmodified{2013-03-22 14:24:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{irreducible polynomial}
+\pmrecord{18}{35907}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmsynonym{prime polynomial}{IrreduciblePolynomial}
+\pmsynonym{indivisible polynomial}{IrreduciblePolynomial}
+%\pmkeywords{irreducible}
+\pmrelated{EisensteinCriterion}
+\pmrelated{Irreducible}
+\pmrelated{Monic2}
+\pmdefines{irreducible polynomial}
+\pmdefines{reducible}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let\, $f(x) = a_0\!+\!a_1x\!+\cdots+\!a_nx^n$\, be a polynomial with complex coefficients $a_{\nu}$ and with the \PMlinkname{degree}{Polynomial}\, $n > 0$.\, If $f(x)$ can not be written as product of two polynomials with positive degrees and with coefficients in the field\, $\mathbb{Q}(a_0,\,a_1,\,\ldots,\,a_n)$,\, then the polynomial $f(x)$ is said to be \PMlinkescapetext{{\em irreducible}}.\, Otherwise, $f(x)$ is {\em reducible}.
+
+\textbf{Examples.}\, All linear polynomials are \PMlinkescapetext{irreducible}.\, The polynomials $x^2\!-\!3$, $x^2\!+\!1$ and $x^2\!-\!i$ are \PMlinkescapetext{irreducible} (although they split in linear factors in the fields $\mathbb{Q}(\sqrt{3})$, $\mathbb{Q}(i)$ and $\mathbb{Q}(\frac{1\!+\!i}{\sqrt{2}})$, respectively).\, The polynomials $x^4\!+\!4$ and $x^6\!+\!1$ are not \PMlinkescapetext{irreducible}.\\
+
+The above definition of \PMlinkescapetext{irreducible} polynomial is special case of the more general setting where $f(x)$ is a non-constant polynomial in the polynomial ring $K[x]$ of a field $K$; if $f(x)$ is not expressible as product of two polynomials with positive degrees in the ring $K[x]$, then $f(x)$ is \PMlinkescapetext{{\em irreducible}} (in $K[x]$).
+
+\textbf{Example.}\, If $K$ is the Galois field with two elements (0 and 1), then the trinomial $x^2\!+\!x\!+\!1$ of $K[x]$ is \PMlinkescapetext{irreducible} (because an equation\, $x^2\!+\!x\!+\!1 = (x\!+\!a)(x\!+\!b)$\, would imply the two conflicting conditions\, $a\!+\!b = 1$\, and\, $ab = 1$).
+%%%%%
+%%%%%
+\end{document}

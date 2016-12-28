@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeDefinitionOfAlgebraicallyClosed}
+\pmcreated{2013-03-22 16:53:23}
+\pmmodified{2013-03-22 16:53:23}
+\pmowner{polarbear}{3475}
+\pmmodifier{polarbear}{3475}
+\pmtitle{alternative definition of algebraically closed}
+\pmrecord{8}{39145}
+\pmprivacy{1}
+\pmauthor{polarbear}{3475}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{proposition}{Proposition} 
+
+\begin{document}
+\begin{proposition} If $K$ is a field, the following are equivalent:\\
+\begin{enumerate}
+\item[(1)] $K$ is algebraically closed, i.e. every nonconstant polynomial $f$ in $K[x]$ has a root in $K$.
+\item[(2)] Every nonconstant polynomial $f$ in $K[x]$ splits completely over $K$.
+\item[(3)] If $L|K$ is an algebraic extension then $L = K$.\end{enumerate}\end{proposition}
+\begin{proof}
+ If (1) is true then we can prove by induction on degree of $f$ that every nonconstant polynomial $f$ splits completely over $K$. Conversely, (2)$\Rightarrow$ (1) is trivial.\newline
+(2)$\Rightarrow$ (3) If $L|K$ is algebraic and $\alpha\in L$, then $\alpha$ is a root of a polynomial $f\in K[x]$. By (2) $f$ splits over $K$, which implies that $\alpha\in K$. It follows that $L=K$.\newline
+(3)$\Rightarrow$ (1) Let $f\in K[x]$ and $\alpha$ a root of $f$ (in some extension of $K$). Then $K(\alpha)$ is an algebraic extension of $K$, hence  $\alpha\in K$.
+\end{proof} 
+\textbf{Examples} 1) The field of real numbers $\mathbb{R}$ is not algebraically closed. Consider the equation $x^2+1=0$. The square of a real number is always positive and cannot be $-1$ so the equation has no roots.\newline
+2) The $p$-adic field $\mathbb{Q}_p$ is not algebraically closed because the equation $x^2-p=0$ has no roots. Otherwise $x^2=p$ implies $2v_{p}x = 1$, which is false.
+
+%%%%%
+%%%%%
+\end{document}

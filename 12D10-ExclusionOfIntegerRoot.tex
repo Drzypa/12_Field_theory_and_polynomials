@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExclusionOfIntegerRoot}
+\pmcreated{2013-03-22 19:08:21}
+\pmmodified{2013-03-22 19:08:21}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{exclusion of integer root}
+\pmrecord{5}{42038}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmclassification{msc}{12D05}
+\pmrelated{DivisibilityInRings}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, The equation
+$$p(x) \;:=\; a_nx^n+a_{n-1}x^{n-1}+\ldots+a_0 \;=\; 0$$
+with integer coefficients $a_i$ has no integer \PMlinkname{roots}{Equation}, if $p(0)$ and $p(1)$ are odd.\\
+
+\emph{Proof.}\, Make the antithesis, that there is an integer $x_0$ such that\, $p(x_0) = 0$.\, This $x_0$ cannot be even, because else all terms of $p(x_0)$ except $a_0$ were even and thus the whole sum could not have the even value 0.\, Consequently, $x_0$ and also its \PMlinkname{powers}{GeneralAssociativity} have to be odd.\, Since 
+$$2 \mid 0 = p(x_0) \quad \textrm{and} \quad 2 \nmid p(0) = a_0,$$
+there must be among the coefficients $a_n,\,a_{n-1},\,\ldots,\,a_1$ an odd amount of odd numbers.\, This means that
+$$2 \mid a_n\!+\!a_{n-1}\!+\!\ldots\!+\!a_1\!+\!a_0 \;=\; p(1).$$
+This however contradicts the assumption on the parity of $p(1)$, whence the antithesis is wrong and the theorem \PMlinkescapetext{right}.
+%%%%%
+%%%%%
+\end{document}

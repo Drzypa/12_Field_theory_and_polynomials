@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuarticPolynomialWithGaloisGroupD8}
+\pmcreated{2013-03-22 17:44:09}
+\pmmodified{2013-03-22 17:44:09}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{quartic polynomial with Galois group $D_8$}
+\pmrecord{6}{40185}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+The polynomial $f(x)=x^4-2x^2-2$ is Eisenstein at $2$ and thus irreducible over $\Rats$. Solving $f(x)$ as a quadratic in $x^2$, we see that the roots of $f(x)$ are
+\begin{center}
+\begin{tabular}{ccc}
+$\alpha_1 = \sqrt{1+\sqrt{3}}$ &\qquad & $\alpha_3 = -\sqrt{1+\sqrt{3}}$ \\
+$\alpha_2 = \sqrt{1-\sqrt{3}}$ &\qquad & $\alpha_4 = -\sqrt{1-\sqrt{3}}$
+\end{tabular}
+\end{center}
+
+Note that the discriminant of $f(x)$ is $-4608=-2^9\cdot 3^2$, and that its resolvent cubic is
+\[x^3+4x^2+12x=x(x^2+4x+12)=0\]
+which factors over $\Rats$ into a linear and an irreducible quadratic. Additionally, $f(x)$ remains irreducible over $\Rats(\sqrt{-4608})=\Rats(\sqrt{-2})$, since none of the roots of $f(x)$ lie in this field and the discriminant of $f(x)$, regarded as a quadratic in $x^2$, does not lie in this field either, so $f(x)$ cannot factor as a product of two quadratics. So according to the article on the Galois group of a quartic polynomial, $f(x)$ should indeed have Galois group isomorphic to $D_8$. We show that this is the case by explicitly examining the structure of its splitting field. 
+
+Let $K$ be the splitting field of $f(x)$ over $\Rats$, and let $G=\Gal(K/\Rats)$.
+
+Let $K_1=\Rats(\alpha_1) = \Rats(\alpha_3)$ and $K_2 = \Rats(\alpha_2)=\Rats(\alpha_4)$. Clearly $K$ contains both $K_1$ and $K_2$ and thus contains $K_1K_2=\Rats(\alpha_1,\alpha_2)$. But obviously $f(x)$ splits in $K_1K_2$, so that $K=K_1K_2$. We next determine the degree of $K$ over $\Rats$.
+
+Note that $K_1\neq K_2$ since $K_1$ is a real field while $K_2$ is not. Thus $K_1\cap K_2\subsetneq K_1, K_2$. Clearly $[K_1:\Rats]=[K_2:\Rats]=4$, so $[K_1\cap K_2:\Rats]\leq 2$. But
+\[\sqrt{3}=\left(\sqrt{1+\sqrt{3}}\right)^2-1 = -\left(\sqrt{1-\sqrt{3}}\right)^2+1\]
+so $\sqrt{3}\in K_1\cap K_2$. Hence $K_1\cap K_2=\Rats(\sqrt{3})$; call this field $F$.
+
+Since $K_1\neq K_2$, we also have $K=K_1K_2\neq K_1$ and $K=K_1K_2\neq K_2$; thus $K$ is a quadratic extension of each and $[K:F]=4$.
+
+Putting these results together, we see that
+\[[K:\Rats]=[K:F][F:\Rats]=8\]
+so that $G$ has order $8$.
+
+Now, neither $K_1$ nor $K_2$ is Galois over $\Rats$ (since the Galois closure of either one is $K$), so that the subgroup of $G$ fixing (say) $K_1$ is a nonnormal subgroup of $G$. Thus $G$ must be nonabelian, so must be isomorphic to either $D_8$ or $Q_8$ (the quaternions). But the subgroups of $G$ corresponding to $K_1$ and $K_2$ are distinct subgroups of order $2$ in $G$, and $Q_8$ has only one subgroup of order $2$. Thus $G\cong D_8$. (Alternatively, note that all subgroups of $Q_8$ are normal, so $G\cong D_8$ since it has a nonnormal subgroup).
+%%%%%
+%%%%%
+\end{document}

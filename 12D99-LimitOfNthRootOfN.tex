@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitOfNthRootOfN}
+\pmcreated{2014-09-28 13:20:59}
+\pmmodified{2014-09-28 13:20:59}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limit of nth root of n}
+\pmrecord{8}{40112}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{30-00}
+\pmsynonym{sequence of nth roots of n}{LimitOfNthRootOfN}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkname{$n$th root}{NthRoot} of $n$ tends to 1 as $n$ tends to infinity, i.e. the real number sequence
+$$\sqrt[1]{1},\, \sqrt[2]{2},\,\sqrt[3]{3},\,\ldots,\,\sqrt[n]{n},\,\ldots$$
+converges to the limit
+\begin{align}
+\lim_{n\to\infty}\sqrt[n]{n} = 1.
+\end{align}
+
+{\it Proof.}\, If we denote\, $\sqrt[n]{n} := 1+\delta_n$, we may write by the binomial theorem that
+$$n = (1+\delta_n)^n = 1+{n\choose1}\delta_n+{n\choose2}\delta_n^2+\ldots+{n\choose n}\delta_n^n.$$
+This implies, since all \PMlinkescapetext{terms of the right} hand side are positive (when\, $n > 1$), that
+$$n > {n\choose2}\delta_n^2 = \frac{n(n\!-\!1)}{2!}\delta_n^2, 
+\qquad \delta_n^2 < \frac{2}{n-1}, 
+\qquad 0 < \delta_n < \sqrt{\frac{2}{n-1}},$$
+whence\, $\displaystyle\lim_{n\to\infty}\delta_n = 0$.\, Accordingly, 
+$$\lim_{n\to\infty}\sqrt[n]{n} = \lim_{n\to\infty}(1+\delta_n) = 1,$$
+Q.E.D.\\
+
+\textbf{Note.}\, (1) follows also from the corollary 3 in the entry growth of exponential function.
+
+
+             
+
+%%%%%
+%%%%%
+\end{document}

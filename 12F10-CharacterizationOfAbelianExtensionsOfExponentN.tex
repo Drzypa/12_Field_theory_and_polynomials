@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfAbelianExtensionsOfExponentN}
+\pmcreated{2013-03-22 18:42:13}
+\pmmodified{2013-03-22 18:42:13}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{characterization of abelian extensions of exponent n}
+\pmrecord{4}{41467}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\Order}[1]{\left\lvert #1 \right\rvert}
+%
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\begin{document}
+\begin{thm} Let $K$ be a field containing the $n^{\mathrm{th}}$ roots of unity, with characteristic not dividing $n$. Let $L$ be a finite extension of $K$. Then the following are equivalent:
+\begin{enumerate}
+\item $L/K$ is Galois with abelian Galois group of exponent dividing $n$
+\item $L=K(\sqrt[n]{a_1},\ \dotsc,\ \sqrt[n]{a_k})$ for some $a_i\in K$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof} Let $\zeta\in K$ be a primitive $n^{\mathrm{th}}$ root of unity.
+
+$(2\Rightarrow 1):$ Choose $\alpha_i\in L$ such that $\alpha_i^n = a_i\in K$. Then for each $i$, the elements $\alpha_i,\ \zeta\alpha_i,\ \dotsc,\ \zeta^{n-1}\alpha_i$ are distinct and are all the roots of $x^n-a_i$ in $L$. Thus $x^n-a_i$ is separable over $K$ and splits in $L$, so that $L$ is the splitting field of the set of polynomials $\{x^n-a_i\ \mid\ 1\leq i\leq k\}$. Thus $L/K$ is Galois. Given $\sigma\in \Gal(L/K)$, for each $i$ we have $\sigma(\alpha_i) = \zeta^j\alpha_i$ for some $1\leq j\leq n$, so that $\sigma^k(\alpha_i) = \zeta^{kj}\alpha_i$. It follows that $\sigma^n$ is the identity for every $\sigma\in\Gal(L/K)$, so that the exponent of $\Gal(L/K)$ divides $n$. It remains to show that $\Gal(L/K)$ is abelian; this follows trivially from the simple definition of the Galois action as multiplication by some $n^{\mathrm{th}}$ root of unity: if $\sigma,\tau\in\Gal(L/K)$ with $\sigma(\alpha_i) = \zeta^r\alpha_i,\quad\tau(\alpha_i) = \zeta^s\alpha_i$, then
+\begin{align*}
+  (\sigma\tau)(\alpha_i) &= \sigma(\zeta^s\alpha_i) = \zeta^s\zeta^r\alpha_i \\
+  (\tau\sigma)(\alpha_i) &= \tau(\zeta^r\alpha_i) = \zeta^r\zeta^s\alpha_i
+\end{align*}
+Thus $\sigma\tau=\tau\sigma$ on each $\alpha_i$. But the $\alpha_i$ generate $L/K$, so $\sigma\tau=\tau\sigma$ on $L$ and $\Gal(L/K)$ is abelian.
+
+$(1 \Rightarrow 2):$ Let $G=\Gal(L/K)$, and write $G=C_1\times \dots \times C_r$ where each $C_i$ is cyclic; $\Order{C_i}=m_i\mid n$ for each $i$. For each $i$, define a subgroup $H_i\leq G$ by
+\[
+  H_i = C_1 \times \dots \times C_{i-1} \times C_{i+1} \times \dots \times C_r
+\]
+Then $G/H_i \cong C_i$. Let $L_i$ be the fixed field of $H_i$. $L_i$ is normal over $K$ since $H_i$ is normal in $G$, and $\Gal(L_i/K) \cong G/H_i \cong C_i$ and thus $L_i/K$ is cyclic Galois of order $m_i$. $K$ contains the primitive $m_i^{\mathrm{th}}$ root of unity $\zeta^{n/m_i}$ and thus $L_i = K(\alpha_i)$ for some $\alpha_i\in L$ with $\alpha_i^{m_i}\in K$ (by Kummer theory). But then also $\alpha_i^n\in K$.  Then
+\[
+  \Gal(L:K(\alpha_1,\dotsc,\alpha_r)) = H_1\cap \dots \cap H_r = \{1\}
+\]
+since any element of the left-hand group fixes each $\alpha_i$ and thus fixes $L_i$ so is the identity in $G/H_i$. Thus $L=K(\alpha_1,\dotsc,\alpha_r)$.
+\end{proof}
+
+\begin{cor} If $L/K$ is the maximal abelian extension of $K$ of exponent $n$, where $n$ is prime to the characteristic of $K$, then $L = K(\{\sqrt[n]{a}\})$ for some set of $a\in K$.
+\end{cor}
+\begin{proof}
+Clearly $K(\{\sqrt[n]{a}\mid a \in K^*)$ is an infinite abelian extension of exponent $n$. If $L$ is the maximal such extension, choose $b \in L$. Then $K(b)$ is a finite extension of exponent dividing $n$ and thus $K(b)$ is of the required form. Thus $L=\cup_{b\in L} K(b)$ is also of the required form; for example, if $S\subset K^*$ is a set of coset representatives for $K^*/(K^*)^n$, then $L=K(S)$.
+\end{proof}
+
+\begin{thebibliography}{10}
+\bibitem{bib:df}
+Morandi,~P., \emph{Field and Galois Theory}, Springer, 1996.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

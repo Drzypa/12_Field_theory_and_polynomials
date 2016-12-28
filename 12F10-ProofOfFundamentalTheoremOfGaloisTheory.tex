@@ -1,0 +1,192 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFundamentalTheoremOfGaloisTheory}
+\pmcreated{2013-03-22 14:26:38}
+\pmmodified{2013-03-22 14:26:38}
+\pmowner{pbruin}{1001}
+\pmmodifier{pbruin}{1001}
+\pmtitle{proof of fundamental theorem of Galois theory}
+\pmrecord{5}{35958}
+\pmprivacy{1}
+\pmauthor{pbruin}{1001}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmclassification{msc}{11R32}
+\pmclassification{msc}{11S20}
+\pmclassification{msc}{13B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Gal}{Gal}
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+The theorem is a consequence of the following lemmas, roughly
+corresponding to the various assertions in the theorem.  We assume
+$L/F$ to be a finite-dimensional Galois extension of fields with
+Galois group
+\[
+G=\Gal(L/F).
+\]
+The first two lemmas establish the correspondence between subgroups of
+$G$ and extension fields of $F$ contained in $L$.
+
+\begin{lemma}
+\label{lemma1}
+Let $K$ be an extension field of $F$ contained in $L$.  Then $L$ is
+Galois over $K$, and $\Gal(L/K)$ is a subgroup of $G$.
+\end{lemma}
+
+\begin{proof}
+Note that $L/F$ is normal and separable because it is a Galois
+extension; it remains to prove that $L/K$ is also normal and
+separable.  Since $L$ is normal and finite over $F$, it is the
+splitting field of a polynomial $f\in F[X]$ over $F$.  Now $L$ is also
+the splitting field of $f$ over $K$ (because $F\subset K\subset L$),
+so $L/K$ is normal.
+
+To see that $L/K$ is also separable, suppose $\alpha\in L$, and let
+$f^\alpha_F\in F[X]$ be its minimal polynomial over $F$.  Then the
+minimal polynomial $f^\alpha_K$ of $\alpha$ over $K$ divides
+$f^\alpha_F$, which has no double roots in its splitting field by the
+separability of $L/F$.  Therefore $f^\alpha_K$ has no double roots in
+its splitting field for any $\alpha\in L$, so $L$ is separable over
+$K$.
+
+The assertion that $\Gal(L/K)$ is a subgroup of $G$ is clear from the
+fact that $K\supset F$.
+\end{proof}
+
+\begin{lemma}
+\label{lemma2}
+The function $\phi$ from the set of extension fields of $F$ contained
+in $L$ to the set of subgroups of $G$ defined by
+\[
+\phi(K)=\Gal(L/K)
+\]
+is an inclusion-reversing bijection.  The inverse is given by
+\[
+\phi^{-1}(H)=L^H,
+\]
+where $L^H$ is the fixed field of $H$ in $L$.
+\end{lemma}
+
+\begin{proof}
+The definition of $\phi$ makes sense because of Lemma \ref{lemma1}.
+The \PMlinkescapetext{identities}
+\[
+\phi^{-1}\circ\phi(K)=K\quad\hbox{and}\quad
+\phi\circ\phi^{-1}(H)=H
+\]
+for all subgroups $H\subset G$ and all fields $K$ with $F\subset
+K\subset L$ follow from the properties of the Galois group.  The fixed
+field of $\Gal(L/K)$ is precisely $K$; on the other hand, since $L^H$
+is the fixed field of $H$ in $L$, $H$ is the Galois group of $L/L^H$.
+
+For extensions $K$ and $K'$ of $F$ with $F\subset K\subset K'\subset
+L$, we have
+\[
+\sigma\in\Gal(L/K')\iff\sigma\in\Gal(L/K),
+\]
+so $\phi(K)\supset\phi(K')$.  This shows that $\phi$ is
+inclusion-reversing.
+\end{proof}
+
+The following lemmas show that normal subextensions of $L/F$ are
+Galois extensions and that their Galois groups are quotient groups of
+$G$.
+
+\begin{lemma}
+\label{lemma3}
+Let $H$ be a subgroup of $G$.  Then the following are equivalent:
+\begin{enumerate}
+\item $L^H$ is normal over $F$.
+\item $\sigma\left(L^H\right)=L^H$ for all $\sigma\in G$.
+\item $\sigma H\sigma^{-1}=H$ for all $\sigma\in G$.
+\end{enumerate}
+In particular, $L^H$ is normal over $F$ if and only if $H$ is a normal
+subgroup of $G$.
+\end{lemma}
+
+\begin{proof}
+$1\Rightarrow2$: Since for all $\sigma\in G$ and $\alpha\in L^H$,
+$\sigma(\alpha)$ is a zero of the minimal polynomial of $\alpha$ over
+$F$, we have $\sigma(\alpha)\in L^H$ by the
+\PMlinkescapetext{normality} of $L^H/F$.
+
+$2\Rightarrow3$: For all $\sigma\in G,\tau\in H$ the equality
+\[
+\sigma\tau\sigma^{-1}(x)=\sigma\sigma^{-1}(x)=x
+\]
+holds for all $x\in L^H$ (from the assumption it follows that
+$\sigma^{-1}(x)\in L^H$, which is fixed by $\tau$).  This implies that
+\[
+\sigma\tau\sigma^{-1}\in\Gal(L/L^H)=H
+\]
+for all $\sigma\in G,\tau\in H$.
+
+$3\Rightarrow1$: Let $\alpha\in L^H$, and let $f$ be the minimal
+polynomial of $\alpha$ over $F$.  Since $L/F$ is normal, $f$ splits
+into linear factors in $L[X]$.  Suppose $\alpha'\in L$ is another zero
+of $f$, and let $\sigma\in G$ be such that $\sigma(\alpha')=\alpha$
+(such a $\sigma$ always exists).  By assumption, for all $\tau\in H$
+we have $\tau':=\sigma\tau\sigma^{-1}\in H$, so that
+\[
+\tau(\alpha')=\sigma^{-1}\tau'\sigma(\alpha')
+=\sigma^{-1}\tau'(\alpha)=\sigma^{-1}(\alpha)=\alpha'.
+\]
+This shows that $\alpha'$ lies in $L^H$ as well, so $f$ splits in
+$L^H[X]$.  We conclude that $L^H$ is normal over $F$.
+\end{proof}
+
+\begin{lemma}
+Let $H$ be a normal subgroup of $G$.  Then $L^H$ is a Galois extension
+of $F$, and the homomorphism
+\begin{eqnarray*}
+r\colon G&\to&\Gal(L^H/F) \\
+\sigma&\mapsto&\sigma\vert_{L^H}
+\end{eqnarray*}
+induces a natural identification
+\[
+\Gal(L^H/F)\cong G/H.
+\]
+\end{lemma}
+
+\begin{proof}
+By Lemma \ref{lemma3}, $L^H$ is normal over $F$, and because a
+subextension of a separable extension is separable, $L^H/F$ is a
+Galois extension.
+
+The map $r$ is well-defined by the implication $1\Rightarrow2$ from
+Lemma \ref{lemma3}.  It is surjective since every automorphism of
+$L^H$ that fixes $F$ can be extended to an automorphism of $L$ (if
+$L\ne L^H$, for example, we can choose an $\alpha\in L\setminus L^H$
+such that $L=L^H(\alpha)$ using the primitive element theorem, and we
+can extend $\sigma\in\Gal(L^H/F)$ to $L$ by putting
+$\sigma(\alpha)=\alpha$).  The kernel of $r$ is clearly equal to $H$,
+so the first isomorphism theorem gives the claimed identification.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

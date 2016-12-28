@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AssociativityOfMultiplication}
+\pmcreated{2013-03-22 15:09:22}
+\pmmodified{2013-03-22 15:09:22}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{associativity of multiplication}
+\pmrecord{5}{36904}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{00A35}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+It's important to know the following interpretation of the associative law
+\begin{align}
+a\cdot(b\cdot c) = (a\cdot b)\cdot c
+\end{align}
+of multiplication in arithmetics and elementary algebra:
+ 
+{\em A product ($b\cdot c$) is multiplied by a number ($a$) so that only one \PMlinkescapetext{factor} ($b$) of the product is multiplied by that number.}
+
+This rule is sometimes violated even in high school \PMlinkescapetext{level. \,A pupil may calculate} e.g. like
+$$10 \cdot 2.5 \cdot 0.3 = 25 \cdot 3 = 75,$$
+which is wrong. \,Or when solving an equation like
+$$x\cdot\frac{2x-1}{3} = 1$$
+one would like to multiply both sides by 3 for removing the denominator, getting perhaps
+$$3x(2x-1) = 3;$$
+then the both \PMlinkescapetext{factors} of left side have incorrectly been multiplied by 3.
+
+The reason of such mistakes is very likely that one confuses the associative law with the distributive law; \,cf. (1) with this latter
+\begin{align}
+a\cdot(b+c) = a\cdot b+a\cdot c,
+\end{align}
+which \PMlinkescapetext{contains} two different operations, multiplication and addition;  both {\em addends must be multiplied separately}.
+%%%%%
+%%%%%
+\end{document}

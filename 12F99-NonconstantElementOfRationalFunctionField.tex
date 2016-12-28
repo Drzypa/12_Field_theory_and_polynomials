@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonconstantElementOfRationalFunctionField}
+\pmcreated{2013-03-22 15:02:50}
+\pmmodified{2013-03-22 15:02:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{non-constant element of rational function field}
+\pmrecord{17}{36762}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+\pmsynonym{field of rational functions}{NonconstantElementOfRationalFunctionField}
+\pmsynonym{rational function field}{NonconstantElementOfRationalFunctionField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+  \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $K$ be a field. \, Every \PMlinkname{simple}{SimpleFieldExtension} transcendent field extension $K(\alpha)/K$ may be represented by the extension $K(X)/K$, where $K(X)$ is the field of fractions of the polynomial ring $K[X]$ in one indeterminate $X$. \,The elements of $K(X)$ are rational functions, i.e. rational expressions
+\begin{align}
+\varrho = \frac{f(X)}{g(X)}
+\end{align}
+with $f(X)$ and $g(X)$ polynomials in $K[X]$.
+
+\begin{thmplain}
+\,\,Let the non-constant rational function (1) be reduced to lowest terms and let the greater of the degrees of its numerator and denominator be $n$. \,This element $\varrho$ is transcendental with respect to the base field $K$. \,The field extension $K(X)/K(\varrho)$ is algebraic and of degree $n$.
+\end{thmplain}
+
+{\em Proof.}\, The element $X$ satisfies the equation
+\begin{align}
+                \varrho\,g(X)\!-\!f(X) = 0,
+\end{align}
+the coefficients of which are in the field $K(\varrho)$, actually in the ring $K[\varrho]$.\, If all these coefficients were zero, we could take one non-zero coefficient $b_\nu$ in $g(X)$ and the coefficient $a_\nu$ of the same power of $X$ in $f(X)$, and then we would have especially\, $\varrho b_\nu\!-a_\nu = 0$;\, this would mean that\, $\varrho = \frac{a_\nu}{b_\nu}$ = constant, contrary to the supposition.\, Thus at least one coefficient in (2) differs from zero, and we conclude that $X$ is algebraic with respect to $K(\varrho)$.\, If $K(\varrho)$ were algebraic with respect to $K$, then also $X$ should be algebraic with respect to $K$.\, This is not true, and therefore we see that $K(\varrho)$ is transcendental, Q.E.D.
+
+Further, $X$ is a zero of the $n^\mathrm{th}$ degree polynomial
+               $$h(Y) = \varrho\,g(Y)\!-\!f(Y)$$
+of the ring $K(\varrho)[Y]$, actually of the ring $K[\varrho][Y]$, i.e. of $K[\varrho$,\,Y].\, The polynomial is irreducible in this ring, since otherwise it would have there two factors, and because $h(Y)$ is linear in $\varrho$, the other factor should depend only on $Y$; but there can not be such a factor, for the polynomials $f(Z)$ and $g(Z)$ are relatively prime.\, The conclusion is that $X$ is an algebraic element over $K(\varrho)$ of degree $n$ and therefore also
+     $$(K(X):K(\varrho)) = n,$$
+Q.E.D.
+
+\begin{thebibliography}{9}
+\bibitem{Waerden} B. L. van der Waerden: {\em Algebra}.\, Siebte Auflage der {\em Modernen Algebra}.\, Erster Teil. \\--- Springer-Verlag. Berlin, Heidelberg (1966).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

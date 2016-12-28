@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFactorTheoremDueToFermat}
+\pmcreated{2013-03-22 15:40:12}
+\pmmodified{2013-03-22 15:40:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proof of factor theorem due to Fermat}
+\pmrecord{10}{37610}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmclassification{msc}{12D05}
+\pmsynonym{proof of factor theorem without division}{ProofOfFactorTheoremDueToFermat}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\textbf{Lemma (cf. factor theorem).}\, If the polynomial 
+    $$f(x) := a_0x^n\!+\!a_1x^{n-1}\!+\cdots+\!a_{n-1}x\!+\!a_n$$
+vanishes at\, $x = c$,\, then it is divisible by the difference $x\!-\!c$, i.e. there is valid the identic equation
+\begin{align}
+    f(x) \equiv (x\!-\!c)q(x)
+\end{align}
+where $q(x)$ is a polynomial of degree $n\!-\!1$, beginning with the \PMlinkescapetext{term} $a_0x^{n-1}$.
+
+The lemma is here proved by using only the properties of the multiplication and addition, not the division.
+
+{\em Proof.}\, If we denote\, $x\!-\!c = y$,\, we may write the given polynomial in the form
+$$f(x) = 
+a_0(y\!+\!c)^n\!+\!a_1(y\!+\!c)^{n-1}\!+\cdots+\!a_{n-1}(y\!+\!c)\!+\!a_n.$$
+It's clear that every $(y\!+\!c)^k$ is a polynomial of degree $k$ with respect to $y$, where $y^k$ has the coefficient 1 and the \PMlinkescapetext{constant term} is $c^k$.\, This implies that $f(x)$ may be written as a polynomial of degree $n$ with respect to $y$, where $y^n$ has the coefficient $a_0$ and the \PMlinkescapetext{term independent} on $y$ is equal to\, $ a_0c^n\!+\!a_1c^{n-1}\!+\cdots+\!a_{n-1}c\!+\!a_n$, i.e. $f(c)$.\, So we have
+ $$f(x) = a_0y^n\!+\!b_1y^{n-1}\!+\!b_2y^{n-2}\!+\cdots+\!b_{n-1}y\!+f(c)
+      = f(c)+y\cdot(a_0y^{n-1}\!+\!b_1y^{n-2}\!+\cdots+\!b_{n-1}\!+\!a_n),$$
+where\, $b_1,\,b_2,\,\ldots,\,b_{n-1}$\, are certain coefficients.\, If we return to the indeterminate $x$ by substituting in the last identic equation $x\!-\!c$ for $y$, we get
+ $$f(x) \equiv f(c)+(x\!-\!c)[a_0(x\!-\!c)^{n-1}\!+\!b_1(x\!-\!c)^{n-2}\!+\cdots+\!b_{n-1}].$$
+When the powers $(x\!-\!c)^k$ are expanded to polynomials, we see that the expression in the brackets is a polynomial $q(x)$ of degree\, $n\!-\!1$\, with respect to $x$ and with the coefficient $a_0$ of $x^{n-1}$.\, Thus we obtain
+\begin{align}
+   f(x) \equiv f(c)+(x\!-\!c)q(x).
+\end{align}
+This result is true independently on the value of $c$.\, If this value is chosen such that\, $f(c) = 0$,\, then (2) reduces to (1), Q. E. D.
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Johdatus korkeampaan analyysiin} (`Introduction to Higher Analysis').\, Fourth edition. WSOY, Helsinki (1956).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

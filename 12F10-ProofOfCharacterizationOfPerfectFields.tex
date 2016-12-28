@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCharacterizationOfPerfectFields}
+\pmcreated{2013-03-22 14:47:44}
+\pmmodified{2013-03-22 14:47:44}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{proof of characterization of perfect fields}
+\pmrecord{6}{36448}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{proposition}{Proposition}
+\newcommand{\cchar}{\operatorname{char}}
+\begin{document}
+\begin{proposition}
+The following are equivalent:
+\begin{enumerate}
+\item[(a)] Every algebraic extension of $K$ is separable.
+\item[(b)] Either $\cchar K = 0$ or $\cchar K = p$ and the Frobenius map is surjective.
+\end{enumerate}
+\end{proposition}
+
+{\bf Proof.}
+Suppose (a) and not (b).  Then we must have $\cchar K = p > 0$, and there must be $a \in K$
+with no $p$-th root in $K$.  Let $L$ be a splitting field over $K$ for the polynomial $X^p - a$,
+and let $\alpha \in L$ be a root of this polynomial.
+Then $(X - \alpha)^p = X^p - \alpha^p = X^p - a$, which has coefficients in $K$.
+This means that the minimum polynomial for $\alpha$ over $K$ must be a divisor of
+$(X - \alpha)^p$ and so must have repeated roots.  This is not possible since $L$ is separable
+over $K$.
+
+Conversely, suppose (b) and not (a).
+Let $\alpha$ be an element which is algebraic over $K$ but not separable.
+Then its minimum polynomial $f$ must have a repeated root, and by replacing $\alpha$ by this
+root if necessary, we may assume that $\alpha$ is a repeated root of $f$.
+Now, $f'$ has coefficients in $K$ and also has $\alpha$ as a root.  Since it is of lower
+degree than $f$, this is not possible unless $f' = 0$,
+whence $\cchar K = p > 0$ and $f$ has the form:
+$$f = x^{pn} + a_{n-1}x^{p(n-1)} + \dots + a_1 x^p + a_0.$$
+with $a_o \neq 0$.
+By (b), we may choose elements $b_i \in K$, for $0 \le i \le n-1$ such that ${b_i}^p = a_i$.
+Then we may write $f$ as:
+$$f = ( x^n + b_{n-1} x^{n-1} + \dots + b_1 x  + b_0)^p.$$
+Since $f(\alpha) = 0$ and since the Frobenius map $x \mapsto x^p$ is injective, we see that
+$$\alpha^n + b_{n-1} \alpha^{n-1} + \dots + b_1 \alpha + b_0 = 0$$
+But then $\alpha$ is a root of the polynomial
+$$x^n + b_{n-1} x^{n-1} + \dots + b_1 x  + b_0$$
+which has coefficients in $K$, is non-zero (since $b_o \neq 0$), and has lower degree than $f$.
+This contradicts the choice of $f$ as the minimum polynomial of $\alpha$.
+%%%%%
+%%%%%
+\end{document}

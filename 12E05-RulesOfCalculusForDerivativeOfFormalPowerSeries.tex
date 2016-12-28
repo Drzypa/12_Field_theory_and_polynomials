@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RulesOfCalculusForDerivativeOfFormalPowerSeries}
+\pmcreated{2013-03-22 18:22:35}
+\pmmodified{2013-03-22 18:22:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{rules of calculus for derivative of formal power series}
+\pmrecord{8}{41018}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{11C08}
+\pmclassification{msc}{13P05}
+\pmrelated{InvertibleFormalPowerSeries}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+In this entry, we will show that the rules of calculus
+hold for derivatives of formal power series.  While
+this could be verified directly in a manner analogous 
+to what was done for polynomials in the parent entry,
+we will take a different tack, deriving the results
+for power series from the corresponding results for
+polynomials.  The basis for our approach is the 
+observation that the ring of formal power series can
+be expressed as a limit of quotients of the ring of
+polynomials:
+\[
+ A[[x]]  = \lim_{k \to \infty} A[x] / \langle x^k \rangle
+\]
+Thus, we will proceed in two steps, first extending the 
+derivative operation to the quotient rings and showing that 
+its properties still hold there, then extending it to the 
+limit and showing that its properties hold there as well.
+
+We begin by noting that the derivative is well-defined 
+as a map from $A[x] / \langle x^{k+1} \rangle$ to 
+$A[x] / \langle x^k \rangle$ for all integers $k \ge 0$.  
+
+\begin{thm}
+Suppose that $A$ is a commutative ring, $k$ is a non-negative
+integer, and that $p$ and $q$ are elements of $A[x]$ such
+that $p \equiv q$ modulo $x^{k+1}$.  Then $p' \equiv q'$
+modulo $x^k$.
+\end{thm}
+
+\begin{proof}
+By definition of congruence, $p(x) = q(x) + x^{k+1} r(x)$ for 
+some polynomial $r \in A[x]$.  Taking derivaitves, $p'(x) = 
+q'(x) + x^k (k r(x) + x r'(x))$, so $p'$ and $q'$ are 
+equivalent modulo $x^k$.
+\end{proof}
+
+It is easy to verify that the sum and product rules hold
+in this new context:
+
+\begin{thm}
+If $A$ is a commutative ring, $k$ is a non-negative integer,
+and $f,g$ are elements of $A[x] / \langle x^{k+1} \rangle$,
+then $(f+g)' = f' + g'$.
+\end{thm}
+
+\begin{proof}
+Let $p,q$ be representatives of the equivalence classes
+$f,g$.  Then we have $(p+q)' = p' + q'$ by the corresponding
+theorem for polynomials.  Hence, by definition of quotient,
+we have $(f + g)' = f' + g'$.
+\end{proof}
+
+\begin{thm}
+If $A$ is a commutative ring, $k$ is a non-negative integer,
+and $f,g$ are elements of $A[x] / \langle x^{k+1} \rangle$,
+then $(f \cdot g)' = f' \cdot g + f \cdot g'$.
+\end{thm}
+
+\begin{proof}
+Let $p,q$ be representatives of the equivalence classes
+$f,g$.  Then we have $(p \cdot q)' = p' \cdot q + p \cdot q'$ 
+by the corresponding theorem for polynomials.  Hence, by 
+definition of quotient, we have 
+$(f \cdot g)' = f' \cdot g + f \cdot g'$.
+\end{proof}
+
+When considering the chain rule, we need to note that composition
+does not always pass to the quotient, so we need to restrict the
+operands to obtain a well-defined operation.  In particular, we
+will consider the following two cases:
+
+\begin{thm}
+If $A$ is a commutative ring, $p,q,r$ is a n element of $A[x]$,
+and $q \equiv r$ modulo $x^k$ for some integer $k > 0$, then
+$p \circ q \equiv p \circ r$ modulo $x^k$.
+\end{thm}
+
+\begin{thm}
+If $A$ is a commutative ring, $k$ is a non-negative integer, and
+$p,q,P,Q$ are elements of $A[x]$ such that $p \equiv P$ modulo 
+$x^k$, $q \equiv Q$ modulo $x^k$ and $p(0) = 0$, then $p \circ q
+\equiv P \circ Q$ modulo $x^k$.
+\end{thm}
+
+[More to come]
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CardinalityOfMonomials}
+\pmcreated{2013-03-22 16:34:42}
+\pmmodified{2013-03-22 16:34:42}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{cardinality of monomials}
+\pmrecord{10}{38769}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+If $S$ is a finite set of variable symbols, then the number of monomials of 
+degree $n$ constructed from these symbols is ${n + m - 1 \choose n}$, where 
+$m$ is the cardinality of $S$.
+\end{theorem}
+
+\begin{proof}
+The proof proceeds by inducion on the cardinality of $S$.  If $S$ has but one
+element, then there is but one monomial of degree $n$, namely the sole element
+of $S$ raised to the $n$-th power.  Since ${n + 1 - 1 \choose n} = 1$, the 
+conclusion holds when $m = 1$.
+
+Suppose, then, that the result holds whenver $m < M$ for some $M$.  Let $S$ be
+a set with exactly $M$ elements and let $x$ be an element of $S$.  A monomial
+of degree $n$ constructed from elements of $S$ can be expressed as the product
+of a power of $x$ and a monomial constructed from the elements of $S \setminus
+\{x\}$.  By the induction hypothesis, the number of monomials of degree $k$ 
+constructed from elements of $S \setminus \{x\}$ is ${k + M - 2 \choose k}$.
+Summing over the possible powers to which $x$ may be raised, the number of
+monomials of degree $n$ constructed from the elements of $S$ is as follows:
+ \[ \sum_{k=0}^n {k + M - 2 \choose k} = {k + M - 1 \choose k} \]
+\end{proof}
+
+\begin{theorem}
+If $S$ is an infinite set of variable symbols, then the number of monomials 
+of degree $n$ constructed from these symbols equals the cardinality of $S$.
+\end{theorem}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AConditionOfAlgebraicExtension}
+\pmcreated{2013-03-22 17:53:34}
+\pmmodified{2013-03-22 17:53:34}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{a condition of algebraic extension}
+\pmrecord{7}{40379}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmrelated{RingAdjunction}
+\pmrelated{FieldAdjunction}
+\pmrelated{Overring}
+\pmrelated{AConditionOfSimpleExtension}
+\pmrelated{SteinitzTheoremOnFiniteFieldExtension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, A field extension $L/K$ is \PMlinkname{algebraic}{AlgebraicExtension} if and only if any subring of the extension field $L$ containing the base field $K$ is a field.\\
+
+{\em Proof.}\, Assume first that $L/K$ is algebraic.\, Let $R$ be a subring of $L$ containing $K$.\, For any non-zero element $r$ of $R$, naturally\, $K[r] \subseteq R$,\, and since $r$ is an algebraic element over $K$, the ring $K[r]$ coincides with the field $K(r)$.\, Therefore we have\, $r^{-1} \in K[r] \subseteq R$,\, and $R$ must be a field.
+
+Assume then that each subring of $L$ which contains $K$ is a field.\, Let $a$ be any non-zero element of $L$.\, Accordingly, the subring $K[a]$ of $L$ contains $K$ and is a field.\, So we have\, $a^{-1} \in K[a]$.\, This means that there is a polynomial $f(x)$ in the polynomial ring $K[x]$ such that\, $a^{-1} = f(a)$.\, Because\, $af(a)-1 = 0$,\, the element $a$ is a zero of the polynomial $xf(x)-1$ of $K[x]$, i.e. is algebraic over $K$.\, Thus every element of $L$ is algebraic over $K$.
+
+\begin{thebibliography}{9}
+\bibitem{D.B.}{\sc David M. Burton}: {\em A first course in rings and ideals}. Addison-Wesley Publishing Company. Reading, Menlo Park, London, Don Mills (1970).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfFields}
+\pmcreated{2013-03-22 12:50:13}
+\pmmodified{2013-03-22 12:50:13}
+\pmowner{AxelBoldt}{56}
+\pmmodifier{AxelBoldt}{56}
+\pmtitle{examples of fields}
+\pmrecord{16}{33162}
+\pmprivacy{1}
+\pmauthor{AxelBoldt}{56}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+\pmrelated{NumberField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{arithmetic}
+\PMlinkescapeword{class}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{domain}
+\PMlinkescapeword{field}
+\PMlinkescapeword{fields}
+\PMlinkescapeword{fractions}
+\PMlinkescapeword{prime}
+\PMlinkescapeword{sort}
+
+\PMlinkname{Fields}{Field} are typically sets of ``numbers'' in which the arithmetic
+  operations of addition, subtraction, multiplication and division are
+  defined. The following is a list of examples of fields.
+
+\begin{itemize}
+
+\item The set of all rational numbers $\Bbb{Q}$, all real numbers $\Bbb{R}$ and all
+complex numbers $\Bbb{C}$ are the most familiar examples of fields.
+
+\item Slightly more exotic, the hyperreal numbers and the surreal
+numbers are fields containing infinitesimal and infinitely large
+numbers. (The surreal numbers aren't a field in the strict sense since
+they form a proper class and not a set.)
+
+\item The {\em algebraic numbers} form a field; this is the algebraic
+closure of $\Bbb{Q}$. In general, every field has an (essentially
+unique) algebraic closure.
+
+\item The computable complex numbers (those whose digit sequence can be produced by a Turing machine) form a field. The definable complex numbers (those which can be
+precisely specified using a logical formula) form a field containing the computable numbers; arguably, this
+field contains all the numbers we can ever talk about.  It is countable.
+
+\item The so-called {\em algebraic number fields} (sometimes just called number fields) arise from $\Bbb{Q}$ by adjoining some (finite number of) algebraic numbers. For instance $\Bbb{Q}(\sqrt{2}) = \{u +
+v\sqrt{2} \mid u,v\in\Bbb{Q}\}$ and $\Bbb{Q}(\sqrt[3]{2},i) = \{u + vi
++ w\sqrt[3]{2} + xi\sqrt[3]{2} + y \sqrt[3]{4} + zi \sqrt[3]{4} \mid
+u,v,w,x,y,z\in\Bbb{Q}\} = \mathbb{Q}(i\sqrt[3]{2})$ (every separable finite field extension is simple).
+
+\item If $p$ is a prime number, then the $p${\em -adic numbers} form a
+field $\Bbb{Q}_p$ which is the completion of the field $\mathbb{Q}$ with respect to the $p$-adic valuation. 
+
+\item If $p$ is a prime number, then the integers modulo $p$ form a
+finite field with $p$ elements, typically denoted by $\Bbb{F}_p$. More
+generally, for every \PMlinkname{prime}{Prime} power $p^n$ there is one and only one
+finite field $\Bbb{F}_{p^n}$ with $p^n$ elements.
+
+\item If $K$ is a field, we can form the field of rational functions
+over $K$, denoted by $K(X)$. It consists of quotients of polynomials
+in $X$ with coefficients in $K$.
+
+\item  If $V$ is a \PMlinkname{variety}{AffineVariety} over the field $K$, then the function field of $V$, denoted by
+$K(V)$, consists of all quotients of polynomial functions defined on $V$.
+
+\item If $U$ is a domain (= connected open set) in $\Bbb{C}$, then the
+set of all meromorphic functions on $U$ is a field. More generally, the  meromorphic functions on any Riemann surface form a field.
+
+\item If $X$ is a variety (or scheme) then the rational functions on $X$ form a field.  At each point of $X$, there is also a residue field which contains information about that point.
+
+\item The field of formal Laurent series over the field $K$ in the
+variable $X$ consists
+of all expressions of the form
+$$\sum_{j=-M}^\infty a_j X^j$$
+where $M$ is some integer and the coefficients $a_j$ come from $K$.
+
+\item More generally, whenever $R$ is an integral domain, we can form
+its field of fractions, a field whose elements are the
+fractions of elements of $R$.
+
+\end{itemize}
+
+Many of the fields described above have some sort of additional structure, for example a topology (yielding a topological field), a total order, or a canonical absolute value.
+%%%%%
+%%%%%
+\end{document}

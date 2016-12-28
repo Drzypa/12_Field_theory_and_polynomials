@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfTotallyRealFields}
+\pmcreated{2013-03-22 13:55:05}
+\pmmodified{2013-03-22 13:55:05}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{examples of totally real fields}
+\pmrecord{6}{34675}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+%\pmkeywords{totally}
+%\pmkeywords{real}
+%\pmkeywords{imaginary}
+%\pmkeywords{complex multiplication}
+\pmrelated{TotallyRealAndImaginaryFields}
+\pmrelated{NumberField}
+\pmdefines{examples of totally imaginary fields}
+\pmdefines{examples of CM-fields}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Here we present examples of totally real fields, totally imaginary
+fields and CM-fields.
+
+{\bf Examples}:
+\begin{enumerate}
+\item Let $K=\Rats(\sqrt{d})$ with $d$ a square-free {\bf
+positive} integer. Then
+$$\Sigma_K=\{ \operatorname{Id}_K, \sigma\}$$
+where $\operatorname{Id}_K\colon K \hookrightarrow \Complex $ is
+the identity map ($\operatorname{Id}_K(k)=k$, for all $k\in K$),
+whereas
+$$\sigma\colon K \hookrightarrow \Complex,\quad
+\sigma(a+b\sqrt{d})=a-b\sqrt{d}$$ Since $\sqrt{d}\in \Reals$ it
+follows that $K$ is a totally real field.
+
+\item Similarly, let $K=\Rats(\sqrt{d})$ with $d$ a square-free
+{\bf negative} integer. Then
+$$\Sigma_K=\{ \operatorname{Id}_K, \sigma\}$$
+where $\operatorname{Id}_K\colon K \hookrightarrow \Complex $ is
+the identity map ($\operatorname{Id}_K(k)=k$, for all $k\in K$),
+whereas
+$$\sigma\colon K \hookrightarrow \Complex,\quad
+\sigma(a+b\sqrt{d})=a-b\sqrt{d}$$ Since $\sqrt{d}\in \Complex$ and
+it is not in $\Reals$, it follows that $K$ is a totally imaginary
+field.
+
+\item Let $\zeta_n, n\geq 3$, be a primitive $n^{th}$ root of
+unity and let $L=\Rats(\zeta_n)$, a cyclotomic extension. Note
+that the only roots of unity that are real are $\pm 1$. If
+$\psi\colon L \hookrightarrow \Complex $ is an embedding, then
+$\psi(\zeta_n)$ must be a conjugate of $\zeta_n$, i.e. one of $$\{
+\zeta_n^a \mid a \in (\Ints/n\Ints)^{\times}\}$$ but those are all
+imaginary. Thus $\psi(L)\nsubseteq \Reals$. Hence $L$ is a totally
+imaginary field.
+
+\item In fact, $L$ as in $(3)$ is a CM-field. Indeed, the maximal
+real subfield of $L$ is $$F=\Rats(\zeta_n + \zeta_n^{-1})$$ Notice
+that the minimal polynomial of $\zeta_n$ over $F$ is
+$$X^2-(\zeta_n+\zeta_n^{-1})X+1$$
+so we obtain $L$ from $F$ by adjoining the square root of the
+discriminant of this polynomial which is
+$$\zeta_n^2+\zeta_n^{-2}-2= 2\cos(\frac{4\pi}{n})-2 < 0$$
+and any other conjugate is
+$$\zeta_n^{2a}+\zeta_n^{-2a}-2=2\cos(\frac{4a\pi}{n})-2 < 0, a\in
+(\Ints/n\Ints)^{\times}$$ Hence, $L$ is a CM-field.
+
+\item Notice that any quadratic imaginary number field is
+obviously a CM-field.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

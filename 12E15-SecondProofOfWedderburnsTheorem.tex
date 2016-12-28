@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondProofOfWedderburnsTheorem}
+\pmcreated{2013-03-22 13:34:39}
+\pmmodified{2013-03-22 13:34:39}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{second proof of Wedderburn's theorem}
+\pmrecord{17}{34198}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E15}
+%\pmkeywords{cyclotomic polynomial}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand {\cnums}{\mathbb{C}}
+\newcommand {\znums}{\mathbb{Z}}
+\begin{document}
+We can prove Wedderburn's theorem,without using Zsigmondy's theorem on the conjugacy class formula of the first proof;
+let $G_n$ set of n-th roots of unity and $P_n$ set of n-th primitive
+roots of unity and $\Phi_d(q)$ the d-th cyclotomic polynomial.\\
+It results
+\begin{itemize}
+    \item $ \Phi_n(q)=\prod_{\xi \in P_n}(q- \xi)$
+    \item $ p(q)=q^n-1=\prod _{\xi \in G_n}
+ (q- \xi)=\prod_{d\mid n}\Phi_d(q) $
+    \item $ \Phi_n(q)\in \znums [q] \;$, it has multiplicative identity and $\Phi_n(q)\mid q^n-1$
+    \item $ \Phi_n(q) \mid \frac{q^n-1 }{q^d-1} \;$with $ d \mid n, d<n$
+\end{itemize}
+by conjugacy class formula, we have:
+$$q^n-1=q-1+\sum_x \frac{q^n-1}{q^{n_x}-1} $$
+by last two previous properties, it results:
+$$ \Phi_n(q) \mid q^n-1 \;,\; \Phi_n(q) \mid \frac{q^n-1}{q^{n_x}-1}
+\Rightarrow \Phi_n(q) \mid q-1$$
+\\because $\Phi_n(q)$
+divides the left and each addend of $ \sum_x \frac{q^n-1}{q^{n_x}-1} $  
+of the right member of the conjugacy class formula.
+\\By third property
+$$q>1 \;,\; \Phi_n(x)\in \znums[x]
+\Rightarrow \Phi_n(q)\in \znums \Rightarrow |\Phi_n(q)| \mid q-1
+\Rightarrow |\Phi_n(q)|\leqslant q-1 $$
+\\If, for $n>1$,we have $|\Phi_n(q)|>q-1 $, then $n=1$ and the theorem is proved.
+\\We know that
+\\ $$ |\Phi_n(q)|=\prod_{\xi \in P_n} |q - \xi|\;,\;with\; q- \xi\in \cnums $$
+\\by the triangle inequality in $\cnums$
+$$ |q-\xi|\geqslant||q|-|\xi||=|q-1|$$ as $\xi$ is a primitive root of unity,
+ besides $$|q-\xi|=|q-1| \Leftrightarrow \xi=1$$
+but $$n>1 \Rightarrow \xi \neq 1$$ therefore, we have
+$$|q-\xi|>|q-1|=q-1 \Rightarrow |\Phi_n(q)|>q-1$$
+%%%%%
+%%%%%
+\end{document}

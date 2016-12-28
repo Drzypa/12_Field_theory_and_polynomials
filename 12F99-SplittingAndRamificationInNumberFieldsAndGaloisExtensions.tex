@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SplittingAndRamificationInNumberFieldsAndGaloisExtensions}
+\pmcreated{2013-03-22 15:05:29}
+\pmmodified{2013-03-22 15:05:29}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{splitting and ramification in number fields and Galois extensions}
+\pmrecord{11}{36818}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+\pmclassification{msc}{13B02}
+\pmclassification{msc}{11S15}
+\pmsynonym{completely split}{SplittingAndRamificationInNumberFieldsAndGaloisExtensions}
+\pmsynonym{strongly ramified}{SplittingAndRamificationInNumberFieldsAndGaloisExtensions}
+\pmsynonym{wild ramification}{SplittingAndRamificationInNumberFieldsAndGaloisExtensions}
+\pmrelated{Ramify}
+\pmrelated{InertialDegree}
+\pmrelated{CalculatingTheSplittingOfPrimes}
+\pmrelated{PrimeIdealDecompositionInQuadraticExtensionsOfMathbbQ}
+\pmrelated{PrimeIdealDecompositionInCyclotomicExtensionsOfMathbbQ}
+\pmdefines{totally ramified}
+\pmdefines{totally split}
+\pmdefines{wildly ramified}
+\pmdefines{tamely ramified}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\p}{{\mathfrak{p}}}
+\newcommand{\A}{{\mathfrak{A}}}
+\renewcommand{\P}{{\mathfrak{P}}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\intK}{\mathcal{O}_K}
+\newcommand{\intF}{\mathcal{O}_F}
+\begin{document}
+Let $F/K$ be an extension of number fields and let $\mathcal{O}_F$ and $\mathcal{O}_K$ be their respective rings of integers. The ring of integers of a number field is a Dedekind domain, and these enjoy the property that every ideal $\A$ factors uniquely as a finite product of prime ideals (see the entry \PMlinkname{fractional ideal}{FractionalIdeal}). Let $\p$ be a prime ideal of $\intK$. Then $\p \intF$ is an ideal of $\intF$. Let us assume that the prime ideal factorization of $\p \intF$ into primes of $\intF$ is as follows:
+\begin{eqnarray}
+\label{eq1} \p \intF=\prod_{i=1}^r {\P_i}^{e_i}
+\end{eqnarray}
+We say that the primes $\P_i$ lie above $\p$ and $\P_i|\p$ (divides). The exponent $e_i$ (commonly denoted as $e(\P_i|\p)$) is the ramification index of $\P_i$ over $\p$. Notice that for each prime ideal $\P_i$, the quotient ring $\intF/\P_i$ is a finite field extension of the finite field $\intK/\p$ (also called the residue field). The degree of this extension is called the inertial degree of $\P_i$ over $\p$ and it is usually denoted by:
+$$f(\P_i|\p)=[\intF/\P_i:\intK/\p].$$
+
+Notice that as it is pointed out in the entry ``\PMlinkname{inertial degree}{InertialDegree}'', the ramification index and the inertial degree are related by the formula:
+\begin{eqnarray}
+\label{eq2}
+\sum_{i=1}^r e(\P_i|\p)f(\P_i|\p)=[F:K]
+\end{eqnarray}
+where $r$ is the number of prime ideals lying above $\p$ (as in Eq. (\ref{eq1})). See the theorem below for an improvement of Eq. (\ref{eq2}) in the case when $F/K$ is Galois.
+\begin{defn}
+Let $F,K$ and $\P_i,\p$ be as above.
+\begin{enumerate}
+\item If $e_i>1$ for some $i$, then we say that $\P_i$ is {\bf ramified} over $\p$ and $\p$ ramifies in $F/K$. If $e_i=1$ for all $i$ then we say that $\p$ is unramified in $F/K$.
+\item If there is a unique prime ideal $\P$ lying above $\p$ (so $r=1$) and $f(\P|\p)=1$ then we say that $\p$ is {\bf totally ramified} in $F/K$. In this case $e(\P|\p)=[F:K]$.
+\item On the other hand, if $e(\P_i|\p)=f(\P_i|\p)=1$ for all $i$, we say that $\p$ is {\bf totally split} (or splits completely) in $F/K$. Notice that there are exactly $r=[F:K]$ prime ideals of $\intF$ lying above $\p$.
+\item  Let $p$ be the characteristic of the residue field $\intK/\p$. If $e_i=e(\P_i|\p)>1$ and $e_i$ and $p$ are relatively prime, then we say that $\P_i$ is {\bf tamely ramified}. If $p|e_i$ then we say that $\P_i$ is {\bf strongly ramified} (or wildly ramified). 
+\end{enumerate}
+\end{defn}
+
+When the extension $F/K$ is a Galois extension then Eq. (\ref{eq2}) is quite more simple:
+
+\begin{thm}
+Assume that $F/K$ is a Galois extension of number fields. Then all the ramification indices $e_i=e(\P_i|\p)$ are equal to the same number $e$, all the inertial degrees $f_i=f(\P_i|\p)$ are equal to the same number $f$ and the ideal $\p \intF$ factors as:
+$$\p\intF = \prod_{i=1}^r \P_i^e=(\P_1\cdot\P_2\cdot\ldots\cdot\P_r)^e$$
+Moreover:
+$$e\cdot f\cdot r=[F:K].$$
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

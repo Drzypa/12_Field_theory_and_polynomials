@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PythagoreanField}
+\pmcreated{2013-03-22 14:22:36}
+\pmmodified{2013-03-22 14:22:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Pythagorean field}
+\pmrecord{11}{35868}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D15}
+\pmdefines{Pythagorean extension}
+\pmdefines{Pythagorean closure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $F$ be a field.  A field extension $K$ of $F$ is called a \emph{Pythagorean extension} if $K = F(\sqrt{1+\alpha^2})$ for some $\alpha$ in $F$, where $\sqrt{1+\alpha^2}$ denotes a root of the polynomial $x^2-(1+\alpha^2)$ in the algebraic closure $\overline{F}$ of $F$.  A field $F$ is \emph{Pythagorean} if every Pythagorean extension of $F$ is $F$ itself.  
+
+The following are equivalent:
+\begin{enumerate}
+\item
+$F$ is Pythagorean
+\item
+Every sum of two squares in $F$ is a square
+\item
+Every sum of (finite number of) squares in $F$ is a square
+\end{enumerate}
+
+\textbf{Examples:}
+\begin{itemize}
+\item
+$\mathbb{R}$ and $\mathbb{C}$ are Pythagorean.
+\item
+$\mathbb{Q}$ is not Pythagorean.
+\end{itemize}
+
+\textbf{Remark}.  Every field is contained in some Pythagorean field.  The smallest Pythagorean field over a field $F$ is called the \emph{Pythagorean closure} of $F$, and is written $F_{py}$.  Given a field $F$, one way to construct its Pythagorean closure is as follows: let $K$ be an extension over $F$ such that there is a tower
+$$F=K_1\subseteq K_2\subseteq \cdots \subseteq K_n=K$$
+of fields with $K_{i+1}=K_i(\sqrt{1+\alpha_i^2})$ for some $\alpha_i\in K_i$, where $i=1,\ldots,n-1$.  Take the compositum $L$ of the family $\mathcal{K}$ of all such $K$'s.  Then $L=F_{py}$.
+%%%%%
+%%%%%
+\end{document}

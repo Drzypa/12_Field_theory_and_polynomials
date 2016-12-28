@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AFiniteExtensionOfFieldsIsAnAlgebraicExtension}
+\pmcreated{2013-03-22 13:57:30}
+\pmmodified{2013-03-22 13:57:30}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{a finite extension of fields is an algebraic extension}
+\pmrecord{6}{34725}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+%\pmkeywords{algebraic}
+%\pmkeywords{polynomial}
+%\pmkeywords{finite}
+\pmrelated{Algebraic}
+\pmrelated{AlgebraicExtension}
+\pmrelated{ProofOfTranscendentalRootTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{thm}
+Let $L/K$ be a finite field extension. Then $L/K$ is an algebraic
+extension.
+\end{thm}
+
+\begin{proof}
+In order to prove that $L/K$ is an algebraic extension, we need to show that any element
+$\alpha\in L$ is algebraic, i.e., there exists a non-zero
+polynomial $p(x)\in K[x]$ such that $p(\alpha)=0$.
+
+Recall that $L/K$ is a finite extension of fields, by definition,
+it means that $L$ is a finite dimensional vector space over $K$.
+Let the dimension be
+$$[L\colon K]=n$$
+for some $n\in \Nats$.
+
+Consider the following set of ``vectors'' in $L$:
+$$\mathcal{S}=\{ 1, \alpha, \alpha^2,\alpha^3,\ldots,\alpha^n\}$$
+Note that the cardinality of $S$ is $n+1$, one more than the
+dimension of the vector space. Therefore, the elements of $S$ must
+be linearly dependent over $K$, otherwise the dimension of $S$
+would be greater than $n$. Hence, there exist $k_i\in K,\ 0\leq i
+\leq n$, not all zero, such that
+$$k_0+k_1\alpha+k_2\alpha^2+k_3\alpha^3+\ldots+k_n\alpha^n=0$$
+Thus, if we define
+$$p(X)=k_0+k_1X+k_2X^2+k_3X^3+\ldots+k_nX^n$$
+then $p(X)\in K[X]$ and $p(\alpha)=0$, as desired.
+
+\end{proof}
+
+{\bf NOTE: } The converse is not true. See the entry ``algebraic
+extension'' for details.
+%%%%%
+%%%%%
+\end{document}

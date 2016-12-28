@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReciprocalPolynomial}
+\pmcreated{2013-03-22 13:36:33}
+\pmmodified{2013-03-22 13:36:33}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{reciprocal polynomial}
+\pmrecord{12}{34239}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmrelated{CharacteristicPolynomialOfASymplecticMatrixIsAReciprocalPolynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{name}
+\PMlinkescapeword{degree}
+
+{\bf Definition} \cite{eves}
+Let $p:\mathbb{C}\to\mathbb{C}$
+be a polynomial of degree $n$ with complex (or real)
+coefficients. Then $p$  is a \emph{reciprocal polynomial} if
+$$
+   p(z) = \pm z^n p(1/z)
+$$
+for all $z\in \mathbb{C}$.
+
+Examples of reciprocal polynomials are Gaussian polynomials, as well as the characteristic polynomials of orthogonal matrices (including the identity matrix as a special case), symplectic matrices, \PMlinkname{involution matrices}{LinearInvolution}, and the Pascal matrices \cite{higham}. 
+
+It is clear that if $z$ is a zero for a reciprocal polynomial, then
+$1/z$ is also a zero. This property motivates the name. This
+means that the spectra of matrices of above type is symmetric
+with respect to the unit circle in $\mathbb{C}$; if $\lambda\in \mathbb{C}$ is an
+eigenvalue, so is $1/\lambda$. 
+
+The sum, difference, and product of two reciprocal polynomials is again a reciprocal polynomial.  Hence, reciprocal polynomials form an algebra over the complex numbers.
+
+\begin{thebibliography}{9}
+\bibitem {eves} H. Eves,
+ \emph{Elementary Matrix Theory},
+ Dover publications, 1980.
+\bibitem{higham} N.J. Higham, \emph{Accuracy and Stability of Numerical Algorithms}, 
+2nd ed., SIAM, 2002. 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

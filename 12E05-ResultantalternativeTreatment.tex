@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResultantalternativeTreatment}
+\pmcreated{2013-03-22 12:32:52}
+\pmmodified{2013-03-22 12:32:52}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{resultant (alternative treatment)}
+\pmrecord{6}{32792}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmrelated{Discriminant}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\dn}{\delta^{(n)}}
+\newcommand{\kfield}{\mathbb{K}}
+\newcommand{\Res}{\mathrm{Res}}
+ 
+\newcommand{\ha}{A}
+\newcommand{\hb}{B}
+
+ 
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\paragraph{Summary.}
+The {\em resultant} of two polynomials is a number, calculated from
+the coefficients of those polynomials, that vanishes if and only if
+the two polynomials share a common root.  Conversely, the resultant is
+non-zero if and only if the two polynomials are mutually prime.
+
+\paragraph{Definition.}
+Let $\kfield$ be a field and let
+\begin{align*}
+p(x) &= a_0 x^n + a_1 x^{n-1} + \ldots + a_n,\\
+q(x) &= b_0 x^m + b_1 x^{m-1} + \ldots + b_m  
+\end{align*}
+be two polynomials over $\kfield$ of degree $n$ and $m$, respectively.
+We define $\Res[p,q]\in\kfield$, the resultant of $p(x)$ and $q(x)$,
+to be the determinant of a $n+m$ square matrix with columns 1 to $m$
+formed by shifted sequences consisting of the coefficients of $p(x)$,
+and columns $m+1$ to $n+m$ formed by shifted sequences consisting of
+coefficients of $q(x)$, i.e.
+
+$$\Res[p,q] = \left | 
+  \begin{array}{cccccccc}
+    a_0 & 0 &  \ldots &  0 & b_0 & 0 & \ldots & 0 \\
+    a_1 & a_0  & \ldots & 0 & b_1 & b_0 & \ldots & 0 \\
+    a_2 & a_1 & \ldots  & 0 & b_2 & b_1 & \ldots & 0\\
+    \vdots & \vdots  & \ddots & \vdots  &\vdots  &\vdots 
+    &\ddots & \vdots \\
+    0 & 0 &  \ldots  & a_{n-1} & 0 & 0 &\ldots & b_{m-1} \\
+    0 & 0 &  \ldots  & a_n & 0 & 0 &\ldots & b_m \\
+  \end{array}
+\right|
+$$
+
+% {\small
+% $$\left | 
+%   \begin{array}{ccccccccccc}
+%     a_0 & a_1 & \ldots & a_{m-2} & a_{m-1} & a_m & \ldots & a_{n} & 0
+%     & \ldots & 0 \\ 
+%     0 & a_0 &  \ldots & a_{m-3} & a_{m-2} & a_{m-1} &  \ldots &
+%     a_{n-1} & a_{n} & 
+%     \ldots & 0 \\ 
+%     \vdots  & \vdots & \ddots & \vdots&\vdots &\vdots & \ddots &
+%     \vdots & \vdots & 
+%     \ddots & \vdots \\
+%     0 & 0 &  \ldots & a_0 & a_1 & a_2 & \ldots & a_{n-m+2} & a_{n-m+3} &
+%     \ldots & a_n \\ 
+%     b_0 & b_1 &\ldots &b_{m-2} & b_{m-1} & b_m & \ldots & 0 & 0&\ldots & 0 \\ 
+%     0 & b_0 &  \ldots &b_{m-3} & b_{m-2} & b_{m-1} & \ldots & 0 & 0&
+%     \ldots & 0 \\ 
+%     \vdots  & \vdots & \ddots & \vdots& \vdots & \vdots & \ddots & \vdots &
+%     \vdots & \ddots & \vdots \\
+%     0 & 0  &  \ldots & b_0 & b_1 & b_2 & \ldots & b_{n-m+2} &
+%     b_{n-m+3}  & \ldots & 0 \\ 
+%     \vdots  & \vdots & \ddots & \vdots& \vdots & \vdots & \ddots & \vdots &
+%     \vdots & \ddots & \vdots \\
+%     0 & 0  &  \ldots & 0 & 0 & 0 & \ldots & b_2 &
+%     b_3  & \ldots & b_m \\ 
+%     \end{array}\right|$$}
+
+\begin{proposition}
+  The resultant of two polynomials is non-zero if and only if the
+  polynomials are  relatively prime.
+\end{proposition}
+{\em Proof.} Let $p(x), q(x)\in \kfield[x]$ be two arbitrary
+polynomials of degree $n$ and $m$, respectively.  The polynomials are
+relatively prime if and only if every polynomial --- including the
+unit polynomial 1 --- can be formed as a linear combination of $p(x)$
+and $q(x)$.  Let
+\begin{align*}
+r(x) &= c_0 x^{m-1} + c_1 x^{m-2} + \ldots + c_{m-1},\\
+s(x) &= d_0 x^{n-1} + b_1 x^{n-2} + \ldots + d_{n-1}
+\end{align*}
+be polynomials of degree
+$m-1$ and $n-1$, respectively.  The coefficients of the linear
+combination
+$r(x) p(x) + s(x) q(x)$ are given by the following matrix--vector
+multiplication:
+
+$$\begin{bmatrix}
+    a_0 & 0 &  \ldots &  0 & b_0 & 0 & \ldots & 0 \\
+    a_1 & a_0  & \ldots & 0 & b_1 & b_0 & \ldots & 0 \\
+    a_2 & a_1 & \ldots  & 0 & b_2 & b_1 & \ldots & 0\\
+    \vdots & \vdots  & \ddots & \vdots  &\vdots  &\vdots 
+    &\ddots & \vdots \\
+    0 & 0 &  \ldots  & a_{n-1} & 0 & 0 &\ldots & b_{m-1} \\
+    0 & 0 &  \ldots  & a_n & 0 & 0 &\ldots & b_m \\
+  \end{bmatrix}
+  \begin{bmatrix}
+    c_0 \\ c_1 \\ c_2 \\ \vdots \\ c_{m-1} \\ d_0 \\ d_1 \\ d_2 \\
+    \vdots \\ d_{n-1}
+  \end{bmatrix}
+$$
+In consequence of the preceding remarks, $p(x)$ and $q(x)$ are
+relatively prime if and only if the matrix above is non-singular,
+i.e. the resultant is non-vanishing.  Q.E.D.
+
+\paragraph{Alternative Characterization.}
+The following Proposition describes the resultant of two polynomials
+in terms of the polynomials' roots.  Indeed this property uniquely
+characterizes the resultant, as can be seen by carefully studying the
+appended proof.
+\begin{proposition}
+  Let $p(x), q(x)$ be as above and let $x_1,\ldots,x_n$ and
+  $y_1,\ldots,y_m$ be their respective roots in the algebraic closure
+  of $\kfield$.  Then,
+  $$\Res[p,q] = a_0^m\, b_0^n \prod_{i=1}^n \prod_{j=1}^m (x_i-y_j)$$
+\end{proposition}
+{\em Proof.}  The multilinearity property of determinants implies that
+$$\Res[p,q] = a_0^m\, b_0^n
+ \left | 
+  \begin{array}{cccccccc}
+    1 & 0 &  \ldots &  0 & 1 & 0 & \ldots & 0 \\
+    \ha_1 & 1  & \ldots & 0 & \hb_1 & 1 & \ldots & 0 \\
+    \ha_2 & \ha_1 & \ldots  & 0 & \hb_2 & \hb_1 & \ldots & 0\\
+    \vdots & \vdots  & \ddots & \vdots  &\vdots  &\vdots 
+    &\ddots & \vdots \\
+    0 & 0 &  \ldots  & \ha_{n-1} & 0 & 0 &\ldots & \hb_{m-1} \\
+    0 & 0 &  \ldots  & \ha_n & 0 & 0 &\ldots & \hb_m \\
+  \end{array}
+\right|$$
+where
+\begin{align*}
+A_i &= \frac{a_i}{a_0},\quad i=1,\ldots n,\\
+B_j &= \frac{b_j}{b_0},\quad j=1,\ldots m.
+\end{align*}
+It therefore suffices to prove the proposition for monic polynomials.
+Without loss of generality we can also assume that the roots in
+question are algebraically independent.
+
+Thus, let $X_1,\ldots,X_n, Y_1,\ldots,Y_m$ be indeterminates and set
+\begin{align*}
+F(X_1,\ldots,X_n, Y_1,\ldots,Y_m) &= \prod_{i=1}^n \prod_{j=1}^m
+(X_i-Y_j)\\
+P(x)&=(x-X_1)\ldots (x-X_n),\\
+Q(x) &= (x-Y_1)\ldots (x-Y_m),\\
+G(X_1,\ldots,X_n, Y_1,\ldots,Y_m) &= \Res[P,Q]
+\end{align*}
+Now by Proposition 1, $G$ vanishes if we replace any of the
+$Y_1,\ldots,Y_m$ by any of $X_1,\ldots,X_n$ and hence $F$ divides $G$.
+
+Next, consider the main diagonal of the matrix whose determinant gives
+$\Res[P,Q]$. The first $m$ entries of the diagonal are equal to $1$,
+and the next $n$ entries are equal to $(-1)^m Y_1\ldots Y_m$.  It
+follows that the expansion of $G$ contains a term of the form
+$(-1)^{mn} Y_1^n\ldots Y_m^n$.  However, the expansion of $F$ contains
+exactly the same term, and therefore $F=G$.  Q.E.D.
+%%%%%
+%%%%%
+\end{document}

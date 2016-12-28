@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationsOfIntegral}
+\pmcreated{2013-03-22 14:56:54}
+\pmmodified{2013-03-22 14:56:54}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{characterizations of integral}
+\pmrecord{11}{36642}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+\pmclassification{msc}{13B21}
+\pmsynonym{characterisations of integral}{CharacterizationsOfIntegral}
+%\pmkeywords{integral over a ring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+Let $R$ be a subring of a field $K$,\, $1\in R$\, and let $\alpha$ be a non-zero element of $K$.\, The following conditions are equivalent:
+\begin{enumerate}
+ \item $\alpha$ is integral over $R$.
+ \item $\alpha$ belongs to $R[\alpha^{-1}]$.
+ \item $\alpha$ is unit of $R[\alpha^{-1}]$.
+ \item $\alpha^{-1}R[\alpha^{-1}] = R[\alpha^{-1}]$.
+\end{enumerate}
+\end{thmplain}
+
+{\em Proof.} \,Supposing the first condition \PMlinkescapetext{means} that an equation
+          $$\alpha^n+a_1\alpha^{n-1}+\ldots+a_{n-1}\alpha+a_n = 0,$$
+with $a_j$'s belonging to $R$, holds.\, Dividing both \PMlinkescapetext{sides} by $\alpha^{n-1}$ gives 
+          $$\alpha = -a_1-a_2\alpha^{-1}-\ldots-a_n\alpha^{-n+1}.$$
+One sees that $\alpha$ belongs to the ring $R[\alpha^{-1}]$ even being a unit of this (of course \,$\alpha^{-1}\in R[\alpha^{-1}]$).\, Therefore also the principal ideal $\alpha^{-1}R[\alpha^{-1}]$ of the ring $R[\alpha^{-1}]$ coincides with this ring.\, Conversely, the last circumstance implies that $\alpha$ is integral over $R$.
+
+\begin{thebibliography}{7}
+\bibitem{artin} Emil Artin: {\em \PMlinkescapetext{Theory of Algebraic Numbers}}.\, Lecture notes.\, Mathematisches Institut, G\"ottingen (1959).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

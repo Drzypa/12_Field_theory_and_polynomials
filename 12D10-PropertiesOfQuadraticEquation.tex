@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfQuadraticEquation}
+\pmcreated{2015-02-12 9:55:41}
+\pmmodified{2015-02-12 9:55:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of quadratic equation}
+\pmrecord{14}{36115}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+%\pmkeywords{quadratic equation}
+\pmrelated{VietasFormula}
+\pmrelated{ValuesOfComplexCosine}
+\pmrelated{IntegralBasisOfQuadraticField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The quadratic equation
+$$ax^2\!+\!bx\!+\!c = 0$$
+or
+$$x^2\!+\!px+\!q\! = 0$$
+with rational, real, \PMlinkname{algebraic}{AlgebraicNumber}  or complex coefficients ($a \neq 0$) has the following properties:
+\begin{itemize}
+ \item It has in $\mathbb{C}$ two roots (which may be equal), since the complex numbers form an algebraically closed field containing the coefficients.
+ \item The sum of the roots is equal to \,$-\frac{b}{a}$,\, i.e.\, $-p$.
+ \item The product of the roots is equal to \,$\frac{c}{a}$,\, i.e.\, $q$.
+\end{itemize}
+\textbf{Corollary.}\, If the leading coefficient and the constant \PMlinkescapetext{term} are equal, then the roots are inverse numbers of each other.
+
+Without solving the equation, the value of any symmetric polynomial 
+of the roots can be calculated.\\
+
+\textbf{Example.}\, If one has to \PMlinkescapetext{calculate} 
+$x_1^3\!+\!x_2^3$, when $x_1$ and $x_2$ are the roots of the 
+equation\, $x^2\!-\!4x\!+\!9 = 0$,\, we have\, 
+$x_1\!+\!x_2 = 4$\, and\, $x_1x_2 = 9$.\, Because
+$$(x_1\!+\!x_2)^3 = 
+x_1^3\!+\!3x_1^2x_2\!+\!3x_1x_2^2\!+\!x_2^3 = 
+(x_1^3\!+\!x_2^3)\!+\!3x_1x_2(x_1\!+\!x_2),$$
+we obtain
+$$x_1^3\!+\!x_2^3 = (x_1\!+\!x_2)^3\!-\!3x_1x_2(x_1\!+\!x_2) = 4^3\!-\!3\cdot 9\cdot 4 = -44.$$
+
+\textbf{Note.}\, If one wants to write easily a quadratic equation 
+with rational roots, one could take such one that the sum of the 
+coefficients is zero (then one root is always 1).\, For instance, 
+the roots of the equation\, $5x^2\!+\!11x\!-\!16 = 0$\, are 1 and 
+$-\frac{16}{5}$.
+%%%%%
+%%%%%
+\end{document}

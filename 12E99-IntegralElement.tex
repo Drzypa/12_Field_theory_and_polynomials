@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IntegralElement}
+\pmcreated{2013-03-22 14:15:56}
+\pmmodified{2013-03-22 14:15:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{integral element}
+\pmrecord{31}{35715}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+\pmrelated{PAdicCanonicalForm}
+\pmrelated{PAdicValuation}
+\pmrelated{KummersCongruence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+An element $a$ of a field $K$ is an {\em integral element of the field} $K$, iff    
+                         $$|a| \leq 1$$
+for every non-archimedean valuation\, $|\cdot|$\, of this field.
+
+The set $\mathcal{O}$ of all integral elements of $K$ is a subring (in fact, an integral domain) of $K$, because it is the intersection of all valuation rings in $K$.
+
+\textbf{Examples}
+\begin{enumerate}
+
+ \item $K = \mathbb{Q}$.\, The only non-archimedean valuations of $\mathbb{Q}$ are the $p$-adic valuations\, $|\cdot|_p$\, (where $p$ is a rational prime) and the trivial valuation (all values are 1 except the value of 0).\, The valuation ring $\mathcal{O}_p$ of\, $|\cdot|_p$\, consists of all so-called {\em p-integral rational numbers} whose denominators are not divisible by $p$.\, The valuation ring of the trivial valuation is, generally, the whole field.\, Thus, $\mathcal{O}$ is, by definition, the intersection of the $\mathcal{O}_p$'s for all $p$;\, this is the set of rationals whose denominators are not divisible by any prime, which is exactly the set $\mathbb{Z}$ of ordinary integers.
+
+ \item If $K$ is a finite field, it has only the trivial valuation.\, In fact, if $|\cdot|$ is a valuation and $a$ any non-zero element of $K$, then there is a positive integer $m$ such that\, $a^m = 1$,\, and we have\, $|a|^m = |a^m| = |1| = 1$,\, and therefore\, $|a| = 1$.\, Thus, $|\cdot|$ is trivial and\, $\mathcal{O} = K$.\, This means that all elements of the field are integral elements.
+
+ \item If $K$ is the field $\mathbb{Q}_p$ of the \PMlinkname{$p$-adic numbers}{NonIsomorphicCompletionsOfMathbbQ}, it has only one non-trivial valuation, the $p$-adic valuation, and now the ring $\mathcal{O}$ is its valuation ring, which is the ring of \PMlinkname{{\em $p$-adic integers}}{PAdicIntegers};\, this is visualized in the 2-adic ({\em dyadic}) case in the article ``$p$-adic canonical form''. 
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

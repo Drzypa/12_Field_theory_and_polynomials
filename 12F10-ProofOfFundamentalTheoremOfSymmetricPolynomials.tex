@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFundamentalTheoremOfSymmetricPolynomials}
+\pmcreated{2016-02-22 13:29:31}
+\pmmodified{2016-02-22 13:29:31}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proof of fundamental theorem of symmetric polynomials}
+\pmrecord{14}{42071}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmclassification{msc}{13B25}
+\pmsynonym{proof of fundamental theorem of symmetric functions}{ProofOfFundamentalTheoremOfSymmetricPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{degree}
+
+Let\, $P := P(x_1,\,x_2,\,\ldots,\,x_n)$ be an arbitrary symmetric polynomial in $x_1,\,x_2,\,\ldots,\,x_n$.\, We can assume that $P$ is \PMlinkname{homogeneous}{Polynomial}, because if\, $P = P_1\!+\!P_2\!+\ldots+\!P_m$\, where each $P_i$ is homogeneous and if the \PMlinkname{theorem}{FundamentalTheoremOfSymmetricPolynomials} is true for each $P_i$, it is evidently true for the sum $P$, too.
+
+Let the \PMlinkname{degree}{Polynomial} of $P$ be $d$.\, For any two terms
+$$M \;:=\; c_\mu x_1^{\mu_1}x_2^{\mu_2}\!\cdots\!x_n^{\mu_n}, 
+\qquad  N \;:=\; c_\nu x_1^{\nu_1}x_2^{\nu_2}\!\cdots\!x_n^{\nu_n}$$
+of $P$, if the first of the differences
+$$\mu_1\!-\!\nu_1,\quad \mu_2\!-\!\nu_2,\quad \ldots,\quad 
+\mu_n\!-\!\nu_n,$$
+which differs from 0, is positive, we say that $M$ is \emph{higher} than $N$.\, Since, of cource, the \PMlinkescapetext{similar} terms of $P$ have been merged, always one of two arbitrary terms is higher than the other.\, The higherness is obviously \PMlinkname{transitive}{Transitive3}.\, Thus there is a certain \emph{highest} term 
+$$A \;:=\; c_\alpha x_1^{\alpha_1}x_2^{\alpha_2}\!\cdots\!x_n^{\alpha_n}$$
+in $P$.\, Then we have
+$$\alpha_1\!+\!\alpha_2\!+\ldots+\!\alpha_n \;=\; d,$$
+$$\alpha_1\;\ge\;\alpha_2\;\ge\;\ldots\;\ge\;\alpha_n.$$
+In fact, if e.g.\, $\alpha_2 > \alpha_1$,\, then the term
+$$c_\alpha x_2^{\alpha_1}x_1^{\alpha_2}x_3^{\alpha_3}\!\cdots\!x_n^{\alpha_n} \:=\; 
+c_\alpha x_1^{\alpha_2}x_2^{\alpha_1}x_3^{\alpha_3}\!\cdots\!x_n^{\alpha_n},$$
+which is obtained from $A$ by changing $x_1$ and $x_2$ with each other, would be higher than $A$. 
+
+For proving the \PMlinkname{fundamental theorem}{FundamentalTheoremOfSymmetricPolynomials}, we form now the homogeneous polynomial
+$$Q_\alpha \;:=\; c_\alpha p_1^{i_1}p_2^{i_2}\!\cdots\!p_n^{i_n}$$
+and we will show that the \PMlinkname{exponents}{Exponentiation} $i_j$ can be determined such that the highest term in $Q_\alpha$ is same as in $P$.
+
+It is easily seen that the highest term of a product of homogeneous symmetric polynomials is equal to the product of the highest terms of the factors.\, Since the highest term of
+$$p_1 \quad\mbox{is}\quad x_1,$$
+$$p_2 \quad\mbox{is}\quad x_1x_2,$$
+$$\cdots \qquad\quad \cdots$$
+$$p_n \quad\mbox{is}\quad x_1x_2\!\cdots\!x_n,$$
+therefore the highest term of
+$$p_1^{i_1} \quad\mbox{is}\quad x_1^{i_1},$$
+$$p_2^{i_2} \quad\mbox{is}\quad x_1^{i_2}x_2^{i_2},$$
+$$\cdots \qquad\quad \cdots$$
+$$p_n^{i_n} \quad\mbox{is}\quad x_1^{i_n}x_2^{i_n}\!\cdots\!x_n^{i_n}$$
+and thus the highest term of $Q_\alpha$ is 
+$$c_\alpha x_1^{i_1+i_2+\cdots+i_n}x_2^{i_2+\cdots+i_n}\!\cdots\!x_n^{i_n}.$$
+This term coincides with the highest term of $P$, when one determines the numbers $i_j$ from the equations
+\begin{align*}
+\begin{cases}
+i_1+i_2+\ldots+i_n \;=\; \alpha_1 \\
+    i_2+\ldots+i_n \;=\; \alpha_2 \\
+\qquad\qquad\cdots\qquad  \cdots \\
+               i_n \;=\; \alpha_n.
+ \end{cases}
+\end{align*}
+Subtracting here the second equation from the first, the third equation from the second and so on, the result is
+$$i_1 \;=\; \alpha_1\!-\!\alpha_2, \qquad i_2 \;=\; 
+\alpha_2\!-\!\alpha_3, \qquad\ldots, \qquad 
+i_{n-1} \;=\; \alpha_{n-1}\!-\!\alpha_n, \quad i_n \;=\; \alpha_n,$$
+which are nonnegative integers.\, Hence we get the homogeneous symmetric polynomial 
+$$Q_\alpha \;=\; 
+c_\alpha p_1^{\alpha_1-\alpha_2}p_2^{\alpha_2-\alpha_3}\!\cdots\!p_{n-1}^{\alpha_{n-1}-\alpha_n}p_n^{\alpha_n}$$
+having the same highest term as $P$, and consequently the difference
+$$P\!-\!Q_\alpha \;:=\; P_\alpha$$
+is a homogeneous symmetric polynomial of degree $d$ having the highest term lower than in $P$.\, If then
+$$c_\beta x_1^{\beta_1}x_2^{\beta_2}\!\cdots\!x_n^{\beta_n}$$
+is the highest term of $P_\alpha$ and one denotes
+$$Q_\beta \;:=\; 
+c_\beta p_1^{\beta_1-\beta_2}p_2^{\beta_2-\beta_3}\!\cdots\!p_{n-1}^{\beta_{n-1}-\beta_n}p_n^{\beta_n},$$
+one infers as above that the difference
+$$P_\alpha\!-\!Q_\beta \;:=\; P_\beta$$
+is a homogeneous symmetric polynomial of degree $d$ having the highest term lower than in $P_\alpha$.\, Continuing similarly, one finally (after a finite amount of steps) shall come to a difference which is equal to 0.\, Accordingly one obtains
+$$P \;=\; Q_\alpha+Q_\beta+\ldots+Q_\omega \;:=\; Q(p_1,\,p_2,\,\ldots,\,p_n).$$
+The degree of $Q_\alpha$ with respect to the elementary symmetric polynomials is
+$$(\alpha_1\!-\!\alpha_2)+(\alpha_2\!-\!\alpha_3)+\ldots+(\alpha_{n-1}\!-\!\alpha_n)+\alpha_n \;=\; \alpha_1.$$
+Similarly, the degree of $Q_\beta$ is $\beta_1$ which is $\le \alpha_1$; thus one infers that the degree of $Q$ is equal to $\alpha_1$.\, This number is also the degree of the highest term of $P$ and as well the degree of $P$ itself, with respect to $x_1$.  
+
+The preceding construction implies immediately that the coefficients of $G$ are elements of the ring determined by the coefficients of $P$.\, We have still to prove the uniqueness of $Q$.\, Let's make the antithesis that $P$ may be represented also by another polynomial in $p_1,\,p_2,\,\ldots,\,p_n$ which differs from $Q$.\, Forming the difference of it and $Q$ we get an equation of the form
+$$0 \;=\; \sum_i g_ip_1^{i_1}p_2^{i_2}\cdots p_n^{i_n},$$
+where the coefficients are distinct from zero.\, The equation becomes identical if one expresses 
+$p_1,\,p_2,\,\ldots,\,p_n$ in it via the indeterminates $x_1,\,x_2,\,\ldots,\,x_n$.\, The general term of the right hand side of the equation is a homogeneous symmetric polynomial in those indeterminates; if its highest term is 
+$g_ip_1^{\lambda_1}p_2^{\lambda_2}\cdots p_n^{\lambda_n},$\, one infers as before that
+$$i_1 \;=\; \lambda_1\!-\!\lambda_2, \qquad i_2 \;=\; 
+\lambda_2\!-\!\lambda_3, \qquad\ldots, \qquad 
+i_{n-1} \;=\; \lambda_{n-1}\!-\!\lambda_n, \qquad i_n \;=\; 
+\lambda_n.$$
+Thus, distinct addends of the sum cannot have equal highest terms.\, It means that the highest term of the sum appears only in one of the addends of the sum.\, This is, however, impossible, because after the substitution of $x_i$s the equation would not be identical.\, Consequently, the antithesis is wrong and the whole fundamental theorem of symmetric polynomials has been proved.
+
+\begin{thebibliography}{9}
+\bibitem{K.V.}{\sc K. V\"ais\"al\"a:} {\em Lukuteorian ja korkeamman algebran alkeet}. \,Tiedekirjasto No. 17. \, Kustannusosakeyhti\"o Otava, Helsinki (1950).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

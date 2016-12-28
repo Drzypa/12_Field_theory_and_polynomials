@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZariskiLemma}
+\pmcreated{2013-03-22 17:18:11}
+\pmmodified{2013-03-22 17:18:11}
+\pmowner{polarbear}{3475}
+\pmmodifier{polarbear}{3475}
+\pmtitle{Zariski lemma}
+\pmrecord{7}{39650}
+\pmprivacy{1}
+\pmauthor{polarbear}{3475}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmclassification{msc}{11J85}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{prop*}{Proposition}
+\newtheorem{lem*}{Lemma}
+\begin{document}
+\begin{prop*} Let $R\subseteq S\subseteq T$ be commutative rings. If $R$ is noetherian, and T finitely generated as an $R$-algebra and as an $S$-module, then $S$ is finitely generated as an $R$-algebra.
+\end{prop*}
+\begin{lem*}[Zariski's lemma]
+ Let $(L:K)$ be a field extension and $a_1,\ldots,a_n\in L$ be such that $K(a_1,\ldots,a_n)=K[a_1,\ldots,a_n]$. Then the elements $a_1,\ldots,a_n$ are algebraic over $K$.\end{lem*}
+\begin{proof}
+The case $n=1$ is clear. Now suppose $n>1$ and not all $a_i,1\leq i\leq n$ are algebraic over $K$.\\ Wlog we may assume $a_1,\ldots,a_n$ are algebraically independent and each element $a_{r+1},\ldots,a_n$ is algebraic over $D:=K(a_1,\ldots,a_r)$. Hence $K[a_1,\ldots,a_n]$ is a finite algebraic extension of $D$ and therefore is a finitely generated $D$-module.\newline
+ The above proposition applied to $K\subseteq D\subseteq K[a_1,\ldots,a_n]$ shows that $D$ is finitely generated as a $K$-algebra, i.e $D=K[d_1,\ldots,d_n]$.\newline
+
+
+ Let $d_i=\frac{p_i(a_1,\ldots,a_n)}{q_i(a_1,\ldots,a_n)}$, where $p_i,q_i\in K[x_1,\ldots,x_n]$.\\ Now $a_1,\ldots,a_n$ are algebraically independent so that $K[a_1,\ldots,a_n]\cong K[x_1,\ldots,x_n]$, which is a \PMlinkname{UFD}{UFD}.\newline
+ Let $h$ be a prime divisor of $q_1\cdots q_r+1$. Since $q$ is relatively prime to each of $q_i$, the element ${q(a_1,\ldots,a_n)}^{-1} \in D$ cannot be in $K[d_1,\ldots,d_n]$. We obtain a contradiction.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

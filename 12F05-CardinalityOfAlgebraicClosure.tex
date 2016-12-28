@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CardinalityOfAlgebraicClosure}
+\pmcreated{2013-03-22 16:28:54}
+\pmmodified{2013-03-22 16:28:54}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{cardinality of algebraic closure}
+\pmrecord{22}{38649}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+If a field is finite, then its algebraic closure is countably infinite.
+\end{theorem}
+
+\begin{proof}
+Because a finite field cannot be algebraically closed, the algebraic closure 
+of a finite field must be infinite.  Hence, it only remains to show that the
+algebraic closure is countable.  Every element of the algebraic closure is 
+the root of some polynomial.  Furthermore, every polynomial
+has a finite number of roots (the number is bounded by its degree) and there
+are a countable number of polynomials whose coefficients belong to a given
+finite set.  Since the union of a countable family of finite sets is 
+countable, the number of elements of the algebraic closure is countable.
+\end{proof}
+
+\begin{theorem}
+If a field is infinite, then its algebraic closure has the same cardinality
+as the original field.
+\end{theorem}
+
+\begin{proof}
+Since a field is isomorphic to a subset of its algebraic closure, it follows 
+that the cardinality of the closure is at least the cardinality of the original field.  The number of polynomials of degree $n$ with coefficients in
+a given set is the same as the number of $n$- tuplets of elements of $S$,
+which is the cardinality of the set raised to the $n$-th power.  Since an
+infinite cardinal raised to an finite power equals itself, the number of
+polynomials of a given degree equals the the cardinality the original field.
+Since the cardinality of the union of a countable number of sets each of
+which has the same infinite number of elements equals the common cardinality 
+of the sets, the total number of polynomials with coefficients in the field
+equals the cardinality of the field.  Since every element of the algebraic
+closure of a field is the root of some polynomial with elements of the
+field for coefficients and a polynomial has a finite number of roots, it
+follows that the cardinality of the algebraic closure is bounded by the
+cardinality of the original field.
+\end{proof}
+
+\begin{theorem}
+For every transfinite cardinal number $N$, there exists an algebrically
+closed field with exactly $N$ elements.
+\end{theorem}
+
+\begin{proof}
+Let $F$ be the field of rational functions with integer coefficients in 
+variables $x_i$, where the index $i$ ranges over an index set $I$ 
+whose cardinality is $N$.  We claim that the cardinality of $F$ is $N$. 
+The cardinality is at least $N$ becasue we have the $N$ rational functions
+$x_i$, so it only remains to show that the cardinality is not greater
+than $N$.  To do this, we first show that the number of polynomials in
+the $x_i$ with integer coefficients equals $N$.  A polynomial is 
+determined by a finite set of coefficients and a finite set of monomials.
+The number of possible sets of coefficients is the number of finite 
+tuplets of integers, which is $\aleph_0$.  Since a monomial may be determined 
+by a mapping of a finite set into the set $\{ x_i \mid i \in I \}$, the number 
+of possible monomials of degree $n$ is bounded by $N^n$.  Since $N$ is
+transfinite and $n$ is finite, we have $N^n = N$.  Thus the number of 
+possible monomials is bounded by $N \aleph_0 = N$.  So the number of 
+polynomials is bounded by the product of $\aleph_0$ and $N$, which is
+$N$ and the number of rational functions is bounded by $N^2$, which
+equals $N$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

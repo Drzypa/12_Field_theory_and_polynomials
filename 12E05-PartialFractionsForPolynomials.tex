@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialFractionsForPolynomials}
+\pmcreated{2013-03-22 15:40:22}
+\pmmodified{2013-03-22 15:40:22}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{partial fractions for polynomials}
+\pmrecord{6}{37613}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmsynonym{partial fraction decomposition of rational functions}{PartialFractionsForPolynomials}
+\pmsynonym{partial fractions for rational functions}{PartialFractionsForPolynomials}
+%\pmkeywords{partial fraction decomposition}
+\pmrelated{PartialFractionsOfExpressions}
+\pmrelated{ALectureOnThePartialFractionDecompositionMethod}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+This entry precisely states and proves 
+the existence and uniqueness of partial fraction decompositions
+of ratios of polynomials of a single variable, with coefficients over a field.  
+
+The theory is used for, for example,
+the method of \PMlinkname{partial fraction decomposition for integrating 
+rational functions over the reals}{ALectureOnThePartialFractionDecompositionMethod}.
+
+The proofs involve fairly elementary algebra only. Although we refer
+to Euclidean domains in our proofs, the reader who is not familiar with abstract 
+algebra may simply read that as ``set of polynomials''
+(which is one particular Euclidean domain).
+
+Also note that the proofs themselves furnish a method for actually computing
+the partial fraction decomposition, as a finite-time algorithm,
+provided the irreducible factorization of the denominator is known.
+It is not an efficient way to find the partial fraction decomposition; usually 
+one uses instead the method of making substitutions into the polynomials, 
+to derive linear constraints on the coefficients.
+But what is important is that the existence proofs here 
+\emph{justify} the substitution method.  The uniqueness property proved here
+might also simplify some calculations: it shows that we never have
+to consider multiple solutions for the coefficients in the decomposition.
+
+
+\begin{thm}
+\label{thm:powers-uniq}
+Let $p$ and $q \neq 0$ be polynomials over a field,
+and $n$ be any positive integer.
+Then there exist unique polynomials 
+$\alpha_1, \dotsc, \alpha_n, \beta$ such that
+\begin{equation}
+\label{eq:powers-uniq}
+\frac{p}{q^n} = \beta + \frac{\alpha_1}{q} + \frac{\alpha_2}{q^2} + \dotsb + \frac{\alpha_n}{q^n}\,, \quad
+\deg \alpha_j < \deg q\,.
+\end{equation}
+
+\begin{proof}
+Existence has already been proven as a special case of partial fractions in Euclidean domains; 
+we now prove uniqueness.  
+Suppose equation \eqref{eq:powers-uniq} has been given.
+Multiplying by $q^n$ and rearranging, 
+\[
+p = \beta q^n + r_1 \,, \quad r_1 = \alpha_1 q^{n-1} + \dotsb + \alpha_n\,, \quad \deg r_1 < \deg q^n\,.
+\]
+But according to the division algorithm for polynomials (also known as long division), the quotient and remainder polynomial
+after a division (by $q^n$ in this case) are unique.  
+So $\beta$ must be uniquely determined.
+Then we can rearrange:
+\[
+p - \beta \, q^n = \alpha_1 q^{n-1} + r_2\,, \quad r_2 = 
+\alpha_2 q^{n-2} + \dotsb + \alpha_n\,, \quad \deg r_2 < \deg q^{n-1}\,.
+\]
+By uniqueness of division again (by $q^{n-1}$), $\alpha_1$ is determined.
+Repeating this process, we see that all the polynomials $\alpha_j$ and $\beta$
+are uniquely determined.
+\end{proof}
+\end{thm}
+
+
+\begin{thm}
+\label{thm:partial-fractions-uniq}
+Let $p$ and $q \neq 0$ be polynomials over a field.
+Let $q = \phi_1^{n_1} \, \phi_2^{n_2} \, \dotsb \, \phi_k^{n_k}$
+be the factorization of $q$ to irreducible factors $\phi_i$
+(which is unique except for the ordering and constant factors).
+Then there exist unique polynomials $\alpha_{ij}, \beta$
+such
+that
+\begin{equation}
+\label{eq:partial-fractions-uniq}
+\frac{p}{q} = \beta + \sum_{i=1}^k \sum_{j=1}^{n_i} \frac{\alpha_{ij}}{\phi_i^j}\,, \quad 
+\deg \alpha_{ij} < \deg \phi_i\,.
+\end{equation}
+\begin{proof}
+Existence has already been proven as a special case of
+partial fractions in Euclidean domains; we now prove uniqueness.  
+Suppose equation \eqref{eq:partial-fractions-uniq} has been given.
+First, multiply the equation by $q$:
+\[
+p = \beta \, q + \sum_{i,j} \alpha_{ij} \, \frac{q}{\phi_i^j}\,.
+\]
+The polynomial sum on the far right of this equation
+has degree $< q$, because
+each summand has degree 
+$\deg (\alpha_{ij} \, q/\phi_i^j) < \deg \phi_i + \deg q - j \cdot \deg \phi_i \leq \deg q$.
+So the polynomial sum is the remainder of a division of $p$ by $q$.
+Then the quotient polynomial $\beta$ is uniquely determined.
+
+Now suppose $s_i$ and $s'_i$ are polynomials of degree $< \phi_i^{n_i}$,
+such that
+\begin{equation}
+\label{eq:pf-s1-unique}
+\sum_{i=1}^k \frac{s_i}{\phi_i^{n_i}} = \sum_{i=1}^k \frac{s'_i}{\phi_i^{n_i}}\,.
+\end{equation}
+We claim that $s_i = s'_i$.  Let $q_1 = \phi_1^{n_1}$ and $q_2 = q/q_1$,
+and write
+\[
+\frac{s_1}{q_1} + \frac{u}{q_2} = 
+\sum_{i=1}^k \frac{s_i}{\phi_i^{n_i}} =
+\sum_{i=1}^k \frac{s'_i}{\phi_i^{n_i}} = \frac{s'_1}{q_1} + \frac{u'}{q_2}\,,
+\]
+for some polynomials $u$ and $u'$.
+Rearranging, we get:
+\[
+(s_1 - s'_1) \, q_2 = (u' - u) \, q_1\,.
+\]
+In particular, $q_1$ divides the left side.
+Since $q_1 = \phi_1^{n_1}$ is relatively prime from $q_2$, it must divide 
+the factor $(s_1 - s'_1)$.  But $\deg (s_1 - s'_1) < \deg q_1$,
+hence $s_1 - s'_1$ must be the zero polynomial. That is, $s_1 = s'_1$.
+
+So we can cancel the term $s_1/\phi_1^{n_1} = s'_1/\phi_1^{n_1}$ 
+on both sides of 
+equation \eqref{eq:pf-s1-unique}.
+  And we could repeat the argument,
+and show that $s_2$ and $s'_2$ are the same, 
+$s_3$ and $s'_3$ are the same, and so on.
+Therefore, we have shown that
+the polynomials $s_i$ in the following expression
+\[
+\frac{p}{q} - \beta = \sum_{i=1}^k \frac{s_i}{\phi_i^{n_i}}\,, \quad \deg s_i < \deg \phi_i^{n_i}
+\]
+are unique.  In particular, $s_i$ is
+the following numerator that results when the fractions $\alpha_{ij}/\phi_i^j$
+are put under a common denominator $\phi^i_{n_i}$:
+\[
+s_i = \sum_{j=1}^{n_i} \alpha_{ij} \, \phi_i^{n_i-j}\,.
+\]
+But by the uniqueness part of Theorem \ref{thm:powers-uniq},
+the decomposition
+\[
+\frac{s_i}{\phi_i^{n_i}} = \beta_i + \sum_{j=1}^{n_i} \frac{\alpha_{ij}}{\phi_i^j}\,, \quad \deg \alpha_{ij} < \deg \phi_i
+\]
+uniquely determines $\alpha_{ij}$.
+(Note that the proof of Theorem \ref{thm:powers-uniq} shows that
+$\beta_i = 0$, as $\deg s_i < \deg \phi_i^{n_i}$.)
+\end{proof}
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

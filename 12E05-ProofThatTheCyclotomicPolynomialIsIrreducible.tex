@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatTheCyclotomicPolynomialIsIrreducible}
+\pmcreated{2013-03-22 12:38:04}
+\pmmodified{2013-03-22 12:38:04}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{proof that the cyclotomic polynomial is irreducible}
+\pmrecord{9}{32897}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E05}
+\pmclassification{msc}{11R60}
+\pmclassification{msc}{11R18}
+\pmclassification{msc}{11C08}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\p}{\mathfrak{p}}
+\begin{document}
+We first prove that $\Phi_n(x) \in \Z[x]$. The field extension $\Q(\zeta_n)$ of $\Q$ is the splitting field of the polynomial $x^n - 1 \in \Q[x]$, since it splits this polynomial and is generated as an algebra by a single root of the polynomial. Since splitting fields are normal, the extension $\Q(\zeta_n)/\Q$ is a Galois extension. Any element of the Galois group, being a field automorphism, must map $\zeta_n$ to another root of unity of exact order $n$. Therefore, since the Galois group of $\Q(\zeta_n)/\Q$ permutes the roots of $\Phi_n(x)$, it must fix the coefficients of $\Phi_n(x)$, so by Galois theory these coefficients are in $\Q$. Moreover, since the coefficients are algebraic integers, they must be in $\Z$ as well.
+
+Let $f(x)$ be the minimal polynomial of $\zeta_n$ in $\Q[x]$. Then $f(x)$ has integer coefficients as well, since $\zeta_n$ is an algebraic integer. We will prove $f(x) = \Phi_n(x)$ by showing that every root of $\Phi_n(x)$ is a root of $f(x)$. We do so via the following claim:
+
+{\bf Claim:} For any prime $p$ not dividing $n$, and any primitive $n^{\rm th}$ root of unity $\zeta \in \mathbb{C}$, if $f(\zeta) = 0$ then $f(\zeta^p) = 0$.
+
+This claim does the job, since we know $f(\zeta_n) = 0$, and any other primitive $n^{\rm th}$ root of unity can be obtained from $\zeta_n$ by successively raising $\zeta_n$ by prime powers $p$ not dividing $n$ a finite number of times\footnote{Actually, if one applies Dirichlet's theorem on primes in arithmetic progressions here, it turns out that one prime is enough, but we do not need such a sharp result here.}.
+
+To prove this claim, consider the factorization $x^n - 1 = f(x) g(x)$ for some polynomial $g(x) \in \Z[x]$. Writing $\O$ for the ring of integers of $\Q(\zeta_n)$, we treat the factorization as taking place in $\O[x]$ and proceed to mod out both sides of the factorization by any prime ideal $\p$ of $\O$ lying over $(p)$. Note that the polynomial $x^n - 1$ has no repeated roots mod $\p$, since its derivative $n x^{n-1}$ is relatively prime to $x^n - 1$ mod $\p$. Therefore, if $f(\zeta) = 0 \bmod \p$, then $g(\zeta) \neq 0 \bmod \p$, and applying the $p^{\rm th}$ power Frobenius map to both sides yields $g(\zeta^p) \neq 0 \bmod \p$. This means that $g(\zeta^p)$ cannot be 0 in $\mathbb{C}$, because it doesn't even equal $0 \bmod \p$. However, $\zeta^p$ is a root of $x^n - 1$, so if it is not a root of $g$, it must be a root of $f$, and so we have $f(\zeta^p) = 0$, as desired.
+%%%%%
+%%%%%
+\end{document}

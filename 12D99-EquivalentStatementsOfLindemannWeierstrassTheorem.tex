@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquivalentStatementsOfLindemannWeierstrassTheorem}
+\pmcreated{2013-03-22 18:05:18}
+\pmmodified{2013-03-22 18:05:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{equivalent statements of Lindemann-Weierstrass theorem}
+\pmrecord{4}{40626}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{11J85}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+
+\newcommand{\rats}{\mathbb{Q}}
+\newcommand{\ints}{\mathbb{Z}}
+\newcommand{\pwr}[3]{{#1}_{#2}^{\phantom{#2}#3}}
+\begin{document}
+\begin{prop} The following versions of the
+Lindemann-Weierstrass Theorem are equivalent:
+\begin{enumerate}
+\item
+If $\alpha_1, \ldots, \alpha_n$ are linearly independent algebraic numbers over $\rats$, then
+$e^{\alpha_1}, \ldots, e^{\alpha_n}$ are algebraically independent over $\rats$.
+\item
+If $\alpha_1, \ldots, \alpha_n$ are distinct algebraic numbers over $\rats$, then
+$e^{\alpha_1}, \ldots, e^{\alpha_n}$ are linearly independent over $\rats$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+
+$(1 \Longrightarrow 2).$  Write $A_i=e^{\alpha_i}$ for each $i=1,\dots,n$.  Suppose $0=r_1A_1+\cdots+r_nA_n$,
+where $r_i\in\rats$.  Moving $r_1A$ to the LHS and by multiplying a common denominator we can assume that $r_1A_1=
+r_2A_2+\cdots+r_nA_n$ where $r_i\in\ints$.  We want to show that $r_1=\cdots=r_n=0$.  We induct on $n$.  The case when
+$n=1$ is trivial because $A_1$ is never 0 and therefore $0=r_1A_1$ forces $r_1=0$.  
+
+By induction hypothesis, suppose the statement is true when $n<k$.  Now suppose $n=k$.  If $\alpha_1,
+\ldots,\alpha_k$ are linearly independent over $\rats$, $A_1,\ldots,A_k$ are algebraically independent and certainly
+linearly independent over $\rats$.  So suppose $\alpha_1,\ldots,\alpha_k$ are not linearly independent over $\rats$.
+Without loss of generality, we can assume $s_1\alpha_1=s_2\alpha_2+\cdots+s_k\alpha_k$, where $s_i\in\rats$ and $s_1
+\neq0$.  By multiplying a common denominator we can further assume that $s_i\in\ints$ and $s_1>0$.  Then
+$$\pwr{A}{1}{s_1}=e^{s_1\alpha_1}=e^{s_2\alpha_2+\cdots+s_k\alpha_k}=e^{s_2\alpha_2}\cdots e^{s_k\alpha_k}=
+\pwr{A}{2}{s_2}\cdots\pwr{A}{k}{s_k}.$$  Since $r_1A_1=r_2A_2+\cdots+r_nA_n$, we get
+\begin{eqnarray*}
+(r_1^{s_1})(\pwr{A}{2}{s_2}\cdots\pwr{A}{k}{s_k}) &=& (r_1^{s_1})\pwr{A}{1}{s_1} \\ &=& (r_1A_1)^{s_1} \\
+&=& (r_2A_2+\cdots+r_kA_k)^{s_1} \\ &=& g(A_2,\ldots,A_k),
+\end{eqnarray*}
+where $g(x_2,\ldots,x_k)=(r_2x_2+\cdots+r_kx_k)^{s_1}\in\rats[x_2,\ldots,x_k].$  Partition the numbers $\pwr{s}{i}{'}s$ into non-negative and negative ones, so that, say, 
+$s_{c(1)},\ldots,s_{c(l)}$ are non-negative and $s_{d(1)},\ldots,s_{d(m)}$ are negative, then
+$$(r_1^{s_1})\pwr{A}{c(1)}{s_{c(1)}}\cdots\pwr{A}{c(i)}{s_{c(i)}}=g(A_2,\ldots,A_k)
+\pwr{A}{d(1)}{s_{d(1)}}\cdots\pwr{A}{d(j)}{s_{d(j)}}.$$
+If we define $$f(x_2,\ldots,x_k)=r_1^{s_1}\pwr{x}{c(1)}{s_{c(1)}}\cdots\pwr{x}{c(i)}{s_{c(i)}}-g(x_2,\ldots,x_k)
+\pwr{x}{d(1)}{s_{d(1)}}\cdots\pwr{x}{d(j)}{s_{d(j)}},$$  then $f(x_2,\ldots,x_k)\in\rats[x_2,\ldots,x_k]$ and
+$f(A_2,\ldots,A_k)=0.$  By the induction hypothesis, $f=0$.  It is not hard to see that $r_1=\cdots=r_k=0$ and
+therefore $A_1,\ldots,A_k$ are linearly independent.
+
+$(1 \Longleftarrow 2).$  We first need two lemmas:
+
+\textbf{Lemma 1.}  Given 2., if $\alpha\neq 0$ is algebraic over $\rats$, then $e^{\alpha}$ is transcendental
+over $\rats$.
+\begin{proof}
+Suppose $f(e^\alpha)=0$ where $f(x)=r_0+r_1x+\cdots+r_nx^n\in\rats[x]$.  Then we have
+\begin{eqnarray*}
+0 &=& r_0+r_1e^{\alpha}+\cdots+r_n(e^{\alpha})^n \\
+&=& r_0e^0+r_1e^{\alpha}+\cdots+r_ne^{n\alpha}.
+\end{eqnarray*}
+Since $\alpha\neq0$, $0,\alpha,\ldots,n\alpha$ are all distinct, $1, e^{\alpha},\ldots,e^{n\alpha}$ are
+linearly independent by the hypothesis.  Thus, $r_0=r_1=\ldots=r_n=0$ and we have $f(x)=0$, which means that
+$e^{\alpha}$ is transcendental over $\rats$.
+\end{proof}
+
+\textbf{Lemma 2.}  Given 2., if $\alpha$ and $\beta$ are linearly independent and algebraic over $\rats$, then
+$e^{\alpha}$ is transcendental over $\rats(e^{\beta})$.
+\begin{proof}
+Let $A=e^{\alpha}$ and $B=e^{\beta}$.  Suppose $f(A)=0$ where $f(x)\in\rats(B)[x]$.  We want to show that $f(x)=0$.
+Write $$f(x)=r_0(B)+r_1(B)x+\cdots+r_n(B)x^n,$$ where each $r_i(x)=p_i(x)/q_i(x)$ with $p_i(x)$, $q_i(x)\neq 0 \in
+\rats[x]$. Let $Q(x)=q_1(x)\cdots q_n(x)$.  So $Q(B)$, being the product of the denominators $q_i(B)\neq 0$, is non-zero.
+Multiply $f(x)$ by $Q(B)$ we get a new polynomial $g(x)$ such that  $$g(x)=R_0(B)+R_1(B)x+\cdots+R_n(B)x^n,$$
+where each $R_i(x)=r_i(x)Q(x)=p_i(x)Q(x)/q_i(x)\in \rats[x]$.  Now, $g(A)=f(A)Q(B)=0$.  So
+\begin{eqnarray*}
+0 &=& R_0(B)+R_1(B)A+\cdots+r_n(B)A^n \\
+&=& \sum_{j=0}^{m_0}a_{0j}B^j+\sum_{j=0}^{m_1}a_{1j}B^jA+\cdots+\sum_{j=0}^{m_n}a_{nj}B^jA^n \\
+&=& \sum_{j=0}^{m_0}a_{0j}e^{j\beta}+\sum_{j=0}^{m_1}a_{1j}e^{j\beta+\alpha}+\cdots+
+\sum_{j=0}^{m_n}a_{nj}e^{j\beta+n\alpha},
+\end{eqnarray*}
+where each $a_{ij}\in \rats$.  Now, the exponents in the above equation are all distinct, or else we would end up with
+$\alpha$ and $\beta$ being linearly dependent, contrary to the assumption.  Therefore, by 2 (Lindemann-Weierstrass
+Version 2), all $e^{i\beta+j\alpha}$ are linearly independent, which means each $a_{ij}=0$.  This implies that $g(x)=0$.
+But $g(x)=f(x)Q(B)$ and $Q(B)\neq 0$, we must have $f(x)=0$.
+\end{proof}
+
+Now onto the main problem.  We proceed by induction on the number of linearly independent algebraic elements over
+$\rats$.  The case when $n=1$ is covered in Lemma 1, since a linearly independent singleton is necessarily non-zero.
+So suppose $\alpha_1, \ldots, \alpha_k$ are linearly independent and algebraic over $\rats$.  Then each pair
+$\alpha_k, \alpha_i$ are independent and algebraic over $\rats$, $i\neq k$.  Thus $e^{\alpha_k}$ is transcendental over
+$\rats(e^{\alpha_i})$ for all $i\neq k$.  This means that $e^{\alpha_k}$ is transcendental over $\rats
+(e^{\alpha_1},\ldots,e^{\alpha_{k-1}}).$
+
+Now let $A_i=e^{\alpha_i}$ for all $i=1,\ldots,k$.  Suppose $f(A_1,\ldots,A_k)=0$ where $f\in\rats[x_1,\ldots,x_k]$.
+To show the algebraic independence of the $A_i's$, we need to show that $f=0$.  Rearranging terms of $f$ and we have
+$$0 = f(A_1,\ldots,A_k) = \sum_{j=0}^{m}g_j(A_1,\ldots,A_{k-1})(A_k)^j.$$
+If we let $g(x)=f(A_1,\ldots,A_{k-1},x)$, we see that $g(x)\in\rats(A_1,\ldots,A_{k-1})[x]$ and $g(A_k)=
+f(A_1,\ldots,A_{k-1},A_k)=0$.  Since $e^{\alpha_k}$ is transcendental over $\rats(A_1,\ldots,A_{k-1})$, we must have
+$g(x)=0$.  This implies that each $g_j(A_1,\ldots,A_{k-1})=0$.  But then $A_1,\ldots,A_{k-1}$ are algebraically
+independent by the induction hypothesis, we must have each $g_j=0$.  This means that $f=0$.  
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

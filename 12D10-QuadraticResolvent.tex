@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticResolvent}
+\pmcreated{2014-11-27 16:05:30}
+\pmmodified{2014-11-27 16:05:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{quadratic resolvent}
+\pmrecord{9}{40338}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D10}
+\pmsynonym{quadratic resolvent equation}{QuadraticResolvent}
+%\pmkeywords{resolvent}
+\pmrelated{CardanosFormulae}
+\pmrelated{TchirnhausTransformations}
+\pmdefines{cubic resolvent}
+\pmdefines{resolvent equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em quadratic resolvent} of the cubic equation
+\begin{align}
+y^3+py+q = 0,
+\end{align}
+where $p$ and $q$ are known complex numbers, is the auxiliary equation
+$$z^2+qz-\left(\frac{p}{3}\right)^3 = 0$$
+determining as its \PMlinkname{roots}{Equation}
+$$z_1 = u^3, \qquad z_2 = v^3$$
+the numbers $u$ and $v$ whose sum \,$y = u+v$\, satisfies the
+equation (1).\, See 
+\PMlinkname{example of solving a cubic equation}{exampleofsolvingacubicequation}.
+
+Analogically, a quartic equation has a {\em cubic resolvent} (resolvent cubic) equation.
+%%%%%
+%%%%%
+\end{document}

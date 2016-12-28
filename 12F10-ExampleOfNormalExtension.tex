@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfNormalExtension}
+\pmcreated{2013-03-22 14:30:46}
+\pmmodified{2013-03-22 14:30:46}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{example of normal extension}
+\pmrecord{4}{36051}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmrelated{GaloisExtension}
+\pmrelated{CompositumOfAGaloisExtensionAndAnotherExtensionIsGalois}
+\pmrelated{NormalIsNotTransitive}
+\pmrelated{GaloisIsNotTransitive}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\begin{document}
+Let $F=\Rats(\sqrt{2})$. Then the extension $F/\Rats$ is normal because $F$ is clearly the splitting field of the polynomial $f(x)=x^2-2$. Furthermore $F/\Rats$ is a Galois extension with $\Gal(F/\Rats)\cong \Ints/2\Ints$.
+
+Now, let $2^{1/4}$ denote the positive real fourth root of $2$ and define $K=F(2^{1/4})$. Then the extension $K/F$ is normal because $K$ is the splitting field of $k(x)=x^2-\sqrt{2}$, and as before $K/F$ is a Galois extension with $\Gal(K/F)\cong \Ints/2\Ints$.
+
+However, the extension $K/\Rats$ is neither normal nor Galois. Indeed, the polynomial $g(x)=x^4-2$ has one root in $K$ (actually two), namely $2^{1/4}$, and yet $g(x)$ does not split in $K$ into linear factors.
+
+$$g(x)=x^4-2=(x^2-\sqrt{2})\cdot(x^2+\sqrt{2})=(x-2^{1/4})\cdot(x+2^{1/4})\cdot(x^2+\sqrt{2})$$
+
+The Galois closure of $K$ over $\Rats$ is $L=\Rats(2^{1/4},i)$.
+%%%%%
+%%%%%
+\end{document}

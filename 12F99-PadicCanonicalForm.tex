@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PadicCanonicalForm}
+\pmcreated{2013-03-22 14:13:37}
+\pmmodified{2013-03-22 14:13:37}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{p-adic canonical form}
+\pmrecord{66}{35665}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F99}
+\pmrelated{IntegralElement}
+\pmrelated{UltrametricTriangleInequality}
+\pmrelated{NonIsomorphicCompletionsOfMathbbQ}
+\pmrelated{IdealsOfADiscreteValuationRingArePowersOfItsMaximalIdeal}
+\pmdefines{proper p-adic number}
+\pmdefines{dyadic number}
+\pmdefines{dyadic point}
+\pmdefines{2-adic fractional number}
+\pmdefines{2-adic integer}
+\pmdefines{2-adic valuation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Every non-zero $p$-adic number ($p$ is a positive rational prime number) can be uniquely written in {\em canonical form}, formally as a Laurent series, 
+    $$\xi = a_{-m}p^{-m}+a_{-m+1}p^{-m+1}+\cdots+a_0+a_1p+a_2p^2+\cdots$$
+where\, $m \in \mathbb{N}$,\, $0 \leqq a_k \leqq p-1$\, for all $k$'s, and at least one of the integers $a_k$ is positive.\, In addition, we can write:\, 
+$0 = 0+0p+0p^2+\cdots$
+
+The field $\mathbb {Q}_p$ of the $p$-adic numbers is the completion of the field $\mathbb {Q}$ with respect to its \PMlinkname{$p$-adic valuation}{PAdicValuation}; thus $\mathbb {Q}$ may be thought the subfield (prime subfield) of $\mathbb {Q}_p$.\, We can call the elements of\, $\mathbb{Q}_p\!\setminus\!\mathbb{Q}$\, the {\em proper $p$-adic numbers}.
+
+If, e.g.,\, $p = 2$,\, we have the 2-{\em adic} or, according to G. W. Leibniz, {\em dyadic numbers}, for which every $a_k$ is 0 or 1.\, In this case we can write the sum expression for $\xi$ in the reverse \PMlinkescapetext{order} and use the ordinary \PMlinkname{positional}{Base3} \PMlinkescapetext{binary} (i.e., {\em dyadic}) \PMlinkname{figure system}{Base3}.\, Then, for example, we have the rational numbers
+   $$-1 = ...111111,$$
+   $$1 = ...0001,$$ 
+   $$6.5 = ...000110.1,$$
+   $$\frac{1}{5}= ...00110011001101.$$
+(You may check the first by adding 1, and the last by multiplying by\, 5 = ...000101.) 
+All 2-adic rational numbers have periodic binary \PMlinkname{expansion}{DecimalExpansion}.\, Similarly as the \PMlinkname{decimal}{DecimalExpansion} (according to Leibniz: {\em decadic}) expansions of irrational real numbers are aperiodic, the proper 2-adic numbers also have aperiodic binary expansion, for example the 2-{\em adic fractional number}
+   $$\alpha = ...1000010001001011.10111.$$
+
+The {\em 2-adic fractional numbers} have some bits ``1'' after the {\em dyadic point} ``.'' (in continental Europe: comma ``$,$''), the {\em 2-adic integers} have none.\, The 2-adic integers form a subring of the 2-adic field $\mathbb {Q}_2$ such that $\mathbb{Q}_2$ is the quotient field of this ring.
+
+Every such 2-adic integer $\varepsilon$ whose last bit is ``1'', as\, $-3/7 = ...11011011011$, is a unit of this ring, because the division\, $1\colon\!\varepsilon$\, clearly gives as quotient a \PMlinkescapetext{similar} integer (by the way, the divisions of the binary expansions in practice go from right to left and are very comfortable!). 
+
+Those integers ending in a ``0'' are non-units of the ring, and they apparently form the only maximal ideal in the ring (which thus is a local ring).\, This is a principal ideal $\mathfrak{p}$, the generator of which may be taken\, $...00010 = 10$ (i.e., two).\, Indeed, two is the only prime number of the ring, but it has infinitely many associates, a kind of copies, namely all expansions of the form\, $...10 = \varepsilon\cdot 10$.\, The only non-trivial ideals in the ring of 2-adic integers are\, $\mathfrak{p},\, \mathfrak{p}^2,\, \mathfrak{p}^3,\, \ldots$\, They have only 0 as common element.
+
+All 2-adic non-zero integers are of the form $\varepsilon\cdot 2^n$ where\, $n = 0,\,1,\,2,\,\ldots$.\, The values\, $n = -1,\,-2,\,-3,\,\ldots$\, here would give non-integral, i.e. fractional 2-adic numbers.
+
+If in the binary \PMlinkescapetext{representation} of an arbitrary 2-adic number, the last non-zero digit ``1'' corresponds to the power $2^n$, then the {\em 2-adic valuation} of the 2-adic number $\xi$ is given by
+    $$|\xi|_2 = 2^{-n}.$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFactorTheorem}
+\pmcreated{2013-03-22 12:39:54}
+\pmmodified{2013-03-22 12:39:54}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of factor theorem}
+\pmrecord{8}{32937}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D05}
+\pmclassification{msc}{12D10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $f(x)$ is a polynomial with real or complex coefficients of degree $n-1$. Since $f$ is a polynomial, it is infinitely differentiable.  Therefore, $f$ has a Taylor expansion about $a$. Since $f^{(n)}(x)=0$, the \PMlinkescapetext{expansion} terminates after the $n-1^{\text{th}}$ term. Also, the $n^{\text{th}}$ remainder of the Taylor series vanishes; \PMlinkname{i.e.}{Ie}, $\displaystyle R_n(x)=\frac{f^{(n)}(y)}{n!}x^n=0$.  Thus, the function is equal to its Taylor series.  Hence,
+
+\begin{center}
+$\begin{array}{rl}
+f(x) & \displaystyle =\sum_{k=0}^{n-1}\frac{f^{(k)}(a)}{k!}(x-a)^k \\
+& \\
+& \displaystyle =f(a)+\sum_{k=1}^{n-1}\frac{f^{(k)}(a)}{k!}(x-a)^k \\
+& \\
+& \displaystyle =f(a)+(x-a)\sum_{k=1}^{n-1}\frac{f^{(k)}(a)}{k!}(x-a)^{k-1} \\
+& \\
+& \displaystyle =f(a)+(x-a)\sum_{k=0}^{n-2}\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^k. \end{array}$
+\end{center}
+
+If $f(a)=0$, then $\displaystyle f(x)=(x-a)\sum_{k=0}^{n-2}\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^k$.  Thus, $f(x)=(x-a)g(x)$, where $g(x)$ is the polynomial $\displaystyle \sum_{k=0}^{n-2}\frac{f^{(k+1)}(a)}{(k+1)!}(x-a)^k$. Hence, $x-a$ is a factor of $f(x)$.
+
+Conversely, if $x-a$ is a factor of $f(x)$, then $f(x)=(x-a)g(x)$ for some polynomial $g(x)$.  Hence, $f(a)=(a-a)g(a)=0$.
+
+It follows that $x-a$ is a factor of $f(x)$ if and only if $f(a)=0$.
+%%%%%
+%%%%%
+\end{document}

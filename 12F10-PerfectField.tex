@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PerfectField}
+\pmcreated{2013-03-22 13:08:23}
+\pmmodified{2013-03-22 13:08:23}
+\pmowner{sleske}{997}
+\pmmodifier{sleske}{997}
+\pmtitle{perfect field}
+\pmrecord{11}{33577}
+\pmprivacy{1}
+\pmauthor{sleske}{997}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+\pmrelated{SeparablePolynomial}
+\pmrelated{ExtensionField}
+\pmdefines{perfect}
+\pmdefines{perfect ring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{perfect field} is a field $K$ such that every algebraic extension field $L/K$ is separable over $K$.
+
+All fields of characteristic 0 are perfect, so in particular the fields $\mathbb R$, $\mathbb C$ and $\mathbb Q$ are perfect.  If $K$ is a field of characteristic $p$ (with $p$ a prime number), then $K$ is perfect if and only if the Frobenius endomorphism $F$ on $K$, defined by
+$$
+F(x)=x^p\quad(x\in K),
+$$
+is an automorphism of $K$.  Since the Frobenius map is always injective, it is sufficient to check whether $F$ is surjective.  In particular, all finite fields are perfect (any injective endomorphism is also surjective).  Moreover, any field whose characteristic is nonzero that is \PMlinkname{algebraic}{AlgebraicExtension} over its prime subfield is perfect.  Thus, the only fields that are not perfect are those whose characteristic is nonzero and are transcendental over their prime subfield.
+
+Similarly, a ring $R$ of characteristic $p$ is perfect if the endomorphism $x\mapsto x^p$ of $R$ is an {\it automorphism} (i.e., is surjective).
+%%%%%
+%%%%%
+\end{document}

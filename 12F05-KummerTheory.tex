@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KummerTheory}
+\pmcreated{2013-03-22 15:04:20}
+\pmmodified{2013-03-22 15:04:20}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Kummer theory}
+\pmrecord{5}{36793}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+%\pmkeywords{Kummer}
+%\pmkeywords{abelian extension}
+\pmrelated{AbelianExtension}
+\pmrelated{CyclicExtension}
+\pmrelated{Exponent}
+\pmdefines{Kummer extension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+The following theorem is usually referred to as {\it Kummer theory}. 
+
+\begin{thm}[Kummer Theory]
+Let $n$ be a positive integer and let $K$ be a field of characteristic not dividing $n$ which contains the $n$-th roots of unity. Then:
+\begin{enumerate}
+\item The extension $K(\sqrt[n]{a})$ for $a\in K$ is a cyclic extension over $K$ of degree dividing $n$.\\
+
+\item Any cyclic extension of degree $n$ over $K$ is of the form $K(\sqrt[n]{a})$ for some $a\in K$.\\
+\end{enumerate}
+\end{thm}
+
+\begin{defn}
+Let $n$ be a positive integer and let $K$ be a field of characteristic not dividing $n$ which contains the $n$-th roots of unity. An extension of $K$ of the form:
+$$K(\sqrt[n]{a_1},\sqrt[n]{a_2},\ldots,\sqrt[n]{a_k})$$
+with $a_i \in K^\times$ is called a {\bf Kummer extension} of $K$. Notice that the Galois group of the extension is of \PMlinkname{exponent}{Exponent} $n$.
+\end{defn}
+%%%%%
+%%%%%
+\end{document}

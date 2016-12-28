@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArchimedeanProperty}
+\pmcreated{2013-03-22 13:00:47}
+\pmmodified{2013-03-22 13:00:47}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Archimedean property}
+\pmrecord{9}{33396}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmsynonym{axiom of Archimedes}{ArchimedeanProperty}
+\pmsynonym{Archimedean principle}{ArchimedeanProperty}
+\pmrelated{ArchimedeanSemigroup}
+\pmrelated{ExistenceOfSquareRootsOfNonNegativeRealNumbers}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\theoremstyle{definition}
+
+Let $x$ be any real number.  Then there exists a natural number $n$ such that $n > x$.
+
+This theorem is known as the \emph{Archimedean property} of real numbers.  It is also sometimes called the axiom of Archimedes, although this name is doubly deceptive: it is neither an axiom (it is rather a consequence of the least upper bound property) nor attributed to Archimedes (in fact, Archimedes credits it to Eudoxus).
+
+\begin{proof}
+Let $x$ be a real number, and let $S = \{ a \in \mathbb{N} : a \leq x \}$.  If $S$ is empty, let $n = 1$; note that $x < n$ (otherwise $1 \in S$).
+
+Assume $S$ is nonempty.  Since $S$ has an upper bound, $S$ must have a least upper bound; call it $b$.  Now consider $b - 1$.  Since $b$ is the least upper bound, $b - 1$ cannot be an upper bound of $S$; therefore, there exists some $y \in S$ such that $y > b - 1$.  Let $n = y + 1$; then $n > b$.  But $y$ is a natural, so $n$ must also be a natural.  Since $n > b$, we know $n \not\in S$; since $n \not\in S$, we know $n > x$.  Thus we have a natural greater than $x$.
+\end{proof}
+
+\begin{corollary}
+If $x$ and $y$ are real numbers with $x > 0$, there exists a natural $n$ such that $nx > y$.
+\end{corollary}
+
+\begin{proof}
+Since $x$ and $y$ are reals, and $x \neq 0$, $y/x$ is a real.  By the Archimedean property, we can choose an $n \in \mathbb{N}$ such that $n > y/x$.  Then $nx > y$.
+\end{proof}
+
+\begin{corollary}
+If $w$ is a real number greater than $0$, there exists a natural $n$ such that $0 < 1/n < w$.
+\end{corollary}
+
+\begin{proof}
+Using Corollary 1, choose $n \in \mathbb{N}$ satisfying $nw > 1$.  Then $0 < 1/n < w$.
+\end{proof}
+
+\begin{corollary}
+If $x$ and $y$ are real numbers with $x < y$, there exists a rational number $a$ such that $x < a < y$.
+\end{corollary}
+
+\begin{proof}
+First examine the case where $0 \leq x$.  Using Corollary 2, find a natural $n$ satisfying $0 < 1/n < (y-x)$.  Let $S = \{ m \in \mathbb{N} : m/n \geq y \}$.  By Corollary 1 $S$ is non-empty, so let $m_0$ be the least element of $S$ and let $a = (m_0-1)/n$.  Then $a< y$.  Furthermore, since $y \leq m_0/n$, we have $y - 1/n < a$; and $x < y - 1/n < a$.  Thus $a$ satisfies $x < a < y$.
+
+Now examine the case where $x < 0 < y$.  Take $a = 0$.
+
+Finally consider the case where $x < y \leq 0$.  Using the first case, let $b$ be a rational satisfying $-y < b < -x$.  Then let $a = -b$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

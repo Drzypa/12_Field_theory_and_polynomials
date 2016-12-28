@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndeterminateForm}
+\pmcreated{2013-03-22 12:28:19}
+\pmmodified{2013-03-22 12:28:19}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{indeterminate form}
+\pmrecord{7}{32658}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmsynonym{indeterminate value}{IndeterminateForm}
+\pmrelated{LHpitalsRule}
+\pmrelated{ImproperLimits}
+\pmrelated{EmptyProduct}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+The expression
+
+$$ \frac{0}{0} $$
+
+is known as the \emph{indeterminate form}.  The motivation for this name is that there are no rules for comparing the value of $\frac{0}{0}$ to the other real numbers.  Note that, for example, $\frac{1}{0}$ is \emph{not} indeterminate, since we can justifiably associate it with $+\infty$, which \emph{does} compare with the rest of the real numbers (in particular, it is defined to be greater than all of them.)
+
+\section{Other Indeterminate Forms}
+
+Although $\frac{0}{0}$ is often called ``the'' indeterminate form, there are many others.  Some of these are:
+
+\begin{enumerate} 
+
+\item $ \frac{\infty}{\infty} $, for the same motivating reasons as $\frac{0}{0}$.
+
+\item $ 0^0 $; which is the result of much impassioned debate (especially since $0!$ is defined to be 1, counter-intuitively, but not unreasonably).
+
+\item $1^{\infty}$; notably because of the derivation of $e$: 
+
+$$ \lim_{n \to \infty} \left( 1+\frac{1}{n} \right)^n = e $$
+
+A direct substitution would yield $1^\infty$.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

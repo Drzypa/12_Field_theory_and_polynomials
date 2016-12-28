@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EveryOrderedFieldWithTheLeastUpperBoundPropertyIsIsomorphicTomathbbRProofThat}
+\pmcreated{2013-03-22 14:10:51}
+\pmmodified{2013-03-22 14:10:51}
+\pmowner{mps}{409}
+\pmmodifier{mps}{409}
+\pmtitle{every ordered field with the least upper bound property is isomorphic to $\mathbb{R}$, proof that}
+\pmrecord{9}{35607}
+\pmprivacy{1}
+\pmauthor{mps}{409}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12E99}
+\pmclassification{msc}{54C30}
+\pmclassification{msc}{26-00}
+\pmclassification{msc}{12D99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\embed}{\hookrightarrow}
+\begin{document}
+Let $F$ be an ordered field with the least upper bound property.  By the 
+order properties of $F$, $0 < 1_F$ and by an induction argument $0 < n\cdot 1_F$ 
+for any positive integer $n$.  Hence the characteristic of the field $F$ is 
+zero, implying that there is an order-preserving embedding $j\colon \mathbb{Q}\to F$.
+
+We would like to extend this map to an embedding of $\mathbb{R}$ into $F$.  Let $r\in\mathbb{R}$
+and let $D_r = \{ q \in\mathbb{Q}\colon q < r \}$ be the associated Dedekind cut.  Since $D_r$ is 
+nonempty and bounded above in $\mathbb{Q}$, it follows that the set $j(D_r)$ is nonempty and
+bounded above in $F$.  Applying the least upper bound property of $F$, define a function
+$\widetilde{\jmath}\colon\mathbb{R}\to F$ by
+\[
+\widetilde{\jmath}(r) = \sup\left(j(D_r)\right).
+\]
+One can check that $\widetilde{\jmath}$ is an order-preserving field homomorphism.  
+By replacing $F$ with the isomorphic field $F\setminus\widetilde{\jmath}(\mathbb{R})\cup\mathbb{R}$,
+we may assume that $\mathbb{R}\subset F$.
+
+We claim that in fact $\mathbb{R}=F$.  To see this, first recall that 
+\PMlinkname{since $F$ is a partially ordered group with the least upper 
+bound property, $F$ has the Archimedean property}{DistributivityInPoGroups}.
+So for any $f\in F$, there exists some positive integer $n$ such that $-n < f < n$.
+Hence the set
+$D'_f = \{ r\in\mathbb{R} \colon r < f \}\subset\mathbb{R}$ is nonempty and
+bounded above, implying that $f' = \sup_{\mathbb{R}} D'_f$ lies in $\mathbb{R}$.
+Now observe that applying the least upper bound axiom in $F$ gives us that
+$f = \sup_F D'_f$.  Since $f'$ is an upper bound of $D'_f$ in $F$, it follows
+that $f\le f'$.
+
+Seeking a contradiction, suppose $f<f'$.  By the Archimedean property,
+there is some positive integer $n$ such that $f<f'-n^{-1}<f'$.  Because
+$f'=\sup_{\mathbb{R}} D'_f$, we obtain $f'-n^{-1}<f$, which implies the 
+contradiction
+$f<f$.  Therefore $f=f'$, and so $f\in\mathbb{R}$.  This completes the proof.
+
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{embedding}
+\PMlinkescapeword{isomorphic}
+\PMlinkescapeword{satisfies}
+
+%%%%%
+%%%%%
+\end{document}

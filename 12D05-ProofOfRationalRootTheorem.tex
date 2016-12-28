@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfRationalRootTheorem}
+\pmcreated{2013-03-22 13:03:53}
+\pmmodified{2013-03-22 13:03:53}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of rational root theorem}
+\pmrecord{11}{33472}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D05}
+\pmclassification{msc}{12D10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{similar}
+
+Let $p(x) \in \mathbb{Z}[x]$.  Let $n$ be a positive integer with $\operatorname{deg} p(x)=n$.  Let $c_0, \ldots , c_n \in \mathbb{Z}$ such that $p(x)=c_nx^n+c_{n-1}x^{n-1}+\cdots +c_1x+c_0$.
+
+Let $a,b \in \mathbb{Z}$ with $\operatorname{gcd}(a,b)=1$ and $b>0$ such that $\displaystyle \frac{a}{b}$ is a root of $p(x)$. Then
+
+\begin{center}
+$\begin{array}{ll}
+0 & \displaystyle =p\left( \frac{a}{b} \right) \\
+\\
+& \displaystyle =c_n \left( \frac{a}{b} \right)^n+c_{n-1} \left( \frac{a}{b} \right)^{n-1} +\cdots +c_1 \cdot \frac{a}{b} +c_0 \\
+\\
+& \displaystyle =c_n \cdot \frac{a^n}{b^n}+c_{n-1} \cdot \frac{a^{n-1}}{b^{n-1}} +\cdots +c_1 \cdot \frac{a}{b} +c_0. \end{array}$
+\end{center}
+
+Multiplying through by $b^n$ and rearranging yields:
+
+\begin{center}
+$\begin{array}{rl}
+c_na^n+c_{n-1}a^{n-1}b+\cdots +c_1ab^{n-1} +c_0b^n & =0 \\
+\\
+c_0b^n & =-c_na^n-c_{n-1}a^{n-1}b -\cdots -c_1ab^{n-1} \\
+\\
+c_0b^n & =a \left( -c_na^{n-1}-c_{n-1}a^{n-2}b -\cdots -c_1b^{n-1} \right) \\
+\end{array}$
+\end{center}
+
+Thus, $a|c_0b^n$ and, by hypothesis, $\operatorname{gcd}(a,b)=1$.  This implies that $a|c_0$.
+
+Similarly:
+
+\begin{center}
+$\begin{array}{rl}
+c_na^n+c_{n-1}a^{n-1} b+\cdots +c_1ab^{n-1} +c_0b^n & =0 \\
+\\
+c_na^n & =-c_{n-1}a^{n-1} b-\cdots -c_1ab^{n-1} -c_0b^n \\
+\\
+c_na^n & =b \left( -c_{n-1}a^{n-1} -\cdots -c_1ab^{n-1} -c_0b^{n-1} \right) \\
+\end{array}$
+\end{center}
+
+Therefore, $b|c_na^n$ and $b|c_n$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfContinuousFunctionsOnTheExtendedRealNumbers}
+\pmcreated{2013-03-22 16:59:34}
+\pmmodified{2013-03-22 16:59:34}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{examples of continuous functions on the extended real numbers}
+\pmrecord{9}{39273}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{28-00}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+Within this entry, $\overline{\mathbb{R}}$ will be used to refer to the extended real numbers.
+
+Examples of continuous functions on $\overline{\mathbb{R}}$ include:
+
+\begin{itemize}
+
+\item Polynomial functions:  Let $f \in \mathbb{R}[x]$ with $\displaystyle f(x)=\sum_{j=0}^n a_nx^n$ for some $n \in \mathbb{N}$ and $a_0, \ldots , a_n \in \mathbb{R}$ with $a_n \neq 0$ if $n \neq 0$.  Then $\overline{f}$ is defined in the following manner:
+
+\begin{enumerate}
+
+\item If $n=0$, then $\overline{f}(x)=a_0$ for all $x \in \overline{\mathbb{R}}$.
+
+\item If $n$ is odd and $a_n>0$, then $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+x & \text{ if } x \notin \mathbb{R}. \end{cases}$
+
+\item If $n$ is odd and $a_n<0$, then $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+-x & \text{ if } x \notin \mathbb{R}.  \end{cases}$
+
+\item If $n \neq 0$ is even and $a_n>0$, then $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+\infty & \text{ if } x \notin \mathbb{R}.  \end{cases}$
+
+\item If $n \neq 0$ is even and $a_n<0$, then $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+-\infty & \text{ if } x \notin \mathbb{R}.  \end{cases}$
+
+\end{enumerate}
+
+\item Exponential functions:  Let $f(x)=a^x$ for some $a \in \mathbb{R}$ with $a>0$ and $a \neq 1$.  Then $\overline{f}$ is defined in the following manner:
+
+\begin{enumerate}
+
+\item If $a<1$, then $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+0 & \text{ if } x=\infty \\
+\infty & \text{ if } x=-\infty.  \end{cases}$
+
+\item If $a>1$, then $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+\infty & \text{ if } x=\infty \\
+0 & \text{ if } x=-\infty.  \end{cases}$
+
+\end{enumerate}
+
+\item Miscellaneous \PMlinkescapetext{functions}
+
+\begin{enumerate}
+
+\item Let $f(x)=\arctan x$.  Then $\overline{f}$ is defined by $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+& \\
+\displaystyle \frac{\pi}{2} & \text{ if } x=\infty \\
+& \\
+\displaystyle -\frac{\pi}{2} & \text{ if } x=-\infty.  \end{cases}$
+
+\item Let $f(x)=\tanh x$.  Then $\overline{f}$ is defined by $\displaystyle \overline{f}(x)=\begin{cases}
+f(x) & \text{ if } x \in \mathbb{R} \\
+1 & \text{ if } x=\infty \\
+-1 & \text{ if } x=-\infty.  \end{cases}$
+
+\end{enumerate}
+\end{itemize}
+
+Of course, not every function $f$ that is continuous on $\mathbb{R}$ extends to a continuous function on $\overline{\mathbb{R}}$.  Common examples of these include the real functions $x \mapsto \sin x$ and $x \mapsto \cos x$.  (It is proven that these are continuous on $\mathbb{R}$ in the entry continuity of sine and cosine.)
+
+On the other hand, there are some continuous functions $\overline{f} \colon \overline{\mathbb{R}} \to \overline{\mathbb{R}}$ that have no analogous function $f \colon \mathbb{R} \to \mathbb{R}$.  For example, consider
+
+\begin{center}
+$\overline{f}(x)=\begin{cases}
+\displaystyle \frac{1}{x^2} & \text{ if } x \in \mathbb{R} \setminus \{0\} \\
+\infty & \text{ if } x=0 \\
+0 & \text{ if } x=\pm \infty. \end{cases}$
+\end{center}
+%%%%%
+%%%%%
+\end{document}

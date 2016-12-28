@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalRing}
+\pmcreated{2013-03-22 12:45:59}
+\pmmodified{2013-03-22 12:45:59}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{topological ring}
+\pmrecord{6}{33076}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12J99}
+\pmclassification{msc}{13J99}
+\pmclassification{msc}{54H13}
+\pmrelated{TopologicalGroup}
+\pmrelated{TopologicalVectorSpace}
+\pmdefines{topological field}
+\pmdefines{topological division ring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A ring $R$ which is a topological space is called a \emph{topological ring} if the addition, multiplication, and the additive inverse functions are continuous functions from $R \times R$ to $R$.
+
+A \emph{topological division ring} is a topological ring such that the multiplicative inverse function is continuous away from $0$.  A \emph{topological field} is a topological division ring that is a field.
+
+\textbf{Remark}.  It is easy to see that if $R$ contains the multiplicative identity $1$, then $R$ is a topological ring iff addition and multiplication are continuous.  This is true because the additive inverse of an element can be written as the product of the element and $-1$.  However, if $R$ does not contain $1$, it is necessary to impose the continuity condition on the additive inverse operation.
+
+%%%%%
+%%%%%
+\end{document}

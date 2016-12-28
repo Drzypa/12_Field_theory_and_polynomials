@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugateFields}
+\pmcreated{2013-03-22 17:10:28}
+\pmmodified{2013-03-22 17:10:28}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{conjugate fields}
+\pmrecord{10}{39487}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+\pmclassification{msc}{11R04}
+\pmrelated{PropertiesOfMathbbQvarthetaConjugates}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If\, $\vartheta_1,\,\vartheta_2,\,\ldots,\,\vartheta_n$\, are the algebraic conjugates of the algebraic number $\vartheta_1$, then the algebraic number fields\, $\mathbb{Q}(\vartheta_1),\,\mathbb{Q}(\vartheta_2),\,\ldots,\,\mathbb{Q}(\vartheta_n)$\, 
+are the {\em conjugate fields} of $\mathbb{Q}(\vartheta_1)$. 
+
+Notice that the conjugate fields of $\mathbb{Q}(\vartheta_1)$ are always isomorphic but not necessarily distinct. 
+
+All conjugate fields are equal, \PMlinkname{i.e.}{Ie} $\mathbb{Q}(\vartheta_1)= \mathbb{Q}(\vartheta_2)=\ldots=\mathbb{Q}(\vartheta_n)$, or equivalently $\vartheta_1,\ldots,\vartheta_n$ belong to $\mathbb{Q}(\vartheta_1)$, if and only if the extension $\mathbb{Q}(\vartheta_1)/\mathbb{Q}$ is a Galois extension of fields.  The reason for this is that if $\vartheta_1$ is an algebraic number and $m(x)$ is the minimal polynomial of $\vartheta_1$ then the roots of $m(x)$ are precisely the algebraic conjugates of $\vartheta_1$.
+
+For example, let $\vartheta_1 = \sqrt{2}$.  Then its only conjugate is $\vartheta_2=-\sqrt{2}$ and $\mathbb{Q}(\sqrt{2})$ is Galois and contains both $\vartheta_1$ and $\vartheta_2$.  Similarly, let $p$ be a prime and let $\vartheta_1=\zeta$ be a \PMlinkname{primitive $p$th root of unity}{PrimitiveRootOfUnity}.  Then the algebraic conjugates of $\zeta$ are $\zeta^2,\ldots,\zeta^{p-1}$ and so all conjugate fields are equal to $\mathbb{Q}(\zeta)$ and the extension $\mathbb{Q}(\zeta)/\mathbb{Q}$ is Galois.  It is a cyclotomic extension of $\mathbb{Q}$.
+
+Now let $\vartheta_1=\sqrt[3]{2}$ and let $\zeta$ be a primitive $3$rd root of unity (i.e. $\zeta$ is a root of $x^2+x+1$, so we can pick $\zeta=\frac{-1+\sqrt{-3}}{2}$).  Then the conjugates of $\vartheta_1$ are $\vartheta_1$, $\vartheta_2=\zeta\sqrt[3]{2}$, and $\vartheta_3=\zeta^2\sqrt[3]{2}$.  The three conjugate fields $\mathbb{Q}(\vartheta_1)$, $\mathbb{Q}(\vartheta_2)$, and $\mathbb{Q}(\vartheta_3)$ are distinct in this case.  The Galois closure of each of these fields is $\mathbb{Q}(\zeta,\sqrt[3]{2})$.
+%%%%%
+%%%%%
+\end{document}

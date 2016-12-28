@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalculatingTheNthRootsOfAComplexNumber}
+\pmcreated{2013-03-22 14:13:42}
+\pmmodified{2013-03-22 14:13:42}
+\pmowner{archibal}{4430}
+\pmmodifier{archibal}{4430}
+\pmtitle{calculating the nth roots of a complex number}
+\pmrecord{10}{35667}
+\pmprivacy{1}
+\pmauthor{archibal}{4430}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12D99}
+\pmclassification{msc}{30-00}
+\pmrelated{TopicEntryOnComplexAnalysis}
+\pmrelated{BinomialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{fix}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{restriction}
+\PMlinkescapeword{range}
+
+Fix a complex number $z$.  We wish to compute all the nth roots of $z$.  By definition, $w$ is an nth root of $z$ if $w^n=z$.  
+
+First of all, if $z=0$, it is clear that all its nth roots will be zero as well. 
+
+Suppose $z$ is not zero.  Then we can write $z=re^{i\theta}$, for some positive real number $r$ and some real number $\theta$ (this is de Moivre's theorem).  In fact, we have a choice of values for $\theta$: $re^{i(\theta + 2k\pi)}=re^{i\theta}$ for every integer $k$.  Usually, we choose $\theta$ so that $-\pi<\theta\leq\pi$. 
+
+What are the possible values for $w$?  Write $w$ in polar form also, as $w=\rho e^{i\phi}$.  Then $w^n=\rho^n e^{in\phi}$.  We are looking for values of $\rho$ and $\phi$ so that $\rho^n e^{in\phi} = re^{i\theta}$.  Since every nonzero complex number can be written in polar form in a unique way with $\rho>0$ and $-\pi<\phi\leq\pi$, we can assume that this is true for $w$.  So for $w^n$ to equal $z$, we must have $\rho^n = r$ and $n\phi = \theta + 2k\pi$ for some integer $k$.  The first of these conditions is that $\rho$ be the usual (positive) nth root of the real number $r$.  The second, rewritten, says that $\phi = \theta/n + 2k\pi/n$ for some integer $k$.  There will be exactly $n$ possibilities for $k$ which yield $-\pi<\phi\leq\pi$: $-n/2<k\leq n/2$. 
+
+Summarizing, if 
+\[
+z = re^{i\theta}\text{ for }-\pi<\theta\leq\pi,
+\]
+and 
+\[
+w^n = z,
+\]
+then 
+\[
+w = \sqrt[n]{r}e^{i\left(\frac{\theta}{n} + \frac{2k}{n}\pi\right)}\text{ for some $k$ such that }-\frac{n}{2}<k\leq \frac{n}{2}.
+\]
+
+Of course, the restriction on the values of $k$ is designed to ensure that none of the values obtained for different $k$ are actually equal; we could have chosen a different range of values for $k$: in books, you most often see $0\leq k < n$, which still ensures that the values are all distinct but does not ensure that they are between $-\pi$ and $\pi$. 
+
+Thinking about what this means in polar coordinates, this means that the angles between the nth roots are exactly $1/n$ of a complete circle, so that they form the vertices of a regular polygon.
+
+We can write the nth roots of a complex number in another way.  First, apply the above expression to compute the nth roots of $1$:
+\[
+\omega_k = e^{i\frac{2\pi}{n}k} = \left(e^{i\frac{2\pi}{n}}\right)^k = \omega_0^k.
+\]
+Then observe that if $w^n=z$, then $(\omega_kw)^n=\omega_k^nw^n=w^n=z$.  So if $w$ is any nth root of $z$, the nth roots of $z$ can also be written as
+\[
+\omega_kw\text{ for }0\leq k\ < n,
+\]
+or
+\[
+\omega_0^k w\text{ for }0\leq k\ < n.
+\]
+
+This last way of writing the nth roots of a complex number shows that somehow the nth roots of $1$ already capture the unusual behaviour of the nth roots of any number.  So in fact, one often wants to look at the roots of unity in any field, whether it is the integers modulo a prime, rational functions, or some more exotic field.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfTraceAndNorm}
+\pmcreated{2013-03-22 15:55:45}
+\pmmodified{2013-03-22 15:55:45}
+\pmowner{polarbear}{3475}
+\pmmodifier{polarbear}{3475}
+\pmtitle{examples of trace and norm}
+\pmrecord{16}{37937}
+\pmprivacy{1}
+\pmauthor{polarbear}{3475}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\omega$ be a complex root of unity different than 1. Then $\omega$ and $\omega^2$ are the conjugate roots of the minimal polynomial $x^2 + x +1$.
+ Since $\mathbb{Q}(\omega)$ is the splitting field of $x^2 + x +1$, it is Galois over $\mathbb{Q}$. Moreover the Galois group $Gal(\mathbb{Q}(\omega)/\mathbb{Q}))$ is formed by the identity and the automorphism $g(\omega) = \omega^2$
+ The elements of $\mathbb{Q}(\omega)$ have the form $a + b\omega$, $a,b\in \mathbb{Q}$.
+ Then we obtain
+\[N_{\mathbb{Q}(\omega)}^{\mathbb{Q}}(a + b\omega) = (a +b\omega)(a +b\omega^2) = a^2 - ab + b^2,
+Tr_{\mathbb{Q}(\omega)}^{\mathbb{Q}}(a + b\omega) = (a +b\omega) + (a + b\omega^2) = 2a - b \]
+%%%%%
+%%%%%
+\end{document}

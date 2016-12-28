@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfAnExtensionThatIsNotNormal}
+\pmcreated{2013-03-22 16:00:28}
+\pmmodified{2013-03-22 16:00:28}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{example of an extension that is not normal}
+\pmrecord{6}{38038}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{12F10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry, $\sqrt[3]{2}$ indicates the real cube root of $2$.
+
+Consider the extension $\mathbb{Q}(\sqrt[3]{2})/\mathbb{Q}$.  The minimal polynomial for $\sqrt[3]{2}$ over $\mathbb{Q}$ is $x^3-2$.  This polynomial factors in $\mathbb{Q}(\sqrt[3]{2})$ as $x^3-2=(x-\sqrt[3]{2})(x^2+x\sqrt[3]{2}+\sqrt[3]{4})$.  Let $f(x)=x^2+x\sqrt[3]{2}+\sqrt[3]{4}$.  Note that $\operatorname{disc}(f(x))=(\sqrt[3]{2})^2-4\sqrt[3]{4}=\sqrt[3]{4}-4\sqrt[3]{4}=-3\sqrt[3]{4}<0$.  Thus, $f(x)$ has no real roots.  Therefore, $f(x)$ has no roots in $\mathbb{Q}(\sqrt[3]{2})$ since $\mathbb{Q}(\sqrt[3]{2}) \subseteq \mathbb{R}$.  Hence, $x^3-2$ has a root in $\mathbb{Q}(\sqrt[3]{2})$ but does not split in $\mathbb{Q}(\sqrt[3]{2})$.  It follows that the extension $\mathbb{Q}(\sqrt[3]{2})/\mathbb{Q}$ is not normal.
+%%%%%
+%%%%%
+\end{document}
