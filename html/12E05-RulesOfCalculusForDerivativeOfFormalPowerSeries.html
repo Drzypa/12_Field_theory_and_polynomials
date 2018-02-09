@@ -1,0 +1,203 @@
+<!DOCTYPE html><html>
+<head>
+<title>rules of calculus for derivative of formal power series</title>
+<!--Generated on Fri Feb  9 16:40:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">rules of calculus for derivative of formal power series</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">In this entry, we will show that the rules of calculus
+hold for derivatives of formal power series. While
+this could be verified directly in a manner analogous
+to what was done for polynomials in the parent entry,
+we will take a different tack, deriving the results
+for power series from the corresponding results for
+polynomials. The basis for our approach is the
+observation that the ring of formal power series can
+be expressed as a limit of quotients of the ring of
+polynomials:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A[[x]]=\lim_{k\to\infty}A[x]/\langle x^{k}\rangle" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>k</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>x</mi><mi>k</mi></msup><mo stretchy="false">⟩</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, we will proceed in two steps, first extending the
+derivative operation to the quotient rings and showing that
+its properties still hold there, then extending it to the
+limit and showing that its properties hold there as well.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We begin by noting that the derivative is well-defined
+as a map from <math id="p2.m1" class="ltx_Math" alttext="A[x]/\langle x^{k+1}\rangle" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">⟩</mo></mrow></mrow></math> to
+<math id="p2.m2" class="ltx_Math" alttext="A[x]/\langle x^{k}\rangle" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>x</mi><mi>k</mi></msup><mo stretchy="false">⟩</mo></mrow></mrow></math> for all integers <math id="p2.m3" class="ltx_Math" alttext="k\geq 0" display="inline"><mrow><mi>k</mi><mo>≥</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a commutative ring, <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a non-negative
+integer, and that <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are elements of <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="A[x]" display="inline"><mrow><mi>A</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> such
+that <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="p\equiv q" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">≡</mo><mi>q</mi></mrow></math> modulo <math id="Thmthm1.p1.m7" class="ltx_Math" alttext="x^{k+1}" display="inline"><msup><mi>x</mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msup></math>. Then <math id="Thmthm1.p1.m8" class="ltx_Math" alttext="p^{\prime}\equiv q^{\prime}" display="inline"><mrow><msup><mi>p</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal">≡</mo><msup><mi>q</mi><mo mathvariant="normal">′</mo></msup></mrow></math>
+modulo <math id="Thmthm1.p1.m9" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">By definition of congruence, <math id="p3.m1" class="ltx_Math" alttext="p(x)=q(x)+x^{k+1}r(x)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for
+some polynomial <math id="p3.m2" class="ltx_Math" alttext="r\in A[x]" display="inline"><mrow><mi>r</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. Taking derivaitves, <math id="p3.m3" class="ltx_Math" alttext="p^{\prime}(x)=q^{\prime}(x)+x^{k}(kr(x)+xr^{\prime}(x))" display="inline"><mrow><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>q</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mi>r</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, so <math id="p3.m4" class="ltx_Math" alttext="p^{\prime}" display="inline"><msup><mi>p</mi><mo>′</mo></msup></math> and <math id="p3.m5" class="ltx_Math" alttext="q^{\prime}" display="inline"><msup><mi>q</mi><mo>′</mo></msup></math> are
+equivalent modulo <math id="p3.m6" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>.
+∎</p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">It is easy to verify that the sum and product rules hold
+in this new context:</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a commutative ring, <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a non-negative integer,
+and <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="f,g" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">,</mo><mi>g</mi></mrow></math> are elements of <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="A[x]/\langle x^{k+1}\rangle" display="inline"><mrow><mrow><mi>A</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow><mo mathvariant="normal">/</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><msup><mi>x</mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math>,
+then <math id="Thmthm2.p1.m5" class="ltx_Math" alttext="(f+g)^{\prime}=f^{\prime}+g^{\prime}" display="inline"><mrow><msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>f</mi><mo mathvariant="normal">+</mo><mi>g</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal">=</mo><mrow><msup><mi>f</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal">+</mo><msup><mi>g</mi><mo mathvariant="normal">′</mo></msup></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> be representatives of the equivalence classes
+<math id="p5.m2" class="ltx_Math" alttext="f,g" display="inline"><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow></math>. Then we have <math id="p5.m3" class="ltx_Math" alttext="(p+q)^{\prime}=p^{\prime}+q^{\prime}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>+</mo><msup><mi>q</mi><mo>′</mo></msup></mrow></mrow></math> by the corresponding
+theorem for polynomials. Hence, by definition of quotient,
+we have <math id="p5.m4" class="ltx_Math" alttext="(f+g)^{\prime}=f^{\prime}+g^{\prime}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>+</mo><msup><mi>g</mi><mo>′</mo></msup></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a commutative ring, <math id="Thmthm3.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a non-negative integer,
+and <math id="Thmthm3.p1.m3" class="ltx_Math" alttext="f,g" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">,</mo><mi>g</mi></mrow></math> are elements of <math id="Thmthm3.p1.m4" class="ltx_Math" alttext="A[x]/\langle x^{k+1}\rangle" display="inline"><mrow><mrow><mi>A</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow><mo mathvariant="normal">/</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><msup><mi>x</mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math>,
+then <math id="Thmthm3.p1.m5" class="ltx_Math" alttext="(f\cdot g)^{\prime}=f^{\prime}\cdot g+f\cdot g^{\prime}" display="inline"><mrow><msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>f</mi><mo mathvariant="normal">⋅</mo><mi>g</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal">=</mo><mrow><mrow><msup><mi>f</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal">⋅</mo><mi>g</mi></mrow><mo mathvariant="normal">+</mo><mrow><mi>f</mi><mo mathvariant="normal">⋅</mo><msup><mi>g</mi><mo mathvariant="normal">′</mo></msup></mrow></mrow></mrow></math>.
+</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let <math id="p6.m1" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> be representatives of the equivalence classes
+<math id="p6.m2" class="ltx_Math" alttext="f,g" display="inline"><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow></math>. Then we have <math id="p6.m3" class="ltx_Math" alttext="(p\cdot q)^{\prime}=p^{\prime}\cdot q+p\cdot q^{\prime}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>⋅</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mrow><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>⋅</mo><mi>q</mi></mrow><mo>+</mo><mrow><mi>p</mi><mo>⋅</mo><msup><mi>q</mi><mo>′</mo></msup></mrow></mrow></mrow></math>
+by the corresponding theorem for polynomials. Hence, by
+definition of quotient, we have
+<math id="p6.m4" class="ltx_Math" alttext="(f\cdot g)^{\prime}=f^{\prime}\cdot g+f\cdot g^{\prime}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⋅</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mrow><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>⋅</mo><mi>g</mi></mrow><mo>+</mo><mrow><mi>f</mi><mo>⋅</mo><msup><mi>g</mi><mo>′</mo></msup></mrow></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">When considering the chain rule, we need to note that composition
+does not always pass to the quotient, so we need to restrict the
+operands to obtain a well-defined operation. In particular, we
+will consider the following two cases:</p>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm4.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a commutative ring, <math id="Thmthm4.p1.m2" class="ltx_Math" alttext="p,q,r" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">,</mo><mi>q</mi><mo mathvariant="normal">,</mo><mi>r</mi></mrow></math> is a n element of <math id="Thmthm4.p1.m3" class="ltx_Math" alttext="A[x]" display="inline"><mrow><mi>A</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>,
+and <math id="Thmthm4.p1.m4" class="ltx_Math" alttext="q\equiv r" display="inline"><mrow><mi>q</mi><mo mathvariant="normal">≡</mo><mi>r</mi></mrow></math> modulo <math id="Thmthm4.p1.m5" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math> for some integer <math id="Thmthm4.p1.m6" class="ltx_Math" alttext="k&gt;0" display="inline"><mrow><mi>k</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>, then
+<math id="Thmthm4.p1.m7" class="ltx_Math" alttext="p\circ q\equiv p\circ r" display="inline"><mrow><mrow><mi>p</mi><mo mathvariant="normal">∘</mo><mi>q</mi></mrow><mo mathvariant="normal">≡</mo><mrow><mi>p</mi><mo mathvariant="normal">∘</mo><mi>r</mi></mrow></mrow></math> modulo <math id="Thmthm4.p1.m8" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>.</span></p>
+</div>
+</div>
+<div id="Thmthm5" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 5</span>.</h6>
+<div id="Thmthm5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm5.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a commutative ring, <math id="Thmthm5.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a non-negative integer, and
+<math id="Thmthm5.p1.m3" class="ltx_Math" alttext="p,q,P,Q" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">,</mo><mi>q</mi><mo mathvariant="normal">,</mo><mi>P</mi><mo mathvariant="normal">,</mo><mi>Q</mi></mrow></math> are elements of <math id="Thmthm5.p1.m4" class="ltx_Math" alttext="A[x]" display="inline"><mrow><mi>A</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> such that <math id="Thmthm5.p1.m5" class="ltx_Math" alttext="p\equiv P" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">≡</mo><mi>P</mi></mrow></math> modulo
+<math id="Thmthm5.p1.m6" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>, <math id="Thmthm5.p1.m7" class="ltx_Math" alttext="q\equiv Q" display="inline"><mrow><mi>q</mi><mo mathvariant="normal">≡</mo><mi>Q</mi></mrow></math> modulo <math id="Thmthm5.p1.m8" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math> and <math id="Thmthm5.p1.m9" class="ltx_Math" alttext="p(0)=0" display="inline"><mrow><mrow><mi>p</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>, then <math id="Thmthm5.p1.m10" class="ltx_Math" alttext="p\circ q\equiv P\circ Q" display="inline"><mrow><mrow><mi>p</mi><mo mathvariant="normal">∘</mo><mi>q</mi></mrow><mo mathvariant="normal">≡</mo><mrow><mi>P</mi><mo mathvariant="normal">∘</mo><mi>Q</mi></mrow></mrow></math> modulo <math id="Thmthm5.p1.m11" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>.</span></p>
+</div>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">[More to come]
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">rules of calculus for derivative of formal power series</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RulesOfCalculusForDerivativeOfFormalPowerSeries</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:22:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:22:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12E05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 11C08</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 13P05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">InvertibleFormalPowerSeries</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 16:40:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

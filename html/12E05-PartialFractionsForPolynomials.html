@@ -1,0 +1,304 @@
+<!DOCTYPE html><html>
+<head>
+<title>partial fractions for polynomials</title>
+<!--Generated on Fri Feb  9 16:40:26 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">partial fractions for polynomials</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">This entry precisely states and proves
+the existence and uniqueness of partial fraction decompositions
+of ratios of polynomials of a single variable, with coefficients over a field.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The theory is used for, for example,
+the method of partial fraction decomposition for integrating
+rational functions over the reals (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ALectureOnThePartialFractionDecompositionMethod</span>).</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The proofs involve fairly elementary algebra only. Although we refer
+to Euclidean domains in our proofs, the reader who is not familiar with abstract
+algebra may simply read that as “set of polynomials”
+(which is one particular Euclidean domain).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Also note that the proofs themselves furnish a method for actually computing
+the partial fraction decomposition, as a finite-time algorithm,
+provided the irreducible factorization of the denominator is known.
+It is not an efficient way to find the partial fraction decomposition; usually
+one uses instead the method of making substitutions into the polynomials,
+to derive linear constraints on the coefficients.
+But what is important is that the existence proofs here
+<em class="ltx_emph ltx_font_italic">justify</em> the substitution method. The uniqueness property proved here
+might also simplify some calculations: it shows that we never have
+to consider multiple solutions for the coefficients in the decomposition.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="q\neq 0" display="inline"><mrow><mi>q</mi><mo mathvariant="normal">≠</mo><mn mathvariant="normal">0</mn></mrow></math> be polynomials over a field,
+and <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> be any positive integer.
+Then there exist unique polynomials
+<math id="Thmthm1.p1.m4" class="ltx_Math" alttext="\alpha_{1},\ldots,\alpha_{n},\beta" display="inline"><mrow><msub><mi>α</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msub><mi>α</mi><mi>n</mi></msub><mo mathvariant="normal">,</mo><mi>β</mi></mrow></math> such that</span></p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\frac{p}{q^{n}}=\beta+\frac{\alpha_{1}}{q}+\frac{\alpha_{2}}{q^{2}}+\cdots+%
+\frac{\alpha_{n}}{q^{n}}\,,\quad\deg\alpha_{j}&lt;\deg q\,." display="block"><mrow><mrow><mrow><mfrac><mi>p</mi><msup><mi>q</mi><mi>n</mi></msup></mfrac><mo>=</mo><mrow><mi>β</mi><mo>+</mo><mfrac><msub><mi>α</mi><mn>1</mn></msub><mi>q</mi></mfrac><mo>+</mo><mfrac><msub><mi>α</mi><mn>2</mn></msub><msup><mi>q</mi><mn>2</mn></msup></mfrac><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mpadded width="+1.7pt"><mfrac><msub><mi>α</mi><mi>n</mi></msub><msup><mi>q</mi><mi>n</mi></msup></mfrac></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>α</mi><mi>j</mi></msub></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><mpadded width="+1.7pt"><mi>q</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmthm1.p2" class="ltx_para">
+<p class="ltx_p">Existence has already been proven as a special case of partial fractions in Euclidean domains;
+we now prove uniqueness.
+Suppose equation (<a href="#S0.E1" title="(1) ‣ Theorem 1. ‣ partial fractions for polynomials" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) has been given.
+Multiplying by <math id="Thmthm1.p2.m1" class="ltx_Math" alttext="q^{n}" display="inline"><msup><mi>q</mi><mi>n</mi></msup></math> and rearranging,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="p=\beta q^{n}+r_{1}\,,\quad r_{1}=\alpha_{1}q^{n-1}+\cdots+\alpha_{n}\,,\quad%
+\deg r_{1}&lt;\deg q^{n}\,." display="block"><mrow><mrow><mrow><mi>p</mi><mo>=</mo><mrow><mrow><mi>β</mi><mo>⁢</mo><msup><mi>q</mi><mi>n</mi></msup></mrow><mo>+</mo><mpadded width="+1.7pt"><msub><mi>r</mi><mn>1</mn></msub></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mpadded width="+1.7pt"><msub><mi>α</mi><mi>n</mi></msub></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>r</mi><mn>1</mn></msub></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><mpadded width="+1.7pt"><msup><mi>q</mi><mi>n</mi></msup></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But according to the division algorithm for polynomials (also known as long division), the quotient and remainder polynomial
+after a division (by <math id="Thmthm1.p2.m2" class="ltx_Math" alttext="q^{n}" display="inline"><msup><mi>q</mi><mi>n</mi></msup></math> in this case) are unique.
+So <math id="Thmthm1.p2.m3" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> must be uniquely determined.
+Then we can rearrange:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="p-\beta\,q^{n}=\alpha_{1}q^{n-1}+r_{2}\,,\quad r_{2}=\alpha_{2}q^{n-2}+\cdots+%
+\alpha_{n}\,,\quad\deg r_{2}&lt;\deg q^{n-1}\,." display="block"><mrow><mrow><mrow><mrow><mi>p</mi><mo>-</mo><mrow><mpadded width="+1.7pt"><mi>β</mi></mpadded><mo>⁢</mo><msup><mi>q</mi><mi>n</mi></msup></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>+</mo><mpadded width="+1.7pt"><msub><mi>r</mi><mn>2</mn></msub></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><msub><mi>α</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mpadded width="+1.7pt"><msub><mi>α</mi><mi>n</mi></msub></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>r</mi><mn>2</mn></msub></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><mpadded width="+1.7pt"><msup><mi>q</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By uniqueness of division again (by <math id="Thmthm1.p2.m4" class="ltx_Math" alttext="q^{n-1}" display="inline"><msup><mi>q</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math>), <math id="Thmthm1.p2.m5" class="ltx_Math" alttext="\alpha_{1}" display="inline"><msub><mi>α</mi><mn>1</mn></msub></math> is determined.
+Repeating this process, we see that all the polynomials <math id="Thmthm1.p2.m6" class="ltx_Math" alttext="\alpha_{j}" display="inline"><msub><mi>α</mi><mi>j</mi></msub></math> and <math id="Thmthm1.p2.m7" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math>
+are uniquely determined.
+∎</p>
+</div>
+</div>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="Thmthm2.p1.m2" class="ltx_Math" alttext="q\neq 0" display="inline"><mrow><mi>q</mi><mo mathvariant="normal">≠</mo><mn mathvariant="normal">0</mn></mrow></math> be polynomials over a field.
+Let <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="q=\phi_{1}^{n_{1}}\,\phi_{2}^{n_{2}}\,\cdots\,\phi_{k}^{n_{k}}" display="inline"><mrow><mi>q</mi><mo mathvariant="normal">=</mo><mrow><mpadded width="+1.7pt"><msubsup><mi>ϕ</mi><mn mathvariant="normal">1</mn><msub><mi>n</mi><mn mathvariant="normal">1</mn></msub></msubsup></mpadded><mo mathvariant="italic">⁢</mo><mpadded width="+1.7pt"><msubsup><mi>ϕ</mi><mn mathvariant="normal">2</mn><msub><mi>n</mi><mn mathvariant="normal">2</mn></msub></msubsup></mpadded><mo mathvariant="italic">⁢</mo><mpadded width="+1.7pt"><mi mathvariant="normal">⋯</mi></mpadded><mo mathvariant="italic">⁢</mo><msubsup><mi>ϕ</mi><mi>k</mi><msub><mi>n</mi><mi>k</mi></msub></msubsup></mrow></mrow></math>
+be the factorization of <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> to irreducible factors <math id="Thmthm2.p1.m5" class="ltx_Math" alttext="\phi_{i}" display="inline"><msub><mi>ϕ</mi><mi>i</mi></msub></math>
+(which is unique except for the ordering and constant factors).
+Then there exist unique polynomials <math id="Thmthm2.p1.m6" class="ltx_Math" alttext="\alpha_{ij},\beta" display="inline"><mrow><msub><mi>α</mi><mrow><mi>i</mi><mo mathvariant="italic">⁢</mo><mi>j</mi></mrow></msub><mo mathvariant="normal">,</mo><mi>β</mi></mrow></math>
+such
+that</span></p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\frac{p}{q}=\beta+\sum_{i=1}^{k}\sum_{j=1}^{n_{i}}\frac{\alpha_{ij}}{\phi_{i}^%
+{j}}\,,\quad\deg\alpha_{ij}&lt;\deg\phi_{i}\,." display="block"><mrow><mrow><mrow><mfrac><mi>p</mi><mi>q</mi></mfrac><mo>=</mo><mrow><mi>β</mi><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><msub><mi>n</mi><mi>i</mi></msub></munderover><mpadded width="+1.7pt"><mfrac><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><msubsup><mi>ϕ</mi><mi>i</mi><mi>j</mi></msubsup></mfrac></mpadded></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><mpadded width="+1.7pt"><msub><mi>ϕ</mi><mi>i</mi></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmthm2.p2" class="ltx_para">
+<p class="ltx_p">Existence has already been proven as a special case of
+partial fractions in Euclidean domains; we now prove uniqueness.
+Suppose equation (<a href="#S0.E2" title="(2) ‣ Theorem 2. ‣ partial fractions for polynomials" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) has been given.
+First, multiply the equation by <math id="Thmthm2.p2.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="p=\beta\,q+\sum_{i,j}\alpha_{ij}\,\frac{q}{\phi_{i}^{j}}\,." display="block"><mrow><mrow><mi>p</mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mi>β</mi></mpadded><mo>⁢</mo><mi>q</mi></mrow><mo>+</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></munder><mrow><mpadded width="+1.7pt"><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mfrac><mi>q</mi><msubsup><mi>ϕ</mi><mi>i</mi><mi>j</mi></msubsup></mfrac></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The polynomial sum on the far right of this equation
+has degree <math id="Thmthm2.p2.m2" class="ltx_Math" alttext="&lt;q" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi>q</mi></mrow></math>, because
+each summand has degree
+<math id="Thmthm2.p2.m3" class="ltx_Math" alttext="\deg(\alpha_{ij}\,q/\phi_{i}^{j})&lt;\deg\phi_{i}+\deg q-j\cdot\deg\phi_{i}\leq\deg
+q" display="inline"><mrow><mrow><mi>deg</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="+1.7pt"><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded><mo>⁢</mo><mi>q</mi></mrow><mo>/</mo><msubsup><mi>ϕ</mi><mi>i</mi><mi>j</mi></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>ϕ</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mi>deg</mi><mo>⁡</mo><mi>q</mi></mrow></mrow><mo>-</mo><mrow><mi>j</mi><mo>⋅</mo><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>ϕ</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>≤</mo><mrow><mi>deg</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></math>.
+So the polynomial sum is the remainder of a division of <math id="Thmthm2.p2.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> by <math id="Thmthm2.p2.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>.
+Then the quotient polynomial <math id="Thmthm2.p2.m6" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is uniquely determined.</p>
+</div>
+<div id="Thmthm2.p3" class="ltx_para">
+<p class="ltx_p">Now suppose <math id="Thmthm2.p3.m1" class="ltx_Math" alttext="s_{i}" display="inline"><msub><mi>s</mi><mi>i</mi></msub></math> and <math id="Thmthm2.p3.m2" class="ltx_Math" alttext="s^{\prime}_{i}" display="inline"><msubsup><mi>s</mi><mi>i</mi><mo>′</mo></msubsup></math> are polynomials of degree <math id="Thmthm2.p3.m3" class="ltx_Math" alttext="&lt;\phi_{i}^{n_{i}}" display="inline"><mrow><mi></mi><mo>&lt;</mo><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mrow></math>,
+such that</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="\sum_{i=1}^{k}\frac{s_{i}}{\phi_{i}^{n_{i}}}=\sum_{i=1}^{k}\frac{s^{\prime}_{i%
+}}{\phi_{i}^{n_{i}}}\,." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mfrac><msub><mi>s</mi><mi>i</mi></msub><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mfrac></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mpadded width="+1.7pt"><mfrac><msubsup><mi>s</mi><mi>i</mi><mo>′</mo></msubsup><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mfrac></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">We claim that <math id="Thmthm2.p3.m4" class="ltx_Math" alttext="s_{i}=s^{\prime}_{i}" display="inline"><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>=</mo><msubsup><mi>s</mi><mi>i</mi><mo>′</mo></msubsup></mrow></math>. Let <math id="Thmthm2.p3.m5" class="ltx_Math" alttext="q_{1}=\phi_{1}^{n_{1}}" display="inline"><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>=</mo><msubsup><mi>ϕ</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup></mrow></math> and <math id="Thmthm2.p3.m6" class="ltx_Math" alttext="q_{2}=q/q_{1}" display="inline"><mrow><msub><mi>q</mi><mn>2</mn></msub><mo>=</mo><mrow><mi>q</mi><mo>/</mo><msub><mi>q</mi><mn>1</mn></msub></mrow></mrow></math>,
+and write</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{s_{1}}{q_{1}}+\frac{u}{q_{2}}=\sum_{i=1}^{k}\frac{s_{i}}{\phi_{i}^{n_{i}%
+}}=\sum_{i=1}^{k}\frac{s^{\prime}_{i}}{\phi_{i}^{n_{i}}}=\frac{s^{\prime}_{1}}%
+{q_{1}}+\frac{u^{\prime}}{q_{2}}\,," display="block"><mrow><mrow><mrow><mfrac><msub><mi>s</mi><mn>1</mn></msub><msub><mi>q</mi><mn>1</mn></msub></mfrac><mo>+</mo><mfrac><mi>u</mi><msub><mi>q</mi><mn>2</mn></msub></mfrac></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mfrac><msub><mi>s</mi><mi>i</mi></msub><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mfrac></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mfrac><msubsup><mi>s</mi><mi>i</mi><mo>′</mo></msubsup><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mfrac></mrow><mo>=</mo><mrow><mfrac><msubsup><mi>s</mi><mn>1</mn><mo>′</mo></msubsup><msub><mi>q</mi><mn>1</mn></msub></mfrac><mo>+</mo><mpadded width="+1.7pt"><mfrac><msup><mi>u</mi><mo>′</mo></msup><msub><mi>q</mi><mn>2</mn></msub></mfrac></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some polynomials <math id="Thmthm2.p3.m7" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="Thmthm2.p3.m8" class="ltx_Math" alttext="u^{\prime}" display="inline"><msup><mi>u</mi><mo>′</mo></msup></math>.
+Rearranging, we get:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="(s_{1}-s^{\prime}_{1})\,q_{2}=(u^{\prime}-u)\,q_{1}\,." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>-</mo><msubsup><mi>s</mi><mn>1</mn><mo>′</mo></msubsup></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>q</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>u</mi><mo>′</mo></msup><mo>-</mo><mi>u</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>q</mi><mn>1</mn></msub></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In particular, <math id="Thmthm2.p3.m9" class="ltx_Math" alttext="q_{1}" display="inline"><msub><mi>q</mi><mn>1</mn></msub></math> divides the left side.
+Since <math id="Thmthm2.p3.m10" class="ltx_Math" alttext="q_{1}=\phi_{1}^{n_{1}}" display="inline"><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>=</mo><msubsup><mi>ϕ</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup></mrow></math> is relatively prime from <math id="Thmthm2.p3.m11" class="ltx_Math" alttext="q_{2}" display="inline"><msub><mi>q</mi><mn>2</mn></msub></math>, it must divide
+the factor <math id="Thmthm2.p3.m12" class="ltx_Math" alttext="(s_{1}-s^{\prime}_{1})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>-</mo><msubsup><mi>s</mi><mn>1</mn><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></math>. But <math id="Thmthm2.p3.m13" class="ltx_Math" alttext="\deg(s_{1}-s^{\prime}_{1})&lt;\deg q_{1}" display="inline"><mrow><mrow><mi>deg</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>-</mo><msubsup><mi>s</mi><mn>1</mn><mo>′</mo></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>q</mi><mn>1</mn></msub></mrow></mrow></math>,
+hence <math id="Thmthm2.p3.m14" class="ltx_Math" alttext="s_{1}-s^{\prime}_{1}" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>-</mo><msubsup><mi>s</mi><mn>1</mn><mo>′</mo></msubsup></mrow></math> must be the zero polynomial. That is, <math id="Thmthm2.p3.m15" class="ltx_Math" alttext="s_{1}=s^{\prime}_{1}" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><msubsup><mi>s</mi><mn>1</mn><mo>′</mo></msubsup></mrow></math>.</p>
+</div>
+<div id="Thmthm2.p4" class="ltx_para">
+<p class="ltx_p">So we can cancel the term <math id="Thmthm2.p4.m1" class="ltx_Math" alttext="s_{1}/\phi_{1}^{n_{1}}=s^{\prime}_{1}/\phi_{1}^{n_{1}}" display="inline"><mrow><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>/</mo><msubsup><mi>ϕ</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup></mrow><mo>=</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mo>′</mo></msubsup><mo>/</mo><msubsup><mi>ϕ</mi><mn>1</mn><msub><mi>n</mi><mn>1</mn></msub></msubsup></mrow></mrow></math>
+on both sides of
+equation (<a href="#S0.E3" title="(3) ‣ Theorem 2. ‣ partial fractions for polynomials" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>).
+And we could repeat the argument,
+and show that <math id="Thmthm2.p4.m2" class="ltx_Math" alttext="s_{2}" display="inline"><msub><mi>s</mi><mn>2</mn></msub></math> and <math id="Thmthm2.p4.m3" class="ltx_Math" alttext="s^{\prime}_{2}" display="inline"><msubsup><mi>s</mi><mn>2</mn><mo>′</mo></msubsup></math> are the same,
+<math id="Thmthm2.p4.m4" class="ltx_Math" alttext="s_{3}" display="inline"><msub><mi>s</mi><mn>3</mn></msub></math> and <math id="Thmthm2.p4.m5" class="ltx_Math" alttext="s^{\prime}_{3}" display="inline"><msubsup><mi>s</mi><mn>3</mn><mo>′</mo></msubsup></math> are the same, and so on.
+Therefore, we have shown that
+the polynomials <math id="Thmthm2.p4.m6" class="ltx_Math" alttext="s_{i}" display="inline"><msub><mi>s</mi><mi>i</mi></msub></math> in the following expression</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\frac{p}{q}-\beta=\sum_{i=1}^{k}\frac{s_{i}}{\phi_{i}^{n_{i}}}\,,\quad\deg s_{%
+i}&lt;\deg\phi_{i}^{n_{i}}" display="block"><mrow><mrow><mrow><mfrac><mi>p</mi><mi>q</mi></mfrac><mo>-</mo><mi>β</mi></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mpadded width="+1.7pt"><mfrac><msub><mi>s</mi><mi>i</mi></msub><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mfrac></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>s</mi><mi>i</mi></msub></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are unique. In particular, <math id="Thmthm2.p4.m7" class="ltx_Math" alttext="s_{i}" display="inline"><msub><mi>s</mi><mi>i</mi></msub></math> is
+the following numerator that results when the fractions <math id="Thmthm2.p4.m8" class="ltx_Math" alttext="\alpha_{ij}/\phi_{i}^{j}" display="inline"><mrow><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>/</mo><msubsup><mi>ϕ</mi><mi>i</mi><mi>j</mi></msubsup></mrow></math>
+are put under a common denominator <math id="Thmthm2.p4.m9" class="ltx_Math" alttext="\phi^{i}_{n_{i}}" display="inline"><msubsup><mi>ϕ</mi><msub><mi>n</mi><mi>i</mi></msub><mi>i</mi></msubsup></math>:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="s_{i}=\sum_{j=1}^{n_{i}}\alpha_{ij}\,\phi_{i}^{n_{i}-j}\,." display="block"><mrow><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><msub><mi>n</mi><mi>i</mi></msub></munderover><mrow><mpadded width="+1.7pt"><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msubsup><mi>ϕ</mi><mi>i</mi><mrow><msub><mi>n</mi><mi>i</mi></msub><mo>-</mo><mi>j</mi></mrow></msubsup></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But by the uniqueness part of Theorem <a href="#Thmthm1" title="Theorem 1. ‣ partial fractions for polynomials" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>,
+the decomposition</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\frac{s_{i}}{\phi_{i}^{n_{i}}}=\beta_{i}+\sum_{j=1}^{n_{i}}\frac{\alpha_{ij}}{%
+\phi_{i}^{j}}\,,\quad\deg\alpha_{ij}&lt;\deg\phi_{i}" display="block"><mrow><mrow><mfrac><msub><mi>s</mi><mi>i</mi></msub><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mfrac><mo>=</mo><mrow><msub><mi>β</mi><mi>i</mi></msub><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><msub><mi>n</mi><mi>i</mi></msub></munderover><mpadded width="+1.7pt"><mfrac><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><msubsup><mi>ϕ</mi><mi>i</mi><mi>j</mi></msubsup></mfrac></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>ϕ</mi><mi>i</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">uniquely determines <math id="Thmthm2.p4.m10" class="ltx_Math" alttext="\alpha_{ij}" display="inline"><msub><mi>α</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math>.
+(Note that the proof of Theorem <a href="#Thmthm1" title="Theorem 1. ‣ partial fractions for polynomials" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> shows that
+<math id="Thmthm2.p4.m11" class="ltx_Math" alttext="\beta_{i}=0" display="inline"><mrow><msub><mi>β</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></mrow></math>, as <math id="Thmthm2.p4.m12" class="ltx_Math" alttext="\deg s_{i}&lt;\deg\phi_{i}^{n_{i}}" display="inline"><mrow><mrow><mi>deg</mi><mo>⁡</mo><msub><mi>s</mi><mi>i</mi></msub></mrow><mo>&lt;</mo><mrow><mi>deg</mi><mo>⁡</mo><msubsup><mi>ϕ</mi><mi>i</mi><msub><mi>n</mi><mi>i</mi></msub></msubsup></mrow></mrow></math>.)
+∎</p>
+</div>
+</div>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">partial fractions for polynomials</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PartialFractionsForPolynomials</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:40:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:40:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12E05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">partial fraction decomposition of rational functions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">partial fractions for rational functions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PartialFractionsOfExpressions</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ALectureOnThePartialFractionDecompositionMethod</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 16:40:26 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

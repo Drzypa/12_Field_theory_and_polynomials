@@ -1,0 +1,198 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of solving a cubic equation</title>
+<!--Generated on Fri Feb  9 16:37:33 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of solving a cubic equation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let us use Cardano’s formulae for solving algebraically the cubic equation</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle x^{3}\!+\!3x^{2}\!-\!1\;=\;0." display="inline"><mrow><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>3</mn></msup></mpadded><mo rspace="0.8pt">+</mo><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">-</mo><mpadded width="+2.8pt"><mn>1</mn></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">First apply the Tschirnhaus transformation (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CardanosDerivationOfTheCubicFormula</span>)  <math id="p1.m1" class="ltx_Math" alttext="x:=y\!-\!1" display="inline"><mrow><mi>x</mi><mo>:=</mo><mrow><mpadded width="-1.7pt"><mi>y</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow></mrow></math>  for removing the quadratic term; from  <math id="p1.m2" class="ltx_Math" alttext="(y-1)^{3}+3(y-1)^{2}-1=0" display="inline"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>-</mo><mn>1</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>  we get the simplified equation</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle y^{3}\!+\!3y\!-\!2\;=\;0." display="inline"><mrow><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>y</mi><mn>3</mn></msup></mpadded><mo rspace="0.8pt">+</mo><mrow><mn>3</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>y</mi></mpadded></mrow></mrow><mo rspace="0.8pt">-</mo><mpadded width="+2.8pt"><mn>2</mn></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We now suppose that  <math id="p1.m3" class="ltx_Math" alttext="y:=u\!+\!v" display="inline"><mrow><mi>y</mi><mo>:=</mo><mrow><mpadded width="-1.7pt"><mi>u</mi></mpadded><mo rspace="0.8pt">+</mo><mi>v</mi></mrow></mrow></math>.  Substituting this into (2) and rewriting the equation in the form</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(u^{3}\!+\!v^{3}\!-\!2)+3(uv\!+\!1)(u\!+\!v)\;=\;0," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="-1.7pt"><msup><mi>u</mi><mn>3</mn></msup></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><msup><mi>v</mi><mn>3</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>u</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>v</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>u</mi></mpadded><mo rspace="0.8pt">+</mo><mi>v</mi></mrow><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn> 0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">one can determine <math id="p1.m4" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p1.m5" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> such that  <math id="p1.m6" class="ltx_Math" alttext="u^{3}\!+\!v^{3}\!-\!2=0" display="inline"><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>u</mi><mn>3</mn></msup></mpadded><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><msup><mi>v</mi><mn>3</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>  and  <math id="p1.m7" class="ltx_Math" alttext="uv\!+\!1=0" display="inline"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mpadded width="-1.7pt"><mi>v</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>,  i.e.</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}u^{3}\!+\!v^{3}\;=\;2,\\
+u^{3}v^{3}\;=\;-1.\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>u</mi><mn>3</mn></msup></mpadded><mo rspace="0.8pt">+</mo><mpadded width="+2.8pt"><msup><mi>v</mi><mn>3</mn></msup></mpadded></mrow><mo>=</mo><mn> 2</mn></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><msup><mi>u</mi><mn>3</mn></msup><mo>⁢</mo><mpadded width="+2.8pt"><msup><mi>v</mi><mn>3</mn></msup></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the properties of quadratic equation, we infer that <math id="p1.m8" class="ltx_Math" alttext="u^{3}" display="inline"><msup><mi>u</mi><mn>3</mn></msup></math> and <math id="p1.m9" class="ltx_Math" alttext="v^{3}" display="inline"><msup><mi>v</mi><mn>3</mn></msup></math> are the roots of the resolvent equation</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="z^{2}\!-\!2z\!-\!1\;=\;0." display="block"><mrow><mrow><mrow><mpadded width="-1.7pt"><msup><mi>z</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>z</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mpadded width="+2.8pt"><mn>1</mn></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, <math id="p1.m10" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p1.m11" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> satisfy the binomial equations</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle u^{3}\;=\;1\!+\!\sqrt{2},\qquad v^{3}\;=\;1\!-\!\sqrt{2}," display="inline"><mrow><mrow><mrow><mpadded width="+2.8pt"><msup><mi>u</mi><mn>3</mn></msup></mpadded><mo>=</mo><mrow><mpadded width="-1.7pt"><mn> 1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mpadded width="+2.8pt"><msup><mi>v</mi><mn>3</mn></msup></mpadded><mo>=</mo><mrow><mpadded width="-1.7pt"><mn> 1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">respectively.  If we choose the real radicals  <math id="p1.m12" class="ltx_Math" alttext="u=u_{0}=\sqrt[3]{1\!+\!\sqrt{2}}" display="inline"><mrow><mi>u</mi><mo>=</mo><msub><mi>u</mi><mn>0</mn></msub><mo>=</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow></math>  and 
+<math id="p1.m13" class="ltx_Math" alttext="v=v_{0}=\sqrt[3]{1\!-\!\sqrt{2}}" display="inline"><mrow><mi>v</mi><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mo>=</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow></math>,  the other solutions <math id="p1.m14" class="ltx_Math" alttext="u,\,v" display="inline"><mrow><mi>u</mi><mo rspace="4.2pt">,</mo><mi>v</mi></mrow></math> of (3) are</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle\zeta u_{0},\;\;\zeta^{2}v_{0};\qquad\zeta^{2}u_{0},\;\;\zeta v_{%
+0}," display="inline"><mrow><mrow><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>u</mi><mn>0</mn></msub></mrow><mo rspace="8.1pt">,</mo><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>v</mi><mn>0</mn></msub></mrow><mo rspace="22.5pt">;</mo><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>u</mi><mn>0</mn></msub></mrow><mo rspace="8.1pt">,</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>v</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where  <math id="p1.m15" class="ltx_Math" alttext="\zeta=\frac{-1+i\sqrt{3}}{2},\quad\zeta^{2}=\frac{-1-i\sqrt{3}}{2}" display="inline"><mrow><mrow><mi>ζ</mi><mo>=</mo><mfrac><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow><mn>2</mn></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow><mn>2</mn></mfrac></mrow></mrow></math> 
+are the primitive third roots of unity.  One must combine the pairs  <math id="p1.m16" class="ltx_Math" alttext="(u,\,v)" display="inline"><mrow><mo stretchy="false">(</mo><mi>u</mi><mo rspace="4.2pt">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></math>  of (4) so that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="uv\;=\;\sqrt[3]{u^{3}v^{3}}\;=\;-1." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>v</mi></mpadded></mrow><mo rspace="5.3pt">=</mo><mpadded width="+2.8pt"><mroot><mrow><msup><mi>u</mi><mn>3</mn></msup><mo>⁢</mo><msup><mi>v</mi><mn>3</mn></msup></mrow><mn>3</mn></mroot></mpadded><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Accordingly, all three roots of the cubic equation (2) are</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}y_{1}\;=\;u_{0}\!+\!v_{0}\;=\;\sqrt[3]{1\!+\!\sqrt{2%
+}}\!+\!\sqrt[3]{1\!-\!\sqrt{2}},\\
+y_{2}\;=\;\zeta u_{0}\!+\!\zeta^{2}v_{0}\;=\;\frac{-1+i\sqrt{3}}{2}\sqrt[3]{1%
+\!+\!\sqrt{2}}\!+\!\frac{-1-i\sqrt{3}}{2}\sqrt[3]{1\!-\!\sqrt{2}},\\
+y_{3}\;=\;\zeta^{2}u_{0}\!+\!\zeta v_{0}\;=\;\frac{-1-i\sqrt{3}}{2}\sqrt[3]{1%
+\!+\!\sqrt{2}}\!+\!\frac{-1+i\sqrt{3}}{2}\sqrt[3]{1\!-\!\sqrt{2}}.\\
+\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>y</mi><mn>1</mn></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><msub><mi>u</mi><mn>0</mn></msub></mpadded><mo rspace="0.8pt">+</mo><mpadded width="+2.8pt"><msub><mi>v</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded><mo rspace="0.8pt">+</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>y</mi><mn>2</mn></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mi>ζ</mi><mo>⁢</mo><mpadded width="-1.7pt"><msub><mi>u</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi>v</mi><mn>0</mn></msub></mpadded></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mfrac><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow><mn>2</mn></mfrac><mo>⁢</mo><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mfrac><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow><mn>2</mn></mfrac><mo>⁢</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>y</mi><mn>3</mn></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><mpadded width="-1.7pt"><msub><mi>u</mi><mn>0</mn></msub></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mi>ζ</mi><mo>⁢</mo><mpadded width="+2.8pt"><msub><mi>v</mi><mn>0</mn></msub></mpadded></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mfrac><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow><mn>2</mn></mfrac><mo>⁢</mo><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded></mrow><mo rspace="0.8pt">+</mo><mrow><mfrac><mrow><mrow><mo>-</mo><mn>1</mn></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow><mn>2</mn></mfrac><mo>⁢</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow></mrow></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The roots of the original equation (1) are gotten via the used substitution equation  <math id="p1.m17" class="ltx_Math" alttext="x:=y-1" display="inline"><mrow><mi>x</mi><mo>:=</mo><mrow><mi>y</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>, i.e. adding <math id="p1.m18" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>-</mo><mn>1</mn></mrow></math> to the values of <math id="p1.m19" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.  If we also separate the real (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RealPart</span>) and imaginary parts, we have the following solution of (1):</p>
+<table id="S0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}x_{1}\;=\;-1\!+\!\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\sqrt[%
+3]{1\!-\!\sqrt{2}},\\
+x_{2}\;=\;-1\!-\!\frac{1}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\sqrt[3]{1\!-%
+\!\sqrt{2}}\right)\!+i\frac{\sqrt{3}}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!-\!%
+\sqrt[3]{1\!-\!\sqrt{2}}\right),\\
+x_{3}\;=\;-1\!-\!\frac{1}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!+\!\sqrt[3]{1\!-%
+\!\sqrt{2}}\right)\!-i\frac{\sqrt{3}}{2}\!\left(\sqrt[3]{1\!+\!\sqrt{2}}\!-\!%
+\sqrt[3]{1\!-\!\sqrt{2}}\right).\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>x</mi><mn>1</mn></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded></mrow><mo rspace="0.8pt">+</mo><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded><mo rspace="0.8pt">+</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>x</mi><mn>2</mn></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mo>-</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mpadded width="-1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded><mo rspace="0.8pt">+</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow><mo rspace="0.8pt">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mpadded width="-1.7pt"><mfrac><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded><mo rspace="0.8pt">-</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>x</mi><mn>3</mn></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mpadded width="-1.7pt"><mfrac><mn>1</mn><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded><mo rspace="0.8pt">+</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow><mo rspace="0.8pt">)</mo></mrow></mrow><mo rspace="0.8pt">-</mo><mrow><mi>i</mi><mo>⁢</mo><mpadded width="-1.7pt"><mfrac><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mpadded width="-1.7pt"><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mpadded><mo rspace="0.8pt">-</mo><mroot><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msqrt><mn>2</mn></msqrt></mrow><mn>3</mn></mroot></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One of the roots is a real number, but the other two are  (i.e. non-real) complex conjugates of each other.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of solving a cubic equation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfSolvingACubicEquation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-11-18 14:15:18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2015-11-18 14:15:18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12D10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">example of using Cardano’s formulas</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">PolynomialEquationOfOddDegree</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ConjugatedRootsOfEquation2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 16:37:33 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

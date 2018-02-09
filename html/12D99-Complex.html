@@ -1,0 +1,325 @@
+<!DOCTYPE html><html>
+<head>
+<title>complex</title>
+<!--Generated on Fri Feb  9 16:39:04 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">complex</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">There are some polynomial equations with real coefficients that don’t have real solutions.  Examples of these are  <math id="p2.m1" class="ltx_Math" alttext="x^{2}+5=0" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>5</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>,  <math id="p2.m2" class="ltx_Math" alttext="x^{2}+x+1=0" display="inline"><mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo>=</mo><mn>0</mn></mrow></math>.  Mathematically we express this by saying that <math id="p2.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> is not an algebraically closed field.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In  to solve that kind of equation, we have to “extend” our number system <math id="p3.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> by adjoining a number <math id="p3.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> that has the property that  <math id="p3.m3" class="ltx_Math" alttext="i^{2}=-1" display="inline"><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>.  In this way we extend the field of real numbers <math id="p3.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> to a field <math id="p3.m5" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> whose elements are called <em class="ltx_emph ltx_font_italic"></em>.  A formal construction can be seen at [<span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/471</span>complex numbers] (cf. the field adjunction).  The field <math id="p3.m6" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> is algebraically closed: every polynomial with complex coefficients, and especially every polynomial with real coefficients, (and with positive degree) has at least one complex zero (which might be real as well).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Any complex number can be written as  <math id="p4.m1" class="ltx_Math" alttext="z=x+iy" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math> (with <math id="p4.m2" class="ltx_Math" alttext="x,\,y\in\mathbb{R}" display="inline"><mrow><mrow><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>). Here we call <math id="p4.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> the <span class="ltx_text ltx_font_italic">real part</span> of <math id="p4.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> and <math id="p4.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> the <span class="ltx_text ltx_font_italic">imaginary part</span> of <math id="p4.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>. 
+We write this as</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="x=\mbox{Re}(z),\qquad y=\mbox{Im}(z)." display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mtext>Re</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>y</mi><mo>=</mo><mrow><mtext>Im</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Real numbers are a subset of complex numbers, and a real number <math id="p4.m7" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> can be written also as <math id="p4.m8" class="ltx_Math" alttext="r+i0" display="inline"><mrow><mi>r</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mn>0</mn></mrow></mrow></math>.  Thus, a complex number is real if and only if its imaginary part is equal to zero.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">By writing <math id="p5.m1" class="ltx_Math" alttext="x\!+\!iy" display="inline"><mrow><mpadded width="-1.7pt"><mi>x</mi></mpadded><mo rspace="0.8pt">+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math> as  <math id="p5.m2" class="ltx_Math" alttext="(x,\,y)" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math> we can also look at complex numbers as ordered pairs.  With this notation, real numbers are the pairs of the form  <math id="p5.m3" class="ltx_Math" alttext="(r,\,0)" display="inline"><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mn> 0</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The rules of addition and multiplication for complex numbers are:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle(a+ib)+(x+iy)=(a+x)+i(b+y)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle(a,\,b)+(x,\,y)=(a+x,\,b+y)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>x</mi></mrow><mo rspace="4.2pt">,</mo><mrow><mi>b</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle(a+ib)\cdot(x+iy)=(ax-by)+i(ay+bx)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle(a,\,b)\cdot(x,\,y)=(ax-by,\,ay+bx)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo rspace="4.2pt">,</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(to see why the last identity holds, expand the first product and then simplify
+by using  <math id="p6.m1" class="ltx_Math" alttext="i^{2}=-1" display="inline"><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>).</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">We have also the negatives (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OppositeNumber</span>):  <math id="p7.m1" class="ltx_Math" alttext="-(a,\,b)=(-a,\,-b)" display="inline"><mrow><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>a</mi></mrow><mo rspace="4.2pt">,</mo><mrow><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math>  and the multiplicative inverses:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="(a,\,b)^{-1}=\left(\frac{a}{a^{2}+b^{2}},\,\frac{-b}{a^{2}+b^{2}}\right)." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mi>a</mi><mo rspace="4.2pt">,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo>(</mo><mfrac><mi>a</mi><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac><mo rspace="4.2pt">,</mo><mfrac><mrow><mo>-</mo><mi>b</mi></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Seeing complex numbers as ordered pairs also let us give <math id="p8.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> the structure of vector space (over <math id="p8.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>).  The <em class="ltx_emph ltx_font_italic">norm</em> of  <math id="p8.m3" class="ltx_Math" alttext="z=x+iy" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math>  is defined as</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="|z|=\sqrt{x^{2}+y^{2}}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then we have  <math id="p8.m4" class="ltx_Math" alttext="|z|^{2}=z\overline{z}" display="inline"><mrow><msup><mrow><mo stretchy="false">|</mo><mi>z</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mi>z</mi><mo>⁢</mo><mover accent="true"><mi>z</mi><mo>¯</mo></mover></mrow></mrow></math>  where <math id="p8.m5" class="ltx_Math" alttext="\overline{z}" display="inline"><mover accent="true"><mi>z</mi><mo>¯</mo></mover></math> is the <em class="ltx_emph ltx_font_italic">conjugate</em> of <math id="p8.m6" class="ltx_Math" alttext="z=x+iy" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math> and it’s defined as  <math id="p8.m7" class="ltx_Math" alttext="\overline{z}=x-iy" display="inline"><mrow><mover accent="true"><mi>z</mi><mo>¯</mo></mover><mo>=</mo><mrow><mi>x</mi><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math>.  Thus we can also characterize real numbers as those complex numbers <math id="p8.m8" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> such that <math id="p8.m9" class="ltx_Math" alttext="z=\overline{z}" display="inline"><mrow><mi>z</mi><mo>=</mo><mover accent="true"><mi>z</mi><mo>¯</mo></mover></mrow></math>.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Conjugation obeys the following rules:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\overline{z_{1}+z_{2}}" display="inline"><mover accent="true"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\overline{z_{1}}+\overline{z_{2}}" display="inline"><mrow><mover accent="true"><msub><mi>z</mi><mn>1</mn></msub><mo>¯</mo></mover><mo>+</mo><mover accent="true"><msub><mi>z</mi><mn>2</mn></msub><mo>¯</mo></mover></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\overline{z_{1}z_{2}}" display="inline"><mover accent="true"><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\overline{z_{1}}\,\overline{z_{2}}" display="inline"><mrow><mpadded width="+1.7pt"><mover accent="true"><msub><mi>z</mi><mn>1</mn></msub><mo>¯</mo></mover></mpadded><mo>⁢</mo><mover accent="true"><msub><mi>z</mi><mn>2</mn></msub><mo>¯</mo></mover></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle\overline{\overline{z}}" display="inline"><mover accent="true"><mover accent="true"><mi>z</mi><mo>¯</mo></mover><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle z" display="inline"><mi>z</mi></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">The real and imaginary parts of a complex number may be expressed with the conjugate as</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\mbox{Re}(z)=\frac{z+\overline{z}}{2},\quad\mbox{Im}(z)=\frac{z-\overline{z}}{%
+2i}." display="block"><mrow><mrow><mrow><mrow><mtext>Re</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>z</mi><mo>+</mo><mover accent="true"><mi>z</mi><mo>¯</mo></mover></mrow><mn>2</mn></mfrac></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mtext>Im</mtext><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>z</mi><mo>-</mo><mover accent="true"><mi>z</mi><mo>¯</mo></mover></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">The ordered-pair notation lets us visualize complex numbers as points in the plane; this is called the <span class="ltx_text ltx_font_italic">complex plane</span>, often also the <math id="p11.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math><span class="ltx_text ltx_font_italic">-plane</span>.  As well, we can also describe complex numbers with polar coordinates.</p>
+<img src="argand" id="p11.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p">Using this representation, we see that the real numbers are located at the abscissa (horizontal) axis, which is then known as the real axis.  The ordinate (vertical) axis is known as the imaginary axis, since it consists of all complex numbers with real part equal to zero.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">If  <math id="p12.m1" class="ltx_Math" alttext="z=a+ib" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow></mrow></math>  is represented in polar coordinates as  <math id="p12.m2" class="ltx_Math" alttext="(r,\,t)" display="inline"><mrow><mo stretchy="false">(</mo><mi>r</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math>  we call <math id="p12.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> the  of <math id="p12.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> and <math id="p12.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> its <em class="ltx_emph ltx_font_italic">argument</em>.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">If  <math id="p13.m1" class="ltx_Math" alttext="r=a+ib=(r,\,t)" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo rspace="4.2pt">,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>,  then  <math id="p13.m2" class="ltx_Math" alttext="a=r\sin{t}" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow></math>  and  <math id="p13.m3" class="ltx_Math" alttext="b=r\cos{t}" display="inline"><mrow><mi>b</mi><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow></math>.  So we have the following expression, called the <span class="ltx_text ltx_font_italic">polar form</span> of complex number <math id="p13.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>:</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="z=a+ib=r(\cos{t}+i\sin{t})" display="block"><mrow><mi>z</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo>⁡</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">Multiplication of complex numbers can be done in a very neat way using polar coordinates:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="(r_{1},\,t_{1})(r_{2},\,t_{2})=(r_{1}r_{2},\,t_{1}\!+\!t_{2})." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>r</mi><mn>2</mn></msub><mo rspace="4.2pt">,</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>r</mi><mn>2</mn></msub></mrow><mo rspace="4.2pt">,</mo><mrow><mpadded width="-1.7pt"><msub><mi>t</mi><mn>1</mn></msub></mpadded><mo rspace="0.8pt">+</mo><msub><mi>t</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remark.</span>  The adjective  <span class="ltx_text ltx_font_italic">complex</span>  qualifying such nouns as “number”, “root” and “solution” is in the English  ambiguous; it may mean that it is a question of a element belonging to either <math id="p15.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> or to <math id="p15.m2" class="ltx_Math" alttext="\mathbb{C}\!\smallsetminus\!\mathbb{R}" display="inline"><mrow><mpadded width="-1.7pt"><mi>ℂ</mi></mpadded><mo rspace="0.8pt">∖</mo><mi>ℝ</mi></mrow></math>, i.e. the  <span class="ltx_text ltx_font_italic">complex</span>  may either have its basic sense or mean ‘non-real’.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">complex</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Complex</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:57:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 11:57:12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">43</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12D99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 30-00</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">complex number</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Polynomial</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ArgandDiagram</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RealNumber</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ComplexNumber</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ComplexConjugate</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NthRoot</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RiemannZetaFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Imaginary</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ImaginaryUnit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Region</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UnitDisk</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">UpperHalfPlane</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ZeroesOfAnalyticFunctionsAreIsolated</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">RiemannSphere</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SquareRoot</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CardanosFormulae</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Fundamenta</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">complex plane</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">z-plane</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">real axis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">imaginary axis</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">real part</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">imaginary part</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">conjugate</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">argument</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">polar form</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 16:39:04 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
