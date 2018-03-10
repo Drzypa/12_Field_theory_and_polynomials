@@ -19,14 +19,14 @@
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
 <p class="ltx_p">In this entry, we will show that the rules of calculus
-hold for derivatives of formal power series. While
+hold for <a class="nnexus_concept" href="http://planetmath.org/fixedpointsofnormalfunctions">derivatives</a> of <a class="nnexus_concept" href="http://planetmath.org/formalpowerseries">formal power series</a>. While
 this could be verified directly in a manner analogous
-to what was done for polynomials in the parent entry,
+to what was done for <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">polynomials</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/polynomial"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/polynomialring"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> in the parent entry,
 we will take a different tack, deriving the results
 for power series from the corresponding results for
 polynomials. The basis for our approach is the
 observation that the ring of formal power series can
-be expressed as a limit of quotients of the ring of
+be expressed as a limit of <a class="nnexus_concept" href="http://planetmath.org/division">quotients</a> of the ring of
 polynomials:</p>
 <table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
 
@@ -37,20 +37,20 @@ polynomials:</p>
 </tr>
 </table>
 <p class="ltx_p">Thus, we will proceed in two steps, first extending the
-derivative operation to the quotient rings and showing that
+derivative <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">operation</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Operation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/operation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> to the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">quotient rings</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/QuotientRing.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/quotientring"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> and showing that
 its properties still hold there, then extending it to the
 limit and showing that its properties hold there as well.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">We begin by noting that the derivative is well-defined
 as a map from <math id="p2.m1" class="ltx_Math" alttext="A[x]/\langle x^{k+1}\rangle" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo stretchy="false">⟩</mo></mrow></mrow></math> to
-<math id="p2.m2" class="ltx_Math" alttext="A[x]/\langle x^{k}\rangle" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>x</mi><mi>k</mi></msup><mo stretchy="false">⟩</mo></mrow></mrow></math> for all integers <math id="p2.m3" class="ltx_Math" alttext="k\geq 0" display="inline"><mrow><mi>k</mi><mo>≥</mo><mn>0</mn></mrow></math>.</p>
+<math id="p2.m2" class="ltx_Math" alttext="A[x]/\langle x^{k}\rangle" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow><mo>/</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>x</mi><mi>k</mi></msup><mo stretchy="false">⟩</mo></mrow></mrow></math> for all <a class="nnexus_concept" href="http://mathworld.wolfram.com/Integer.html">integers</a> <math id="p2.m3" class="ltx_Math" alttext="k\geq 0" display="inline"><mrow><mi>k</mi><mo>≥</mo><mn>0</mn></mrow></math>.</p>
 </div>
 <div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
 <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
 <span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
 <div id="Thmthm1.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a commutative ring, <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a non-negative
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a <a class="nnexus_concept" href="http://mathworld.wolfram.com/CommutativeRing.html">commutative ring</a>, <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is a non-negative
 integer, and that <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> are elements of <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="A[x]" display="inline"><mrow><mi>A</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> such
 that <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="p\equiv q" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">≡</mo><mi>q</mi></mrow></math> modulo <math id="Thmthm1.p1.m7" class="ltx_Math" alttext="x^{k+1}" display="inline"><msup><mi>x</mi><mrow><mi>k</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msup></math>. Then <math id="Thmthm1.p1.m8" class="ltx_Math" alttext="p^{\prime}\equiv q^{\prime}" display="inline"><mrow><msup><mi>p</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal">≡</mo><msup><mi>q</mi><mo mathvariant="normal">′</mo></msup></mrow></math>
 modulo <math id="Thmthm1.p1.m9" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>.</span></p>
@@ -59,15 +59,15 @@ modulo <math id="Thmthm1.p1.m9" class="ltx_Math" alttext="x^{k}" display="inline
 <div class="ltx_proof">
 <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">By definition of congruence, <math id="p3.m1" class="ltx_Math" alttext="p(x)=q(x)+x^{k+1}r(x)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for
+<p class="ltx_p">By definition of <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">congruence</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Congruence.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/congruence12"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/congruenceonapartialalgebra"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/congruence"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>, <math id="p3.m1" class="ltx_Math" alttext="p(x)=q(x)+x^{k+1}r(x)" display="inline"><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>x</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for
 some polynomial <math id="p3.m2" class="ltx_Math" alttext="r\in A[x]" display="inline"><mrow><mi>r</mi><mo>∈</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math>. Taking derivaitves, <math id="p3.m3" class="ltx_Math" alttext="p^{\prime}(x)=q^{\prime}(x)+x^{k}(kr(x)+xr^{\prime}(x))" display="inline"><mrow><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>q</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>x</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mi>r</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, so <math id="p3.m4" class="ltx_Math" alttext="p^{\prime}" display="inline"><msup><mi>p</mi><mo>′</mo></msup></math> and <math id="p3.m5" class="ltx_Math" alttext="q^{\prime}" display="inline"><msup><mi>q</mi><mo>′</mo></msup></math> are
-equivalent modulo <math id="p3.m6" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>.
+<a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">equivalent</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Equivalent.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/filterbasis"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/equivalenceofforcingnotions"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/equivalentmachines"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/equivalencerelation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> modulo <math id="p3.m6" class="ltx_Math" alttext="x^{k}" display="inline"><msup><mi>x</mi><mi>k</mi></msup></math>.
 ∎</p>
 </div>
 </div>
 <div id="p4" class="ltx_para">
 <p class="ltx_p">It is easy to verify that the sum and product rules hold
-in this new context:</p>
+in this new <a class="nnexus_concept" href="http://planetmath.org/conceptlattice">context</a>:</p>
 </div>
 <div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
 <h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
@@ -81,9 +81,9 @@ then <math id="Thmthm2.p1.m5" class="ltx_Math" alttext="(f+g)^{\prime}=f^{\prime
 <div class="ltx_proof">
 <h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="p5" class="ltx_para">
-<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> be representatives of the equivalence classes
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="p,q" display="inline"><mrow><mi>p</mi><mo>,</mo><mi>q</mi></mrow></math> be representatives of the <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">equivalence classes</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/EquivalenceClass.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/equivalenceclass"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup>
 <math id="p5.m2" class="ltx_Math" alttext="f,g" display="inline"><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow></math>. Then we have <math id="p5.m3" class="ltx_Math" alttext="(p+q)^{\prime}=p^{\prime}+q^{\prime}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>+</mo><mi>q</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mrow><msup><mi>p</mi><mo>′</mo></msup><mo>+</mo><msup><mi>q</mi><mo>′</mo></msup></mrow></mrow></math> by the corresponding
-theorem for polynomials. Hence, by definition of quotient,
+<a class="nnexus_concept" href="http://mathworld.wolfram.com/Theorem.html">theorem</a> for polynomials. Hence, by definition of quotient,
 we have <math id="p5.m4" class="ltx_Math" alttext="(f+g)^{\prime}=f^{\prime}+g^{\prime}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>′</mo></msup><mo>=</mo><mrow><msup><mi>f</mi><mo>′</mo></msup><mo>+</mo><msup><mi>g</mi><mo>′</mo></msup></mrow></mrow></math>.
 ∎</p>
 </div>
@@ -110,7 +110,7 @@ definition of quotient, we have
 </div>
 </div>
 <div id="p7" class="ltx_para">
-<p class="ltx_p">When considering the chain rule, we need to note that composition
+<p class="ltx_p">When considering the chain rule, we need to note that <a class="nnexus_concept" href="http://planetmath.org/function">composition</a>
 does not always pass to the quotient, so we need to restrict the
 operands to obtain a well-defined operation. In particular, we
 will consider the following two cases:</p>
@@ -140,7 +140,7 @@ and <math id="Thmthm4.p1.m4" class="ltx_Math" alttext="q\equiv r" display="inlin
 <tbody class="ltx_tbody">
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
-<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">rules of calculus for derivative of formal power series</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t"><a class="nnexus_concept" href="http://planetmath.org/rulesofcalculusforderivativeofformalpowerseries">rules of calculus for derivative of formal power series</a></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
@@ -172,7 +172,7 @@ and <math id="Thmthm4.p1.m4" class="ltx_Math" alttext="q\equiv r" display="inlin
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
-<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+<td class="ltx_td ltx_align_left ltx_border_r"><a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">Derivation</a><sup style="display: none;"><a class="nnexus_concept" href="http://planetmath.org/derivation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/derivationsinnaturaldeduction"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup></td>
 </tr>
 <tr class="ltx_tr">
 <th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
